@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dimo Dimov",
+    "classifications": [ "Web" ],
+    "identity": "Telerik.Blazor.Server.Empty",
+    "name": "Telerik Blazor Server Empty",
+    "shortName": "telerikBlazorServerEmpty",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    }
+}
