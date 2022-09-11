@@ -18,7 +18,7 @@
     "TelerikBlazorServer": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:63212;http://localhost:50037",
+      "applicationUrl": "http://localhost:54404",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
