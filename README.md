@@ -21,7 +21,9 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 
 ## Usage with Visual Studio
 
-The new project templates should appear in the `Custom` category in the New Project wizard.
+On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the Create New Project wizard. Make sure to select "All platforms" in the respective dropdown.
+
+On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category.
 
 ## Usage with the .NET CLI
 
