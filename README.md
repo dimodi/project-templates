@@ -22,11 +22,11 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 After successful installation, the output of `dotnet new list` should include:
 
 <pre>
-Template Name                                 Short Name          Language    Tags                                 
---------------------------------------------  ------------------  ----------  -------------------------------------
+Template Name                  Short Name       Language    Tags                   
+-----------------------------  ---------------  ----------  -----------------------
 ...
-Telerik Blazor Server                         tbserver            [C#]        Web/Blazor                           
-Telerik Blazor WebAssembly                    tbwasm              [C#]        Web/Blazor/WebAssembly               
+Telerik Blazor Server          tbserver         [C#]        Web/Blazor             
+Telerik Blazor WebAssembly     tbwasm           [C#]        Web/Blazor/WebAssembly 
 ...
 </pre>
 
