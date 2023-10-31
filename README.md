@@ -14,7 +14,7 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 
 1. Close Visual Studio.
 1. Open your favorite terminal app.
-1. Clone the repository in some folder and remain in this folder.
+1. Clone the repository in some folder and remain in that folder.
 1. Execute `dotnet new install project-templates/TelerikBlazorServer` to install the Telerik Blazor Server template.
 1. Execute `dotnet new install project-templates/TelerikBlazorWasm` to install the Telerik Blazor WebAssembly template.
 1. Execute `dotnet new list` to verify the two project templates are installed. The command output should include:
