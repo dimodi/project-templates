@@ -45,6 +45,7 @@ On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` c
 
 The project templates are almost identical to the default .NET 6 Blazor Server and WebAssembly (hosted) project templates. The differences are:
 
+* The projects reference the latest minor .NET version and the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history).
 * The [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) are installed and configured with [SVG icon support](https://docs.telerik.com/blazor-ui/common-features/icons) and the [`Default` theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview).
 * The [Telerik font icon namespace](https://docs.telerik.com/blazor-ui/common-features/icons#icon-namespaces) is added in `_Imports.razor`, but it's commented out. The [Telerik font icon stylesheet](https://docs.telerik.com/blazor-ui/common-features/icons#font-icon-stylesheet) is added in `_Layout.cshtml` and `index.html`, but is commented out.
 * `Program.cs` in both apps contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
