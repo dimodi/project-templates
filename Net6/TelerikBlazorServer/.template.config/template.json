@@ -2,9 +2,9 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor" ],
-  "identity": "Telerik.Blazor.Server.Dimo",
-  "name": "Telerik Blazor Server",
-  "shortName": "tbserver",
+  "identity": "Telerik.Blazor.Server.Net6.Dimo",
+  "name": "Telerik Blazor Server .NET 6",
+  "shortName": "tbserver6",
   "sourceName":"TelerikBlazorServer",
   "tags": {
     "language": "C#",

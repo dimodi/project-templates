@@ -8,23 +8,31 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 * [Usage with Visual Studio](#usage-with-visual-studio)
 * [Usage with the .NET CLI](#usage-with-the-net-cli)
 * [Extras](#extras)
+* [Update]
 * [License](#license)
 
 ## Installation
 
 1. Close Visual Studio.
-1. Open your favorite terminal app.
-1. Clone the repository in some folder and remain in that folder.
-1. Execute `dotnet new install project-templates/TelerikBlazorServer` to install the Telerik Blazor Server template.
-1. Execute `dotnet new install project-templates/TelerikBlazorWasm` to install the Telerik Blazor WebAssembly template.
-1. Execute `dotnet new list` to verify the two project templates are installed. The command output should include:
+1. Open your favorite Terminal app.
+1. Clone the repository and go into the repository root folder (`/project-templates/`).
+1. Execute the `install.sh` script to install all project templates.
+    ```sh
+    sh install.sh
+    ```
+    Alternatively, use the `dotnet new install` command to install only the desired project template(s). The command should point to the folder, which holds the template, for example:
+    ```sh
+    dotnet new install Net6/TelerikBlazorServer
+    ```
+1. Execute `dotnet new list` to verify the desired project templates are installed. The command output should include:
 
 <pre>
-Template Name                  Short Name       Language    Tags                   
------------------------------  ---------------  ----------  -----------------------
+Template Name                       Short Name       Language    Tags
+----------------------------------  ---------------  ----------  -----------------------
 ...
-Telerik Blazor Server          tbserver         [C#]        Web/Blazor             
-Telerik Blazor WebAssembly     tbwasm           [C#]        Web/Blazor/WebAssembly 
+Telerik Blazor Server .NET 6        tbserver6        [C#]        Web/Blazor
+Telerik Blazor Server .NET 8        tbserver8        [C#]        Web/Blazor
+Telerik Blazor WebAssembly .NET 6   tbwasm6          [C#]        Web/Blazor/WebAssembly
 ...
 </pre>
 
@@ -37,9 +45,11 @@ On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` c
 ## Usage with the .NET CLI
 
 1. Create a new empty folder.
-1. Go to that folder in a terminal app.
-1. To create a new Telerik Blazor Server app, execute `dotnet new tbserver -n MyNewAppName`
-1. To create a new Telerik Blazor WebAssembly app, execute `dotnet new tbwasm -n MyNewAppName`
+1. Go to that folder in a Terminal app.
+1. To create a new Telerik Blazor app, use the short name of the template with the `dotnet new` command, for example
+    ```sh
+    dotnet new tbserver6 -n MyNewAppName
+    ```
 
 ## Extras
 
@@ -51,6 +61,19 @@ The project templates are almost identical to the default .NET 6 Blazor Server a
 * `Program.cs` in both apps contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
 * `Program.cs` in the Blazor Server app contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
 * The `SurveyPrompt` Razor component is removed.
+
+## Update or Uninstall
+
+1. Close Visual Studio.
+1. Open Terminal and go to the repository root folder.
+1. Execute the `update.sh` or `uninstall.sh` scripts
+    ```sh
+    sh update.sh
+    ```
+    Alternatively, use the `dotnet new uninstall` command to uninstall only the desired project template(s):
+    ```sh
+    dotnet new uninstall Net6/TelerikBlazorServer
+    ```
 
 ## License
 
