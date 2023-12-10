@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.SignalR;
 using TelerikBlazorServer.Components;
 
 var builder = WebApplication.CreateBuilder(args);
