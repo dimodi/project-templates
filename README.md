@@ -4,14 +4,14 @@ This repository provides Visual Studio project templates for [Telerik Blazor app
 
 When installed, the templates can be used to create new Blazor apps in Visual Studio or with `dotnet new` CLI commands.
 
-* [Installation](#installation)
-* [Usage with Visual Studio](#usage-with-visual-studio)
-* [Usage with the .NET CLI](#usage-with-the-net-cli)
+* [Install](#install)
+* [Use with Visual Studio](#use-with-visual-studio)
+* [Use with the .NET CLI](#use-with-the-net-cli)
 * [Extras](#extras)
-* [Update]
+* [Update or Uninstall](#update-or-uninstall)
 * [License](#license)
 
-## Installation
+## Install
 
 1. Close Visual Studio.
 1. Open your favorite Terminal app.
@@ -36,13 +36,13 @@ Telerik Blazor WebAssembly .NET 6   tbwasm6          [C#]        Web/Blazor/WebA
 ...
 </pre>
 
-## Usage with Visual Studio
+## Use with Visual Studio
 
 On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the Create New Project wizard. Make sure to select "All platforms" in the respective dropdown.
 
 On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category.
 
-## Usage with the .NET CLI
+## Usе with the .NET CLI
 
 1. Create a new empty folder.
 1. Go to that folder in a Terminal app.
