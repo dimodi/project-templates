@@ -5,7 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
+#if (RenderMode == "Auto")
     .AddInteractiveServerComponents()
+#endif
     .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddTelerikBlazor();
@@ -30,7 +32,9 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
+#if (RenderMode == "Auto")
     .AddInteractiveServerRenderMode()
+#endif
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(Counter).Assembly);
 

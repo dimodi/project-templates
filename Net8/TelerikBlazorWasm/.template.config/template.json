@@ -9,5 +9,24 @@
   "tags": {
     "language": "C#",
     "type": "solution"
+  },
+  "symbols": {
+    "RenderMode": {
+      "type": "parameter",
+      "description": "The Blazor render mode",
+      "datatype": "choice",
+      "choices": [
+          {
+              "choice": "Auto",
+              "description": "Auto (Server and WebAssembly)"
+          },
+          {
+              "choice": "WebAssembly",
+              "description": "WebAssembly only"
+          }
+      ],
+      "replaces": "$RENDER_MODE$",
+      "defaultValue": "WebAssembly"
+    }
   }
 }
