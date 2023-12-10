@@ -14,17 +14,21 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 ## Install
 
 1. Close Visual Studio.
-1. Open your favorite Terminal or Shell app.
-1. Clone the repository and go into the repository root folder (`/project-templates/`).
-1. Execute the `install.sh` script to install all project templates.
+1. Open your Terminal or Shell app.
+1. Clone the repository and go to the repository root folder (`/project-templates/`).
+1. Execute the `install.sh` script to install all project templates. On Windows:
+    ```sh
+    ./install.sh
+    ```
+    On macOS and Linux:
     ```sh
     sh install.sh
     ```
-    Alternatively, use the `dotnet new install` command to install only the desired project template(s). The command should point to the folder, which holds the template, for example:
+1. Instead of using the install script, you can also execute the `dotnet new install` command to install only selected project templates. The command should point to the folder, which holds the template, for example:
     ```sh
     dotnet new install Net6/TelerikBlazorServer
     ```
-1. Execute `dotnet new list` to verify the desired project templates are installed. The command output should include:
+1. Execute `dotnet new list` to verify the desired project templates are installed. The install script does that automatically. The command output should include:
 
 <pre>
 Template Name                       Short Name       Language    Tags
@@ -43,6 +47,8 @@ On **Windows**, the new project templates will appear in the `C#`, `Web` and `Bl
 
 On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category.
 
+When creating a WebAssembly app, make sure to select the server project as a startup project before running.
+
 ## Usе with the .NET CLI
 
 1. Open Terminal and go to the desired parent folder of your future app.
@@ -50,6 +56,8 @@ On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` c
     ```sh
     dotnet new tbserver6 -o MyNewAppName
     ```
+
+When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
 ### .NET 8 Interactivity
 
@@ -76,11 +84,15 @@ The project templates are almost identical to the default .NET SDK Blazor projec
 
 1. Close Visual Studio.
 1. Open Terminal and go to the repository root folder.
-1. Execute the `update.sh` or `uninstall.sh` scripts
+1. Execute the `update.sh` or `uninstall.sh` scripts. On Windows:
+    ```sh
+    ./update.sh
+    ```
+    On macOS and Linux:
     ```sh
     sh update.sh
     ```
-    Alternatively, use the `dotnet new uninstall` command to uninstall only the desired project template(s):
+    Alternatively, use the `dotnet new uninstall` command to uninstall only selected templates:
     ```sh
     dotnet new uninstall Net6/TelerikBlazorServer
     ```
