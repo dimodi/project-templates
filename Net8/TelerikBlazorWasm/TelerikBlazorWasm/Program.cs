@@ -49,6 +49,6 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
 #endif
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(Counter).Assembly);
+    .AddAdditionalAssemblies(typeof(TelerikBlazorWasm.Client._Imports).Assembly);
 
 app.Run();
