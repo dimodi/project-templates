@@ -11,7 +11,7 @@
     "type": "solution"
   },
   "symbols": {
-    "RenderMode": {
+    "rendermode": {
       "type": "parameter",
       "description": "The Blazor render mode",
       "datatype": "choice",

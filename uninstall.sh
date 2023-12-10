@@ -1,7 +1,7 @@
 echo
-echo ================================================
-echo Uninstalling Telerik Blazor project templates...
-echo ================================================
+echo ====================================================
+echo = Uninstalling Telerik Blazor project templates... =
+echo ====================================================
 echo
 
 dotnet new uninstall Net6/TelerikBlazorServer
