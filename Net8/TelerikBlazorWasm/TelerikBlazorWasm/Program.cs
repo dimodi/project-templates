@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-#if (RenderMode == "Auto")
+#if (rendermode == "Auto")
     .AddInteractiveServerComponents()
 #endif
     .AddInteractiveWebAssemblyComponents();
@@ -32,7 +32,7 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-#if (RenderMode == "Auto")
+#if (rendermode == "Auto")
     .AddInteractiveServerRenderMode()
 #endif
     .AddInteractiveWebAssemblyRenderMode()
