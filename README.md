@@ -14,17 +14,22 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 
 1. Close Visual Studio.
 1. Open your favorite terminal app.
-1. Clone the repository in some folder and remain in that folder.
-1. Execute `dotnet new install project-templates/TelerikBlazorServer` to install the Telerik Blazor Server template.
-1. Execute `dotnet new install project-templates/TelerikBlazorWasm` to install the Telerik Blazor WebAssembly template.
-1. Execute `dotnet new list` to verify the two project templates are installed. The command output should include:
+1. Clone the repository and remain in the parent folder of the repository.
+1. Use the `dotnet new install` command to install the desired project template(s). The command should point to the folder, which holds the template. The following script will install all templates:
+    ```sh
+    dotnet new install project-templates/Net6/TelerikBlazorServer && \
+    dotnet new install project-templates/Net8/TelerikBlazorServer && \
+    dotnet new install project-templates/Net6/TelerikBlazorWasm
+    ```
+1. Execute `dotnet new list` to verify the desired project templates are installed. The command output should include:
 
 <pre>
-Template Name                  Short Name       Language    Tags                   
------------------------------  ---------------  ----------  -----------------------
+Template Name                       Short Name       Language    Tags
+----------------------------------  ---------------  ----------  -----------------------
 ...
-Telerik Blazor Server          tbserver         [C#]        Web/Blazor             
-Telerik Blazor WebAssembly     tbwasm           [C#]        Web/Blazor/WebAssembly 
+Telerik Blazor Server .NET 6        tbserver6        [C#]        Web/Blazor
+Telerik Blazor Server .NET 8        tbserver8        [C#]        Web/Blazor
+Telerik Blazor WebAssembly .NET 6   tbwasm6          [C#]        Web/Blazor/WebAssembly
 ...
 </pre>
 
@@ -37,9 +42,11 @@ On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` c
 ## Usage with the .NET CLI
 
 1. Create a new empty folder.
-1. Go to that folder in a terminal app.
-1. To create a new Telerik Blazor Server app, execute `dotnet new tbserver -n MyNewAppName`
-1. To create a new Telerik Blazor WebAssembly app, execute `dotnet new tbwasm -n MyNewAppName`
+1. Go to that folder in a Terminal app.
+1. To create a new Telerik Blazor app, use the short name of the template with the `dotnet new` command, for example
+    ```sh
+    dotnet new tbserver6 -n MyNewAppName
+    ```
 
 ## Extras
 
