@@ -8,18 +8,21 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 * [Usage with Visual Studio](#usage-with-visual-studio)
 * [Usage with the .NET CLI](#usage-with-the-net-cli)
 * [Extras](#extras)
+* [Update]
 * [License](#license)
 
 ## Installation
 
 1. Close Visual Studio.
-1. Open your favorite terminal app.
-1. Clone the repository and remain in the parent folder of the repository.
-1. Use the `dotnet new install` command to install the desired project template(s). The command should point to the folder, which holds the template. The following script will install all templates:
+1. Open your favorite Terminal app.
+1. Clone the repository and go into the repository root folder (`/project-templates/`).
+1. Execute the `install.sh` script to install all project templates.
     ```sh
-    dotnet new install project-templates/Net6/TelerikBlazorServer && \
-    dotnet new install project-templates/Net8/TelerikBlazorServer && \
-    dotnet new install project-templates/Net6/TelerikBlazorWasm
+    sh install.sh
+    ```
+    Alternatively, use the `dotnet new install` command to install only the desired project template(s). The command should point to the folder, which holds the template, for example:
+    ```sh
+    dotnet new install Net6/TelerikBlazorServer
     ```
 1. Execute `dotnet new list` to verify the desired project templates are installed. The command output should include:
 
@@ -58,6 +61,19 @@ The project templates are almost identical to the default .NET 6 Blazor Server a
 * `Program.cs` in both apps contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
 * `Program.cs` in the Blazor Server app contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
 * The `SurveyPrompt` Razor component is removed.
+
+## Update or Uninstall
+
+1. Close Visual Studio.
+1. Open Terminal and go to the repository root folder.
+1. Execute the `update.sh` or `uninstall.sh` scripts
+    ```sh
+    sh update.sh
+    ```
+    Alternatively, use the `dotnet new uninstall` command to uninstall only the desired project template(s):
+    ```sh
+    dotnet new uninstall Net6/TelerikBlazorServer
+    ```
 
 ## License
 
