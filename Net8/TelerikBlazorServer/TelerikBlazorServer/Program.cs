@@ -8,6 +8,23 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddTelerikBlazor();
 
+// Upload file size limit on ASP.NET Core
+builder.Services.Configure<FormOptions>(options =>
+{
+    //options.MultipartBodyLengthLimit = 4_294_967_296; // 4 GB
+});
+// Upload file size limit on Kestrel
+builder.Services.Configure<KestrelServerOptions>(options =>
+{
+    //options.Limits.MaxRequestBodySize = 4_294_967_296; // 4 GB
+});
+
+// SignalR max message size for Editor, FileManager, FileSelect, PDF Viewer, Signature
+builder.Services.Configure<HubOptions>(options =>
+{
+    //options.MaximumReceiveMessageSize = 64 * 1024 * 1024; // 64 MB or use null for no limit
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

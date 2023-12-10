@@ -12,6 +12,17 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddTelerikBlazor();
 
+// Upload file size limit on ASP.NET Core
+builder.Services.Configure<FormOptions>(options =>
+{
+    //options.MultipartBodyLengthLimit = 4_294_967_296; // 4 GB
+});
+// Upload file size limit on Kestrel
+builder.Services.Configure<KestrelServerOptions>(options =>
+{
+    //options.Limits.MaxRequestBodySize = 4_294_967_296; // 4 GB
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
