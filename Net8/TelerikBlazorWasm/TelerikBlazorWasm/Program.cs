@@ -1,10 +1,14 @@
-using TelerikBlazorServer.Components;
+using TelerikBlazorWasm.Client.Pages;
+using TelerikBlazorWasm.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+#if (rendermode == "Auto")
+    .AddInteractiveServerComponents()
+#endif
+    .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddTelerikBlazor();
 
@@ -19,16 +23,14 @@ builder.Services.Configure<KestrelServerOptions>(options =>
     //options.Limits.MaxRequestBodySize = 4_294_967_296; // 4 GB
 });
 
-// SignalR max message size for Editor, FileManager, FileSelect, PDF Viewer, Signature
-builder.Services.Configure<HubOptions>(options =>
-{
-    //options.MaximumReceiveMessageSize = 64 * 1024 * 1024; // 64 MB or use null for no limit
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseWebAssemblyDebugging();
+}
+else
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
@@ -41,6 +43,10 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+#if (rendermode == "Auto")
+    .AddInteractiveServerRenderMode()
+#endif
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(Counter).Assembly);
 
 app.Run();
