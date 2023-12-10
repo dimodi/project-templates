@@ -13,7 +13,7 @@
   "symbols": {
     "rendermode": {
       "type": "parameter",
-      "description": "The Blazor render mode",
+      "description": "Select the global Blazor render mode (interactivity)",
       "datatype": "choice",
       "choices": [
           {
