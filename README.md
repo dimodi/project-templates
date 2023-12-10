@@ -33,6 +33,7 @@ Template Name                       Short Name       Language    Tags
 Telerik Blazor Server .NET 6        tbserver6        [C#]        Web/Blazor
 Telerik Blazor Server .NET 8        tbserver8        [C#]        Web/Blazor
 Telerik Blazor WebAssembly .NET 6   tbwasm6          [C#]        Web/Blazor/WebAssembly
+Telerik Blazor WebAssembly .NET 8   tbwasm8          [C#]        Web/Blazor/WebAssembly
 ...
 </pre>
 
