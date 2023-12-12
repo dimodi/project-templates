@@ -14,15 +14,11 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 ## Install
 
 1. Close Visual Studio.
-1. Download the NuGet package and the shell scripts [from the latest release](https://github.com/dimodi/project-templates/releases) to some folder.
+1. Download the NuGet package from the [latest release](https://github.com/dimodi/project-templates/releases) to some folder.
 1. Open your Terminal or Shell app and go to the folder from the previous step.
-1. Execute the `install.sh` script to install all project templates. On Windows:
+1. Execute the `dotnet new install` command:
     ```sh
-    ./install.sh
-    ```
-    On macOS and Linux:
-    ```sh
-    sh install.sh
+    dotnet new install Telerik.Blazor.Dimo.Templates.Package.*.nupkg
     ```
 
 ## Use with Visual Studio
@@ -66,15 +62,11 @@ The project templates are almost identical to the default .NET SDK Blazor projec
 
 ## Update or Uninstall
 
-1. To update, follow steps 1 - 3 from the [installation guide](#install).
-1. To update or uninstall, execute the `update.sh` or `uninstall.sh` script. On Windows:
+1. Remove the currently installed package:
     ```sh
-    ./update.sh
+    dotnet new uninstall Telerik.Blazor.Dimo.Templates.Package
     ```
-    On macOS and Linux:
-    ```sh
-    sh update.sh
-    ```
+1. Repeat the [installation steps](#install).
 
 ## License
 
