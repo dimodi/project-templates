@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
-  "identity": "Telerik.Blazor.WebAssembly.Net8.Dimo",
+  "identity": "Telerik.Blazor.Dimo.WebAssembly.Net8",
   "name": "Telerik Blazor WebAssembly .NET 8",
   "shortName": "tbwasm8",
   "sourceName":"TelerikBlazorWasm",

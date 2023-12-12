@@ -14,8 +14,8 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 ## Install
 
 1. Close Visual Studio.
-1. Open your Terminal or Shell app.
-1. Clone the repository and go to the repository root folder (`/project-templates/`).
+1. Download the NuGet package and the shell scripts [from the latest release](https://github.com/dimodi/project-templates/releases) to some folder.
+1. Open your Terminal or Shell app and go to the folder from the previous step.
 1. Execute the `install.sh` script to install all project templates. On Windows:
     ```sh
     ./install.sh
@@ -24,22 +24,6 @@ When installed, the templates can be used to create new Blazor apps in Visual St
     ```sh
     sh install.sh
     ```
-1. Instead of using the install script, you can also execute the `dotnet new install` command to install only selected project templates. The command should point to the folder, which holds the template, for example:
-    ```sh
-    dotnet new install Net6/TelerikBlazorServer
-    ```
-1. Execute `dotnet new list` to verify the desired project templates are installed. The install script does that automatically. The command output should include:
-
-<pre>
-Template Name                       Short Name       Language    Tags
-----------------------------------  ---------------  ----------  -----------------------
-...
-Telerik Blazor Server .NET 6        tbserver6        [C#]        Web/Blazor
-Telerik Blazor Server .NET 8        tbserver8        [C#]        Web/Blazor
-Telerik Blazor WebAssembly .NET 6   tbwasm6          [C#]        Web/Blazor/WebAssembly
-Telerik Blazor WebAssembly .NET 8   tbwasm8          [C#]        Web/Blazor/WebAssembly
-...
-</pre>
 
 ## Use with Visual Studio
 
@@ -82,19 +66,14 @@ The project templates are almost identical to the default .NET SDK Blazor projec
 
 ## Update or Uninstall
 
-1. Close Visual Studio.
-1. Open Terminal and go to the repository root folder.
-1. Execute the `update.sh` or `uninstall.sh` scripts. On Windows:
+1. To update, follow steps 1 - 3 from the [installation guide](#install).
+1. To update or uninstall, execute the `update.sh` or `uninstall.sh` script. On Windows:
     ```sh
     ./update.sh
     ```
     On macOS and Linux:
     ```sh
     sh update.sh
-    ```
-    Alternatively, use the `dotnet new uninstall` command to uninstall only selected templates:
-    ```sh
-    dotnet new uninstall Net6/TelerikBlazorServer
     ```
 
 ## License

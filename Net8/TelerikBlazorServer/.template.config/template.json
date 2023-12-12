@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor" ],
-  "identity": "Telerik.Blazor.Server.Net8.Dimo",
+  "identity": "Telerik.Blazor.Dimo.Server.Net8",
   "name": "Telerik Blazor Server .NET 8",
   "shortName": "tbserver8",
   "sourceName":"TelerikBlazorServer",
