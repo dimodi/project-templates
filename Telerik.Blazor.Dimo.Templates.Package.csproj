@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Version>1.0.0</Version>
     <PackageId>Telerik.Blazor.Dimo.Templates.Package</PackageId>
     <Title>Telerik Blazor Project Templates</Title>
@@ -9,10 +10,8 @@
     <Description>Blazor project templates that include Telerik UI for Blazor.</Description>
     <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-
-    <TargetFramework>netstandard2.0</TargetFramework>
-
+    <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
