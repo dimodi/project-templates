@@ -59,6 +59,7 @@ The project templates are almost identical to the default .NET SDK Blazor projec
 * `Program.cs` contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
 * `Program.cs` in the server apps contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
 * The `SurveyPrompt` Razor component is removed.
+* The `<button>` and `<table>` are replaced with Telerik Button and Grid.
 
 ## Update or Uninstall
 
