@@ -10,31 +10,21 @@
 
 @if (forecasts == null)
 {
-    <p><em>Loading...</em></p>
+    <TelerikLoaderContainer Visible="true" />
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <TelerikGrid Data="@forecasts"
+                 Sortable="true"
+                 FilterMode="@GridFilterMode.FilterRow"
+                 Pageable="true">
+        <GridColumns>
+            <GridColumn Field="@nameof(WeatherForecast.Date)" DisplayFormat="{0:d}" />
+            <GridColumn Field="@nameof(WeatherForecast.TemperatureC)" Title="Temp. (C)" />
+            <GridColumn Field="@nameof(WeatherForecast.TemperatureF)" Title="Temp. (F)" />
+            <GridColumn Field="@nameof(WeatherForecast.Summary)" />
+        </GridColumns>
+    </TelerikGrid>
 }
 
 @code {
@@ -45,4 +35,3 @@ else
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
     }
 }
-
