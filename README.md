@@ -46,7 +46,7 @@ The .NET 8 Server template (`tbserver8`) sets global `Server` interactivity.
 The .NET 8 WebAssembly template (`tbwasm8`) sets global `WebAssembly` interactivity. To create a project with `Auto` interactivity, set `rendermode` to `Auto` in the `dotnet new` command:
 
 ```sh
-dotnet new tbwasm8 -o MyNewAppName --rendermore Auto
+dotnet new tbwasm8 -o MyNewAppName --rendermode Auto
 ```
 
 ## Extras
