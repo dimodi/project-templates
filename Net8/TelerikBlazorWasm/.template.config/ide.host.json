@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json.schemastore.org/vs-2017.3.host",
+    "icon": "progress-logo.png",
+    "symbolInfo": [{
+        "id": "rendermode",
+        "name": {
+            "text": "Interactive Render Mode"
+        },
+        "isVisible": true
+    }]
+}
