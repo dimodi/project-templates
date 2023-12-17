@@ -40,6 +40,65 @@
         }
       ],
       "replaces": "$RENDER_MODE$"
+    },
+    "theme": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "default",
+      "description": "Select the Telerik theme",
+      "displayName": "Telerik Theme",
+      "choices": [
+        {
+          "choice": "default",
+          "displayName": "Default"
+        },
+        {
+          "choice": "bootstrap",
+          "displayName": "Bootstrap"
+        },
+        {
+          "choice": "material",
+          "displayName": "Material"
+        },
+        {
+          "choice": "fluent",
+          "displayName": "Fluent"
+        }
+      ],
+      "replaces": "$THEME$"
+    },
+    "cdn": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Load Telerik CSS and JS files from CDN",
+      "displayName": "Use Telerik CDN"
+    },
+    "icontype": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "Svg",
+      "description": "Select the Telerik icon type",
+      "displayName": "Global Icon Type",
+      "choices": [
+        {
+          "choice": "Svg",
+          "displayName": "SVG",
+          "description": "SVG Icons"
+        },
+        {
+          "choice": "Font",
+          "description": "Font Icons"
+        }
+      ],
+      "replaces": "$ICON_TYPE$"
+    },
+    "rtl": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Enable Right-to-Left support",
+      "displayName": "Enable RTL"
     }
   }
 }

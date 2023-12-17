@@ -4,7 +4,31 @@
     "symbolInfo": [{
         "id": "rendermode",
         "name": {
-            "text": "Interactive Render Mode (always global)"
+            "text": "Global Interactive Render Mode"
+        },
+        "isVisible": true
+    }, {
+        "id": "theme",
+        "name": {
+            "text": "Telerik Theme"
+        },
+        "isVisible": true
+    }, {
+        "id": "cdn",
+        "name": {
+            "text": "Use Telerik CDN"
+        },
+        "isVisible": true
+    }, {
+        "id": "icontype",
+        "name": {
+            "text": "Telerik Icon Type"
+        },
+        "isVisible": true
+    }, {
+        "id": "rtl",
+        "name": {
+            "text": "Enable RTL"
         },
         "isVisible": true
     }]
