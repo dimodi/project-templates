@@ -4,7 +4,7 @@
     "symbolInfo": [{
         "id": "rendermode",
         "name": {
-            "text": "Interactive Render Mode"
+            "text": "Interactive Render Mode (always global)"
         },
         "isVisible": true
     }]

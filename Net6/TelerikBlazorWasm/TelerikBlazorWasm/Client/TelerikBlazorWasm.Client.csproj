@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>{DOTNET_TFM}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -10,8 +10,14 @@
     <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <ItemGroup>
+<!--#if (Framework == "net6.0") -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.*" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.*" PrivateAssets="all" />
+<!--#endif-->
+<!--#if (Framework == "net7.0") -->
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.*" PrivateAssets="all" />
+<!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="*" />
   </ItemGroup>
 
