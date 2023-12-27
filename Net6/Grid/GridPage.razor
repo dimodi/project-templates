@@ -1,13 +1,13 @@
 @page "/"
 
-@*#if (binding == "OnRead")
+@*#if (datasource == "OnRead")
 @using Telerik.DataSource
 @using Telerik.DataSource.Extensions
 
 #endif*@
-<PageTitle>Grid</PageTitle>
+<PageTitle>GridPage</PageTitle>
 
-@*#if (binding == "OnRead")
+@*#if (datasource == "OnRead")
 <TelerikGrid OnRead="@OnGridRead"
 #else
 <TelerikGrid Data="@GridData"
@@ -29,7 +29,7 @@
 @code {
     private List<SampleModel> GridData { get; set; } = new();
 
-@*#if (binding == "OnRead")
+@*#if (datasource == "OnRead")
     private async Task OnGridRead(GridReadEventArgs args)
     {
         await Task.Delay(1);

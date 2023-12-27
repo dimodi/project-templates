@@ -5,12 +5,13 @@
   "identity": "Telerik.Blazor.Dimo.Grid",
   "name": "Telerik Blazor Grid",
   "shortName": "tbgrid",
+  "sourceName": "GridPage",
   "tags": {
     "language": "C#",
     "type": "item"
   },
   "symbols": {
-    "binding": {
+    "datasource": {
       "type": "parameter",
       "description": "How the component will receive its data",
       "datatype": "choice",
