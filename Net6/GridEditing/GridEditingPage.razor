@@ -1,0 +1,100 @@
+@page "/"
+
+@*#if (validation)
+@using System.ComponentModel.DataAnnotations
+
+#endif*@
+<PageTitle>GridEditingPage</PageTitle>
+
+<TelerikGrid Data="@GridData"
+             EditMode="@GridEditMode.$EDITMODE$"
+             OnUpdate="@OnGridUpdate"
+             OnCreate="@OnGridCreate"
+             OnDelete="@OnGridDelete">
+    <GridToolBarTemplate>
+        <GridCommandButton Command="Add">Add Item</GridCommandButton>
+    </GridToolBarTemplate>
+    <GridColumns>
+        <GridColumn Field="@nameof(SampleModel.Name)" />
+        <GridColumn Field="@nameof(SampleModel.Quantity)" />
+        <GridColumn Field="@nameof(SampleModel.StartDate)" DisplayFormat="{0:d}" />
+        <GridColumn Field="@nameof(SampleModel.IsActive)" />
+        <GridCommandColumn>
+@*#if (editmode != "Incell")
+            <GridCommandButton Command="Edit">Edit</GridCommandButton>
+#endif*@
+            <GridCommandButton Command="Delete">Delete</GridCommandButton>
+@*#if (editmode == "Inline")
+            <GridCommandButton Command="Save" ShowInEdit="true">Save</GridCommandButton>
+            <GridCommandButton Command="Cancel" ShowInEdit="true">Cancel</GridCommandButton>
+#endif*@
+        </GridCommandColumn>
+    </GridColumns>
+</TelerikGrid>
+
+@code {
+    private List<SampleModel> GridData { get; set; } = new();
+
+    private int LastId { get; set; }
+
+    private void OnGridUpdate(GridCommandEventArgs args)
+    {
+        var updatedItem = (SampleModel)args.Item;
+        var originalItemIndex = GridData.FindIndex(i => i.Id == updatedItem.Id);
+
+        if (originalItemIndex != -1)
+        {
+            GridData[originalItemIndex] = updatedItem;
+        }
+    }
+
+    private void OnGridCreate(GridCommandEventArgs args)
+    {
+        var createdItem = (SampleModel)args.Item;
+
+        createdItem.Id = ++LastId;
+
+        GridData.Insert(0, createdItem);
+    }
+
+    private void OnGridDelete(GridCommandEventArgs args)
+    {
+        var deletedItem = (SampleModel)args.Item;
+
+        GridData.Remove(deletedItem);
+    }
+
+    protected override void OnInitialized()
+    {
+        var rnd = new Random();
+
+        for (int i = 1; i <= 5; i++)
+        {
+            GridData.Add(new SampleModel()
+            {
+                Id = ++LastId,
+                Name = $"Name {LastId}",
+                GroupName = $"Group {LastId % 3 + 1}",
+                Price = rnd.Next(1, 100) * 1.23m,
+                Quantity = rnd.Next(0, 1000),
+                StartDate = DateTime.Now.AddDays(-rnd.Next(60, 1000)),
+                IsActive = LastId % 4 > 0
+            });
+        }
+    }
+
+    public class SampleModel
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+@*#if (validation)
+        [Required]
+#endif*@
+        public string Name { get; set; } = string.Empty;
+        public string GroupName { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }
+        public DateTime StartDate { get; set; }
+        public bool IsActive { get; set; }
+    }
+}

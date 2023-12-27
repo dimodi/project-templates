@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Dimo Dimov",
+  "classifications": [ "Web", "Blazor", "Code" ],
+  "identity": "Telerik.Blazor.Dimo.GridEditing",
+  "name": "Telerik Blazor Grid Editing",
+  "shortName": "tbgridedit",
+  "sourceName": "GridEditingPage",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "editmode": {
+      "type": "parameter",
+      "description": "The Grid edit mode",
+      "datatype": "choice",
+      "choices": [{
+          "choice": "Inline",
+          "description": "Inline edit mode"
+      },{
+        "choice": "Popup",
+        "description": "Popup edit mode"
+      },{
+        "choice": "Incell",
+        "description": "Incell edit mode"
+      }],
+      "defaultValue": "Inline",
+      "replaces": "$EDITMODE$"
+    },
+    "validation": {
+      "type": "parameter",
+      "description": "Whether to use validation in edit mode",
+      "datatype": "bool",
+      "defaultValue": "false"
+    }
+  }
+}
