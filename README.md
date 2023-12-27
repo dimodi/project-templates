@@ -1,6 +1,6 @@
-# Telerik Blazor Project Templates
+# Telerik Blazor Project and Item Templates
 
-This repository provides Visual Studio project templates for [Telerik Blazor apps](https://www.telerik.com/blazor-ui) with some convenient [extras](#extras).
+This repository provides Visual Studio templates for [Telerik Blazor apps](https://www.telerik.com/blazor-ui) with some convenient [extras](#extras).
 
 When installed, the templates can be used to create new Blazor apps in Visual Studio or with `dotnet new` CLI commands.
 
@@ -31,6 +31,14 @@ When creating a WebAssembly app, make sure to select the server project as a sta
 
 ## Usе with the .NET CLI
 
+For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
+
+```sh
+dotnet new tbgridedit --help
+```
+
+### Create Projects
+
 1. Open Terminal and go to the desired parent folder of your future app.
 1. Execute the `dotnet new` command with the short name of the template and the app name, for example:
     ```sh
@@ -49,9 +57,20 @@ The .NET 8 WebAssembly template (`tbwasm8`) sets global `WebAssembly` interactiv
 dotnet new tbwasm8 -o MyNewAppName --rendermode Auto
 ```
 
+### Create Items
+
+1. Open Terminal and go to a folder inside your existing app, for example `Pages` or `Components`.
+1. Execute the `dotnet new` command with the short name of the template and the file name, for example:
+    ```sh
+    dotnet new tbgrid -n MyNewGridPаge
+    ```
+1. The above command will produce a `MyNewGridPаge.razor` file inside the current folder.
+
 ## Extras
 
-The project templates are almost identical to the default .NET SDK Blazor project templates. The differences are:
+The **item** templates provide declarations of Telerik Blazor components together with dummy data, which includes different data types.
+
+The **project** templates are similar to the default .NET SDK Blazor project templates. The differences are:
 
 * The projects reference the latest minor .NET version and the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history).
 * The [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) are installed and configured with [SVG icon support](https://docs.telerik.com/blazor-ui/common-features/icons) and the [`Default` theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview).
