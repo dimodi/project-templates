@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Dimo Dimov",
+  "classifications": [ "Web", "Blazor", "Code" ],
+  "identity": "Telerik.Blazor.Dimo.Grid",
+  "name": "Telerik Blazor Grid",
+  "shortName": "tbgrid",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "binding": {
+      "type": "parameter",
+      "description": "How the component will receive its data",
+      "datatype": "choice",
+      "choices": [{
+          "choice": "Data",
+          "description": "Bind with Data parameter"
+      },{
+        "choice": "OnRead",
+        "description": "Bind with OnRead event"
+    }],
+      "defaultValue": "Data"
+    }
+  }
+}

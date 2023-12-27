@@ -5,7 +5,7 @@
   "identity": "Telerik.Blazor.Dimo.Server.Net6",
   "name": "Telerik Blazor Server .NET 6",
   "shortName": "tbserver6",
-  "sourceName":"TelerikBlazorServer",
+  "sourceName": "TelerikBlazorServer",
   "tags": {
     "language": "C#",
     "type": "solution"

@@ -1,26 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageType>Template</PackageType>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.3.0</Version>
-    <PackageId>Telerik.Blazor.Dimo.Templates.Package</PackageId>
-    <Title>Telerik Blazor Project Templates</Title>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Authors>Dimo Dimov</Authors>
-    <Description>Blazor project templates that include Telerik UI for Blazor.</Description>
-    <PackageTags>dotnet-new;templates;contoso</PackageTags>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
-	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <IncludeContentInPack>true</IncludeContentInPack>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <Description>Blazor project templates that include Telerik UI for Blazor.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeContentInPack>true</IncludeContentInPack>
     <NoWarn>$(NoWarn);NU5128;NU5119</NoWarn>
+    <PackageId>Telerik.Blazor.Dimo.Templates.Package</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>dotnet-new;templates</PackageTags>
+    <PackageType>Template</PackageType>
+    <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
+    <Title>Telerik Blazor Project Templates</Title>
+    <Version>1.5.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Net*\**\*" Exclude="Net*\**\bin\**;Net*\**\obj\**" />
     <Compile Remove="**\*" />
+    <Content Include="Net*\**\*" Exclude="Net*\**\bin\**;Net*\**\obj\**" />
     <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 

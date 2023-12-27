@@ -1,0 +1,75 @@
+@page "/"
+
+@*#if (binding == "OnRead")
+@using Telerik.DataSource
+@using Telerik.DataSource.Extensions
+
+#endif*@
+<PageTitle>Grid</PageTitle>
+
+@*#if (binding == "OnRead")
+<TelerikGrid OnRead="@OnGridRead"
+#else
+<TelerikGrid Data="@GridData"
+#endif*@
+             TItem="@SampleModel"
+             Pageable="true"
+             Sortable="true"
+             FilterMode="GridFilterMode.FilterRow">
+    <GridColumns>
+        <GridColumn Field="@nameof(SampleModel.Name)" />
+        <GridColumn Field="@nameof(SampleModel.GroupName)" />
+        <GridColumn Field="@nameof(SampleModel.Price)" />
+        <GridColumn Field="@nameof(SampleModel.Quantity)" />
+        <GridColumn Field="@nameof(SampleModel.StartDate)" />
+        <GridColumn Field="@nameof(SampleModel.IsActive)" />
+    </GridColumns>
+</TelerikGrid>
+
+@code {
+    private List<SampleModel> GridData { get; set; } = new();
+
+@*#if (binding == "OnRead")
+    private async Task OnGridRead(GridReadEventArgs args)
+    {
+        await Task.Delay(1);
+
+        DataSourceResult result = GridData.ToDataSourceResult(args.Request);
+
+        args.Data = result.Data;
+        args.Total = result.Total;
+        args.AggregateResults = result.AggregateResults;
+    }
+
+#endif*@
+    protected override void OnInitialized()
+    {
+        var rnd = new Random();
+
+        for (int i = 1; i <= 7; i++)
+        {
+            GridData.Add(new SampleModel()
+            {
+                Id = i,
+                Name = $"Name {i}",
+                GroupName = $"Group {i % 3 + 1}",
+                Price = rnd.Next(1, 100) * 1.23m,
+                Quantity = rnd.Next(0, 1000),
+                StartDate = DateTime.Now.AddDays(-rnd.Next(60, 1000)),
+                IsActive = i % 4 > 0
+            });
+        }
+    }
+
+    public class SampleModel
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string GroupName { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }
+        public DateTime StartDate { get; set; }
+        public bool IsActive { get; set; }
+    }
+}

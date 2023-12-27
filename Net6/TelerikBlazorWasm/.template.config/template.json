@@ -5,7 +5,7 @@
   "identity": "Telerik.Blazor.Dimo.WebAssembly.Net6",
   "name": "Telerik Blazor WebAssembly .NET 6",
   "shortName": "tbwasm6",
-  "sourceName":"TelerikBlazorWasm",
+  "sourceName": "TelerikBlazorWasm",
   "tags": {
     "language": "C#",
     "type": "solution"
