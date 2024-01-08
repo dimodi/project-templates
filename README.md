@@ -29,7 +29,7 @@ On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` c
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
-## Usе with the .NET CLI
+## Use with the .NET CLI
 
 For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
 
