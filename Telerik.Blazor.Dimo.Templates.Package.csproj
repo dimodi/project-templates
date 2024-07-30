@@ -21,13 +21,13 @@
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <Title>Telerik Blazor Project Templates</Title>
-    <Version>1.4.0</Version>
+    <Version>1.4.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="**\*" />
     <Content Include="Items\**\*;Projects\Net*\**\*" Exclude="Projects\Net*\**\bin\**;Projects\Net*\**\obj\**" />
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
