@@ -1,7 +1,11 @@
 ﻿@inherits LayoutComponentBase
 
+@*#if (rtl)
 <TelerikRootComponent IconType="@IconType.$ICON_TYPE$"
-                      EnableRtl="$RTL$">
+                      EnableRtl="true">
+#else
+<TelerikRootComponent IconType="@IconType.$ICON_TYPE$">
+#endif*@
     <div class="page">
         <div class="sidebar">
             <NavMenu />
