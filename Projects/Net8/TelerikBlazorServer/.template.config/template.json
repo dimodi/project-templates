@@ -5,9 +5,97 @@
   "identity": "Telerik.Blazor.Dimo.Server.Net8",
   "name": "Telerik Blazor Server .NET 8",
   "shortName": "tbserver8",
+  "description": "Blazor Web App with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
   "tags": {
     "language": "C#",
     "type": "solution"
+  },
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [{
+          "choice": "net8.0",
+          "description": "Target .NET 8.0"
+      }],
+      "replaces": "{DOTNET_TFM}",
+      "defaultValue": "net8.0"
+    },
+    "rendermode": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "Server",
+      "description": "Select the global Blazor render mode (interactivity)",
+      "displayName": "Interactive Render Mode",
+      "choices": [
+        {
+          "choice": "Server",
+          "description": "Server"
+        }
+      ],
+      "replaces": "$RENDER_MODE$"
+    },
+    "theme": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "default",
+      "description": "Select the Telerik theme",
+      "displayName": "Telerik Theme",
+      "choices": [
+        {
+          "choice": "default",
+          "displayName": "Default"
+        },
+        {
+          "choice": "bootstrap",
+          "displayName": "Bootstrap"
+        },
+        {
+          "choice": "material",
+          "displayName": "Material"
+        },
+        {
+          "choice": "fluent",
+          "displayName": "Fluent"
+        }
+      ],
+      "replaces": "$THEME$"
+    },
+    "cdn": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Load Telerik CSS and JS files from CDN",
+      "displayName": "Use Telerik CDN"
+    },
+    "icontype": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "Svg",
+      "description": "Select the Telerik icon type",
+      "displayName": "Global Icon Type",
+      "choices": [
+        {
+          "choice": "Svg",
+          "displayName": "SVG",
+          "description": "SVG Icons"
+        },
+        {
+          "choice": "Font",
+          "description": "Font Icons"
+        }
+      ],
+      "replaces": "$ICON_TYPE$"
+    },
+    "rtl": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Enable Right-to-Left support",
+      "displayName": "Enable RTL",
+      "replaces": "$RTL$"
+    }
   }
 }

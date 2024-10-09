@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="TelerikBlazorServer.styles.css" />
-    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css?@telerikUiForBlazorVersion" />
-    @*<link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@telerikUiForBlazorVersion" />*@
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-$THEME$/all.css?@telerikUiForBlazorVersion" />
+    @*#if (icontype == "Font")
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@telerikUiForBlazorVersion" />
+    #endif*@
     <link rel="icon" type="image/png" href="favicon.png" />
     <HeadOutlet @rendermode="@InteractiveServer" />
 </head>
