@@ -5,7 +5,7 @@
   "identity": "Dimodi.Telerik.Blazor.Server.Net8",
   "name": "Telerik Blazor Server .NET 8",
   "shortName": "tbserver8",
-  "description": "Blazor Web App with Telerik Blazor components installed",
+  "description": "Blazor WebApp with global interactive Server render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
   "tags": {
     "language": "C#",

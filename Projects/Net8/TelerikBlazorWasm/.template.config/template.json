@@ -5,7 +5,7 @@
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Net8",
   "name": "Telerik Blazor WebAssembly .NET 8",
   "shortName": "tbwasm8",
-  "description": "Blazor WebAssembly app with Telerik Blazor components installed",
+  "description": "Blazor WebApp with global interactive WebAssembly or Auto render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
   "tags": {
     "language": "C#",
