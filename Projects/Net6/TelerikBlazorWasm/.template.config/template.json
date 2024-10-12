@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
-  "identity": "Telerik.Blazor.Dimo.WebAssembly.Net6",
+  "identity": "Dimodi.Telerik.Blazor.WebAssembly.Net6",
   "name": "Telerik Blazor WebAssembly .NET 6",
   "shortName": "tbwasm6",
   "sourceName": "TelerikBlazorWasm",

@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "Code" ],
-  "identity": "Telerik.Blazor.Dimo.Grid",
+  "identity": "Dimodi.Telerik.Blazor.Grid",
   "name": "Telerik Blazor Grid",
   "shortName": "tbgrid",
   "sourceName": "GridPage",

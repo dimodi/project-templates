@@ -18,7 +18,7 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 1. Open your Terminal or Shell app and go to the folder from the previous step.
 1. Execute the `dotnet new install` command:
     ```sh
-    dotnet new install Telerik.Blazor.Dimo.Templates.Package.*.nupkg
+    dotnet new install Dimodi.Telerik.Blazor.Templates.*.nupkg
     ```
 
 ## Use with Visual Studio
@@ -72,20 +72,24 @@ The **item** templates provide declarations of Telerik Blazor components togethe
 
 The **project** templates are similar to the default .NET SDK Blazor project templates. The differences are:
 
-* The projects reference the latest minor .NET version and the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history).
-* The [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) are installed and configured with [SVG icon support](https://docs.telerik.com/blazor-ui/common-features/icons) and the [`Default` theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview).
-* The [Telerik font icon namespace](https://docs.telerik.com/blazor-ui/common-features/icons#icon-namespaces) is added in `_Imports.razor`, but it's commented out. The [Telerik font icon stylesheet](https://docs.telerik.com/blazor-ui/common-features/icons#font-icon-stylesheet) is added in `_Layout.cshtml`, `index.html`, or `App.razor` (depending on the .NET version and hosting model), but is commented out.
+* The apps reference the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history). The WebAssembly standalone apps reference the latest minor .NET version.
+* The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need).
+* You can configure some settings related to the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (see the default values in the brackets):
+    * [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
+    * [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
+    * [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled)
+    * [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) (disabled)
 * The [Telerik CSS and JS files are loaded with a query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades.
 * `Program.cs` contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
-* `Program.cs` in the server apps contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
+* `Program.cs` in server apps contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
 * The `SurveyPrompt` Razor component is removed.
-* The `<button>` and `<table>` are replaced with Telerik Button and Grid.
+* The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
 
 ## Update or Uninstall
 
 1. Remove the currently installed package:
     ```sh
-    dotnet new uninstall Telerik.Blazor.Dimo.Templates.Package
+    dotnet new uninstall Dimodi.Telerik.Blazor.Templates
     ```
 1. Repeat the [installation steps](#install).
 
