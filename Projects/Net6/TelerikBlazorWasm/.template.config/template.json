@@ -5,6 +5,7 @@
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Net6",
   "name": "Telerik Blazor WebAssembly .NET 6",
   "shortName": "tbwasm6",
+  "description": "Blazor Web App with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
   "tags": {
     "language": "C#",

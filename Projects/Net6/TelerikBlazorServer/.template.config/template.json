@@ -5,6 +5,7 @@
   "identity": "Dimodi.Telerik.Blazor.Server.Net6",
   "name": "Telerik Blazor Server .NET 6",
   "shortName": "tbserver6",
+  "description": "Blazor Web App with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
   "tags": {
     "language": "C#",
