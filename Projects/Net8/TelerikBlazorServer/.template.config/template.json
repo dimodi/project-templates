@@ -3,7 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor" ],
   "identity": "Dimodi.Telerik.Blazor.Server.Net8",
-  "name": "Blazor Web App with Server render mode",
+  "name": "Telerik Blazor Server Web App",
   "shortName": "tbserver8",
   "description": "Blazor Web App with global interactive Server render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",

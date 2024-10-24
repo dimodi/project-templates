@@ -3,7 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Net8",
-  "name": "Blazor Web App with WebAssembly or Auto render mode",
+  "name": "Telerik Blazor WebAssembly or Auto Web App",
   "shortName": "tbwasm8",
   "description": "Blazor Web App with global interactive WebAssembly or Auto render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",

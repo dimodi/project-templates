@@ -31,6 +31,12 @@ When creating a WebAssembly app, make sure to select the server project as a sta
 
 ## Use with the .NET CLI
 
+To see all available project and item templates, execute the `dotnet new list` command with the `--author` option:
+
+```sh
+dotnet new list --author="Dimo Dimov"
+```
+
 For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
 
 ```sh
