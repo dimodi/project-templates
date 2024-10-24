@@ -3,7 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Net6",
-  "name": "Telerik Blazor WebAssembly .NET 6",
+  "name": "Blazor WebAssembly Hosted App",
   "shortName": "tbwasm6",
   "description": "Blazor WebAssembly App (ASP.NET Core hosted) with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
