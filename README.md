@@ -72,7 +72,7 @@ The Blazor Server Web App template (`dimodi-blazor-server`) sets global `Server`
 The Blazor WebAssembly Web App template (`dimodi-blazor-wasmauto`) sets global `WebAssembly` or `Auto` interactivity. To create a project with `Auto` interactivity, set `rendermode` to `Auto` in the `dotnet new` command:
 
 ```sh
-dotnet new tbwasm8 -o MyNewAppName --rendermode Auto
+dotnet new dimodi-blazor-wasmauto -o MyNewAppName --rendermode Auto
 ```
 
 ### Create Items
