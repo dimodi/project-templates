@@ -4,7 +4,7 @@
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Net6",
   "name": "Telerik Blazor WebAssembly App",
-  "shortName": "tbwasm6",
+  "shortName": "dimodi-blazorwasm",
   "description": "Blazor WebAssembly App (ASP.NET Core hosted) with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
   "tags": {

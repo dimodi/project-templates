@@ -8,10 +8,22 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 * [Use with Visual Studio](#use-with-visual-studio)
 * [Use with the .NET CLI](#use-with-the-net-cli)
 * [Extras](#extras)
-* [Update or Uninstall](#update-or-uninstall)
+* [Update](#update)
+* [Uninstall](#uninstall)
 * [License](#license)
 
 ## Install
+
+### Install From nuget.org
+
+1. Close Visual Studio.
+1. Open your Terminal or Shell app.
+1. Execute the `dotnet new install` command:
+    ```sh
+    dotnet new install Dimodi.Telerik.Blazor.Templates
+    ```
+
+### Install From GitHub
 
 1. Close Visual Studio.
 1. Download the NuGet package from the [latest release](https://github.com/dimodi/project-templates/releases) to some folder.
@@ -40,7 +52,7 @@ dotnet new list --author="Dimo Dimov"
 For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
 
 ```sh
-dotnet new tbgridedit --help
+dotnet new dimodi-gridedit --help
 ```
 
 ### Create Projects
@@ -48,16 +60,16 @@ dotnet new tbgridedit --help
 1. Open Terminal and go to the desired parent folder of your future app.
 1. Execute the `dotnet new` command with the short name of the template and the app name, for example:
     ```sh
-    dotnet new tbserver6 -o MyNewAppName
+    dotnet new dimodi-blazor-server -o MyNewAppName
     ```
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
-### .NET 8 Interactivity
+### Interactive Render Mode
 
-The .NET 8 Server template (`tbserver8`) sets global `Server` interactivity.
+The Blazor Server Web App template (`dimodi-blazor-server`) sets global `Server` interactivity location.
 
-The .NET 8 WebAssembly template (`tbwasm8`) sets global `WebAssembly` interactivity. To create a project with `Auto` interactivity, set `rendermode` to `Auto` in the `dotnet new` command:
+The Blazor WebAssembly Web App template (`dimodi-blazor-wasmauto`) sets global `WebAssembly` or `Auto` interactivity. To create a project with `Auto` interactivity, set `rendermode` to `Auto` in the `dotnet new` command:
 
 ```sh
 dotnet new tbwasm8 -o MyNewAppName --rendermode Auto
@@ -68,7 +80,7 @@ dotnet new tbwasm8 -o MyNewAppName --rendermode Auto
 1. Open Terminal and go to a folder inside your existing app, for example `Pages` or `Components`.
 1. Execute the `dotnet new` command with the short name of the template and the file name, for example:
     ```sh
-    dotnet new tbgrid -n MyNewGridPаge
+    dotnet new dimodi-grid -n MyNewGridPаge
     ```
 1. The above command will produce a `MyNewGridPаge.razor` file inside the current folder.
 
@@ -91,13 +103,31 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
 * The `SurveyPrompt` Razor component is removed.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
 
-## Update or Uninstall
+## Update
+
+### Update From nuget.org
+
+Execute the `dotnet new update` command:
+
+```sh
+dotnet new update Dimodi.Telerik.Blazor.Templates
+```
+
+### Update from GitHub
 
 1. Remove the currently installed package:
     ```sh
     dotnet new uninstall Dimodi.Telerik.Blazor.Templates
     ```
-1. Repeat the [installation steps](#install).
+1. Repeat the [GitHub installation steps](#install-from-github).
+
+## Uninstall
+
+To remove the currently installed package, execute the `dotnet new uninstall` command:
+
+```sh
+dotnet new uninstall Dimodi.Telerik.Blazor.Templates
+```
 
 ## License
 

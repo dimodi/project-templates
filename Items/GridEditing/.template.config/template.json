@@ -4,7 +4,7 @@
   "classifications": [ "Web", "Blazor", "Code" ],
   "identity": "Dimodi.Telerik.Blazor.GridEditing",
   "name": "Telerik Blazor Grid Editing",
-  "shortName": "tbgridedit",
+  "shortName": "dimodi-grid-edit",
   "sourceName": "GridEditingPage",
   "tags": {
     "language": "C#",

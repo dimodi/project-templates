@@ -4,7 +4,7 @@
   "classifications": [ "Web", "Blazor" ],
   "identity": "Dimodi.Telerik.Blazor.Server.Net8",
   "name": "Telerik Blazor Server Web App",
-  "shortName": "tbserver8",
+  "shortName": "dimodi-blazor-server",
   "description": "Blazor Web App with global interactive Server render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
   "tags": {

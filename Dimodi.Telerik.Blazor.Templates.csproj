@@ -7,6 +7,7 @@
   <PropertyGroup>
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
     <Description>Blazor templates that include Telerik UI for Blazor</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -16,12 +17,18 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>
+      * Improved the project template names
+      * Improved the template short names
+
+      See https://github.com/dimodi/project-templates/releases for release notes for all versions
+    </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates</PackageTags>
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <Title>Telerik Blazor Project Templates</Title>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

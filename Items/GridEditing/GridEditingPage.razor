@@ -42,7 +42,7 @@
         var updatedItem = (SampleModel)args.Item;
         var originalItemIndex = GridData.FindIndex(i => i.Id == updatedItem.Id);
 
-        if (originalItemIndex != -1)
+        if (originalItemIndex >= 0)
         {
             GridData[originalItemIndex] = updatedItem;
         }
@@ -66,8 +66,6 @@
 
     protected override void OnInitialized()
     {
-        var rnd = new Random();
-
         for (int i = 1; i <= 5; i++)
         {
             GridData.Add(new SampleModel()
@@ -75,9 +73,9 @@
                 Id = ++LastId,
                 Name = $"Name {LastId}",
                 GroupName = $"Group {LastId % 3 + 1}",
-                Price = rnd.Next(1, 100) * 1.23m,
-                Quantity = rnd.Next(0, 1000),
-                StartDate = DateTime.Now.AddDays(-rnd.Next(60, 1000)),
+                Price = Random.Shared.Next(1, 100) * 1.23m,
+                Quantity = Random.Shared.Next(0, 1000),
+                StartDate = DateTime.Now.AddDays(-Random.Shared.Next(60, 1000)),
                 IsActive = LastId % 4 > 0
             });
         }

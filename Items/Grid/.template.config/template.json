@@ -4,7 +4,7 @@
   "classifications": [ "Web", "Blazor", "Code" ],
   "identity": "Dimodi.Telerik.Blazor.Grid",
   "name": "Telerik Blazor Grid",
-  "shortName": "tbgrid",
+  "shortName": "dimodi-grid",
   "sourceName": "GridPage",
   "tags": {
     "language": "C#",
