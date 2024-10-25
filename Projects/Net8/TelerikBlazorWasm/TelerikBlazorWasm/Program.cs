@@ -41,7 +41,11 @@ else
 
 app.UseHttpsRedirection();
 
+#if (Framework == "net8.0")
 app.UseStaticFiles();
+#else
+app.MapStaticAssets();
+#endif
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
