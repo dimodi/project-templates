@@ -23,7 +23,7 @@
         "choice": "net9.0",
         "description": "Target .NET 9.0"
     }],
-      "replaces": "{DOTNET_TFM}",
+      "replaces": "{TVAR_NETVERSION}",
       "defaultValue": "net8.0"
     },
     "rendermode": {
@@ -38,7 +38,7 @@
           "description": "Server"
         }
       ],
-      "replaces": "$RENDER_MODE$"
+      "replaces": "{TVAR_RENDERMODE}"
     },
     "theme": {
       "type": "parameter",
@@ -64,7 +64,7 @@
           "displayName": "Fluent"
         }
       ],
-      "replaces": "$THEME$"
+      "replaces": "{TVAR_THEME}"
     },
     "cdn": {
       "type": "parameter",
@@ -90,15 +90,14 @@
           "description": "Font Icons"
         }
       ],
-      "replaces": "$ICON_TYPE$"
+      "replaces": "{TVAR_ICONTYPE}"
     },
     "rtl": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Enable Right-to-Left support",
-      "displayName": "Enable RTL",
-      "replaces": "$RTL$"
+      "displayName": "Enable RTL"
     }
   }
 }

@@ -23,7 +23,7 @@
         "choice": "net7.0",
         "description": "Target .NET 7.0"
     }],
-      "replaces": "{DOTNET_TFM}",
+      "replaces": "{TVAR_NETVERSION}",
       "defaultValue": "net6.0"
     }
   }

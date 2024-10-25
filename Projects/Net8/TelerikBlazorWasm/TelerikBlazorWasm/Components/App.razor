@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="TelerikBlazorWasm.styles.css" />
-    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-$THEME$/all.css?@telerikUiForBlazorVersion" />
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css?@telerikUiForBlazorVersion" />
     @*#if (icontype == "Font")
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@telerikUiForBlazorVersion" />
     #endif*@
     <link rel="icon" type="image/png" href="favicon.png" />
-    <HeadOutlet @rendermode="@Interactive$RENDER_MODE$" />
+    <HeadOutlet @rendermode="@Interactive{TVAR_RENDERMODE}" />
 </head>
 
 <body>
-    <Routes @rendermode="@Interactive$RENDER_MODE$" />
+    <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
     <script src="_framework/blazor.web.js" autostart="false"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
