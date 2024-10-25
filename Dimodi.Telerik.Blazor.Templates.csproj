@@ -18,8 +18,7 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      * Improved the project template names
-      * Improved the template short names
+      * Added support for .NET 9
 
       See https://github.com/dimodi/project-templates/releases for release notes for all versions
     </PackageReleaseNotes>
@@ -28,7 +27,7 @@
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <Title>Telerik Blazor Project Templates</Title>
-    <Version>2.2.0</Version>
+    <Version>2.3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

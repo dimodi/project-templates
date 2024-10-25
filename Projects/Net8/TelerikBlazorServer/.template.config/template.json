@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor" ],
-  "identity": "Dimodi.Telerik.Blazor.Server.Net8",
+  "identity": "Dimodi.Telerik.Blazor.WebApp.Server",
   "name": "Telerik Blazor Server Web App",
   "shortName": "dimodi-blazor-server",
   "description": "Blazor Web App with global interactive Server render mode, and Telerik Blazor components installed",
