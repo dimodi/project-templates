@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-#if (rendermode == "Auto")
+#if (TPARAM_RENDERMODE == "Auto")
     .AddInteractiveServerComponents()
 #endif
     .AddInteractiveWebAssemblyComponents();
@@ -49,7 +49,7 @@ app.MapStaticAssets();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-#if (rendermode == "Auto")
+#if (TPARAM_RENDERMODE == "Auto")
     .AddInteractiveServerRenderMode()
 #endif
     .AddInteractiveWebAssemblyRenderMode()

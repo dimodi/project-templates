@@ -26,7 +26,7 @@
       "replaces": "{TVAR_NETVERSION}",
       "defaultValue": "net8.0"
     },
-    "rendermode": {
+    "TPARAM_RENDERMODE": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Server",
@@ -40,7 +40,7 @@
       ],
       "replaces": "{TVAR_RENDERMODE}"
     },
-    "theme": {
+    "TPARAM_THEME": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "default",
@@ -66,14 +66,14 @@
       ],
       "replaces": "{TVAR_THEME}"
     },
-    "cdn": {
+    "TPARAM_CDN": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Load Telerik CSS and JS files from CDN",
       "displayName": "Use Telerik CDN"
     },
-    "icontype": {
+    "TPARAM_ICONTYPE": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Svg",
@@ -92,7 +92,7 @@
       ],
       "replaces": "{TVAR_ICONTYPE}"
     },
-    "rtl": {
+    "TPARAM_RTL": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",

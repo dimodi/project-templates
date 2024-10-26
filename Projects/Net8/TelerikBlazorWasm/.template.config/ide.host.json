@@ -2,31 +2,31 @@
   "$schema": "http://json.schemastore.org/vs-2017.3.host",
   "icon": "progress-logo.png",
   "symbolInfo": [{
-      "id": "rendermode",
+      "id": "TPARAM_RENDERMODE",
       "name": {
           "text": "Global Interactive Render Mode"
       },
       "isVisible": true
   }, {
-      "id": "theme",
+      "id": "TPARAM_THEME",
       "name": {
           "text": "Telerik Theme"
       },
       "isVisible": true
   }, {
-      "id": "cdn",
+      "id": "TPARAM_CDN",
       "name": {
           "text": "Use Telerik CDN"
       },
       "isVisible": true
   }, {
-      "id": "icontype",
+      "id": "TPARAM_ICONTYPE",
       "name": {
           "text": "Telerik Icon Type"
       },
       "isVisible": true
   }, {
-      "id": "rtl",
+      "id": "TPARAM_RTL",
       "name": {
           "text": "Enable RTL"
       },
