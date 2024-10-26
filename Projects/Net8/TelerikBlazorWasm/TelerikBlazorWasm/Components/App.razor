@@ -9,13 +9,13 @@
     @*#if (TPARAM_CDN)
     <script src="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/telerik-blazor.min.js" defer></script>
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main.css" />
-    @*#if (TPARAM_ICONTYPE == "Font")
+    #if (TPARAM_ICONTYPE == "Font")
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/kendo-font-icons/font-icons.css" />
     #endif
     #else
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?@telerikUiForBlazorVersion" defer></script>
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css?@telerikUiForBlazorVersion" />
-    @*#if (TPARAM_ICONTYPE == "Font")
+    #if (TPARAM_ICONTYPE == "Font")
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@telerikUiForBlazorVersion" />
     #endif
     #endif*@
