@@ -18,6 +18,7 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
+
       Breaking changes:
       * Renamed the CLI option names
 
@@ -29,6 +30,7 @@
       * Referenced a newer System.Private.Uri version to avoid a vulnerability
 
       See https://github.com/dimodi/project-templates/releases for release notes for all versions
+
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates</PackageTags>
