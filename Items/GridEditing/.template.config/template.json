@@ -11,7 +11,7 @@
     "type": "item"
   },
   "symbols": {
-    "editmode": {
+    "edit-mode": {
       "type": "parameter",
       "description": "The Grid edit mode",
       "datatype": "choice",
@@ -26,7 +26,7 @@
         "description": "Incell edit mode"
       }],
       "defaultValue": "Inline",
-      "replaces": "$EDITMODE$"
+      "replaces": "{TVAR_EDITMODE}"
     },
     "validation": {
       "type": "parameter",

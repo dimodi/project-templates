@@ -7,7 +7,7 @@
 <PageTitle>GridEditingPage</PageTitle>
 
 <TelerikGrid Data="@GridData"
-             EditMode="@GridEditMode.$EDITMODE$"
+             EditMode="@GridEditMode.{TVAR_EDITMODE}"
              OnUpdate="@OnGridUpdate"
              OnCreate="@OnGridCreate"
              OnDelete="@OnGridDelete">

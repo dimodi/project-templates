@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    @*#if (TPARAM_CDN)
+    @*#if (cdn)
     <script src="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/telerik-blazor.min.js" defer></script>
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main.css" />
-    @*#if (TPARAM_ICONTYPE == "Font")
+    @*#if (icon-type == "Font")
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-font-icons/font-icons.css" />
     #endif*@
     #else
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?@TelerikUiForBlazorVersion" defer></script>
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css?@TelerikUiForBlazorVersion" />
-    @*#if (TPARAM_ICONTYPE == "Font")
+    @*#if (icon-type == "Font")
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@TelerikUiForBlazorVersion" />
     #endif*@
     #endif*@
     @*#if (Framework == "net8.0")
-    @*#if (TPARAM_RTL)
+    @*#if (rtl)
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.rtl.min.css" />
     #else
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="TelerikBlazorServer.styles.css" />
     #else
-    @*#if (TPARAM_RTL)
+    @*#if (rtl)
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.rtl.min.css"]" />
     #else
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
@@ -40,7 +40,7 @@
     <HeadOutlet @rendermode="@InteractiveServer" />
 </head>
 
-@*#if (TPARAM_RTL)
+@*#if (rtl)
 <body dir="rtl">
 #else
 <body>
