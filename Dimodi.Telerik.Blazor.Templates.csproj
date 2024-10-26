@@ -18,9 +18,11 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      * Added .NET 9 Blazor Web App project templates.
-      * Added CDN support for Telerik UI for Blazor static assets.
-      * Added RTL support for the app when RTL support is enabled for the Telerik components.
+      Features:
+      N/A
+
+      Fixes:
+      * Referenced .NET 9 RC NuGet packages explicitly
 
       See https://github.com/dimodi/project-templates/releases for release notes for all versions
     </PackageReleaseNotes>
@@ -29,7 +31,7 @@
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <Title>Telerik Blazor Project Templates</Title>
-    <Version>2.4.0</Version>
+    <Version>2.4.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
