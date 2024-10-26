@@ -20,11 +20,19 @@
     #endif
     #endif*@
     @*#if (Framework == "net8.0")
+    #if (TPARAM_RTL)
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.rtl.min.css" />
+    #else
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    #endif
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="TelerikBlazorWasm.styles.css" />
     #else
+    #if (TPARAM_RTL)
+    <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.rtl.min.css"]" />
+    #else
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
+    #endif
     <link rel="stylesheet" href="@Assets["app.css"]" />
     <link rel="stylesheet" href="@Assets["TelerikBlazorWasm.styles.css"]" />
     <ImportMap />
@@ -33,7 +41,11 @@
     <HeadOutlet @rendermode="@Interactive{TVAR_RENDERMODE}" />
 </head>
 
+@*#if (TPARAM_RTL)
+<body dir="rtl">
+#else
 <body>
+#endif*@
     <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
     <script src="_framework/blazor.web.js" autostart="false"></script>
     <script>
