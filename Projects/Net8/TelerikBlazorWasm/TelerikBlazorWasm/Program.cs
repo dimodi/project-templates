@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
-using TelerikBlazorWasm.Client.Pages;
 using TelerikBlazorWasm.Components;
 
 var builder = WebApplication.CreateBuilder(args);
