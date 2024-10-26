@@ -1,9 +1,8 @@
 # Telerik Blazor Project and Item Templates
 
-This repository provides Visual Studio templates for [Telerik Blazor apps](https://www.telerik.com/blazor-ui) with some convenient [extras](#extras).
+This repository provides Visual Studio templates for [Telerik Blazor apps and component scaffolders](https://www.telerik.com/blazor-ui) with some convenient [extras](#extras).
 
-When installed, the templates can be used to create new Blazor apps in Visual Studio or with `dotnet new` CLI commands.
-
+* [Templates](#templates)
 * [Install](#install)
 * [Use with Visual Studio](#use-with-visual-studio)
 * [Use with the .NET CLI](#use-with-the-net-cli)
@@ -11,6 +10,15 @@ When installed, the templates can be used to create new Blazor apps in Visual St
 * [Update](#update)
 * [Uninstall](#uninstall)
 * [License](#license)
+
+## Templates
+
+* .NET 8-9 Blazor Web App with global interactive Server render mode
+* .NET 8-9 Blazor Web App with global interactive WebAssembly or Auto render mode
+* .NET 6-7 Blazor Server App
+* .NET 6-7 Blazor WebAssembly App (ASP.NET Core hosted)
+* Grid
+* Editable Grid with CRUD operations
 
 ## Install
 
@@ -60,7 +68,7 @@ dotnet new dimodi-gridedit --help
 1. Open Terminal and go to the desired parent folder of your future app.
 1. Execute the `dotnet new` command with the short name of the template and the app name, for example:
     ```sh
-    dotnet new dimodi-blazor-server -o MyNewAppName
+    dotnet new dimodi-blazor -o MyNewAppName
     ```
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.

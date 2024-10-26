@@ -30,8 +30,10 @@
 </div>
 
 @code {
-    public static string? GetTelerikUiForBlazorVersion()
+    public static string GetTelerikUiForBlazorVersion()
     {
-        return typeof(TelerikRootComponent).Assembly.GetName()?.Version?.ToString();
+        string telerikBlazorAssemblyVersion = typeof(TelerikRootComponent).Assembly.GetName().Version?.ToString() ?? "0.0.0.0";
+        int lastDotIndex = telerikBlazorAssemblyVersion.LastIndexOf(".");
+        return telerikBlazorAssemblyVersion.Substring(0, lastDotIndex);
     }
 }
