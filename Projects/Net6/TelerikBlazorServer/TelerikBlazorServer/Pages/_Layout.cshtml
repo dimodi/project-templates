@@ -8,13 +8,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
-    @{ var telerikUiForBlazorVersion = typeof(TelerikRootComponent).Assembly.GetName().Version; }
+    @{ var telerikUiForBlazorVersion = typeof(Telerik.Blazor.Components.TelerikRootComponent).Assembly.GetName().Version; }
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?@telerikUiForBlazorVersion" defer></script>
+    <link href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css?@telerikUiForBlazorVersion" rel="stylesheet" />
+    @*<link href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@telerikUiForBlazorVersion" rel="stylesheet" />*@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="css/site.css" rel="stylesheet" />
     <link href="TelerikBlazorServer.styles.css" rel="stylesheet" />
-    <link href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css?@telerikUiForBlazorVersion" rel="stylesheet" />
-    @*<link href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@telerikUiForBlazorVersion" rel="stylesheet" />*@
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>

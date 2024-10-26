@@ -19,15 +19,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 
-      Breaking changes:
-      * Renamed the CLI option names
-
-      Features:
-      N/A
-
       Fixes:
-      * Referenced .NET 9 RC NuGet packages explicitly
-      * Referenced a newer System.Private.Uri version to avoid a vulnerability
+      * Blazor Server App TelerikRootComponent exception in _Layout.cshtml
+      * Reordered the Telerik CSS and JS assets
 
       See https://github.com/dimodi/project-templates/releases for release notes for all versions
 
@@ -37,7 +31,7 @@
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <Title>Telerik Blazor Project Templates</Title>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
