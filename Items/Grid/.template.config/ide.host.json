@@ -7,5 +7,17 @@
           "text": "Data Source Parameter"
       },
       "isVisible": true
+  }, {
+      "id": "selection",
+      "name": {
+          "text": "Enable Row Selection"
+      },
+      "isVisible": true
+  }, {
+      "id": "grouping",
+      "name": {
+          "text": "Enable Grouping"
+      },
+      "isVisible": true
   }]
 }

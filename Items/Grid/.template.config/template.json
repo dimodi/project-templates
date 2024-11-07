@@ -23,6 +23,20 @@
         "description": "Bind with OnRead event"
     }],
       "defaultValue": "Data"
+    },
+    "selection": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow users to select rows",
+      "displayName": "Enable Row Selection"
+    },
+    "grouping": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow users to group data",
+      "displayName": "Enable Grouping"
     }
   }
 }

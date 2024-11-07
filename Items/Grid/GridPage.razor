@@ -1,10 +1,12 @@
 @page "/"
 
-@*#if (datasource == "OnRead")
+@*#if (datasource == "OnRead" || grouping)
 @using Telerik.DataSource
-@using Telerik.DataSource.Extensions
-
 #endif*@
+@*#if (datasource == "OnRead")
+@using Telerik.DataSource.Extensions
+#endif*@
+
 <PageTitle>GridPage</PageTitle>
 
 @*#if (datasource == "OnRead")
@@ -13,10 +15,21 @@
 <TelerikGrid Data="@GridData"
 #endif*@
              TItem="@SampleModel"
+             FilterMode="GridFilterMode.FilterRow"
+@*#if (grouping)
+             Groupable="true"
+             OnStateInit="@OnGridStateInit"
+#endif*@
              Pageable="true"
-             Sortable="true"
-             FilterMode="GridFilterMode.FilterRow">
+@*#if (selection)
+             SelectionMode="@GridSelectionMode.Multiple"
+             @bind-SelectedItems="@GridSelectedItems"
+#endif*@
+             Sortable="true">
     <GridColumns>
+@*#if (selection)
+        <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" />
+#endif*@
         <GridColumn Field="@nameof(SampleModel.Name)" />
         <GridColumn Field="@nameof(SampleModel.GroupName)" />
         <GridColumn Field="@nameof(SampleModel.Price)" />
@@ -28,13 +41,14 @@
 
 @code {
     private List<SampleModel> GridData { get; set; } = new();
+@*#if (selection)
+    private IEnumerable<SampleModel> GridSelectedItems { get; set; } = new List<SampleModel>();
+#endif*@
 
 @*#if (datasource == "OnRead")
     private async Task OnGridRead(GridReadEventArgs args)
     {
-        await Task.Delay(1);
-
-        DataSourceResult result = GridData.ToDataSourceResult(args.Request);
+        DataSourceResult result = await GridData.ToDataSourceResultAsync(args.Request);
 
         args.Data = result.Data;
         args.Total = result.Total;
@@ -42,9 +56,20 @@
     }
 
 #endif*@
+@*#if (grouping)
+    private void OnGridStateInit(GridStateEventArgs<SampleModel> args)
+    {
+        args.GridState.GroupDescriptors.Add(new GroupDescriptor()
+        {
+            Member = nameof(SampleModel.GroupName),
+            MemberType = typeof(string)
+        });
+    }
+
+#endif*@
     protected override void OnInitialized()
     {
-        for (int i = 1; i <= 7; i++)
+        for (int i = 1; i <= 24; i++)
         {
             GridData.Add(new SampleModel()
             {
@@ -53,7 +78,7 @@
                 GroupName = $"Group {i % 3 + 1}",
                 Price = Random.Shared.Next(1, 100) * 1.23m,
                 Quantity = Random.Shared.Next(0, 1000),
-                StartDate = DateTime.Now.AddDays(-Random.Shared.Next(60, 1000)),
+                StartDate = DateTime.Today.AddDays(-Random.Shared.Next(60, 1000)),
                 IsActive = i % 4 > 0
             });
         }
@@ -62,7 +87,6 @@
     public class SampleModel
     {
         public int Id { get; set; }
-        public int? ParentId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string GroupName { get; set; } = string.Empty;
         public decimal Price { get; set; }
