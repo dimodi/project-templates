@@ -19,9 +19,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 
-      Fixes:
-      * Blazor Server App TelerikRootComponent exception in _Layout.cshtml
-      * Reordered the Telerik CSS and JS assets
+      New:
+      * Added compatibility with the official .NET 9.0 version
+      * Added row selection and grouping to the Grid item template.
 
       See https://github.com/dimodi/project-templates/releases for release notes for all versions
 
