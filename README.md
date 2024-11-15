@@ -109,14 +109,14 @@ The **item** templates provide declarations of Telerik Blazor components togethe
 
 The **project** templates are similar to the default .NET SDK Blazor project templates. The differences are:
 
-* The apps reference the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history). The WebAssembly standalone apps reference the latest minor .NET version.
+* The apps reference the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history). The WebAssembly apps reference the latest minor .NET version.
 * The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need).
 * You can configure some settings related to the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (see the default values in the brackets):
     * [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
     * [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
     * [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled)
     * [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) (disabled)
-* The [Telerik CSS and JS files are loaded with a query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades.
+* The [Telerik CSS and JS files are loaded with a query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. This feature is missing from the WebAssembly Standalone App template due to dynamic content usage restrictions in `index.html`.
 * `Program.cs` contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
 * `Program.cs` in server apps contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
 * .NET 8+ apps use the `https` launch profile by default.
