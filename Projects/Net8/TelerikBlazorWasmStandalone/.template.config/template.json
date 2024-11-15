@@ -2,11 +2,11 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
-  "identity": "Dimodi.Telerik.Blazor.WebApp.WebAssemblyAuto",
-  "name": "Telerik Blazor WebAssembly or Auto Web App",
-  "shortName": "dimodi-blazor-wasmauto",
-  "description": "Blazor Web App with global interactive WebAssembly or Auto render mode, and Telerik Blazor components installed",
-  "sourceName": "TelerikBlazorWasm",
+  "identity": "Dimodi.Telerik.Blazor.WebAssembly.Standalone",
+  "name": "Telerik Blazor WebAssembly Standalone App",
+  "shortName": "dimodi-blazorwasm",
+  "description": "Blazor WebAssembly Standalone App with Telerik Blazor components installed",
+  "sourceName": "TelerikBlazorWasmStandalone",
   "tags": {
     "language": "C#",
     "type": "solution"
@@ -25,24 +25,6 @@
     }],
       "replaces": "{TVAR_NETVERSION}",
       "defaultValue": "net9.0"
-    },
-    "render-mode": {
-      "type": "parameter",
-      "datatype": "choice",
-      "defaultValue": "WebAssembly",
-      "description": "Select the global Blazor render mode (interactivity)",
-      "displayName": "Interactive Render Mode",
-      "choices": [
-        {
-          "choice": "Auto",
-          "description": "Auto (Server and WebAssembly)"
-        },
-        {
-          "choice": "WebAssembly",
-          "description": "WebAssembly only"
-        }
-      ],
-      "replaces": "{TVAR_RENDERMODE}"
     },
     "theme": {
       "type": "parameter",

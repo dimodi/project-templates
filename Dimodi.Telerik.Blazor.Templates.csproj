@@ -20,10 +20,11 @@
     <PackageReleaseNotes>
 
       New:
-      * Added compatibility with the official .NET 9.0 version
-      * Added row selection and grouping to the Grid item template.
+      * Added a .NET 8-9 WebAssembly Standalone App project template. The CLI short name is dimodi-blazorwasm.
 
-      See https://github.com/dimodi/project-templates/releases for release notes for all versions
+      Breaking Changes:
+      * Switched the default .NET version of all .NET 8-9 project templates to .NET 9.
+      * Changed the CLI short name of the legacy .NET 6-7 WebAssembly App template from dimodi-blazorwasm to dimodi-blazorwasm-hosted.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -31,7 +32,7 @@
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <Title>Telerik Blazor Project Templates</Title>
-    <Version>3.1.0</Version>
+    <Version>4.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

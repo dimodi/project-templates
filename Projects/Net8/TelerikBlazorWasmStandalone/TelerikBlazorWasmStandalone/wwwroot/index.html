@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TelerikBlazorWasmStandalone</title>
+    <base href="/" />
+    <!--#if (cdn)
+    <script src="https://blazor.cdn.telerik.com/blazor/7.0.0/telerik-blazor.min.js" defer></script>
+    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/7.0.0/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main.css" />
+    <!--#if (icon-type == "Font")
+    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/7.0.0/kendo-font-icons/font-icons.css" />
+    #endif -->
+    #else
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" defer></script>
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css" />
+    <!--#if (icon-type == "Font")
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css" />
+    #endif -->
+    #endif -->
+    <!--#if (rtl)
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.rtl.min.css" />
+    #else
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    #endif -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="TelerikBlazorWasmStandalone.styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<!--#if (rtl)
+<body dir="rtl">
+#else
+<body>
+#endif -->
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Blazor.start();
+        });
+    </script>
+</body>
+
+</html>

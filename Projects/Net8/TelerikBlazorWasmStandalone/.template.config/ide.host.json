@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "icon": "progress-logo.png",
+  "symbolInfo": [{
+      "id": "theme",
+      "name": {
+          "text": "Telerik Theme"
+      },
+      "isVisible": true
+  }, {
+      "id": "cdn",
+      "name": {
+          "text": "Use Telerik CDN"
+      },
+      "isVisible": true
+  }, {
+      "id": "icon-type",
+      "name": {
+          "text": "Telerik Icon Type"
+      },
+      "isVisible": true
+  }, {
+      "id": "rtl",
+      "name": {
+          "text": "Enable RTL"
+      },
+      "isVisible": true
+  }]
+}

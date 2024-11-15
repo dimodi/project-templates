@@ -2,9 +2,9 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
-  "identity": "Dimodi.Telerik.Blazor.WebAssembly",
+  "identity": "Dimodi.Telerik.Blazor.WebAssembly.Hosted",
   "name": "Telerik Blazor WebAssembly App",
-  "shortName": "dimodi-blazorwasm",
+  "shortName": "dimodi-blazorwasm-hosted",
   "description": "Blazor WebAssembly App (ASP.NET Core hosted) with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
   "tags": {

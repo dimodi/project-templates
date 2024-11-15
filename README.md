@@ -15,6 +15,7 @@ This repository provides Visual Studio templates for [Telerik Blazor apps and co
 
 * .NET 8-9 Blazor Web App with global interactive Server render mode
 * .NET 8-9 Blazor Web App with global interactive WebAssembly or Auto render mode
+* .NET 8-9 Blazor WebAssembly Standalone App
 * .NET 6-7 Blazor Server App
 * .NET 6-7 Blazor WebAssembly App (ASP.NET Core hosted)
 * Grid with optional row selection, grouping, and two data binding mechanisms
@@ -61,10 +62,11 @@ The project templates use similar short names to the respective Microsoft counte
 
 | Template Descrption | Microsoft Template Short Name | Dimodi Template Short Name |
 | --- | --- | --- |
-| .NET 6-7 Blazor Server App | `blazorserver` | `dimodi-blazorserver` |
-| .NET 6-7 Blazor WebAssembly App | `blazorwasm` | `dimodi-blazorwasm` |
 | .NET 8-9 Blazor Server App | `blazor` | `dimodi-blazor-server` |
 | .NET 8-9 Blazor Web App with WebAssembly or Auto render mode | `blazor` | `dimodi-blazor-wasmauto` |
+| .NET 8-9 Blazor WebAssembly Standalone App | `blazorwasm` | `dimodi-blazorwasm` |
+| .NET 6-7 Blazor Server App | `blazorserver` | `dimodi-blazorserver` |
+| .NET 6-7 Blazor WebAssembly App (ASP.NET Core hosted) | `blazorwasm` | `dimodi-blazorwasm-hosted` |
 
 For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
 
@@ -84,9 +86,9 @@ When creating a WebAssembly app, make sure to select the server project as a sta
 
 ### Interactive Render Mode
 
-The Blazor Server Web App template (`dimodi-blazor-server`) sets global `Server` interactivity location.
+The Blazor Web App (Server) template (`dimodi-blazor-server`) sets global `Server` interactivity location.
 
-The Blazor WebAssembly Web App template (`dimodi-blazor-wasmauto`) sets global `WebAssembly` or `Auto` interactivity. To create a project with `Auto` interactivity, set `rendermode` to `Auto` in the `dotnet new` command:
+The Blazor Web App (WebAssembly / Auto) template (`dimodi-blazor-wasmauto`) sets global `WebAssembly` or `Auto` interactivity. To create a project with `Auto` interactivity, set `rendermode` to `Auto` in the `dotnet new` command:
 
 ```sh
 dotnet new dimodi-blazor-wasmauto -o MyNewAppName --rendermode Auto

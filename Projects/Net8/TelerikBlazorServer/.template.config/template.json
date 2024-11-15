@@ -24,7 +24,7 @@
         "description": "Target .NET 9.0"
     }],
       "replaces": "{TVAR_NETVERSION}",
-      "defaultValue": "net8.0"
+      "defaultValue": "net9.0"
     },
     "render-mode": {
       "type": "parameter",
