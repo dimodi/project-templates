@@ -9,15 +9,18 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
     <NoWarn>$(NoWarn);NU5128;NU5119</NoWarn>
+    <PackageIcon>progress-logo.png</PackageIcon>
     <PackageId>Dimodi.Telerik.Blazor.Templates</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 
+      New:
+      * Added a NuGet package icon.
+
       Fixes:
-      * Use the latest (wildcard) minor version of .NET 9 packages in WebAssembly Standalone Apps.
-      * Use the latest (wildcard) version of Telerik UI for Blazor in WebAssembly Standalone Apps when CDN is disabled.
+      * Use the Grid item template .razor file name as the @page URL instead of hard-coded "/".
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -26,12 +29,13 @@
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.0.1</Version>
+    <Version>4.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="**\*" />
     <Content Include="Items\**\*;Projects\Net*\**\*" Exclude="Projects\Net*\**\bin\**;Projects\Net*\**\obj\**" />
+    <None Include="progress-logo.png" Pack="true" PackagePath="\" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 

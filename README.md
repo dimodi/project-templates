@@ -19,7 +19,7 @@ This repository provides Visual Studio templates for [Telerik Blazor apps and co
 * .NET 6-7 Blazor Server App
 * .NET 6-7 Blazor WebAssembly App (ASP.NET Core hosted)
 * Grid with optional row selection, grouping, and two data binding mechanisms
-* Editable Grid with CRUD operations
+* Grid with editing and CRUD operations
 
 ## Install
 
@@ -71,7 +71,7 @@ The project templates use similar short names to the respective Microsoft counte
 For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
 
 ```sh
-dotnet new dimodi-gridedit --help
+dotnet new dimodi-grid-edit --help
 ```
 
 ### Create Projects
