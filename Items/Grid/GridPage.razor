@@ -31,7 +31,9 @@
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" />
 #endif*@
         <GridColumn Field="@nameof(SampleModel.Name)" />
+@*#if (grouping)
         <GridColumn Field="@nameof(SampleModel.GroupName)" />
+#endif*@
         <GridColumn Field="@nameof(SampleModel.Price)" />
         <GridColumn Field="@nameof(SampleModel.Quantity)" />
         <GridColumn Field="@nameof(SampleModel.StartDate)" />

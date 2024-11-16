@@ -21,6 +21,7 @@
 
       Fixes:
       * Use the Grid item template .razor file name as the @page URL instead of hard-coded "/".
+      * Render the GroupName Grid column only if grouping is enabled.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
