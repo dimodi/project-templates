@@ -1,14 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
     <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
-    <Description>Blazor templates that include Telerik UI for Blazor</Description>
+    <Description>Blazor project and item templates that include Telerik UI for Blazor</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -19,20 +15,18 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 
-      New:
-      * Added a .NET 8-9 WebAssembly Standalone App project template. The CLI short name is dimodi-blazorwasm.
-
-      Breaking Changes:
-      * Switched the default .NET version of all .NET 8-9 project templates to .NET 9.
-      * Changed the CLI short name of the legacy .NET 6-7 WebAssembly App template from dimodi-blazorwasm to dimodi-blazorwasm-hosted.
+      Fixes:
+      * Use the latest (wildcard) minor version of .NET 9 packages in WebAssembly Standalone Apps.
+      * Use the latest (wildcard) version of Telerik UI for Blazor in WebAssembly Standalone Apps when CDN is disabled.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>dotnet-new;templates</PackageTags>
+    <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
-    <Title>Telerik Blazor Project Templates</Title>
-    <Version>4.0.0</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>Telerik Blazor Project and Item Templates</Title>
+    <Version>4.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

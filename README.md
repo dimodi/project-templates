@@ -119,7 +119,7 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
 * The [Telerik CSS and JS files are loaded with a query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. This feature is missing from the WebAssembly Standalone App template due to dynamic content usage restrictions in `index.html`.
 * `Program.cs` contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
 * `Program.cs` in server apps contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
-* .NET 8+ apps use the `https` launch profile by default.
+* .NET 8 and .NET 9 apps use the `https` launch profile by default.
 * The `SurveyPrompt` Razor component is removed.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
 
