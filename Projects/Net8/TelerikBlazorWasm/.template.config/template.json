@@ -3,7 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor", "WebAssembly" ],
   "identity": "Dimodi.Telerik.Blazor.WebApp.WebAssemblyAuto",
-  "name": "Telerik Blazor WebAssembly or Auto Web App",
+  "name": "Telerik Blazor Web App (WebAssembly or Auto)",
   "shortName": "dimodi-blazor-wasmauto",
   "description": "Blazor Web App with global interactive WebAssembly or Auto render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
@@ -11,6 +11,12 @@
     "language": "C#",
     "type": "solution"
   },
+  "guids": [
+    "9A19103F-16F7-4668-BE54-9A1E7A4F7556",
+    "27EC6E1B-25F1-4610-848C-816BA6C5DCFD",
+    "99CEE179-E2E4-40F9-B4D0-3055CE52699B",
+    "10E9231B-C208-4707-B24C-735A779D09F0"
+  ],
   "symbols": {
     "Framework": {
       "type": "parameter",
@@ -39,7 +45,7 @@
         },
         {
           "choice": "WebAssembly",
-          "description": "WebAssembly only"
+          "description": "WebAssembly"
         }
       ],
       "replaces": "{TVAR_RENDERMODE}"
@@ -102,6 +108,22 @@
       "defaultValue": "false",
       "description": "Enable Right-to-Left support",
       "displayName": "Enable RTL"
+    },
+    "form-body-length": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "128",
+      "description": "Increase the Form MultipartBodyLengthLimit. Relevant to the Upload component.",
+      "displayName": "Max Form Body Length (MB)",
+      "replaces": "{TVAR_FORMBODY}"
+    },
+    "kestrel-request-size": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "28",
+      "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component.",
+      "displayName": "Max Kestrel Request Body Size (MB)",
+      "replaces": "{TVAR_KESTRELREQUEST}"
     }
   }
 }

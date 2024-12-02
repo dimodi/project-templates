@@ -3,7 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor" ],
   "identity": "Dimodi.Telerik.Blazor.WebApp.Server",
-  "name": "Telerik Blazor Server Web App",
+  "name": "Telerik Blazor Web App (Server)",
   "shortName": "dimodi-blazor-server",
   "description": "Blazor Web App with global interactive Server render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
@@ -11,6 +11,11 @@
     "language": "C#",
     "type": "solution"
   },
+  "guids": [
+    "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC",
+    "3F047879-D472-41B7-86B6-61FB2D0083F6",
+    "B4DCBEA3-B740-4931-82BB-F3583E1C2230"
+  ],
   "symbols": {
     "Framework": {
       "type": "parameter",
@@ -98,6 +103,30 @@
       "defaultValue": "false",
       "description": "Enable Right-to-Left support",
       "displayName": "Enable RTL"
+    },
+    "signalr-message-size": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "32",
+      "description": "Increase the max SignalR message size. Recommended for the Editor, FileManager, FileSelect, PDF Viewer, and Signature components.",
+      "displayName": "Max SignalR Message Size (KB)",
+      "replaces": "{TVAR_SIGNALRMESSAGE}"
+    },
+    "form-body-length": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "128",
+      "description": "Increase the Form MultipartBodyLengthLimit. Relevant to the Upload component.",
+      "displayName": "Max Form Body Length (MB)",
+      "replaces": "{TVAR_FORMBODY}"
+    },
+    "kestrel-request-size": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "28",
+      "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component.",
+      "displayName": "Max Kestrel Request Body Size (MB)",
+      "replaces": "{TVAR_KESTRELREQUEST}"
     }
   }
 }

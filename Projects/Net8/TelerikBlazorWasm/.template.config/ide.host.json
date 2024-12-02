@@ -31,5 +31,17 @@
           "text": "Enable RTL"
       },
       "isVisible": true
+  }, {
+    "id": "form-body-length",
+    "name": {
+        "text": "Max Form Body Length (MB)"
+    },
+    "isVisible": true
+  }, {
+    "id": "kestrel-request-size",
+    "name": {
+        "text": "Max Kestrel Request Body Size (MB)"
+    },
+    "isVisible": true
   }]
 }

@@ -11,6 +11,10 @@
     "language": "C#",
     "type": "solution"
   },
+  "guids": [
+    "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC",
+    "C10C311B-98E5-4EAF-860D-D053C9B69C8B"
+  ],
   "symbols": {
     "Framework": {
       "type": "parameter",

@@ -17,11 +17,13 @@
     <PackageReleaseNotes>
 
       New:
-      * Added a NuGet package icon.
+      * Added a Max SignalR Message Size setting.
+      * Added a Max Form Body Length setting.
+      * Added a Max Kestrel Request Body Size setting.
 
       Fixes:
-      * Use the Grid item template .razor file name as the @page URL instead of hard-coded "/".
-      * Render the GroupName Grid column only if grouping is enabled.
+      * Added a k-body CSS class to the HTML body element to apply text color and background color, depending on the Telerik theme.
+      * Added project GUID replacement settings in template.json.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -30,7 +32,7 @@
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.1.0</Version>
+    <Version>4.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

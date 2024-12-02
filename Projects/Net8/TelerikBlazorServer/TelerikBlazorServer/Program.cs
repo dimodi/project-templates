@@ -11,21 +11,34 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddTelerikBlazor();
 
-// Upload file size limit on ASP.NET Core
-builder.Services.Configure<FormOptions>(options =>
-{
-    //options.MultipartBodyLengthLimit = 4_294_967_296; // 4 GB
-});
-// Upload file size limit on Kestrel
-builder.Services.Configure<KestrelServerOptions>(options =>
-{
-    //options.Limits.MaxRequestBodySize = 4_294_967_296; // 4 GB
-});
-
 // SignalR max message size for Editor, FileManager, FileSelect, PDF Viewer, Signature
 builder.Services.Configure<HubOptions>(options =>
 {
-    //options.MaximumReceiveMessageSize = 64 * 1024 * 1024; // 64 MB or use null for no limit
+#if (signalr-message-size != 32)
+    options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGE} * 1024; // {TVAR_SIGNALRMESSAGE} KB, or use null for no limit
+#else
+    //options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGE} * 1024; // {TVAR_SIGNALRMESSAGE} KB, or use null for no limit
+#endif
+});
+
+// .NET Core max form body length for Upload
+builder.Services.Configure<FormOptions>(options =>
+{
+#if (form-body-length != 128)
+    options.MultipartBodyLengthLimit = {TVAR_FORMBODY} * 1048576; // {TVAR_FORMBODY} MB
+#else
+    //options.MultipartBodyLengthLimit = {TVAR_FORMBODY} * 1048576; // {TVAR_FORMBODY} MB
+#endif
+});
+
+// Kestrel max request body size for Upload
+builder.Services.Configure<KestrelServerOptions>(options =>
+{
+#if (kestrel-request-size != 28)
+    options.Limits.MaxRequestBodySize = {TVAR_KESTRELREQUEST} * 1048576; // {TVAR_KESTRELREQUEST} MB
+#else
+    //options.Limits.MaxRequestBodySize = {TVAR_KESTRELREQUEST} * 1048576; // {TVAR_KESTRELREQUEST} MB
+#endif
 });
 
 var app = builder.Build();

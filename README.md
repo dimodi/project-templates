@@ -62,7 +62,7 @@ The project templates use similar short names to the respective Microsoft counte
 
 | Template Descrption | Microsoft Template Short Name | Dimodi Template Short Name |
 | --- | --- | --- |
-| .NET 8-9 Blazor Server App | `blazor` | `dimodi-blazor-server` |
+| .NET 8-9 Blazor Web App with Server render mode | `blazor` | `dimodi-blazor-server` |
 | .NET 8-9 Blazor Web App with WebAssembly or Auto render mode | `blazor` | `dimodi-blazor-wasmauto` |
 | .NET 8-9 Blazor WebAssembly Standalone App | `blazorwasm` | `dimodi-blazorwasm` |
 | .NET 6-7 Blazor Server App | `blazorserver` | `dimodi-blazorserver` |
@@ -111,17 +111,19 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
 
 * The apps reference the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history). The WebAssembly apps reference the latest minor .NET version.
 * The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need).
-* You can configure some settings related to the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (see the default values in the brackets):
+* You can configure some settings related to the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (see the default values in the brackets):
     * [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
     * [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
     * [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled)
     * [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) (disabled)
+    * [Maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) (128 MB in FormOptions and 28 MB in Kestrel) *
+    * [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) (32 KB) *
 * The [Telerik CSS and JS files are loaded with a query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. This feature is missing from the WebAssembly Standalone App template due to dynamic content usage restrictions in `index.html`.
-* `Program.cs` contains commented code to [increase the maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads).
-* `Program.cs` in server apps contains commented code to [increase the maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size).
 * .NET 8 and .NET 9 apps use the `https` launch profile by default.
 * The `SurveyPrompt` Razor component is removed.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
+
+\* The options to change the max file upload size and the max SignalR message size work in Visual Studio on Windows and through the .NET CLI. They don't appear in VS Code and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app.
 
 ## Update
 
