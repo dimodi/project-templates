@@ -3,7 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [ "Web", "Blazor" ],
   "identity": "Dimodi.Telerik.Blazor.Server",
-  "name": "Telerik Blazor Server App",
+  "name": "Telerik Blazor Server App (.NET 6-7)",
   "shortName": "dimodi-blazorserver",
   "description": "Blazor Server App with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
