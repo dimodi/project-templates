@@ -24,6 +24,7 @@
       Fixes:
       * Added a k-body CSS class to the HTML body element to apply text color and background color, depending on the Telerik theme.
       * Added project GUID replacement settings in template.json.
+      * Changed the project template names to better distinguish the legacy .NET 6-7 ones.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
