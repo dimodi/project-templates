@@ -123,7 +123,7 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
 * The `SurveyPrompt` Razor component is removed.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
 
-\* The options to change the max file upload size and the max SignalR message size work in Visual Studio on Windows and through the .NET CLI. They don't appear in VS Code and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app.
+\* The options to change the max file upload size and the max SignalR message size work in Visual Studio on Windows and through the .NET CLI. [They don't appear in VS Code](https://github.com/microsoft/vscode-dotnettools/issues/1659) and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app.
 
 ## Update
 
