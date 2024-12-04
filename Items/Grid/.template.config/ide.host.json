@@ -1,23 +1,27 @@
 {
   "$schema": "http://json.schemastore.org/vs-2017.3.host",
   "icon": "progress-logo.png",
-  "symbolInfo": [{
+  "symbolInfo": [
+    {
       "id": "datasource",
       "name": {
-          "text": "Data Source Parameter"
+        "text": "Data Binding Mechanism"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "selection",
       "name": {
-          "text": "Enable Row Selection"
+        "text": "Enable Row Selection"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "grouping",
       "name": {
-          "text": "Enable Grouping"
+        "text": "Enable Grouping"
       },
       "isVisible": true
-  }]
+    }
+  ]
 }

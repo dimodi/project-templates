@@ -1,7 +1,11 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
-  "classifications": [ "Web", "Blazor", "Code" ],
+  "classifications": [
+    "Web",
+    "Blazor",
+    "Code"
+  ],
   "identity": "Dimodi.Telerik.Blazor.Grid",
   "name": "Telerik Blazor Grid",
   "shortName": "dimodi-grid",
@@ -13,29 +17,33 @@
   "symbols": {
     "datasource": {
       "type": "parameter",
-      "description": "How the component will receive its data",
       "datatype": "choice",
-      "choices": [{
+      "defaultValue": "Data",
+      "description": "How the component will receive its data",
+      "displayName": "Data Binding Mechanism",
+      "choices": [
+        {
           "choice": "Data",
           "description": "Bind with Data parameter"
-      },{
-        "choice": "OnRead",
-        "description": "Bind with OnRead event"
-    }],
-      "defaultValue": "Data"
+        },
+        {
+          "choice": "OnRead",
+          "description": "Bind with OnRead event"
+        }
+      ],
     },
     "selection": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Allow users to select rows",
+      "description": "Allow users to select one or multiple rows",
       "displayName": "Enable Row Selection"
     },
     "grouping": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Allow users to group data",
+      "description": "Allow users to group and ungroup the data",
       "displayName": "Enable Grouping"
     }
   }

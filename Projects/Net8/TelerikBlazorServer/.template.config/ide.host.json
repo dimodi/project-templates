@@ -1,53 +1,62 @@
 {
   "$schema": "http://json.schemastore.org/vs-2017.3.host",
   "icon": "progress-logo.png",
-  "symbolInfo": [{
+  "symbolInfo": [
+    {
       "id": "render-mode",
       "name": {
-          "text": "Global Interactive Render Mode"
+        "text": "Global Interactive Render Mode"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "theme",
       "name": {
-          "text": "Telerik Theme"
+        "text": "Telerik Theme"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "cdn",
       "name": {
-          "text": "Use Telerik CDN"
+        "text": "Use Telerik CDN"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "icon-type",
       "name": {
-          "text": "Telerik Icon Type"
+        "text": "Telerik Icon Type"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "rtl",
       "name": {
-          "text": "Enable RTL"
+        "text": "Enable RTL"
       },
       "isVisible": true
-  }, {
+    },
+    {
       "id": "signalr-message-size",
       "name": {
-          "text": "Max SignalR Message Size (KB)"
+        "text": "Max SignalR Message Size (KB)"
       },
       "isVisible": true
-  }, {
-    "id": "form-body-length",
-    "name": {
+    },
+    {
+      "id": "form-body-length",
+      "name": {
         "text": "Max Form Body Length (MB)"
+      },
+      "isVisible": true
     },
-    "isVisible": true
-  }, {
-    "id": "kestrel-request-size",
-    "name": {
+    {
+      "id": "kestrel-request-size",
+      "name": {
         "text": "Max Kestrel Request Body Size (MB)"
-    },
-    "isVisible": true
-  }]
+      },
+      "isVisible": true
+    }
+  ]
 }

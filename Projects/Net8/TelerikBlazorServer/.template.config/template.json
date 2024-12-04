@@ -1,7 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Dimo Dimov",
-  "classifications": [ "Web", "Blazor" ],
+  "classifications": [
+    "Web",
+    "Blazor"
+  ],
   "identity": "Dimodi.Telerik.Blazor.WebApp.Server",
   "name": "Telerik Blazor Web App (Server)",
   "shortName": "dimodi-blazor-server",
@@ -19,23 +22,26 @@
   "symbols": {
     "Framework": {
       "type": "parameter",
-      "description": "The target framework for the project.",
       "datatype": "choice",
-      "choices": [{
+      "defaultValue": "net9.0",
+      "description": "The target framework for the project.",
+      "choices": [
+        {
           "choice": "net8.0",
           "description": "Target .NET 8.0"
-      },{
-        "choice": "net9.0",
-        "description": "Target .NET 9.0"
-    }],
-      "replaces": "{TVAR_NETVERSION}",
-      "defaultValue": "net9.0"
+        },
+        {
+          "choice": "net9.0",
+          "description": "Target .NET 9.0"
+        }
+      ],
+      "replaces": "{TVAR_NETVERSION}"
     },
     "render-mode": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Server",
-      "description": "Select the global Blazor render mode (interactivity)",
+      "description": "The global Blazor render mode (interactivity) is preset. For WebAssembly or Auto mode, use the Blazor Web App WebAssembly template.",
       "displayName": "Interactive Render Mode",
       "choices": [
         {
@@ -49,7 +55,7 @@
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "default",
-      "description": "Select the Telerik theme",
+      "description": "Select the Telerik theme.",
       "displayName": "Telerik Theme",
       "choices": [
         {
@@ -75,15 +81,15 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Load Telerik CSS and JS files from CDN",
+      "description": "Load Telerik CSS and JS files from CDN.",
       "displayName": "Use Telerik CDN"
     },
     "icon-type": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Svg",
-      "description": "Select the Telerik icon type",
-      "displayName": "Global Icon Type",
+      "description": "Select the global Telerik icon type which affects internally rendered icons in all components.",
+      "displayName": "Telerik Icon Type",
       "choices": [
         {
           "choice": "Svg",
@@ -101,7 +107,7 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Enable Right-to-Left support",
+      "description": "Enable Right-to-Left support.",
       "displayName": "Enable RTL"
     },
     "signalr-message-size": {
@@ -116,7 +122,7 @@
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "128",
-      "description": "Increase the Form MultipartBodyLengthLimit. Relevant to the Upload component.",
+      "description": "Increase the Form MultipartBodyLengthLimit. Relevant to the Upload component. Consider setting the same value for the Kestrel Request Body Size.",
       "displayName": "Max Form Body Length (MB)",
       "replaces": "{TVAR_FORMBODY}"
     },
@@ -124,7 +130,7 @@
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "28",
-      "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component.",
+      "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component. Consider setting the same value for the Form Body Length.",
       "displayName": "Max Kestrel Request Body Size (MB)",
       "replaces": "{TVAR_KESTRELREQUEST}"
     }

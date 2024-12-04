@@ -1,17 +1,20 @@
 {
   "$schema": "http://json.schemastore.org/vs-2017.3.host",
   "icon": "progress-logo.png",
-  "symbolInfo": [{
+  "symbolInfo": [
+    {
       "id": "edit-mode",
       "name": {
-          "text": "Grid Edit Mode"
+        "text": "Edit Mode"
       },
       "isVisible": true
-  }, {
-    "id": "validation",
-    "name": {
-      "text": "Use Validation"
     },
-    "isVisible": true
-  }]
+    {
+      "id": "validation",
+      "name": {
+        "text": "Enable Validation"
+      },
+      "isVisible": true
+    }
+  ]
 }
