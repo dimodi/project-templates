@@ -137,10 +137,7 @@ dotnet new update Dimodi.Telerik.Blazor.Templates
 
 ### Update from GitHub
 
-1. Remove the currently installed package:
-    ```sh
-    dotnet new uninstall Dimodi.Telerik.Blazor.Templates
-    ```
+1. [Uninstall the package](#uninstall).
 1. Repeat the [GitHub installation steps](#install-from-github).
 
 ## Uninstall
