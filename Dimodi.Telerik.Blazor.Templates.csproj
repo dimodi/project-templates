@@ -16,17 +16,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 
-      New:
-      * Added a Max SignalR Message Size setting.
-      * Added a Max Form Body Length setting.
-      * Added a Max Kestrel Request Body Size setting.
-      * Added all template parameters to the .NET 6 project templates.
-
       Fixes:
-      * Added a k-body CSS class to the HTML body element to apply text color and background color, depending on the Telerik theme.
-      * Enabled unique project GUID generation for every new app.
-      * Changed the project template names to better distinguish the legacy .NET 6-7 ones.
-      * Improved the template parameter descriptions.
+      * Use the latest (wildcard) version of Telerik UI for Blazor in .NET 6-7 WebAssembly Apps when CDN is disabled.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -35,7 +26,7 @@
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.2.0</Version>
+    <Version>4.2.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
