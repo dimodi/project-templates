@@ -7,7 +7,7 @@
 <label>
     Select your locale:
     <select @bind="@SelectedCulture" @bind:after="@ApplySelectedCultureAsync">
-        @foreach (var culture in SupportedCultures)
+        @foreach (CultureInfo culture in SupportedCultures)
         {
             <option value="@culture">@culture.DisplayName</option>
         }
@@ -32,10 +32,10 @@
     {
         if (CultureInfo.CurrentCulture != SelectedCulture && SelectedCulture != null)
         {
-            var uri = new Uri(Navigation.Uri)
+            string cultureEscaped = Uri.EscapeDataString(SelectedCulture.Name);
+            string uri = new Uri(Navigation.Uri)
                 .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
-            var cultureEscaped = Uri.EscapeDataString(SelectedCulture.Name);
-            var uriEscaped = Uri.EscapeDataString(uri);
+            string uriEscaped = Uri.EscapeDataString(uri);
 
             Navigation.NavigateTo(
                 $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",

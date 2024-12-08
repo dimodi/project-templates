@@ -24,6 +24,13 @@
       "isVisible": true
     },
     {
+      "id": "localization",
+      "name": {
+        "text": "Enable Localization"
+      },
+      "isVisible": true
+    },
+    {
       "id": "rtl",
       "name": {
         "text": "Enable RTL"

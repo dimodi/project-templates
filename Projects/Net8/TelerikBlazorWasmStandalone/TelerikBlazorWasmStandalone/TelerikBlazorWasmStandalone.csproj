@@ -4,16 +4,25 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+<!--#if (localization) -->
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+<!--#endif-->
   </PropertyGroup>
 
   <ItemGroup>
 <!--#if (Framework == "net8.0") -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.*" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.*" PrivateAssets="all" />
+<!--#if (localization) -->
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.*" />
+<!--#endif-->
 <!--#endif-->
 <!--#if (Framework == "net9.0") -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.*" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.*" PrivateAssets="all" />
+<!--#if (localization) -->
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
+<!--#endif-->
 <!--#endif-->
 <!--#if (cdn) -->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="7.0.0" />
@@ -22,4 +31,17 @@
 <!--#endif-->
   </ItemGroup>
 
+<!--#if (localization) -->
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\TelerikMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TelerikMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\TelerikMessages.Designer.cs">
+      <DependentUpon>TelerikMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+<!--#endif-->
 </Project>
