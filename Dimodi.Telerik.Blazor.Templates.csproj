@@ -4,7 +4,7 @@
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
     <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
-    <Description>Blazor project and item templates that include Telerik UI for Blazor</Description>
+    <Description>Blazor project and item templates that include Telerik UI for Blazor. You can configure the Telerik Blazor components through template parameter options, including CSS theme, icon type, CDN, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
