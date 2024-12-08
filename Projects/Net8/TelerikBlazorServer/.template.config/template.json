@@ -103,6 +103,13 @@
       ],
       "replaces": "{TVAR_ICONTYPE}"
     },
+    "localization": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Enable Telerik resource localization.",
+      "displayName": "Enable Localization"
+    },
     "rtl": {
       "type": "parameter",
       "datatype": "bool",
@@ -134,5 +141,20 @@
       "displayName": "Max Kestrel Request Body Size (MB)",
       "replaces": "{TVAR_KESTRELREQUEST}"
     }
-  }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(localization == false)",
+          "exclude": [
+            "**/Components/Layout/CultureSelector.razor",
+            "**/Controllers/**",
+            "**/Resources/**",
+            "**/Services/**"
+          ]
+        }
+      ]
+    }
+  ]
 }

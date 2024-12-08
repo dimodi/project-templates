@@ -16,6 +16,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 
+      New:
+      * Added optional localization to the Blazor Web App (Server) template
+
       Fixes:
       * Use the latest (wildcard) version of Telerik UI for Blazor in .NET 6-7 WebAssembly Apps when CDN is disabled.
 
@@ -26,7 +29,7 @@
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.2.1</Version>
+    <Version>4.3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

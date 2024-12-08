@@ -2,6 +2,11 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.SignalR;
 using TelerikBlazorServer.Components;
+#if (localization)
+using TelerikBlazorServer.Services;
+using Microsoft.Extensions.Localization;
+using Telerik.Blazor.Services;
+#endif
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+#if (localization)
+builder.Services.AddLocalization();
+builder.Services.AddControllers();
+
+#endif
 builder.Services.AddTelerikBlazor();
 
+#if (localization)
+// Localization service for the Telerik component labels
+builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
+
+#endif
 // SignalR max message size for Editor, FileManager, FileSelect, PDF Viewer, Signature
 builder.Services.Configure<HubOptions>(options =>
 {
@@ -60,6 +75,19 @@ app.MapStaticAssets();
 #endif
 app.UseAntiforgery();
 
+#if (localization)
+string[] supportedCultures = app.Configuration.GetSection("Cultures")
+    .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
+
+RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
+app.MapControllers();
+
+#endif
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
