@@ -117,7 +117,7 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
     * [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
     * [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
     * [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled)
-    * [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) (disabled)
+    * [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) in .NET 8 and .NET 9 apps (disabled)
     * [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) (disabled)
     * [Maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) (128 MB in FormOptions and 28 MB in Kestrel) *
     * [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) (32 KB) *
