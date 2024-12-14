@@ -18,12 +18,12 @@ main {
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
+    gap: 1em;
     align-items: center;
 }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
         white-space: nowrap;
-        margin-left: 1.5rem;
         text-decoration: none;
     }
 

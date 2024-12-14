@@ -24,15 +24,16 @@ builder.Services.AddLocalization();
 
 WebAssemblyHost host = builder.Build();
 
-const string defaultCulture = "en-US";
+string[] supportedCultures = host.Configuration.GetSection("Cultures")
+    .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
 
 IJSRuntime js = host.Services.GetRequiredService<IJSRuntime>();
-string result = await js.InvokeAsync<string>("blazorCulture.get");
-CultureInfo culture = CultureInfo.GetCultureInfo(result ?? defaultCulture);
+string savedCulture = await js.InvokeAsync<string>("blazorCulture.get");
+CultureInfo culture = CultureInfo.GetCultureInfo(savedCulture ?? supportedCultures[1]);
 
-if (result == null)
+if (string.IsNullOrEmpty(savedCulture))
 {
-    await js.InvokeVoidAsync("blazorCulture.set", defaultCulture);
+    await js.InvokeVoidAsync("blazorCulture.set", supportedCultures[1]);
 }
 
 CultureInfo.DefaultThreadCurrentCulture = culture;

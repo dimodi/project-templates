@@ -16,14 +16,14 @@ builder.Services.AddRazorComponents()
 #endif
     .AddInteractiveWebAssemblyComponents();
 
-#if (localization && render-mode == "Auto")
+#if (localization)
 builder.Services.AddLocalization();
 builder.Services.AddControllers();
 
 #endif
 builder.Services.AddTelerikBlazor();
 
-#if (localization && render-mode == "Auto")
+#if (localization)
 // Localization service for the Telerik component labels
 builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
 
@@ -71,12 +71,12 @@ app.MapStaticAssets();
 #endif
 app.UseAntiforgery();
 
-#if (localization && render-mode == "Auto")
+#if (localization)
 string[] supportedCultures = app.Configuration.GetSection("Cultures")
     .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
 
 RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture(supportedCultures[0])
+    .SetDefaultCulture(supportedCultures[1])
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 

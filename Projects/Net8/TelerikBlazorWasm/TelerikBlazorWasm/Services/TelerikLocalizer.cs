@@ -1,4 +1,4 @@
-using TelerikBlazorWasmStandalone.Resources;
+using TelerikBlazorWasm.Resources;
 using Telerik.Blazor.Services;
 
 namespace TelerikBlazorWasm.Services

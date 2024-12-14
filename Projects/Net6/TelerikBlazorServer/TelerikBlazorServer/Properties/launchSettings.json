@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:12353",
+      "applicationUrl": "http://localhost:62233",
       "sslPort": 44349
     }
   },
@@ -11,7 +11,7 @@
     "TelerikBlazorServer": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7283;http://localhost:5183",
+      "applicationUrl": "https://localhost:7777;http://localhost:5555",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

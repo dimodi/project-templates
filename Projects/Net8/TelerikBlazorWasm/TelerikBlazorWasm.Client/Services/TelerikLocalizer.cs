@@ -1,4 +1,4 @@
-using TelerikLocalizationTest.Client.Resources;
+using TelerikBlazorWasm.Client.Resources;
 using Telerik.Blazor.Services;
 
 namespace TelerikBlazorWasm.Client.Services

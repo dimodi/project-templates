@@ -1,37 +1,36 @@
 ﻿@using System.Globalization
 
 @inject IJSRuntime js
+@inject IConfiguration AppConfiguration
 @inject NavigationManager Navigation
 
-<label>
-    Select your locale:
-    <select @bind="@SelectedCulture" @bind:after="@ApplySelectedCultureAsync">
-        @foreach (CultureInfo culture in SupportedCultures)
-        {
-            <option value="@culture">@culture.DisplayName</option>
-        }
-    </select>
-</label>
+<label for="culture-selector">Select Locale</label>
+<TelerikDropDownList Data="@SupportedCultures"
+                     @bind-Value="@SelectedCulture"
+                     TextField="Value"
+                     ValueField="Key"
+                     Id="culture-selector"
+                     OnChange="@ApplySelectedCultureAsync"
+                     Width="15em" />
 
 @code {
-    private CultureInfo[] SupportedCultures { get; set; } = new[]
-    {
-        new CultureInfo("en-US"),
-        new CultureInfo("bg-BG")
-    };
+    private Dictionary<string, string?> SupportedCultures { get; set; } = new();
 
-    private CultureInfo? SelectedCulture { get; set; }
+    private string SelectedCulture { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
-        SelectedCulture = CultureInfo.CurrentCulture;
+        SupportedCultures = AppConfiguration.GetSection("Cultures")
+            .GetChildren().ToDictionary(x => x.Key, x => x.Value);
+
+        SelectedCulture = CultureInfo.CurrentCulture.Name;
     }
 
-    private async Task ApplySelectedCultureAsync()
+    private async Task ApplySelectedCultureAsync(object newValue)
     {
-        if (CultureInfo.CurrentCulture != SelectedCulture && SelectedCulture != null)
+        if (CultureInfo.CurrentCulture.Name != SelectedCulture && !string.IsNullOrEmpty(SelectedCulture))
         {
-            await js.InvokeVoidAsync("blazorCulture.set", SelectedCulture.Name);
+            await js.InvokeVoidAsync("blazorCulture.set", SelectedCulture);
 
             Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
         }

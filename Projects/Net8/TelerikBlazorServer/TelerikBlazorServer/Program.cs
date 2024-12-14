@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.SignalR;
 using TelerikBlazorServer.Components;
 #if (localization)
 using TelerikBlazorServer.Services;
-using Microsoft.Extensions.Localization;
 using Telerik.Blazor.Services;
 #endif
 
@@ -80,7 +79,7 @@ string[] supportedCultures = app.Configuration.GetSection("Cultures")
     .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
 
 RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture(supportedCultures[0])
+    .SetDefaultCulture(supportedCultures[1])
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
