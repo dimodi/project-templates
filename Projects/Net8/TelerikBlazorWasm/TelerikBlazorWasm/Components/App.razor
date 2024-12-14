@@ -52,6 +52,13 @@
         document.addEventListener("DOMContentLoaded", function() {
             Blazor.start();
         });
+        @*#if (localization)
+
+        window.blazorCulture = {
+            get: () => window.localStorage['BlazorCulture'],
+            set: (value) => window.localStorage['BlazorCulture'] = value
+        };
+        #endif*@
     </script>
 </body>
 

@@ -39,7 +39,7 @@ namespace TelerikBlazorServer.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TelerikBlazorServer.TelerikMessages", typeof(TelerikMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TelerikBlazorServer.Resources.TelerikMessages", typeof(TelerikMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

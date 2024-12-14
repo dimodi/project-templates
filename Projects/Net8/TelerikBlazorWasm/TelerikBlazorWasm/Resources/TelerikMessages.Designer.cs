@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelerikBlazorWasmStandalone.Resources {
+namespace TelerikBlazorWasm.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TelerikBlazorWasmStandalone.Resources.TelerikMessages", typeof(TelerikMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TelerikBlazorWasm.Resources.TelerikMessages", typeof(TelerikMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

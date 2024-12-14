@@ -1,13 +1,31 @@
 ﻿@page "/"
 
+@*#if (localization)
+@using System.Globalization
+
+#endif*@
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 <p>Welcome to your new Telerik Blazor app!</p>
 
+@*#if (localization)
+<ul>
+    <li><strong>CurrentCulture</strong>: @CultureInfo.CurrentCulture</li>
+    <li><strong>CurrentUICulture</strong>: @CultureInfo.CurrentUICulture</li>
+    <li><strong>Date</strong>: @DateTimeValue.ToShortDateString()</li>
+    <li><strong>Number</strong>: @NumericValue.ToString("N2")</li>
+    <li><strong>Currency</strong>: @NumericValue.ToString("C2")</li>
+</ul>
 
+@code {
+    private DateTime DateTimeValue { get; set; } = DateTime.Now;
 
+    private double NumericValue { get; set; } = 123.45;
+}
+#else
 @code {
 
 }
+#endif*@

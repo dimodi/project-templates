@@ -12,10 +12,30 @@
     <ProjectReference Include="..\TelerikBlazorWasm.Client\TelerikBlazorWasm.Client.csproj" />
 <!--#if (Framework == "net8.0") -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.*" />
+<!--#if (localization && render-mode == "Auto") -->
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.*" />
+<!--#endif-->
 <!--#endif-->
 <!--#if (Framework == "net9.0") -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.*" />
+<!--#if (localization && render-mode == "Auto") -->
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
+<!--#endif-->
 <!--#endif-->
   </ItemGroup>
 
+<!--#if (localization && render-mode == "Auto") -->
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\TelerikMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TelerikMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\TelerikMessages.Designer.cs">
+      <DependentUpon>TelerikMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+<!--#endif-->
 </Project>

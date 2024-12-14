@@ -1,5 +1,6 @@
 ﻿@using System.Globalization
 
+@inject IJSRuntime js
 @inject IConfiguration AppConfiguration
 @inject NavigationManager Navigation
 
@@ -27,18 +28,13 @@
         SelectedCulture = CultureInfo.CurrentCulture;
     }
 
-    private void ApplySelectedCultureAsync()
+    private async Task ApplySelectedCultureAsync()
     {
         if (CultureInfo.CurrentCulture != SelectedCulture && SelectedCulture != null)
         {
-            string cultureEscaped = Uri.EscapeDataString(SelectedCulture.Name);
-            string uri = new Uri(Navigation.Uri)
-                .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
-            string uriEscaped = Uri.EscapeDataString(uri);
+            await js.InvokeVoidAsync("blazorCulture.set", SelectedCulture.Name);
 
-            Navigation.NavigateTo(
-                $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
-                forceLoad: true);
+            Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
         }
     }
 }
