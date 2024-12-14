@@ -17,10 +17,10 @@
     <PackageReleaseNotes>
 
       New:
-      * Added optional localization to the all Blazor Web App and Blazor WebAssembly Standalone templates.
+      * Added optional Telerik component localization to the Blazor Web App and Blazor WebAssembly Standalone templates.
 
       Fixes:
-      * Use the latest (wildcard) version of Telerik UI for Blazor in .NET 6-7 WebAssembly Apps when CDN is disabled.
+      * Referenced the latest (wildcard) version of Telerik UI for Blazor in .NET 6-7 WebAssembly Apps when CDN is disabled.
 
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

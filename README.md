@@ -1,6 +1,8 @@
 # Telerik Blazor Project and Item Templates
 
-This repository provides Visual Studio templates for [Telerik Blazor apps and component scaffolders](https://www.telerik.com/blazor-ui) with some convenient [extras](#extras).
+This NuGet package provides Visual Studio project and item templates for [Telerik Blazor apps and component scaffolders](https://www.telerik.com/blazor-ui) with some convenient [extras](#extras).
+
+## Table of Contents
 
 * [Templates](#templates)
 * [Install](#install)
@@ -46,7 +48,7 @@ This repository provides Visual Studio templates for [Telerik Blazor apps and co
 
 On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the Create New Project wizard. Make sure to select "All platforms" in the respective dropdown.
 
-On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category.
+On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category. Visual Studio for Mac is unable to run .NET 8 Blazor Web Apps with WebAssembly or Auto render mode if .NET 9 is installed. In this case, you can edit the app code in Visual Studio, but run the app through the .NET CLI. Or, edit and run the app through VS Code.
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
@@ -115,6 +117,7 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
     * [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
     * [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
     * [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled)
+    * [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) (disabled)
     * [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) (disabled)
     * [Maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) (128 MB in FormOptions and 28 MB in Kestrel) *
     * [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) (32 KB) *
