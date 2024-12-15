@@ -1,5 +1,8 @@
 @page "/GridPage"
 
+@*#if (edit-demo != "None" && validation)
+@using System.ComponentModel.DataAnnotations
+#endif*@
 @*#if (datasource == "OnRead" || grouping)
 @using Telerik.DataSource
 #endif*@
@@ -15,6 +18,12 @@
 <TelerikGrid Data="@GridData"
 #endif*@
              TItem="@SampleModel"
+@*#if (edit-mode != "None")
+             EditMode="@GridEditMode.{TVAR_EDITMODE}"
+             OnCreate="@OnGridCreate"
+             OnDelete="@OnGridDelete"
+             OnUpdate="@OnGridUpdate"
+#endif*@
              FilterMode="GridFilterMode.FilterRow"
 @*#if (grouping)
              Groupable="true"
@@ -26,26 +35,51 @@
              @bind-SelectedItems="@GridSelectedItems"
 #endif*@
              Sortable="true">
+@*#if (edit-mode != "None")
+    <GridToolBarTemplate>
+        <GridCommandButton Command="Add">Add Item</GridCommandButton>
+    </GridToolBarTemplate>
+#endif*@
     <GridColumns>
 @*#if (selection)
+@*#if (edit-mode == "Incell")
+        <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" CheckBoxOnlySelection="true" />
+#else
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" />
+#endif*@
 #endif*@
         <GridColumn Field="@nameof(SampleModel.Name)" />
 @*#if (grouping)
         <GridColumn Field="@nameof(SampleModel.GroupName)" />
 #endif*@
-        <GridColumn Field="@nameof(SampleModel.Price)" />
-        <GridColumn Field="@nameof(SampleModel.Quantity)" />
-        <GridColumn Field="@nameof(SampleModel.StartDate)" />
+        <GridColumn Field="@nameof(SampleModel.Price)" DisplayFormat="{0:c2}" />
+        <GridColumn Field="@nameof(SampleModel.Quantity)" DisplayFormat="{0:n0}" />
+        <GridColumn Field="@nameof(SampleModel.StartDate)" DisplayFormat="{0:d}" />
         <GridColumn Field="@nameof(SampleModel.IsActive)" />
+@*#if (edit-mode != "None")
+        <GridCommandColumn>
+@*#if (edit-mode != "Incell")
+            <GridCommandButton Command="Edit">Edit</GridCommandButton>
+#endif*@
+            <GridCommandButton Command="Delete">Delete</GridCommandButton>
+@*#if (edit-mode == "Inline")
+            <GridCommandButton Command="Save" ShowInEdit="true">Save</GridCommandButton>
+            <GridCommandButton Command="Cancel" ShowInEdit="true">Cancel</GridCommandButton>
+#endif*@
+        </GridCommandColumn>
+#endif*@
     </GridColumns>
 </TelerikGrid>
 
 @code {
     private List<SampleModel> GridData { get; set; } = new();
+
 @*#if (selection)
     private IEnumerable<SampleModel> GridSelectedItems { get; set; } = new List<SampleModel>();
+
 #endif*@
+
+    private int LastId { get; set; }
 
 @*#if (datasource == "OnRead")
     private async Task OnGridRead(GridReadEventArgs args)
@@ -69,19 +103,48 @@
     }
 
 #endif*@
+@*#if (edit-mode != "None")
+    private void OnGridCreate(GridCommandEventArgs args)
+    {
+        var createdItem = (SampleModel)args.Item;
+
+        createdItem.Id = ++LastId;
+
+        GridData.Insert(0, createdItem);
+    }
+
+    private void OnGridDelete(GridCommandEventArgs args)
+    {
+        var deletedItem = (SampleModel)args.Item;
+
+        GridData.Remove(deletedItem);
+    }
+
+    private void OnGridUpdate(GridCommandEventArgs args)
+    {
+        var updatedItem = (SampleModel)args.Item;
+        var originalItemIndex = GridData.FindIndex(i => i.Id == updatedItem.Id);
+
+        if (originalItemIndex >= 0)
+        {
+            GridData[originalItemIndex] = updatedItem;
+        }
+    }
+
+#endif*@
     protected override void OnInitialized()
     {
         for (int i = 1; i <= 24; i++)
         {
             GridData.Add(new SampleModel()
             {
-                Id = i,
-                Name = $"Name {i}",
-                GroupName = $"Group {i % 3 + 1}",
-                Price = Random.Shared.Next(1, 100) * 1.23m,
-                Quantity = Random.Shared.Next(0, 1000),
+                Id = ++LastId,
+                Name = $"Name {LastId}",
+                GroupName = $"Group {LastId % 3 + 1}",
+                Price = Random.Shared.Next(1, 2000) * 1.23m,
+                Quantity = Random.Shared.Next(0, 2000),
                 StartDate = DateTime.Today.AddDays(-Random.Shared.Next(60, 1000)),
-                IsActive = i % 4 > 0
+                IsActive = LastId % 4 > 0
             });
         }
     }
@@ -89,11 +152,23 @@
     public class SampleModel
     {
         public int Id { get; set; }
+@*#if (edit-demo != "None" && validation)
+        [Required]
+#endif*@
         public string Name { get; set; } = string.Empty;
         public string GroupName { get; set; } = string.Empty;
+@*#if (edit-demo != "None" && validation)
+        [Range(typeof(decimal), "0.01", "1000000000000000")]
+#endif*@
         public decimal Price { get; set; }
+@*#if (edit-demo != "None" && validation)
+        [Range(0, int.MaxValue)]
+#endif*@
         public int Quantity { get; set; }
-        public DateTime StartDate { get; set; }
+@*#if (edit-demo != "None" && validation)
+        [Required]
+#endif*@
+        public DateTime? StartDate { get; set; }
         public bool IsActive { get; set; }
     }
 }

@@ -4,7 +4,7 @@
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
     <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
-    <Description>Blazor project and item templates that include Telerik UI for Blazor. You can configure the Telerik Blazor components through template parameter options, including CSS theme, icon type, CDN, localization, and RTL support.</Description>
+    <Description>Blazor project and item templates with Telerik UI for Blazor. You can configure the Telerik Blazor components through template options, including CSS theme, icon type, CDN, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -15,13 +15,11 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
+NEW
+* Merged the two Grid item templates into one.
 
-      New:
-      * Added optional Telerik component localization to the Blazor Web App and Blazor WebAssembly Standalone templates.
-
-      Fixes:
-      * Referenced the latest (wildcard) version of Telerik UI for Blazor in .NET 6-7 WebAssembly Apps when CDN is disabled.
-
+FIXES
+* Added DisplayFormat to some Grid columns.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
@@ -29,7 +27,7 @@
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.3.0</Version>
+    <Version>4.4.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

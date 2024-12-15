@@ -30,7 +30,40 @@
           "choice": "OnRead",
           "description": "Bind with OnRead event"
         }
+      ]
+    },
+    "edit-mode": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "None",
+      "description": "Select the Grid edit mode, which affects the editing UI and UX",
+      "displayName": "Edit Mode",
+      "choices": [
+        {
+          "choice": "None",
+          "description": "Editing is disabled"
+        },
+        {
+          "choice": "Inline",
+          "description": "Inline edit mode with command buttons"
+        },
+        {
+          "choice": "Popup",
+          "description": "Popup edit mode with command buttons"
+        },
+        {
+          "choice": "Incell",
+          "description": "Incell edit mode without command buttons, except for delete operations"
+        }
       ],
+      "replaces": "{TVAR_EDITMODE}"
+    },
+    "validation": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Whether to use DataAnnotations validation in edit mode",
+      "defaultValue": "false",
+      "displayName": "Enable Validation"
     },
     "selection": {
       "type": "parameter",

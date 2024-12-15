@@ -10,6 +10,20 @@
       "isVisible": true
     },
     {
+      "id": "edit-mode",
+      "name": {
+        "text": "Edit Mode"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "validation",
+      "name": {
+        "text": "Enable Validation"
+      },
+      "isVisible": true
+    },
+    {
       "id": "selection",
       "name": {
         "text": "Enable Row Selection"
