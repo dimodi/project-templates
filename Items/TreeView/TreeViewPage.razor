@@ -1,0 +1,146 @@
+@page "/TreeViewPage"
+
+<PageTitle>TreeViewPage</PageTitle>
+
+<TelerikTreeView Data="@TreeViewData"
+@*#if (selection)
+                 SelectionMode="@TreeViewSelectionMode.Multiple"
+                 @bind-SelectedItems="@TreeViewSelectedItems"
+#endif*@
+@*#if (checkboxes)
+                 CheckBoxMode="@TreeViewCheckBoxMode.Multiple"
+                 @bind-CheckedItems="@TreeViewCheckedItems"
+                 CheckChildren="true"
+                 CheckParents="true"
+#endif*@
+                 @bind-ExpandedItems="@TreeViewExpandedItems" />
+
+@code {
+    private List<TreeItem> TreeViewData { get; set; } = new();
+
+    private IEnumerable<object> TreeViewExpandedItems { get; set; } = new List<TreeItem>();
+@*#if (selection)
+    private IEnumerable<object> TreeViewSelectedItems { get; set; } = new List<TreeItem>();
+#endif*@
+@*#if (checkboxes)
+    private IEnumerable<object> TreeViewCheckedItems { get; set; } = new List<TreeItem>();
+#endif*@
+
+    private int LastId { get; set; }
+
+    private int Levels { get; set; } = TVAR_LEVELS;
+    private int Children { get; set; } = TVAR_CHILDREN;
+    private int RootItems { get; set; } = TVAR_ROOTITEMS;
+
+    protected override void OnInitialized()
+    {
+@*#if (data == "Flat")
+        TreeViewData = LoadFlat();
+
+        TreeViewExpandedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
+@*#if (selection)
+        TreeViewSelectedItems = new List<TreeItem>(TreeViewData);
+#endif*@
+@*#if (checkboxes)
+        TreeViewCheckedItems = new List<TreeItem>(TreeViewData);
+#endif*@
+#endif*@
+@*#if (data == "Hierarchical")
+        TreeViewData = LoadHierarchical();
+
+        TreeViewExpandedItems = new List<TreeItem>(TreeViewData);
+@*#if (selection)
+        TreeViewSelectedItems = new List<TreeItem>(TreeViewData);
+#endif*@
+@*#if (checkboxes)
+        TreeViewCheckedItems = new List<TreeItem>(TreeViewData);
+#endif*@
+#endif*@
+    }
+
+@*#if (data == "Flat")
+    private List<TreeItem> LoadFlat()
+    {
+        List<TreeItem> items = new List<TreeItem>();
+
+        PopulateChildren(items, null, 1);
+
+        return items;
+    }
+
+    private void PopulateChildren(List<TreeItem> items, int? parentId, int level)
+    {
+        var itemCount = level == 1 ? RootItems : Children;
+        for (int i = 1; i <= itemCount; i++)
+        {
+            var itemId = LastId++;
+            items.Add(new TreeItem()
+            {
+                Id = itemId,
+                Text = $"Level {level} Item {i} Id {itemId}",
+                ParentId = parentId,
+                HasChildren = level < Levels
+            });
+        }
+
+        if (level < Levels)
+        {
+            PopulateChildren(items, itemId, level + 1);
+        }
+    }
+#else
+    private List<TreeItem> LoadHierarchical()
+    {
+        List<TreeItem> items = new List<TreeItem>();
+
+        PopulateItems(items, 1);
+
+        return items;
+    }
+
+    private void PopulateItems(List<TreeItem> items, int level)
+    {
+        for (int i = 1; i <= (level == 1 ? RootItems : Children); i++)
+        {
+            var itemId = ++LastId;
+
+            var newItem = new TreeItem()
+            {
+                Id = itemId,
+                Text = $"Level {level} Item {i} Id {itemId}"
+            };
+
+            items.Add(newItem);
+
+            if (level < Levels)
+            {
+                PopulateChildren(items, level + 1);
+            }
+        }
+    }
+
+    private void PopulateChildren(List<TreeItem> items, int level)
+    {
+        foreach (var item in items)
+        {
+            item.Items = new List<TreeItem>();
+
+            PopulateItems(item.Items, level);
+        }
+    }
+#endif*@
+
+    public class TreeItem
+    {
+        public int Id { get; set; }
+@*#if (data == "Flat")
+        public int? ParentId { get; set; }
+        public bool HasChildren { get; set; }
+#endif*@
+        public string Text { get; set; } = string.Empty;
+        public object? Icon { get; set; }
+@*#if (data == "Hierarchical")
+        public List<TreeItem>? Items { get; set; }
+#endif*@
+    }
+}

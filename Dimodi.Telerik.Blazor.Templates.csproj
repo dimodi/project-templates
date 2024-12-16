@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Merged the two Grid item templates into one.
+* Added a new TreeView item template.
 
 FIXES
 * Added DisplayFormat to some Grid columns.

@@ -20,8 +20,8 @@ This NuGet package provides Visual Studio project and item templates for [Teleri
 * .NET 8-9 Blazor WebAssembly Standalone App
 * .NET 6-7 Blazor Server App
 * .NET 6-7 Blazor WebAssembly App (ASP.NET Core hosted)
-* Grid with optional row selection, grouping, and two data binding mechanisms
-* Grid with editing and CRUD operations
+* Grid with optional CRUD operations, row selection, grouping, and two data binding mechanisms
+* TreeView with optional selection, checkboxes, and flat or hierarchical data structure
 
 ## Install
 

@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Dimo Dimov",
+  "classifications": [
+    "Web",
+    "Blazor",
+    "Code"
+  ],
+  "identity": "Dimodi.Telerik.Blazor.TreeView",
+  "name": "Telerik Blazor TreeView",
+  "shortName": "dimodi-treeview",
+  "sourceName": "TreeViewPage",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "data": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "Flat",
+      "description": "",
+      "displayName": "Data Structure",
+      "choices": [
+        {
+          "choice": "Flat",
+          "description": ""
+        },
+        {
+          "choice": "Hierarchical",
+          "description": ""
+        }
+      ]
+    },
+    "levels": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "3",
+      "description": "Number of TreeView hierarchy levels",
+      "displayName": "Levels",
+      "replaces": "TVAR_LEVELS"
+    },
+    "children": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "3",
+      "description": "Number of child TreeView items of each parent item",
+      "displayName": "Children per Parent",
+      "replaces": "TVAR_CHILDREN"
+    },
+    "root-items": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "3",
+      "description": "Number of root TreeView items",
+      "displayName": "Root Items",
+      "replaces": "TVAR_ROOTITEMS"
+    },
+    "selection": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow users to select one or multiple items",
+      "displayName": "Enable Item Selection"
+    },
+    "checkboxes": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow users to check one or multiple items",
+      "displayName": "Render Item Checkboxes"
+    }
+  }
+}
