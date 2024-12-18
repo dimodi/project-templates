@@ -35,18 +35,18 @@
     protected override void OnInitialized()
     {
 @*#if (data == "Flat")
-        TreeViewData = LoadFlat();
+        TreeViewData = LoadTreeViewData();
 
         TreeViewExpandedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
 @*#if (selection)
-        TreeViewSelectedItems = new List<TreeItem>(TreeViewData);
+        TreeViewSelectedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
 #endif*@
 @*#if (checkboxes)
-        TreeViewCheckedItems = new List<TreeItem>(TreeViewData);
+        TreeViewCheckedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
 #endif*@
 #endif*@
 @*#if (data == "Hierarchical")
-        TreeViewData = LoadHierarchical();
+        TreeViewData = LoadTreeViewData();
 
         TreeViewExpandedItems = new List<TreeItem>(TreeViewData);
 @*#if (selection)
@@ -59,21 +59,21 @@
     }
 
 @*#if (data == "Flat")
-    private List<TreeItem> LoadFlat()
+    private List<TreeItem> LoadTreeViewData()
     {
         List<TreeItem> items = new List<TreeItem>();
 
-        PopulateChildren(items, null, 1);
+        PopulateTreeItems(items, null, 1);
 
         return items;
     }
 
-    private void PopulateChildren(List<TreeItem> items, int? parentId, int level)
+    private void PopulateTreeItems(List<TreeItem> items, int? parentId, int level)
     {
         var itemCount = level == 1 ? RootItems : Children;
         for (int i = 1; i <= itemCount; i++)
         {
-            var itemId = LastId++;
+            var itemId = ++LastId;
             items.Add(new TreeItem()
             {
                 Id = itemId,
@@ -81,24 +81,24 @@
                 ParentId = parentId,
                 HasChildren = level < Levels
             });
-        }
 
-        if (level < Levels)
-        {
-            PopulateChildren(items, itemId, level + 1);
+            if (level < Levels)
+            {
+                PopulateTreeItems(items, itemId, level + 1);
+            }
         }
     }
 #else
-    private List<TreeItem> LoadHierarchical()
+    private List<TreeItem> LoadTreeViewData()
     {
         List<TreeItem> items = new List<TreeItem>();
 
-        PopulateItems(items, 1);
+        PopulateTreeItems(items, 1);
 
         return items;
     }
 
-    private void PopulateItems(List<TreeItem> items, int level)
+    private void PopulateTreeItems(List<TreeItem> items, int level)
     {
         for (int i = 1; i <= (level == 1 ? RootItems : Children); i++)
         {
@@ -111,21 +111,21 @@
             };
 
             items.Add(newItem);
+        }
 
-            if (level < Levels)
-            {
-                PopulateChildren(items, level + 1);
-            }
+        if (level < Levels)
+        {
+            CreateTreeChildren(items, level + 1);
         }
     }
 
-    private void PopulateChildren(List<TreeItem> items, int level)
+    private void CreateTreeChildren(List<TreeItem> items, int level)
     {
         foreach (var item in items)
         {
             item.Items = new List<TreeItem>();
 
-            PopulateItems(item.Items, level);
+            PopulateTreeItems(item.Items, level);
         }
     }
 #endif*@
