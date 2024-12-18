@@ -18,6 +18,7 @@
 NEW
 * Merged the two Grid item templates into one.
 * Added a new TreeView item template.
+* Upgraded the WebAssembly apps to Telerik UI for Blazor 7.1.0 when using CDN.
 
 FIXES
 * Added DisplayFormat to some Grid columns.

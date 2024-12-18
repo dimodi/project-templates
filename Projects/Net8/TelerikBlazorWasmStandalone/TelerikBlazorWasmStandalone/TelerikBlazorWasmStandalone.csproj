@@ -25,7 +25,7 @@
 <!--#endif-->
 <!--#endif-->
 <!--#if (cdn) -->
-    <PackageReference Include="Telerik.UI.for.Blazor" Version="7.0.0" />
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="7.1.0" />
 #else
     <PackageReference Include="Telerik.UI.for.Blazor" Version="*" />
 <!--#endif-->

@@ -73,7 +73,7 @@ The project templates use similar short names to the respective Microsoft counte
 For help on a specific project or item template, execute the `dotnet new` command with the `--help` option, for example:
 
 ```sh
-dotnet new dimodi-grid-edit --help
+dotnet new dimodi-grid --help
 ```
 
 ### Create Projects
