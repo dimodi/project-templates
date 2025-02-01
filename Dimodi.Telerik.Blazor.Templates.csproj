@@ -15,13 +15,8 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-NEW
-* Merged the two Grid item templates into one.
-* Added a new TreeView item template.
-* Upgraded the WebAssembly apps to Telerik UI for Blazor 7.1.0 when using CDN.
-
 FIXES
-* Added DisplayFormat to some Grid columns.
+* Renamed SampleModel to GridItem for consistency with the TreeView item template.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
@@ -29,7 +24,7 @@ FIXES
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.4.0</Version>
+    <Version>4.4.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

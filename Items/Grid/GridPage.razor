@@ -17,7 +17,7 @@
 #else
 <TelerikGrid Data="@GridData"
 #endif*@
-             TItem="@SampleModel"
+             TItem="@GridItem"
 @*#if (edit-mode != "None")
              EditMode="@GridEditMode.{TVAR_EDITMODE}"
              OnCreate="@OnGridCreate"
@@ -48,14 +48,14 @@
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" />
 #endif*@
 #endif*@
-        <GridColumn Field="@nameof(SampleModel.Name)" />
+        <GridColumn Field="@nameof(GridItem.Name)" />
 @*#if (grouping)
-        <GridColumn Field="@nameof(SampleModel.GroupName)" />
+        <GridColumn Field="@nameof(GridItem.GroupName)" />
 #endif*@
-        <GridColumn Field="@nameof(SampleModel.Price)" DisplayFormat="{0:c2}" />
-        <GridColumn Field="@nameof(SampleModel.Quantity)" DisplayFormat="{0:n0}" />
-        <GridColumn Field="@nameof(SampleModel.StartDate)" DisplayFormat="{0:d}" />
-        <GridColumn Field="@nameof(SampleModel.IsActive)" />
+        <GridColumn Field="@nameof(GridItem.Price)" DisplayFormat="{0:c2}" />
+        <GridColumn Field="@nameof(GridItem.Quantity)" DisplayFormat="{0:n0}" />
+        <GridColumn Field="@nameof(GridItem.StartDate)" DisplayFormat="{0:d}" />
+        <GridColumn Field="@nameof(GridItem.IsActive)" />
 @*#if (edit-mode != "None")
         <GridCommandColumn>
 @*#if (edit-mode != "Incell")
@@ -72,10 +72,10 @@
 </TelerikGrid>
 
 @code {
-    private List<SampleModel> GridData { get; set; } = new();
+    private List<GridItem> GridData { get; set; } = new();
 
 @*#if (selection)
-    private IEnumerable<SampleModel> GridSelectedItems { get; set; } = new List<SampleModel>();
+    private IEnumerable<GridItem> GridSelectedItems { get; set; } = new List<GridItem>();
 
 #endif*@
 
@@ -93,11 +93,11 @@
 
 #endif*@
 @*#if (grouping)
-    private void OnGridStateInit(GridStateEventArgs<SampleModel> args)
+    private void OnGridStateInit(GridStateEventArgs<GridItem> args)
     {
         args.GridState.GroupDescriptors.Add(new GroupDescriptor()
         {
-            Member = nameof(SampleModel.GroupName),
+            Member = nameof(GridItem.GroupName),
             MemberType = typeof(string)
         });
     }
@@ -106,7 +106,7 @@
 @*#if (edit-mode != "None")
     private void OnGridCreate(GridCommandEventArgs args)
     {
-        var createdItem = (SampleModel)args.Item;
+        var createdItem = (GridItem)args.Item;
 
         createdItem.Id = ++LastId;
 
@@ -115,14 +115,14 @@
 
     private void OnGridDelete(GridCommandEventArgs args)
     {
-        var deletedItem = (SampleModel)args.Item;
+        var deletedItem = (GridItem)args.Item;
 
         GridData.Remove(deletedItem);
     }
 
     private void OnGridUpdate(GridCommandEventArgs args)
     {
-        var updatedItem = (SampleModel)args.Item;
+        var updatedItem = (GridItem)args.Item;
         var originalItemIndex = GridData.FindIndex(i => i.Id == updatedItem.Id);
 
         if (originalItemIndex >= 0)
@@ -136,7 +136,7 @@
     {
         for (int i = 1; i <= 24; i++)
         {
-            GridData.Add(new SampleModel()
+            GridData.Add(new GridItem()
             {
                 Id = ++LastId,
                 Name = $"Name {LastId}",
@@ -149,7 +149,7 @@
         }
     }
 
-    public class SampleModel
+    public class GridItem
     {
         public int Id { get; set; }
 @*#if (edit-demo != "None" && validation)
