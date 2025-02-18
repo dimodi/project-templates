@@ -15,7 +15,7 @@
 <!--#if (localization && Framework == "net9.0") -->
     <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
 <!--#endif-->
-    <PackageReference Include="Telerik.UI.for.Blazor" Version="*" />
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
   </ItemGroup>
 <!--#if (localization) -->
   <ItemGroup>

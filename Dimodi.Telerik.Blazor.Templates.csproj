@@ -16,9 +16,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Upgraded Telerik UI for Blazor version to 8.0.0 in WebAssembly apps with CDN.
-FIXES
-* Renamed SampleModel to GridItem for consistency with the TreeView item template.
+* Added a version selector for Telerik UI for Blazor.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
@@ -26,7 +24,7 @@ FIXES
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.4.1</Version>
+    <Version>4.5.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -57,6 +57,28 @@
       ],
       "replaces": "{TVAR_RENDERMODE}"
     },
+    "telerik-version": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "8.0.0",
+      "description": "Select the Telerik UI for Blazor version.",
+      "displayName": "Telerik UI for Blazor version",
+      "choices": [
+        {
+          "choice": "*",
+          "displayName": "latest"
+        },
+        {
+          "choice": "8.0.0",
+          "displayName": "8.0.0"
+        },
+        {
+          "choice": "7.1.0",
+          "displayName": "7.1.0"
+        }
+      ],
+      "replaces": "{TVAR_TELERIKVERSION}"
+    },
     "theme": {
       "type": "parameter",
       "datatype": "choice",

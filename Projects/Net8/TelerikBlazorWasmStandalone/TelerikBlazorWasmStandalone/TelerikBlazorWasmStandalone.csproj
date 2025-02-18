@@ -24,11 +24,7 @@
     <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
 <!--#endif-->
 <!--#endif-->
-<!--#if (cdn) -->
-    <PackageReference Include="Telerik.UI.for.Blazor" Version="8.0.0" />
-#else
-    <PackageReference Include="Telerik.UI.for.Blazor" Version="*" />
-<!--#endif-->
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
   </ItemGroup>
 
 <!--#if (localization) -->

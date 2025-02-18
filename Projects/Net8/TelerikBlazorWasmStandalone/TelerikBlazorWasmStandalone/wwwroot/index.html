@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TelerikBlazorWasmStandalone</title>
     <base href="/" />
-    <!--#if (cdn)
-    <script src="https://blazor.cdn.telerik.com/blazor/8.0.0/telerik-blazor.min.js" defer></script>
-    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/8.0.0/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main.css" />
+    <!--#if (cdn && telerik-version != "*")
+    <script src="https://blazor.cdn.telerik.com/blazor/{TVAR_TELERIKVERSION}/telerik-blazor.min.js" defer></script>
+    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/{TVAR_TELERIKVERSION}/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main.css" />
     <!--#if (icon-type == "Font")
-    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/8.0.0/kendo-font-icons/font-icons.css" />
+    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/{TVAR_TELERIKVERSION}/kendo-font-icons/font-icons.css" />
     #endif -->
     #else
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" defer></script>
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     #endif -->
     <link rel="stylesheet" href="css/app.css" />
-    <link href="TelerikBlazorWasmStandalone.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="TelerikBlazorWasmStandalone.styles.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 

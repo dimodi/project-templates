@@ -3,6 +3,13 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
+      "id": "telerik-version",
+      "name": {
+        "text": "Telerik UI for Blazor version"
+      },
+      "isVisible": true
+    },
+    {
       "id": "theme",
       "name": {
         "text": "Telerik Theme"
