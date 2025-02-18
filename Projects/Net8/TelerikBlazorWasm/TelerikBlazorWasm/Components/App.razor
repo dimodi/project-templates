@@ -8,7 +8,7 @@
     @{ string telerikUiForBlazorVersion = TelerikBlazorWasm.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion(); }
     @*#if (cdn)
     <script src="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/telerik-blazor.min.js" defer></script>
-    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main.css" />
+    <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main{TVAR_THEMESUFFIX}.css" />
     @*#if (icon-type == "Font")
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@telerikUiForBlazorVersion/kendo-font-icons/font-icons.css" />
     #endif*@

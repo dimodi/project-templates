@@ -111,10 +111,12 @@ The **item** templates provide declarations of Telerik Blazor components togethe
 
 The **project** templates are similar to the default .NET SDK Blazor project templates. The differences are:
 
-* The apps reference the [latest Telerik UI for Blazor version](https://www.telerik.com/support/whats-new/blazor-ui/release-history). The WebAssembly apps reference the latest minor .NET version.
+* The apps reference one of the [latest Telerik UI for Blazor versions](https://www.telerik.com/support/whats-new/blazor-ui/release-history) or the latest version as a wildcard `*`.
+* The WebAssembly apps reference the latest minor .NET version.
 * The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need).
 * You can configure some settings related to the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (see the default values in the brackets):
     * [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
+    * [Dark theme swatch](https://www.telerik.com/blazor-ui/documentation/styling-and-themes/overview#basics) (disabled)
     * [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
     * [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled)
     * [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) in .NET 8 and .NET 9 apps (disabled)
@@ -123,6 +125,7 @@ The **project** templates are similar to the default .NET SDK Blazor project tem
     * [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) (32 KB) *
 * The [Telerik CSS and JS files are loaded with a query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. This feature is missing from the WebAssembly Standalone App template due to dynamic content usage restrictions in `index.html`.
 * .NET 8 and .NET 9 apps use the `https` launch profile by default.
+* The top bar uses background and border colors from the Telerik theme. This makes the styling consistent in dark mode.
 * The `SurveyPrompt` Razor component is removed.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
 

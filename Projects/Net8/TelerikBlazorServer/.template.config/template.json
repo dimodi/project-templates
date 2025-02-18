@@ -99,6 +99,32 @@
       ],
       "replaces": "{TVAR_THEME}"
     },
+    "dark-mode": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Load the dark swatch of the Telerik CSS theme. Requires CDN.",
+      "displayName": "Dark Mode (requires CDN)"
+    },
+    "theme-suffix": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(dark-mode)",
+            "value": "-dark"
+          },
+          {
+            "condition": "",
+            "value": ""
+          }
+        ]
+      },
+      "replaces": "{TVAR_THEMESUFFIX}"
+    },
     "cdn": {
       "type": "parameter",
       "datatype": "bool",

@@ -24,6 +24,13 @@
       "isVisible": true
     },
     {
+      "id": "dark-mode",
+      "name": {
+        "text": "Dark Mode (requires CDN)"
+      },
+      "isVisible": true
+    },
+    {
       "id": "cdn",
       "name": {
         "text": "Use Telerik CDN"
