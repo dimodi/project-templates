@@ -188,6 +188,36 @@
       "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component. Consider setting the same value for the Form Body Length.",
       "displayName": "Max Kestrel Request Body Size (MB)",
       "replaces": "{TVAR_KESTRELREQUEST}"
+    },
+    "kestrel-https-port": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 7777
+      },
+      "replaces": "{TVAR_HTTPSPORT}"
+    },
+    "kestrel-https-port2": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 5555
+      },
+      "replaces": "{TVAR_HTTPSPORT2}"
+    },
+    "kestrel-http-port": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 4444
+      },
+      "replaces": "{TVAR_HTTPPORT}"
     }
   },
   "sources": [

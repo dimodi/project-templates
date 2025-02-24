@@ -18,6 +18,9 @@
 NEW
 * Added a version selector for Telerik UI for Blazor.
 * Added dark mode for Telerik UI for Blazor.
+* Added random ports to launchSettings.json.
+
+(The .NET 6-7 project templates are deprecated and no longer receive new features.)
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
