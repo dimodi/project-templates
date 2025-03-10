@@ -224,7 +224,7 @@
         {
           "condition": "(localization == false)",
           "exclude": [
-            "**/Components/Layout/CultureSelector.razor",
+            "**/Layout/CultureSelector.razor",
             "**/Controllers/**",
             "**/Resources/**",
             "**/Services/**"

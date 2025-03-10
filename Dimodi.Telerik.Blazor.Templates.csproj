@@ -21,6 +21,9 @@ NEW
 * Added random ports to launchSettings.json.
 * Added support for Telerik UI for Blazor 8.1.0.
 
+FIXED
+* Removed CultureSelector.razor from the Web App (WebAssembly / Auto) template when localization is not used.
+
 NOTE
 The .NET 6-7 project templates are deprecated. They don't receive new features, except for latest version support for Telerik UI for Blazor.
     </PackageReleaseNotes>
