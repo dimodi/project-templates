@@ -15,14 +15,7 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-NEW
-* Added a version selector for Telerik UI for Blazor.
-* Added dark mode for Telerik UI for Blazor.
-* Added random ports to launchSettings.json.
-* Added support for Telerik UI for Blazor 8.1.0.
-
-FIXED
-* Removed CultureSelector.razor from the Web App (WebAssembly / Auto) template when localization is not used.
+Added support for Telerik UI for Blazor patch version 8.1.1.
 
 NOTE
 The .NET 6-7 project templates are deprecated. They don't receive new features, except for latest version support for Telerik UI for Blazor.
@@ -33,7 +26,7 @@ The .NET 6-7 project templates are deprecated. They don't receive new features, 
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.5.0</Version>
+    <Version>4.5.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
