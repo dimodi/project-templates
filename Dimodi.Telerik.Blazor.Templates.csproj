@@ -21,9 +21,6 @@ NEW
 
 FIXED
 * Prevented duplicate solution file generation when creating an app with VS Code C# Dev Kit.
-
-NOTE
-The .NET 6-7 project templates are deprecated, but they received all the above enhancements.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
