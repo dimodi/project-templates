@@ -16,11 +16,12 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Added a default app name.
+* Added a default app name for the New Project wizard in C# Dev Kit.
 * Added Telerik UI for Blazor version selector, dark mode, and random ports to the .NET 6-7 project templates.
-* Removed the .sln solution file from the server project templates, similar to how the standard Microsoft project templates work. Visual Studio and VS Code create a solution file automatically.
+* Removed the .sln solution file from the single-project templates, similar to how the standard Microsoft project templates work. Visual Studio and VS Code C# Dev Kit create a solution file automatically.
+* Renamed the framework version short alias from -F to -f when using the .NET CLI.
 
-FIXED
+FIXES
 * Prevented duplicate solution file generation when creating an app with VS Code C# Dev Kit.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
