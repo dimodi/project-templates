@@ -201,11 +201,15 @@
     },
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "TelerikBlazorWasm/TelerikBlazorWasm.csproj"
+      "path": "Server/TelerikBlazorWasm.Server.csproj"
     },
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "TelerikBlazorWasm.Client/TelerikBlazorWasm.Client.csproj"
+      "path": "Client/TelerikBlazorWasm.Client.csproj"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "Shared/TelerikBlazorWasm.Shared.csproj"
     }
   ],
   "sources": [
