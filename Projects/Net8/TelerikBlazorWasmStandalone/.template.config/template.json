@@ -8,17 +8,15 @@
   ],
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Standalone",
   "name": "Telerik Blazor WebAssembly Standalone App",
+  "defaultName": "TelerikBlazorApp",
   "shortName": "dimodi-blazorwasm",
   "description": "Blazor WebAssembly Standalone App with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasmStandalone",
   "tags": {
     "language": "C#",
-    "type": "solution"
+    "type": "project"
   },
-  "guids": [
-    "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC",
-    "C10C311B-98E5-4EAF-860D-D053C9B69C8B"
-  ],
+  "preferNameDirectory": true,
   "symbols": {
     "Framework": {
       "type": "parameter",

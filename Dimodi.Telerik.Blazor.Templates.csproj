@@ -15,10 +15,14 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-Added support for Telerik UI for Blazor patch version 8.1.1.
+NEW
+* Added a default app name.
+
+FIXED
+* Prevented duplicate solution file generation when creating an app with VS Code C# Dev Kit.
 
 NOTE
-The .NET 6-7 project templates are deprecated. They don't receive new features, except for latest version support for Telerik UI for Blazor.
+The .NET 6-7 project templates are deprecated, but they received all the above enhancements.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
@@ -26,7 +30,7 @@ The .NET 6-7 project templates are deprecated. They don't receive new features, 
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.5.1</Version>
+    <Version>4.6.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
