@@ -51,7 +51,7 @@
       "choices": [
         {
           "choice": "*",
-          "displayName": "latest as wildcard"
+          "displayName": "latest as wildcard (no CDN)"
         },
         {
           "choice": "8.1.1",
@@ -60,6 +60,10 @@
         {
           "choice": "7.1.0",
           "displayName": "7.1.0"
+        },
+        {
+          "choice": "6.2.0",
+          "displayName": "6.2.0"
         }
       ],
       "replaces": "{TVAR_TELERIKVERSION}"
