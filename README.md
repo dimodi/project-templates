@@ -11,6 +11,7 @@ This NuGet package provides Visual Studio project and item templates for [Teleri
 * [Extras](#extras)
 * [Update](#update)
 * [Uninstall](#uninstall)
+* [Create your own templates](#create-your-own-templates)
 * [License](#license)
 
 ## Templates
@@ -154,8 +155,19 @@ To remove the currently installed package, execute the `dotnet new uninstall` co
 dotnet new uninstall Dimodi.Telerik.Blazor.Templates
 ```
 
+## Create Your Own Templates
+
+If you wish to experiment with your own project or item templates, then start from here:
+
+* https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates
+* https://github.com/dotnet/templating/
+* https://github.com/dotnet/aspnetcore/tree/main/src/ProjectTemplates
+* https://github.com/sayedihashimi/template-sample
+
+Prepare for reading incomplete and unofficial documentation, and a lot of trial and error.
+
 ## License
 
 [Telerik UI for Blazor is a commercial component library](https://www.telerik.com/purchase/license-agreement/blazor-ui) with its own license agreement.
 
-The project templates are subject to [MIT License](LICENSE).
+The project and item templates are subject to [MIT License](LICENSE).
