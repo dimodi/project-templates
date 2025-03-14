@@ -3,9 +3,23 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
+      "id": "telerik-version",
+      "name": {
+        "text": "Telerik UI for Blazor version"
+      },
+      "isVisible": true
+    },
+    {
       "id": "theme",
       "name": {
         "text": "Telerik Theme"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "dark-mode",
+      "name": {
+        "text": "Dark Mode (requires CDN)"
       },
       "isVisible": true
     },

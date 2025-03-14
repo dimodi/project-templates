@@ -8,15 +8,17 @@
   ],
   "identity": "Dimodi.Telerik.Blazor.WebApp.WebAssemblyAuto",
   "name": "Telerik Blazor Web App (WebAssembly or Auto)",
+  "defaultName": "TelerikBlazorApp",
   "shortName": "dimodi-blazor-wasmauto",
   "description": "Blazor Web App with global interactive WebAssembly or Auto render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
   "tags": {
     "language": "C#",
-    "type": "solution"
+    "type": "solution",
+    "editorTreatAs": "solution"
   },
+  "preferNameDirectory": true,
   "guids": [
-    "9A19103F-16F7-4668-BE54-9A1E7A4F7556",
     "27EC6E1B-25F1-4610-848C-816BA6C5DCFD",
     "99CEE179-E2E4-40F9-B4D0-3055CE52699B",
     "10E9231B-C208-4707-B24C-735A779D09F0"
@@ -216,10 +218,33 @@
         "fallback": 4444
       },
       "replaces": "{TVAR_HTTPPORT}"
+    },
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
     }
   },
+  "primaryOutputs": [
+    {
+      "condition": "(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\")",
+      "path": "TelerikBlazorWasm.sln"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "TelerikBlazorWasm/TelerikBlazorWasm.csproj"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "TelerikBlazorWasm.Client/TelerikBlazorWasm.Client.csproj"
+    }
+  ],
   "sources": [
     {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"
+      ],
       "modifiers": [
         {
           "condition": "(localization == false)",
@@ -228,6 +253,12 @@
             "**/Controllers/**",
             "**/Resources/**",
             "**/Services/**"
+          ]
+        },
+        {
+          "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+          "exclude": [
+            "*.sln"
           ]
         }
       ]
