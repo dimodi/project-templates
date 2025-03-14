@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Added a default app name.
+* Added Telerik UI for Blazor version selector, dark mode, and random ports to the .NET 6-7 project templates.
 
 FIXED
 * Prevented duplicate solution file generation when creating an app with VS Code C# Dev Kit.
