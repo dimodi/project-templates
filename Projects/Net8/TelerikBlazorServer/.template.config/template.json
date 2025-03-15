@@ -259,7 +259,8 @@
           "condition": "(docker == false)",
           "exclude": [
             "**/Dockerfile",
-            "**/NuGet.Config"
+            "**/NuGet.Config",
+            "**/.dockerignore"
           ]
         }
       ]
