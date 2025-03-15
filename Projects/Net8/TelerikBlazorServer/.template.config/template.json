@@ -34,6 +34,25 @@
       ],
       "replaces": "{TVAR_NETVERSION}"
     },
+    "framework-number": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(Framework == \"net8.0\")",
+            "value": "8"
+          },
+          {
+            "condition": "",
+            "value": "9"
+          }
+        ]
+      },
+      "replaces": "{TVAR_NETNUMBER}"
+    },
     "render-mode": {
       "type": "parameter",
       "datatype": "choice",
@@ -47,6 +66,13 @@
         }
       ],
       "replaces": "{TVAR_RENDERMODE}"
+    },
+    "docker": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Add configuration to publish and run the app in a Docker container",
+      "displayName": "Add Dockerfile"
     },
     "telerik-version": {
       "type": "parameter",
@@ -227,6 +253,13 @@
             "**/Controllers/**",
             "**/Resources/**",
             "**/Services/**"
+          ]
+        },
+        {
+          "condition": "(docker == false)",
+          "exclude": [
+            "**/Dockerfile",
+            "**/NuGet.Config"
           ]
         }
       ]

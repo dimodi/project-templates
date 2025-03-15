@@ -9,11 +9,8 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-<!--#if (localization && Framework == "net8.0") -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.*" />
-<!--#endif-->
-<!--#if (localization && Framework == "net9.0") -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
+<!--#if (localization) -->
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
   </ItemGroup>
