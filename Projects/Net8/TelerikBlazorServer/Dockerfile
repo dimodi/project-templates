@@ -10,23 +10,25 @@
 #
 # Suggested build command:
 #
-# docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t TelerikBlazorServer:v1 .
+# docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t telerikblazorserver:v1 .
 #
 # Suggested run command:
 #
-# docker run -p 8080:8080 TelerikBlazorServer:v1
+# docker run -p 8080:8080 telerikblazorserver:v1
 #
 # Browse application at:
 #
 # http://localhost:8080
 #
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:{TVAR_NETNUMBER}.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:{TVAR_NETNUMBER}.0 AS base
+USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM mcr.microsoft.com/dotnet/core/sdk:{TVAR_NETNUMBER}.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:{TVAR_NETNUMBER}.0 AS build
+ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY TelerikBlazorServer.csproj .
 COPY NuGet_Deploy.Config ./NuGet.Config
@@ -36,13 +38,14 @@ RUN dotnet restore TelerikBlazorServer.csproj
 COPY . .
 # WORKDIR /src/TelerikBlazorServer
 RUN --mount=type=secret,id=telerik-license-key,env=TELERIK_LICENSE \
-    dotnet build TelerikBlazorServer.csproj -c Release -o /app
+    dotnet build TelerikBlazorServer.csproj -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
 RUN --mount=type=secret,id=telerik-license-key,env=TELERIK_LICENSE \
-    dotnet publish TelerikBlazorServer.csproj -c Release -o /app /p:UseAppHost=false
+    dotnet publish TelerikBlazorServer.csproj -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "TelerikBlazorServer.dll"]

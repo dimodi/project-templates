@@ -241,6 +241,11 @@
         "fallback": 4444
       },
       "replaces": "{TVAR_HTTPPORT}"
+    },
+    "docker-user-secrets-id": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "{TVAR_DOCKERUSERSECRETSID}"
     }
   },
   "sources": [
@@ -256,10 +261,16 @@
           ]
         },
         {
+          "rename": {
+            "dockerignore.dockerignore": ".dockerignore"
+          }
+        },
+        {
           "condition": "(docker == false)",
           "exclude": [
             "**/Dockerfile",
-            "**/NuGet.Config",
+            "**/NuGet_Deploy.Config",
+            "**/dockerignore.dockerignore",
             "**/.dockerignore"
           ]
         }

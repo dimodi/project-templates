@@ -1,7 +1,0 @@
-**/[b|B]in/
-**/[O|o]bj/
-**/.git/
-**/.vs/
-
-**/.DS_Store
-**/.mono
