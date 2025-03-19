@@ -24,7 +24,7 @@ NEW
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.7.0</Version>
+    <Version>5.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
