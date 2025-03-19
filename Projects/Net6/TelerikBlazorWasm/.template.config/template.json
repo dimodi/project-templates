@@ -8,15 +8,17 @@
   ],
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Hosted",
   "name": "Telerik Blazor WebAssembly App (.NET 6-7)",
+  "defaultName": "TelerikBlazorApp",
   "shortName": "dimodi-blazorwasm-hosted",
   "description": "Blazor WebAssembly App (ASP.NET Core hosted) with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorWasm",
   "tags": {
     "language": "C#",
-    "type": "solution"
+    "type": "solution",
+    "editorTreatAs": "solution"
   },
+  "preferNameDirectory": true,
   "guids": [
-    "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC",
     "C958C14D-1DB4-447F-86FE-E9B242AB45F9",
     "85028194-56A1-427D-9040-EDE93864A9DE",
     "CB296B71-887B-4584-A41A-3DC2EC599806",
@@ -39,6 +41,32 @@
         }
       ],
       "replaces": "{TVAR_NETVERSION}"
+    },
+    "telerik-version": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "8.1.1",
+      "description": "Select the Telerik UI for Blazor version.",
+      "displayName": "Telerik UI for Blazor version",
+      "choices": [
+        {
+          "choice": "*",
+          "displayName": "latest as wildcard (no CDN)"
+        },
+        {
+          "choice": "8.1.1",
+          "displayName": "8.1.1"
+        },
+        {
+          "choice": "7.1.0",
+          "displayName": "7.1.0"
+        },
+        {
+          "choice": "6.2.0",
+          "displayName": "6.2.0"
+        }
+      ],
+      "replaces": "{TVAR_TELERIKVERSION}"
     },
     "theme": {
       "type": "parameter",
@@ -65,6 +93,32 @@
         }
       ],
       "replaces": "{TVAR_THEME}"
+    },
+    "dark-mode": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Load the dark swatch of the Telerik CSS theme. Requires CDN.",
+      "displayName": "Dark Mode (requires CDN)"
+    },
+    "theme-suffix": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(dark-mode)",
+            "value": "-dark"
+          },
+          {
+            "condition": "",
+            "value": ""
+          }
+        ]
+      },
+      "replaces": "{TVAR_THEMESUFFIX}"
     },
     "cdn": {
       "type": "parameter",
@@ -114,6 +168,65 @@
       "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component. Consider setting the same value for the Form Body Length.",
       "displayName": "Max Kestrel Request Body Size (MB)",
       "replaces": "{TVAR_KESTRELREQUEST}"
+    },
+    "kestrel-https-port": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 7777
+      },
+      "replaces": "{TVAR_HTTPSPORT}"
+    },
+    "kestrel-https-port2": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 5555
+      },
+      "replaces": "{TVAR_HTTPSPORT2}"
+    },
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
     }
-  }
+  },
+  "primaryOutputs": [
+    {
+      "condition": "(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\")",
+      "path": "TelerikBlazorWasm.sln"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "Server/TelerikBlazorWasm.Server.csproj"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "Client/TelerikBlazorWasm.Client.csproj"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "Shared/TelerikBlazorWasm.Shared.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"
+      ],
+      "modifiers": [
+        {
+          "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+          "exclude": [
+            "*.sln"
+          ]
+        }
+      ]
+    }
+  ]
 }

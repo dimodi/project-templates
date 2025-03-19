@@ -7,18 +7,15 @@
   ],
   "identity": "Dimodi.Telerik.Blazor.Server",
   "name": "Telerik Blazor Server App (.NET 6-7)",
+  "defaultName": "TelerikBlazorApp",
   "shortName": "dimodi-blazorserver",
   "description": "Blazor Server App with Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
   "tags": {
     "language": "C#",
-    "type": "solution"
+    "type": "project"
   },
-  "guids": [
-    "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC",
-    "1E746FCD-01B9-49AC-BD89-E5C0C39B65A5",
-    "9DE58732-38AD-4571-8186-A058A5BCE359"
-  ],
+  "preferNameDirectory": true,
   "symbols": {
     "Framework": {
       "type": "parameter",
@@ -36,6 +33,32 @@
         }
       ],
       "replaces": "{TVAR_NETVERSION}"
+    },
+    "telerik-version": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "8.1.1",
+      "description": "Select the Telerik UI for Blazor version.",
+      "displayName": "Telerik UI for Blazor version",
+      "choices": [
+        {
+          "choice": "*",
+          "displayName": "latest as wildcard"
+        },
+        {
+          "choice": "8.1.1",
+          "displayName": "8.1.1"
+        },
+        {
+          "choice": "7.1.0",
+          "displayName": "7.1.0"
+        },
+        {
+          "choice": "6.2.0",
+          "displayName": "6.2.0"
+        }
+      ],
+      "replaces": "{TVAR_TELERIKVERSION}"
     },
     "theme": {
       "type": "parameter",
@@ -62,6 +85,32 @@
         }
       ],
       "replaces": "{TVAR_THEME}"
+    },
+    "dark-mode": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Load the dark swatch of the Telerik CSS theme. Requires CDN.",
+      "displayName": "Dark Mode (requires CDN)"
+    },
+    "theme-suffix": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(dark-mode)",
+            "value": "-dark"
+          },
+          {
+            "condition": "",
+            "value": ""
+          }
+        ]
+      },
+      "replaces": "{TVAR_THEMESUFFIX}"
     },
     "cdn": {
       "type": "parameter",
@@ -119,6 +168,26 @@
       "description": "Increase the Kestrel MaxRequestBodySize. Relevant to the Upload component. Consider setting the same value for the Form Body Length.",
       "displayName": "Max Kestrel Request Body Size (MB)",
       "replaces": "{TVAR_KESTRELREQUEST}"
+    },
+    "kestrel-https-port": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 7777
+      },
+      "replaces": "{TVAR_HTTPSPORT}"
+    },
+    "kestrel-https-port2": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "high": 9999,
+        "low": 1024,
+        "fallback": 5555
+      },
+      "replaces": "{TVAR_HTTPSPORT2}"
     }
   }
 }

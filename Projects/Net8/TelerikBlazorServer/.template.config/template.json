@@ -7,18 +7,15 @@
   ],
   "identity": "Dimodi.Telerik.Blazor.WebApp.Server",
   "name": "Telerik Blazor Web App (Server)",
+  "defaultName": "TelerikBlazorApp",
   "shortName": "dimodi-blazor-server",
   "description": "Blazor Web App with global interactive Server render mode, and Telerik Blazor components installed",
   "sourceName": "TelerikBlazorServer",
   "tags": {
     "language": "C#",
-    "type": "solution"
+    "type": "project"
   },
-  "guids": [
-    "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC",
-    "3F047879-D472-41B7-86B6-61FB2D0083F6",
-    "B4DCBEA3-B740-4931-82BB-F3583E1C2230"
-  ],
+  "preferNameDirectory": true,
   "symbols": {
     "Framework": {
       "type": "parameter",
