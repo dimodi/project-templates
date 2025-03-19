@@ -19,10 +19,12 @@ NEW
 * Added a default app name for the New Project wizard in VS Code C# Dev Kit.
 * Added Telerik UI for Blazor version selector, dark mode, and random ports to the .NET 6-7 project templates.
 * Removed the .sln solution file from the single-project templates, similar to how the standard Microsoft project templates work. Visual Studio and VS Code C# Dev Kit create a solution file automatically.
-* Renamed the framework version short alias from -F to -f when using the .NET CLI.
 
-FIXES
+FIXED
 * Prevented duplicate solution file generation when creating an app with VS Code C# Dev Kit.
+
+BREAKING CHANGE
+* Renamed the framework version short alias from -F to -f when using the .NET CLI.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
@@ -30,7 +32,7 @@ FIXES
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>4.6.0</Version>
+    <Version>5.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
