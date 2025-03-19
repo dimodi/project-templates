@@ -246,6 +246,10 @@
       "type": "generated",
       "generator": "guid",
       "replaces": "{TVAR_DOCKERUSERSECRETSID}"
+    },
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
     }
   },
   "sources": [
@@ -275,6 +279,23 @@
           ]
         }
       ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "**/Components/Pages/Home.razor"
+    }
+  ],
+  "postActions": [
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "description": "Open Home.razor",
+      "continueOnError": false,
+      "manualInstructions": [],
+      "args": {
+        "files": "0"
+      }
     }
   ]
 }

@@ -4,7 +4,7 @@
 # Telerik NuGet keys: https://www.telerik.com/blazor-ui/documentation/deployment/nuget-keys
 # Telerik license keys: https://www.telerik.com/blazor-ui/documentation/deployment/ci-cd-license-key
 # 
-# This Dockerfile depends on two secrets that must be passed to the docker build command:
+# This Dockerfile depends on two secrets that must be passed to the docker build command as file paths:
 # - Telerik license key (only for Telerik UI for Blazor versions >= 8.0)
 # - Telerik NuGet API key
 #
