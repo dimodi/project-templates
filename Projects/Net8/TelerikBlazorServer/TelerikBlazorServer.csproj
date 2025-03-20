@@ -19,6 +19,7 @@
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
   </ItemGroup>
+
 <!--#if (localization) -->
   <ItemGroup>
     <EmbeddedResource Update="Resources\TelerikMessages.resx">
@@ -31,5 +32,6 @@
       <DependentUpon>TelerikMessages.resx</DependentUpon>
     </Compile>
   </ItemGroup>
+
 <!--#endif-->
 </Project>

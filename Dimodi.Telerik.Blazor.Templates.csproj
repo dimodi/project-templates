@@ -16,7 +16,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Added Docker support.
+* Added an optional Upload controller class. The larger max upload file size is now set only if the controller is added.
+* Open Home.razor by default. Supported in Visual Studio only.
+* Added Docker support, including Dockerfile, .dockerignore, and a launch profile.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
