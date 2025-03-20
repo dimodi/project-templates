@@ -50,6 +50,13 @@
         "text": "Enable RTL"
       },
       "isVisible": true
+    },
+    {
+      "id": "docker",
+      "name": {
+        "text": "Add Dockerfile"
+      },
+      "isVisible": true
     }
   ]
 }

@@ -59,16 +59,16 @@
       "isVisible": true
     },
     {
-      "id": "form-body-length",
+      "id": "upload-controller",
       "name": {
-        "text": "Max Form Body Length (MB)"
+        "text": "Add Upload Controller"
       },
       "isVisible": true
     },
     {
-      "id": "kestrel-request-size",
+      "id": "docker",
       "name": {
-        "text": "Max Kestrel Request Body Size (MB)"
+        "text": "Add Dockerfile"
       },
       "isVisible": true
     }
