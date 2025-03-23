@@ -16,12 +16,15 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Added an optional Upload controller class. The larger max upload file size is now set only if the controller is added.
+* Added an optional Upload controller class. A larger max upload file size of 256 MB is now set in Program.cs only if the controller is added.
 * Open Home.razor by default. Supported in Visual Studio only.
 * Added Docker support, including Dockerfile, .dockerignore, and a launch profile.
 
 FIXED
 * Renamed the framework version short alias of the WebAssembly Standalone template from -F to -f when using the .NET CLI.
+
+NOTE
+The .NET 6 and .NET 7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>

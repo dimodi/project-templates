@@ -217,6 +217,11 @@
   },
   "sources": [
     {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"
+      ],
       "modifiers": [
         {
           "condition": "(localization == false)",
@@ -246,6 +251,10 @@
   "primaryOutputs": [
     {
       "path": "**/Pages/Home.razor"
+    },
+    {
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "TelerikBlazorWasmStandalone.csproj"
     }
   ],
   "postActions": [

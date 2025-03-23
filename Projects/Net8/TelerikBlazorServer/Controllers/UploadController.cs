@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TelerikBlazorServer.Controllers
 {
     [Route("api/[controller]/[action]")]
+    [ApiController]
     public class UploadController : ControllerBase
     {
         private IWebHostEnvironment HostingEnvironment { get; set; }
@@ -19,13 +20,11 @@ namespace TelerikBlazorServer.Controllers
             {
                 try
                 {
-                    var rootPath = HostingEnvironment.WebRootPath;
-                    var saveLocation = Path.Combine(rootPath, files.FileName);
+                    string rootPath = HostingEnvironment.WebRootPath;
+                    string saveLocation = Path.Combine(rootPath, files.FileName);
 
-                    using (var fileStream = new FileStream(saveLocation, FileMode.Create))
-                    {
-                        await files.CopyToAsync(fileStream);
-                    }
+                    using FileStream fs = new(saveLocation, FileMode.Create);
+                    await files.CopyToAsync(fs);
                 }
                 catch (Exception ex)
                 {
@@ -44,8 +43,8 @@ namespace TelerikBlazorServer.Controllers
             {
                 try
                 {
-                    var rootPath = HostingEnvironment.WebRootPath;
-                    var fileLocation = Path.Combine(rootPath, files);
+                    string rootPath = HostingEnvironment.WebRootPath;
+                    string fileLocation = Path.Combine(rootPath, files);
 
                     if (System.IO.File.Exists(fileLocation))
                     {
