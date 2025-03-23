@@ -32,7 +32,7 @@ This NuGet package provides Visual Studio project and item templates for [Teleri
 
 ### Item Templates
 
-| Template Name | .CLI Short Name | Component Features |
+| Template Name | .CLI&nbsp;Short&nbsp;Name | Component Features |
 | --- | --- | --- |
 | Telerik Blazor Grid | `dimodi-grid` | CRUD operations, row selection, grouping, two data binding mechanisms |
 | Telerik Blazor TreeView | `dimodi-treeview` | Selection, checkboxes, flat or hierarchical data structure |
