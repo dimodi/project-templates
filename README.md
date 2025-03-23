@@ -62,19 +62,24 @@ This NuGet package provides Visual Studio project and item templates for [Teleri
 
 On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the Create New Project wizard. Make sure to select "All platforms" in the respective dropdown.
 
-On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category. Visual Studio for Mac is unable to run .NET 8 Blazor Web Apps with WebAssembly or Auto render mode if .NET 9 is installed. In this case, you can edit the app code in Visual Studio, but run the app through the .NET CLI. Or, edit and run the app through VS Code.
+On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category. Visual Studio for Mac is unable to run .NET 8 Blazor Web Apps with WebAssembly or Auto render mode if .NET 9 is installed. In this case, [edit and run the app through VS Code](#use-with-vs-code) or another compatible IDE.
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
-To [create a new item](#create-items) from a template, [use the .NET CLI](#use-with-the-net-cli).
+To [create a new `.razor` file](#create-items) from an item template, [use the .NET CLI](#use-with-the-net-cli).
 
 ## Use with VS Code
 
 Install the [**C# Dev Kit** extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit).
 
-To create a new app, go to the Command Palette (`Ctrl` + `Shift` + `P`), select **Show and Run Commands** and then **.NET: New Project...**.
+To create a new app:
 
-To [create a new item](#create-items) from a template, [use the .NET CLI](#use-with-the-net-cli).
+1. Go to the Command Palette at the top (`Ctrl` + `Shift` + `P`).
+1. Select **Show and Run Commands**.
+1. Select **.NET: New Project...**
+1. Type a project name and [configure the project template options](#project-template-features).
+
+To [create a new `.razor` file](#create-items) from an item template, [use the .NET CLI](#use-with-the-net-cli).
 
 ## Use with the .NET CLI
 
