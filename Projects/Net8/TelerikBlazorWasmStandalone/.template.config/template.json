@@ -212,7 +212,7 @@
     },
     "HostIdentifier": {
       "type": "bind",
-      "binding": "HostIdentifier"
+      "binding": "host:HostIdentifier"
     }
   },
   "sources": [
