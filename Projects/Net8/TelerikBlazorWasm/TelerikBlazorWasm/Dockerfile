@@ -31,20 +31,20 @@ FROM mcr.microsoft.com/dotnet/sdk:{TVAR_NETNUMBER}.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY TelerikBlazorWasm/TelerikBlazorWasm.csproj ./TelerikBlazorWasm
-COPY TelerikBlazorWasm/TelerikBlazorWasm.Client.csproj ./TelerikBlazorWasm.Client
+COPY TelerikBlazorWasm.Client/TelerikBlazorWasm.Client.csproj ./TelerikBlazorWasm.Client
 COPY NuGet_Deploy.Config ./NuGet.Config
 RUN --mount=type=secret,id=telerik-nuget-key \
     dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile ./NuGet.Config
 RUN dotnet restore TelerikBlazorWasm/TelerikBlazorWasm.csproj
 COPY . .
-# WORKDIR /src/TelerikBlazorWasm
+WORKDIR /src/TelerikBlazorWasm
 RUN --mount=type=secret,id=telerik-license-key,env=TELERIK_LICENSE \
-    dotnet build TelerikBlazorWasm/TelerikBlazorWasm.csproj -c $BUILD_CONFIGURATION -o /app/build
+    dotnet build TelerikBlazorWasm.csproj -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN --mount=type=secret,id=telerik-license-key,env=TELERIK_LICENSE \
-    dotnet publish TelerikBlazorWasm/TelerikBlazorWasm.csproj -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+    dotnet publish TelerikBlazorWasm.csproj -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
