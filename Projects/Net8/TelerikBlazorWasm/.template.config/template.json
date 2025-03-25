@@ -244,26 +244,13 @@
     "HostIdentifier": {
       "type": "bind",
       "binding": "host:HostIdentifier",
-      "defaultValue": "HostIdentifierFail",
+      "defaultValue": "",
       "replaces": "{TVAR_HOSTIDENTIFIER}"
-    },
-    "IsExclusive": {
-      "type": "bind",
-      "binding": "context:IsExclusive",
-      "defaultValue": "IsExclusiveFail",
-      "replaces": "{TVAR_ISEXCLUSIVE}"
-    },
-    "SolutionName": {
-      "type": "bind",
-      "binding": "context:SolutionName",
-      "defaultValue": "SolutionNameFail",
-      "replaces": "{TVAR_SOLUTIONNAME}"
     },
     "CreateSolutionDirectory": {
       "type": "bind",
       "binding": "context:CreateSolutionDirectory",
-      "defaultValue": "CreateSolutionFail",
-      "replaces": "{TVAR_CREATESOLUTIONDIRECTORY}"
+      "defaultValue": ""
     }
   },
   "sources": [
