@@ -11,7 +11,7 @@
 #     - Telerik license key (only for Telerik UI for Blazor versions >= 8.0)
 #     - Telerik NuGet API key
 # 2. Run the build command from the folder that contains the solution .sln file. Specify the Dockerfile location from there.
-# 3. Verify the file and folder paths in all commands below. You may need to prepend or remove "TelerikBlazorWasm/" in each path in the build stage.
+# 3. Verify the file and folder paths in all commands below. They depend on the application structure and the folder in which you execute the docker build command. You may need to prepend or remove "TelerikBlazorWasm/" in each path in the build stage.
 
 # SUGGESTED BUILD COMMAND
 #
@@ -51,10 +51,10 @@ COPY TelerikBlazorWasm/NuGet_Deploy.Config NuGet.Config
 RUN --mount=type=secret,id=telerik-nuget-key \
 //#if (HostIdentifier == "csharpdevkit")
     dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile TelerikBlazorWasm/NuGet.Config
-RUN dotnet restore TelerikBlazorWasm/TelerikBlazorWasm.csproj
+RUN dotnet restore TelerikBlazorWasm/TelerikBlazorWasm/TelerikBlazorWasm.csproj
 //#else
     dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile NuGet.Config
-RUN dotnet restore TelerikBlazorWasm/TelerikBlazorWasm/TelerikBlazorWasm.csproj
+RUN dotnet restore TelerikBlazorWasm/TelerikBlazorWasm.csproj
 //#endif
 COPY . .
 //#if (HostIdentifier == "csharpdevkit")
