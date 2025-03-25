@@ -10,7 +10,7 @@
 # 1. This Dockerfile depends on two secrets that must be passed to the docker build command. The sample commands below assume that you will provide the secrets from files. Just set their paths.
 #     - Telerik license key (only for Telerik UI for Blazor versions >= 8.0)
 #     - Telerik NuGet API key
-# 2. Run the build command from the folder that contains the solution .sln file. Specify the Dockerfile location from there.
+# 2. Run the docker build command from the folder that contains the solution .sln file. Specify the Dockerfile location from there.
 # 3. Verify the file and folder paths in all commands below. They depend on the application structure and the folder in which you execute the docker build command. You may need to prepend or remove "TelerikBlazorWasm/" in each path in the build stage.
 
 # SUGGESTED BUILD COMMAND

@@ -242,7 +242,8 @@
             "**/Dockerfile",
             "**/NuGet_Deploy.Config",
             "**/dockerignore.dockerignore",
-            "**/.dockerignore"
+            "**/.dockerignore",
+            "**/nginx.conf"
           ]
         }
       ]
