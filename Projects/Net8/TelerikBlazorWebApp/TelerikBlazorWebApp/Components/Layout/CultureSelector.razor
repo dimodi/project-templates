@@ -1,0 +1,53 @@
+﻿@using System.Globalization
+
+@*#if (UseWebAssembly)
+@inject IJSRuntime js
+#endif*@
+@inject IConfiguration AppConfiguration
+@inject NavigationManager Navigation
+
+<label for="culture-selector">Select Locale</label>
+<TelerikDropDownList Data="@SupportedCultures"
+                     @bind-Value="@SelectedCulture"
+                     TextField="Value"
+                     ValueField="Key"
+                     Id="culture-selector"
+                     OnChange="@ApplySelectedCultureAsync"
+                     Width="15em" />
+
+@code {
+    private Dictionary<string, string?> SupportedCultures { get; set; } = new();
+
+    private string SelectedCulture { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        SupportedCultures = AppConfiguration.GetSection("Cultures")
+            .GetChildren().ToDictionary(x => x.Key, x => x.Value);
+
+        SelectedCulture = CultureInfo.CurrentCulture.Name;
+    }
+
+@*#if (UseWebAssembly)
+    private async Task ApplySelectedCultureAsync(object newValue)
+#else
+    private void ApplySelectedCultureAsync(object newValue)
+#endif*@
+    {
+        if (CultureInfo.CurrentCulture.Name != SelectedCulture && !string.IsNullOrEmpty(SelectedCulture))
+        {
+@*#if (UseWebAssembly)
+            await js.InvokeVoidAsync("blazorCulture.set", SelectedCulture);
+#endif*@
+
+            string cultureEscaped = Uri.EscapeDataString(SelectedCulture);
+            string uri = new Uri(Navigation.Uri)
+            .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+            string uriEscaped = Uri.EscapeDataString(uri);
+
+            Navigation.NavigateTo(
+                $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
+                forceLoad: true);
+        }
+    }
+}
