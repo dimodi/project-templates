@@ -130,6 +130,7 @@ The project templates are similar to the default .NET SDK Blazor project templat
 
 * The WebAssembly apps reference the latest minor version of the selected .NET version.
 * .NET 8-9 apps use the `https` launch profile by default.
+* Visual Studio opens `Home.razor` automatically after the app is created.
 * The top bar uses background and border colors from the Telerik theme. This makes the styling consistent in dark mode.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
 * The `SurveyPrompt` Razor component is removed.

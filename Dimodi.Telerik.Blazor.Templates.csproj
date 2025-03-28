@@ -17,7 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Added an optional Upload controller class. A larger max upload file size of 256 MB is now set in Program.cs only if the controller is added.
-* Open Home.razor by default. Supported in Visual Studio only.
+* Open Home.razor by default in Visual Studio.
 * Added Docker support, including Dockerfile, .dockerignore, and a launch profile.
 
 FIXED

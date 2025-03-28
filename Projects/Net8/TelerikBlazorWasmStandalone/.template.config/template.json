@@ -251,7 +251,7 @@
   ],
   "primaryOutputs": [
     {
-      "path": "**/Pages/Home.razor"
+      "path": "Pages/Home.razor"
     },
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",

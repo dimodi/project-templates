@@ -285,7 +285,7 @@
   ],
   "primaryOutputs": [
     {
-      "path": "**/Components/Pages/Home.razor"
+      "path": "Components/Pages/Home.razor"
     },
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
