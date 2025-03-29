@@ -1,6 +1,6 @@
-# Telerik Blazor Project and Item Templates
+# Telerik UI for Blazor Project and Item Templates
 
-This NuGet package provides Visual Studio project and item templates for [Telerik Blazor apps and component scaffolders](https://www.telerik.com/blazor-ui) with some convenient [extras](#project-template-features).
+This NuGet package provides ASP.NET Core Blazor project and item templates that include the [Telerik UI for Blazor](https://www.telerik.com/blazor-ui) component library. The [project templates provide multiple settings](#project-template-features) to configure the Telerik Blazor components during app creation. The [item templates expose settings](#item-templates) to enable various component features.
 
 ## Table of Contents
 
@@ -9,13 +9,15 @@ This NuGet package provides Visual Studio project and item templates for [Teleri
 * [Use with Visual Studio](#use-with-visual-studio)
 * [Use with VS Code](#use-with-vs-code)
 * [Use with the .NET CLI](#use-with-the-net-cli)
-* [Project Template Features](#project-template-features)
+* [Project template features](#project-template-features)
 * [Update](#update)
 * [Uninstall](#uninstall)
 * [Create your own templates](#create-your-own-templates)
 * [License](#license)
 
 ## Templates
+
+The package includes the following project and item templates.
 
 ### Project Templates
 
@@ -27,35 +29,24 @@ This NuGet package provides Visual Studio project and item templates for [Teleri
 | Telerik Blazor Server App | .NET 6-7 | `dimodi-blazorserver` |
 | Telerik Blazor WebAssembly App (ASP.NET Core hosted) | .NET 6-7 | `dimodi-blazorwasm-hosted` |
 
-* The Blazor Web Apps use [global interactive render mode](#interactive-render-mode).
-* The .NET 6-7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+The .NET 6-7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
 
 ### Item Templates
 
-| Template Name | .CLI&nbsp;Short&nbsp;Name | Component Features |
+The item templates produce a runnable `.razor` file that includes a Telerik Blazor component, dummy data, and applicable event handlers.
+
+| Template Name | .CLI Short Name | Component Features |
 | --- | --- | --- |
 | Telerik Blazor Grid | `dimodi-grid` | CRUD operations, row selection, grouping, two data binding mechanisms |
 | Telerik Blazor TreeView | `dimodi-treeview` | Selection, checkboxes, flat or hierarchical data structure |
 
 ## Install
 
-### Install From nuget.org
-
 1. Close Visual Studio.
 1. Open your Terminal or Shell app.
 1. Execute the `dotnet new install` command:
     ```sh
     dotnet new install Dimodi.Telerik.Blazor.Templates
-    ```
-
-### Install From GitHub
-
-1. Close Visual Studio.
-1. Download the NuGet package from the [latest release](https://github.com/dimodi/project-templates/releases) to some folder.
-1. Open your Terminal or Shell app and go to the folder from the previous step.
-1. Execute the `dotnet new install` command:
-    ```sh
-    dotnet new install Dimodi.Telerik.Blazor.Templates.*.nupkg
     ```
 
 ## Use with Visual Studio
@@ -105,16 +96,6 @@ dotnet new dimodi-grid --help
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
-### Interactive Render Mode
-
-The Blazor Web App (Server) template (`dimodi-blazor-server`) sets global `Server` interactivity location.
-
-The Blazor Web App (WebAssembly / Auto) template (`dimodi-blazor-wasmauto`) supports global `WebAssembly` or `Auto` interactivity. `WebAssembly` is the default one. To create a project with `Auto` interactivity when using the .NET CLI, set `rendermode` to `Auto` in the `dotnet new` command:
-
-```sh
-dotnet new dimodi-blazor-wasmauto -o MyNewAppName --rendermode Auto
-```
-
 ### Create Items
 
 1. Open Terminal and go to a folder inside your existing app, for example `Pages` or `Components`.
@@ -128,6 +109,7 @@ dotnet new dimodi-blazor-wasmauto -o MyNewAppName --rendermode Auto
 
 The project templates are similar to the default .NET SDK Blazor project templates in terms of structure and configuration. The differences are:
 
+* The Blazor Web Apps use a global interactive render mode. This is the easier and recommended way to integrate Telerik UI for Blazor.
 * The WebAssembly apps reference the latest minor version of the selected .NET version.
 * .NET 8-9 apps use the `https` launch profile by default.
 * Visual Studio opens `Home.razor` automatically after the app is created.
@@ -158,18 +140,11 @@ The .NET 8-9 app templates provide optional Docker setup, including `Dockerfile`
 
 ## Update
 
-### Update From nuget.org
-
 Execute the `dotnet new update` command:
 
 ```sh
 dotnet new update Dimodi.Telerik.Blazor.Templates
 ```
-
-### Update from GitHub
-
-1. [Uninstall the package](#uninstall).
-1. Repeat the [GitHub installation steps](#install-from-github).
 
 ## Uninstall
 
