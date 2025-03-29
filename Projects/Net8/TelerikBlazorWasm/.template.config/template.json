@@ -250,7 +250,8 @@
     "create-solution-directory": {
       "type": "bind",
       "binding": "context:CreateSolutionDirectory",
-      "defaultValue": ""
+      "datatype": "bool",
+      "defaultValue": "false"
     }
   },
   "sources": [
