@@ -1,6 +1,6 @@
 # Telerik UI for Blazor Project and Item Templates
 
-This NuGet package provides ASP.NET Core Blazor project and item templates that include the [Telerik UI for Blazor](https://www.telerik.com/blazor-ui) component library. The [project templates provide multiple settings](#project-template-features) to configure the Telerik Blazor components during app creation. The [item templates expose settings](#item-templates) to enable various component features.
+This NuGet package provides ASP.NET Core Blazor project and item templates that include the [Telerik UI for Blazor](https://www.telerik.com/blazor-ui) component library. The [project templates provide multiple settings](#project-template-features) to configure the Telerik Blazor components during app creation. The [item templates expose settings](#item-templates) to enable various Telerik component features.
 
 ## Table of Contents
 
@@ -21,15 +21,15 @@ The package includes the following project and item templates.
 
 ### Project Templates
 
-| Template Name | .NET&nbsp;Version | .CLI Short Name |
-| --- | --- | --- |
-| Telerik Blazor Web App (Server) | .NET 8-9 | `dimodi-blazor-server` |
-| Telerik Blazor Web App (WebAssembly or Auto) | .NET 8-9 | `dimodi-blazor-wasmauto` |
-| Telerik Blazor WebAssembly Standalone App | .NET 8-9 | `dimodi-blazorwasm` |
-| Telerik Blazor Server App | .NET 6-7 | `dimodi-blazorserver` |
-| Telerik Blazor WebAssembly App (ASP.NET Core hosted) | .NET 6-7 | `dimodi-blazorwasm-hosted` |
+| Template Name | .CLI Short Name |
+| --- | --- |
+| Telerik Blazor Web App (Server) | `dimodi-blazor-server` |
+| Telerik Blazor Web App (WebAssembly or Auto) | `dimodi-blazor-wasmauto` |
+| Telerik Blazor WebAssembly Standalone App | `dimodi-blazorwasm` |
+| Telerik Blazor Server App (.NET 6-7) | `dimodi-blazorserver` |
+| Telerik Blazor WebAssembly App (ASP.NET Core hosted) (.NET 6-7) | `dimodi-blazorwasm-hosted` |
 
-The .NET 6-7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+The two .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
 
 ### Item Templates
 
@@ -51,7 +51,7 @@ The item templates produce a runnable `.razor` file that includes a Telerik Blaz
 
 ## Use with Visual Studio
 
-On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the Create New Project wizard. Make sure to select "All platforms" in the respective dropdown.
+On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the **Create New Project** wizard. Make sure to select "**All platforms**" in the respective dropdown.
 
 On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category. Visual Studio for Mac is unable to run .NET 8 Blazor Web Apps with WebAssembly or Auto render mode if .NET 9 is installed. In this case, [edit and run the app through VS Code](#use-with-vs-code) or another compatible IDE.
 
@@ -111,7 +111,7 @@ The project templates are similar to the default .NET SDK Blazor project templat
 
 * The Blazor Web Apps use a global interactive render mode. This is the easier and recommended way to integrate Telerik UI for Blazor.
 * The WebAssembly apps reference the latest minor version of the selected .NET version.
-* .NET 8-9 apps use the `https` launch profile by default.
+* The apps use the `https` launch profile by default.
 * Visual Studio opens `Home.razor` automatically after the app is created.
 * The top bar uses background and border colors from the Telerik theme. This makes the styling consistent in dark mode.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
@@ -119,7 +119,7 @@ The project templates are similar to the default .NET SDK Blazor project templat
 
 ### Telerik UI for Blazor Configuration
 
-The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need). The Telerik CSS and JS file URLs include a [query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. The cache buster is missing from the WebAssembly Standalone App template due to dynamic content restrictions in `index.html`.
+The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need). The Telerik CSS and JavaScript file URLs include a [query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching after version upgrades. The cache buster is missing from the WebAssembly Standalone App template due to dynamic content restrictions in `index.html`.
 
 The project templates provide options to configure the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation:
 
@@ -137,7 +137,7 @@ The project templates provide options to configure the app and the [Telerik UI f
 
 ### Docker Support
 
-The .NET 8-9 app templates provide an optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile.
+The project templates provide an optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile.
 
 ## Update
 
