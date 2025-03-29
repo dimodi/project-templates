@@ -119,24 +119,27 @@ The project templates are similar to the default .NET SDK Blazor project templat
 
 ### Telerik UI for Blazor Configuration
 
-The apps reference one of the [latest Telerik UI for Blazor versions](https://www.telerik.com/support/whats-new/blazor-ui/release-history) by default. You can also set the latest version as a wildcard `*`.
+The apps reference one of the  by default. 
 
 The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need). The Telerik CSS and JS file URLs include a [query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. The cache buster is missing from the WebAssembly Standalone App template due to dynamic content restrictions in `index.html`.
 
 You can configure some global settings related to the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (the default values are in the brackets):
 
-* [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) (`Default`)
-* [Dark theme mode](https://www.telerik.com/blazor-ui/documentation/styling-and-themes/overview#basics) (disabled). Requires CDN.
-* [Icon type (SVG icons or Font icons)](https://docs.telerik.com/blazor-ui/common-features/icons) (SVG)
-* [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) (disabled). WebAssembly Standalone Apps support CDN only with a fixed Telerik UI for Blazor version number. Blazor Web Apps support CDN with both fixed and wildcard (`*`) version.
-* [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) in .NET 8-9 apps (disabled)
-* [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) (disabled)
-* [File upload controller](https://www.telerik.com/blazor-ui/documentation/components/upload/overview#implement-controller-methods) in the .NET 8-9 Blazor Web App templates (disabled). When added, the [maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) increases to 256 MB in `Programs.cs`.
-* [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) (32 KB). This option works in Visual Studio on Windows and through the .NET CLI. [The setting doesn't appear in VS Code](https://github.com/microsoft/vscode-dotnettools/issues/1659) and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app.
+| Template Option | Default Value | Description |
+| --- | --- | --- |
+| [Components version](https://www.telerik.com/support/whats-new/blazor-ui/release-history) | latest | The project template provides a selection of recent Telerik UI for Blazor versions. The default value is the latest semantic version, but the template also allows you to set the latest version as a wildcard `*`. |
+| [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) | Default | The Telerik UI for Blazor NuGet package includes a few CSS files that define different styling of the Telerik Blazor components. |
+| [Dark mode](https://www.telerik.com/blazor-ui/documentation/styling-and-themes/overview#basics) | disabled | Dark mode requires **CDN** to be enabled, because the dark theme variations (known as swatches) are not included as static assets in the Telerik UI for Blazor NuGet package. |
+| [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) | disabled | WebAssembly Standalone Apps support CDN only with a fixed Telerik UI for Blazor version number. Blazor Web Apps support CDN with both fixed and wildcard version `*`. |
+| [Icon type](https://docs.telerik.com/blazor-ui/common-features/icons) | SVG | Telerik Blazor components can render SVG icons or font icons. |
+| [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) | disabled | Adds both .NET and Telerik localization. Available only in the .NET 8-9 project templates. |
+| [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) | disabled |  |
+| [File upload controller](https://www.telerik.com/blazor-ui/documentation/components/upload/overview#implement-controller-methods) | disabled | When added, the [maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) increases to 256 MB in `Programs.cs`. Available only in the .NET 8-9 project templates. |
+| [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) | 32 KB | This option works in Visual Studio on Windows and through the .NET CLI. [The setting doesn't appear in VS Code](https://github.com/microsoft/vscode-dotnettools/issues/1659) and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app. |
 
 ### Docker Support
 
-The .NET 8-9 app templates provide optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile.
+The .NET 8-9 app templates provide an optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile.
 
 ## Update
 
