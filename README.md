@@ -119,18 +119,16 @@ The project templates are similar to the default .NET SDK Blazor project templat
 
 ### Telerik UI for Blazor Configuration
 
-The apps reference one of the  by default. 
-
 The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need). The Telerik CSS and JS file URLs include a [query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching across version upgrades. The cache buster is missing from the WebAssembly Standalone App template due to dynamic content restrictions in `index.html`.
 
-You can configure some global settings related to the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation (the default values are in the brackets):
+The project templates provide options to configure the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation:
 
 | Template Option | Default Value | Description |
 | --- | --- | --- |
-| [Components version](https://www.telerik.com/support/whats-new/blazor-ui/release-history) | latest | The project template provides a selection of recent Telerik UI for Blazor versions. The default value is the latest semantic version, but the template also allows you to set the latest version as a wildcard `*`. |
+| [Components version](https://www.telerik.com/support/whats-new/blazor-ui/release-history) | latest | The project templates provide a selection of recent Telerik UI for Blazor versions. The default value is the latest semantic version, but the templates also allow you to set the latest version as a wildcard `*`. |
 | [Theme](https://docs.telerik.com/blazor-ui/styling-and-themes/overview) | Default | The Telerik UI for Blazor NuGet package includes a few CSS files that define different styling of the Telerik Blazor components. |
 | [Dark mode](https://www.telerik.com/blazor-ui/documentation/styling-and-themes/overview#basics) | disabled | Dark mode requires **CDN** to be enabled, because the dark theme variations (known as swatches) are not included as static assets in the Telerik UI for Blazor NuGet package. |
-| [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) | disabled | WebAssembly Standalone Apps support CDN only with a fixed Telerik UI for Blazor version number. Blazor Web Apps support CDN with both fixed and wildcard version `*`. |
+| [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) | disabled | Load the Telerik theme and JavaScript file from CDN instead of the NuGet package assets. WebAssembly Standalone Apps support CDN only with a fixed Telerik UI for Blazor version number. Blazor Web Apps support CDN with both fixed and wildcard version `*`. |
 | [Icon type](https://docs.telerik.com/blazor-ui/common-features/icons) | SVG | Telerik Blazor components can render SVG icons or font icons. |
 | [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) | disabled | Adds both .NET and Telerik localization. Available only in the .NET 8-9 project templates. |
 | [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) | disabled |  |
