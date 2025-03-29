@@ -23,11 +23,11 @@ The package includes the following project and item templates.
 
 | Template Name | .CLI Short Name |
 | --- | --- |
-| Telerik Blazor Web App (Server) | `dimodi-blazor-server` |
-| Telerik Blazor Web App (WebAssembly or Auto) | `dimodi-blazor-wasmauto` |
+| Telerik Blazor Web App (Server render mode) | `dimodi-blazor-server` |
+| Telerik Blazor Web App (WebAssembly or Auto render mode) | `dimodi-blazor-wasmauto` |
 | Telerik Blazor WebAssembly Standalone App | `dimodi-blazorwasm` |
 | Telerik Blazor Server App (.NET 6-7) | `dimodi-blazorserver` |
-| Telerik Blazor WebAssembly App (ASP.NET Core hosted) (.NET 6-7) | `dimodi-blazorwasm-hosted` |
+| Telerik Blazor WebAssembly App, ASP.NET Core hosted (.NET 6-7) | `dimodi-blazorwasm-hosted` |
 
 The two .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
 
@@ -37,7 +37,7 @@ The item templates produce a runnable `.razor` file that includes a Telerik Blaz
 
 | Template Name | .CLI Short Name | Component Features |
 | --- | --- | --- |
-| Telerik Blazor Grid | `dimodi-grid` | CRUD operations, row selection, grouping, two data binding mechanisms |
+| Telerik Blazor Grid | `dimodi-grid` | CRUD operations, row selection, grouping, `Data` or `OnRead` data binding |
 | Telerik Blazor TreeView | `dimodi-treeview` | Selection, checkboxes, flat or hierarchical data structure |
 
 ## Install

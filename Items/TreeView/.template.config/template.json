@@ -3,6 +3,7 @@
   "author": "Dimo Dimov",
   "classifications": [
     "Web",
+    "ASP.NET",
     "Blazor",
     "Code"
   ],
@@ -24,11 +25,11 @@
       "choices": [
         {
           "choice": "Flat",
-          "description": ""
+          "description": "All data items are members of a single collection"
         },
         {
           "choice": "Hierarchical",
-          "description": ""
+          "description": "The data items are members of nested collections"
         }
       ]
     },
