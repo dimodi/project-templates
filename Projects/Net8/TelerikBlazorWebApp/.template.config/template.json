@@ -14,7 +14,8 @@
   "sourceName": "TelerikBlazorWebApp",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution",
+    "editorTreatAs": "solution"
   },
   "preferNameDirectory": true,
   "guids": [
