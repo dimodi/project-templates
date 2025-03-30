@@ -4,8 +4,7 @@
   "classifications": [
     "Web",
     "ASP.NET",
-    "Blazor",
-    "Code"
+    "Blazor"
   ],
   "identity": "Dimodi.Telerik.Blazor.Grid",
   "name": "Telerik Blazor Grid",
