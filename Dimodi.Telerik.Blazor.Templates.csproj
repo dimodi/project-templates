@@ -4,7 +4,7 @@
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
     <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
-    <Description>Blazor project and item templates with Telerik UI for Blazor. You can configure the Telerik Blazor components through template options, including CSS theme, icon type, CDN, localization, and RTL support.</Description>
+    <Description>Blazor project and item templates with Telerik UI for Blazor and Docker integration. Configure the Telerik Blazor components via template options like CSS theme, icon type, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -22,7 +22,7 @@ NOTE
 The .NET 6 and .NET 7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
+    <PackageTags>Telerik;Blazor;dotnet-new;templates;Docker;boilerplate</PackageTags>
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>

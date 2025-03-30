@@ -241,16 +241,17 @@
       "generator": "guid",
       "replaces": "{TVAR_DOCKERUSERSECRETSID}"
     },
-    "HostIdentifier": {
+    "host-identifier": {
       "type": "bind",
       "binding": "host:HostIdentifier",
       "defaultValue": "",
       "replaces": "{TVAR_HOSTIDENTIFIER}"
     },
-    "CreateSolutionDirectory": {
+    "create-solution-directory": {
       "type": "bind",
       "binding": "context:CreateSolutionDirectory",
-      "defaultValue": ""
+      "datatype": "bool",
+      "defaultValue": "false"
     }
   },
   "sources": [
@@ -291,7 +292,7 @@
           ]
         },
         {
-          "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+          "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
           "exclude": [
             "*.sln"
           ]
@@ -301,24 +302,24 @@
   ],
   "primaryOutputs": [
     {
-      "path": "**/Pages/Home.razor"
+      "path": "TelerikBlazorWasm.Client/Pages/Home.razor"
     },
     {
-      "condition": "(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\")",
+      "condition": "(host-identifier == \"dotnetcli\" || host-identifier == \"dotnetcli-preview\")",
       "path": "TelerikBlazorWasm.sln"
     },
     {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "path": "TelerikBlazorWasm/TelerikBlazorWasm.csproj"
     },
     {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "path": "TelerikBlazorWasm.Client/TelerikBlazorWasm.Client.csproj"
     }
   ],
   "postActions": [
     {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
       "description": "Open Home.razor",
       "continueOnError": false,

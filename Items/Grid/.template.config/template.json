@@ -3,8 +3,8 @@
   "author": "Dimo Dimov",
   "classifications": [
     "Web",
-    "Blazor",
-    "Code"
+    "ASP.NET",
+    "Blazor"
   ],
   "identity": "Dimodi.Telerik.Blazor.Grid",
   "name": "Telerik Blazor Grid",
