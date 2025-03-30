@@ -345,11 +345,11 @@
   ],
   "primaryOutputs": [
     {
-      "condition": "!UseWebAssembly",
+      "condition": "(!UseWebAssembly && !UseDotNetCli)",
       "path": "Components/Pages/Home.razor"
     },
     {
-      "condition": "UseWebAssembly",
+      "condition": "(UseWebAssembly && !UseDotNetCli)",
       "path": "TelerikBlazorWebApp.Client/Pages/Home.razor"
     },
     {
@@ -363,14 +363,28 @@
     {
       "condition": "(UseWebAssembly && !UseDotNetCli)",
       "path": "TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj"
+    },
+    {
+      "condition": "(!UseWebAssembly)",
+      "path": "TelerikBlazorWebApp.csproj"
     }
   ],
   "postActions": [
     {
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true,
+      "description": "Restore NuGet packages",
+      "manualInstructions": [
+        {
+          "text": "Run dotnet restore"
+        }
+      ]
+    },
+    {
       "condition": "(!UseDotNetCli)",
       "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
       "description": "Open Home.razor",
-      "continueOnError": false,
+      "continueOnError": true,
       "manualInstructions": [],
       "args": {
         "files": "0"
