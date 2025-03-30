@@ -202,6 +202,7 @@
       "defaultValue": "32",
       "description": "Increase the max SignalR message size. Recommended for the Editor, FileManager, FileSelect, PDF Viewer, and Signature components.",
       "displayName": "Max SignalR Message Size (KB)",
+      "isEnabled": "(render-mode == \"Server\")",
       "replaces": "{TVAR_SIGNALRMESSAGE}"
     },
     "upload-controller": {
@@ -253,13 +254,13 @@
       "generator": "guid",
       "replaces": "{TVAR_DOCKERUSERSECRETSID}"
     },
-    "HostIdentifier": {
+    "host-identifier": {
       "type": "bind",
       "binding": "host:HostIdentifier",
       "defaultValue": "",
       "replaces": "{TVAR_HOSTIDENTIFIER}"
     },
-    "CreateSolutionDirectory": {
+    "create-solution-directory": {
       "type": "bind",
       "binding": "context:CreateSolutionDirectory",
       "defaultValue": ""
@@ -307,7 +308,7 @@
           ]
         },
         {
-          "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+          "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
           "exclude": [
             "*.sln"
           ]
@@ -342,21 +343,21 @@
       "path": "**/Pages/Home.razor"
     },
     {
-      "condition": "(UseWebAssembly && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "condition": "(UseWebAssembly && (host-identifier == \"dotnetcli\" || host-identifier == \"dotnetcli-preview\"))",
       "path": "TelerikBlazorWebApp.sln"
     },
     {
-      "condition": "(UseWebAssembly && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(UseWebAssembly && host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "path": "TelerikBlazorWebApp/TelerikBlazorWebApp.csproj"
     },
     {
-      "condition": "(UseWebAssembly && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(UseWebAssembly && host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "path": "TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj"
     }
   ],
   "postActions": [
     {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
       "description": "Open Home.razor",
       "continueOnError": false,
