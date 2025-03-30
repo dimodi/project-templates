@@ -345,7 +345,12 @@
   ],
   "primaryOutputs": [
     {
-      "path": "**/Pages/Home.razor"
+      "condition": "!UseWebAssembly",
+      "path": "Components/Pages/Home.razor"
+    },
+    {
+      "condition": "UseWebAssembly",
+      "path": "TelerikBlazorWebApp.Client/Pages/Home.razor"
     },
     {
       "condition": "(UseWebAssembly && UseDotNetCli)",
