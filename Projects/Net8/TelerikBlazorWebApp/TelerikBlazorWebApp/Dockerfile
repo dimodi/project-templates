@@ -19,7 +19,7 @@
 
 # SUGGESTED BUILD COMMAND
 #
-//#if (host-identifier == "csharpdevkit" || create-solution-directory)
+//#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
 # docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t telerikblazorwebapp:v1 -f TelerikBlazorWebApp/TelerikBlazorWebApp/Dockerfile .
 //#else
 # docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t telerikblazorwebapp:v1 -f TelerikBlazorWebApp/Dockerfile .
@@ -43,7 +43,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:{TVAR_NETNUMBER}.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-//#if (host-identifier == "csharpdevkit" || create-solution-directory)
+//#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
 COPY TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.csproj TelerikBlazorWebApp/TelerikBlazorWebApp/
 //#if (UseWebAssembly)
 COPY TelerikBlazorWebApp/TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj TelerikBlazorWebApp/TelerikBlazorWebApp.Client/
@@ -57,7 +57,7 @@ COPY TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj TelerikBlazorW
 COPY TelerikBlazorWebApp/NuGet_Deploy.Config NuGet.Config
 //#endif
 RUN --mount=type=secret,id=telerik-nuget-key \
-//#if (host-identifier == "csharpdevkit" || create-solution-directory)
+//#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
     dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile TelerikBlazorWebApp/NuGet.Config
 RUN dotnet restore TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.csproj
 //#else
@@ -65,7 +65,7 @@ RUN dotnet restore TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.c
 RUN dotnet restore TelerikBlazorWebApp/TelerikBlazorWebApp.csproj
 //#endif
 COPY . .
-//#if (host-identifier == "csharpdevkit" || create-solution-directory)
+//#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
 WORKDIR /src/TelerikBlazorWebApp/TelerikBlazorWebApp
 //#else
 WORKDIR /src/TelerikBlazorWebApp

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-#if (localization)
+#if (Localization)
 using TelerikBlazorWebApp.Client.Services;
 using Microsoft.JSInterop;
 using System.Globalization;
@@ -8,7 +8,7 @@ using Telerik.Blazor.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-#if (localization)
+#if (Localization)
 // Localization service for the Telerik component labels
 builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
 

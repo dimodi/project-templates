@@ -1,4 +1,4 @@
-#if (upload-controller)
+#if (UploadController)
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 #endif
@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.SignalR;
 #endif
 using TelerikBlazorWebApp.Components;
-#if (localization)
+#if (Localization)
 using TelerikBlazorWebApp.Services;
 using Microsoft.Extensions.Localization;
 using Telerik.Blazor.Services;
@@ -19,23 +19,23 @@ builder.Services.AddRazorComponents()
 #if (!UseWebAssembly)
     .AddInteractiveServerComponents();
 #endif
-#if (render-mode == "Auto")
+#if (RenderMode == "Auto")
     .AddInteractiveServerComponents()
 #endif
 #if (UseWebAssembly)
     .AddInteractiveWebAssemblyComponents();
 #endif
 
-#if (localization)
+#if (Localization)
 builder.Services.AddLocalization();
 #endif
-#if (localization || upload-controller)
+#if (Localization || UploadController)
 builder.Services.AddControllers();
 
 #endif
 builder.Services.AddTelerikBlazor();
 
-#if (localization)
+#if (Localization)
 // Localization service for the Telerik component labels
 builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
 
@@ -44,15 +44,15 @@ builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLoc
 // SignalR max message size for Editor, FileManager, FileSelect, PDF Viewer, Signature
 builder.Services.Configure<HubOptions>(options =>
 {
-#if (signalr-message-size != 32)
-    options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGE} * 1024; // {TVAR_SIGNALRMESSAGE} KB, or use null for no limit
+#if (SignalrMessageSize != 32)
+    options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGESIZE} * 1024; // {TVAR_SIGNALRMESSAGESIZE} KB, or use null for no limit
 #else
-    //options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGE} * 1024; // {TVAR_SIGNALRMESSAGE} KB, or use null for no limit
+    //options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGESIZE} * 1024; // {TVAR_SIGNALRMESSAGESIZE} KB, or use null for no limit
 #endif
 });
 
 #endif
-#if (upload-controller)
+#if (UploadController)
 // .NET Core max form body length for Upload
 builder.Services.Configure<FormOptions>(options =>
 {
@@ -93,7 +93,7 @@ app.MapStaticAssets();
 #endif
 app.UseAntiforgery();
 
-#if (localization)
+#if (Localization)
 string[] supportedCultures = app.Configuration.GetSection("Cultures")
     .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
 
@@ -104,7 +104,7 @@ RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions(
 
 app.UseRequestLocalization(localizationOptions);
 #endif
-#if (localization || upload-controller)
+#if (Localization || UploadController)
 app.MapDefaultControllerRoute();
 
 #endif
@@ -112,7 +112,7 @@ app.MapRazorComponents<App>()
 #if (!UseWebAssembly)
     .AddInteractiveServerRenderMode();
 #endif
-#if (render-mode == "Auto")
+#if (RenderMode == "Auto")
     .AddInteractiveServerRenderMode()
 #endif
 #if (UseWebAssembly)

@@ -1,8 +1,41 @@
 {
-    "$schema": "https://json.schemastore.org/dotnetcli.host",
-    "symbolInfo": {
-      "Framework": {
-        "longName": "framework"
-      }
+  "$schema": "https://json.schemastore.org/dotnetcli.host",
+  "symbolInfo": {
+    "Framework": {
+      "longName": "framework"
+    },
+    "RenderMode": {
+      "longName": "render-mode"
+    },
+    "TelerikVersion": {
+      "longName": "telerik-version"
+    },
+    "Theme": {
+      "longName": "theme"
+    },
+    "DarkMode": {
+      "longName": "dark-mode"
+    },
+    "CDN": {
+      "longName": "cdn"
+    },
+    "IconType": {
+      "longName": "icon-type"
+    },
+    "Localization": {
+      "longName": "localization"
+    },
+    "RTL": {
+      "longName": "rtl"
+    },
+    "SignalrMessageSize": {
+      "longName": "signalr-message-size"
+    },
+    "UploadController": {
+      "longName": "upload-controller"
+    },
+    "Docker": {
+      "longName": "docker"
     }
   }
+}
