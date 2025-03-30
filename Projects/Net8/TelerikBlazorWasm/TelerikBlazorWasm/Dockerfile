@@ -11,7 +11,7 @@
 #     - Telerik license key (only for Telerik UI for Blazor versions >= 8.0)
 #     - Telerik NuGet API key
 # 2. Run the docker build command from the folder that contains the solution .sln file. Specify the Dockerfile location from there.
-# 3. Verify the file and folder paths in all commands below. They depend on the application structure and the folder in which you execute the docker build command. You may need to prepend or remove "TelerikBlazorWasm/" in each path in the build stage.
+# 3. Verify the paths in the build stage, as they depend on the application structure. The source paths in the COPY commands must be relative to the folder from which you execute docker build.
 
 # SUGGESTED BUILD COMMAND
 #
