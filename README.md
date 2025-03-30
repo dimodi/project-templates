@@ -137,7 +137,7 @@ The project templates provide options to configure the app and the [Telerik UI f
 
 ### Docker Support
 
-The project templates provide an optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile.
+The project templates provide an optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile. The `Dockerfile` sets up the Telerik NuGet package source in the container.
 
 ## Update
 
