@@ -4,7 +4,7 @@
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
     <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
-    <Description>Blazor project and item templates with Telerik UI for Blazor. You can configure the Telerik Blazor components through template options, including CSS theme, icon type, CDN, localization, and RTL support.</Description>
+    <Description>Blazor project and item templates with Telerik UI for Blazor and Docker integration. Configure the Telerik Blazor components via template options like CSS theme, icon type, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -16,23 +16,23 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Added a default app name for the New Project wizard in VS Code C# Dev Kit.
-* Added Telerik UI for Blazor version selector, dark mode, and random ports to the .NET 6-7 project templates.
-* Removed the .sln solution file from the single-project templates, similar to how the standard Microsoft project templates work. Visual Studio and VS Code C# Dev Kit create a solution file automatically.
+* Added an optional Upload controller class. A larger max upload file size of 256 MB is now set in Program.cs only if the controller is added.
+* Enabled Home.razor to open automatically in newly created apps in Visual Studio.
+* Added Docker support, including Dockerfile, .dockerignore, and a launch profile.
 
 FIXED
-* Prevented duplicate solution file generation when creating an app with VS Code C# Dev Kit.
+* Renamed the framework version short alias of the WebAssembly Standalone template from -F to -f when using the .NET CLI.
 
-BREAKING CHANGE
-* Renamed the framework version short alias from -F to -f when using the .NET CLI.
+NOTE
+The .NET 6 and .NET 7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>dotnet-new;templates;Telerik;Blazor</PackageTags>
+    <PackageTags>Telerik;Blazor;dotnet-new;templates;Docker;boilerplate</PackageTags>
     <PackageType>Template</PackageType>
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>5.0.0</Version>
+    <Version>5.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

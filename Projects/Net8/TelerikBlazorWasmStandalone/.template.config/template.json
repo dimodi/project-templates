@@ -35,6 +35,25 @@
       ],
       "replaces": "{TVAR_NETVERSION}"
     },
+    "framework-number": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(Framework == \"net8.0\")",
+            "value": "8"
+          },
+          {
+            "condition": "",
+            "value": "9"
+          }
+        ]
+      },
+      "replaces": "{TVAR_NETNUMBER}"
+    },
     "telerik-version": {
       "type": "parameter",
       "datatype": "choice",
@@ -149,6 +168,13 @@
       "description": "Enable Right-to-Left support.",
       "displayName": "Enable RTL"
     },
+    "docker": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Add configuration to publish and run the app in a Docker container",
+      "displayName": "Add Dockerfile"
+    },
     "kestrel-https-port": {
       "type": "generated",
       "generator": "port",
@@ -178,10 +204,24 @@
         "fallback": 4444
       },
       "replaces": "{TVAR_HTTPPORT}"
+    },
+    "docker-user-secrets-id": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "{TVAR_DOCKERUSERSECRETSID}"
+    },
+    "host-identifier": {
+      "type": "bind",
+      "binding": "host:HostIdentifier"
     }
   },
   "sources": [
     {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**"
+      ],
       "modifiers": [
         {
           "condition": "(localization == false)",
@@ -190,8 +230,44 @@
             "**/Resources/**",
             "**/Services/**"
           ]
+        },
+        {
+          "rename": {
+            "dockerignore.dockerignore": ".dockerignore"
+          }
+        },
+        {
+          "condition": "(docker == false)",
+          "exclude": [
+            "**/Dockerfile",
+            "**/NuGet_Deploy.Config",
+            "**/dockerignore.dockerignore",
+            "**/.dockerignore",
+            "**/nginx.conf"
+          ]
         }
       ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "Pages/Home.razor"
+    },
+    {
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
+      "path": "TelerikBlazorWasmStandalone.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "description": "Open Home.razor",
+      "continueOnError": false,
+      "manualInstructions": [],
+      "args": {
+        "files": "0"
+      }
     }
   ]
 }

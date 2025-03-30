@@ -7,22 +7,20 @@
 <!--#if (localization) -->
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
 <!--#endif-->
+<!--#if (docker) -->
+    <UserSecretsId>{TVAR_DOCKERUSERSECRETSID}</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+<!--#endif-->
   </PropertyGroup>
 
   <ItemGroup>
-<!--#if (Framework == "net8.0") -->
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="{TVAR_NETNUMBER}.*" PrivateAssets="all" />
 <!--#if (localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
-<!--#endif-->
-<!--#if (Framework == "net9.0") -->
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.*" PrivateAssets="all" />
-<!--#if (localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
-<!--#endif-->
+<!--#if (docker) -->
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
   </ItemGroup>
@@ -39,5 +37,6 @@
       <DependentUpon>TelerikMessages.resx</DependentUpon>
     </Compile>
   </ItemGroup>
+
 <!--#endif-->
 </Project>

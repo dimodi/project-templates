@@ -4,23 +4,20 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+<!--#if (docker) -->
+    <UserSecretsId>{TVAR_DOCKERUSERSECRETSID}</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+<!--#endif-->
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <ProjectReference Include="..\TelerikBlazorWasm.Client\TelerikBlazorWasm.Client.csproj" />
-<!--#if (Framework == "net8.0") -->
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="{TVAR_NETNUMBER}.*" />
 <!--#if (localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="8.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
-<!--#endif-->
-<!--#if (Framework == "net9.0") -->
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.*" />
-<!--#if (localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.*" />
-<!--#endif-->
+<!--#if (docker) -->
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
 <!--#endif-->
   </ItemGroup>
 

@@ -189,18 +189,18 @@
       },
       "replaces": "{TVAR_HTTPSPORT2}"
     },
-    "HostIdentifier": {
+    "host-identifier": {
       "type": "bind",
-      "binding": "HostIdentifier"
+      "binding": "host:HostIdentifier"
     }
   },
   "primaryOutputs": [
     {
-      "condition": "(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\")",
+      "condition": "(host-identifier == \"dotnetcli\" || host-identifier == \"dotnetcli-preview\")",
       "path": "TelerikBlazorWasm.sln"
     },
     {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
       "path": "Server/TelerikBlazorWasm.Server.csproj"
     },
     {

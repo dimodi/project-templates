@@ -1,5 +1,7 @@
+#if (upload-controller)
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+#endif
 using Microsoft.AspNetCore.SignalR;
 using TelerikBlazorServer.Components;
 #if (localization)
@@ -15,6 +17,8 @@ builder.Services.AddRazorComponents()
 
 #if (localization)
 builder.Services.AddLocalization();
+#endif
+#if (localization || upload-controller)
 builder.Services.AddControllers();
 
 #endif
@@ -35,26 +39,20 @@ builder.Services.Configure<HubOptions>(options =>
 #endif
 });
 
+#if (upload-controller)
 // .NET Core max form body length for Upload
 builder.Services.Configure<FormOptions>(options =>
 {
-#if (form-body-length != 128)
-    options.MultipartBodyLengthLimit = {TVAR_FORMBODY} * 1048576; // {TVAR_FORMBODY} MB
-#else
-    //options.MultipartBodyLengthLimit = {TVAR_FORMBODY} * 1048576; // {TVAR_FORMBODY} MB
-#endif
+    options.MultipartBodyLengthLimit = 256 * 1048576; // 256 MB
 });
 
 // Kestrel max request body size for Upload
 builder.Services.Configure<KestrelServerOptions>(options =>
 {
-#if (kestrel-request-size != 28)
-    options.Limits.MaxRequestBodySize = {TVAR_KESTRELREQUEST} * 1048576; // {TVAR_KESTRELREQUEST} MB
-#else
-    //options.Limits.MaxRequestBodySize = {TVAR_KESTRELREQUEST} * 1048576; // {TVAR_KESTRELREQUEST} MB
-#endif
+    options.Limits.MaxRequestBodySize = 256 * 1048576; // 256 MB
 });
 
+#endif
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -84,7 +82,9 @@ RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions(
     .AddSupportedUICultures(supportedCultures);
 
 app.UseRequestLocalization(localizationOptions);
-app.MapControllers();
+#endif
+#if (localization || upload-controller)
+app.MapDefaultControllerRoute();
 
 #endif
 app.MapRazorComponents<App>()
