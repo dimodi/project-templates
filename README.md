@@ -23,13 +23,19 @@ The package includes the following project and item templates.
 
 | Template Name | .CLI Short Name |
 | --- | --- |
+| Telerik Blazor Web App | `dimodi-blazor` |
+| Telerik Blazor WebAssembly Standalone App | `dimodi-blazorwasm` |
+
+### Deprecated Project Templates
+
+The following project templates are deprecated and do not include the latest template features. The two .NET 6-7 project templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+
+| Template Name | .CLI Short Name |
+| --- | --- |
 | Telerik Blazor Web App (Server render mode) | `dimodi-blazor-server` |
 | Telerik Blazor Web App (WebAssembly or Auto render mode) | `dimodi-blazor-wasmauto` |
-| Telerik Blazor WebAssembly Standalone App | `dimodi-blazorwasm` |
 | Telerik Blazor Server App (.NET 6-7) | `dimodi-blazorserver` |
 | Telerik Blazor WebAssembly App, ASP.NET Core hosted (.NET 6-7) | `dimodi-blazorwasm-hosted` |
-
-The two .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
 
 ### Item Templates
 
@@ -91,10 +97,8 @@ dotnet new dimodi-grid --help
 1. Open Terminal and go to the desired parent folder of your future app.
 1. Execute the `dotnet new` command with the short name of the template and the app name, for example:
     ```sh
-    dotnet new dimodi-blazor-server -o MyNewAppName
+    dotnet new dimodi-blazor -o MyNewAppName
     ```
-
-When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
 ### Create Items
 

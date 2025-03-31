@@ -17,9 +17,12 @@
     <PackageReleaseNotes>
 NEW
 * Merged the Web App (Server) and Web App (WebAssembly or Auto) project templates into one.
+* Restore NuGet packages automatically on app creation.
 
 NOTE
-The .NET 6 and .NET 7 project templates are deprecated and no longer receive new features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+The following project templates are deprecated and do not include the latest features.
+* Web App (Server) and Web App (WebAssembly and Auto) 
+* Blazor Server (.NET 6 and .NET 7) and  project templates. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates;Docker;boilerplate</PackageTags>
@@ -27,7 +30,7 @@ The .NET 6 and .NET 7 project templates are deprecated and no longer receive new
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>6.0.0</Version>
+    <Version>5.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
