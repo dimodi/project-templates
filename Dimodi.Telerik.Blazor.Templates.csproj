@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
-    <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
+    <Copyright>Copyright (c) Dimo Dimov 2025</Copyright>
     <Description>Blazor project and item templates with Telerik UI for Blazor and Docker integration. Configure the Telerik Blazor components via template options like CSS theme, icon type, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
-    <NoWarn>$(NoWarn);NU5128;NU5119</NoWarn>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
     <PackageIcon>progress-logo.png</PackageIcon>
     <PackageId>Dimodi.Telerik.Blazor.Templates</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -20,7 +20,7 @@ NEW
 * Restore NuGet packages automatically on app creation.
 
 NOTE
-The following project templates are deprecated and do not include the latest features.
+The following project templates are deprecated and do not include the latest or all available features.
 * Web App (Server) and Web App (WebAssembly and Auto) 
 * Blazor Server (.NET 6 and .NET 7) and  project templates. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
     </PackageReleaseNotes>
@@ -35,7 +35,7 @@ The following project templates are deprecated and do not include the latest fea
 
   <ItemGroup>
     <Compile Remove="**\*" />
-    <Content Include="Items\**\*;Projects\Net*\**\*" Exclude="Projects\Net*\**\bin\**;Projects\Net*\**\obj\**" />
+    <Content Include="Items\**\*;Projects\Net*\**\*" Exclude="Projects\Net*\**\bin\**;Projects\Net*\**\obj\**;**\.DS_Store" />
     <None Include="progress-logo.png" Pack="true" PackagePath="\" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
