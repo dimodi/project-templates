@@ -83,9 +83,9 @@ rm -rf TestWasmAloneNonDefaultSettings
 
 echo
 echo ===== Web App, Server, default settings =====
-echo dotnet new dimodi-blazor -o TestWebAppServerDefaultSettings -rm Server
+echo dotnet new dimodi-blazor -o TestWebAppServerDefaultSettings -int Server
 
-dotnet new dimodi-blazor -o TestWebAppServerDefaultSettings -rm Server
+dotnet new dimodi-blazor -o TestWebAppServerDefaultSettings -int Server
 cd TestWebAppServerDefaultSettings
 dotnet build
 
@@ -94,9 +94,9 @@ rm -rf TestWebAppServerDefaultSettings
 
 echo
 echo ===== Web App, Server, non-default settings =====
-echo dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings -f net8.0 -rm Server -tv "*" -th bootstrap -dm -c -it Font -lo -r -sms 64 -uc -do
+echo dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings -f net8.0 -int Server -tv "*" -th bootstrap -dm -c -it Font -lo -r -sms 64 -uc -do
 
-dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings -f net8.0 -rm Server -tv "*" -th bootstrap -dm -c -it Font -lo -r -sms 64 -uc -do
+dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings -f net8.0 -int Server -tv "*" -th bootstrap -dm -c -it Font -lo -r -sms 64 -uc -do
 cd TestWebAppServerNonDefaultSettings
 dotnet build
 
@@ -105,9 +105,9 @@ rm -rf TestWebAppServerNonDefaultSettings
 
 echo
 echo ===== Web App, WebAssembly, default settings =====
-echo dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings -rm WebAssembly
+echo dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings -int WebAssembly
 
-dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings -rm WebAssembly
+dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings -int WebAssembly
 cd TestWebAppWasmDefaultSettings
 dotnet build
 
@@ -116,9 +116,9 @@ rm -rf TestWebAppWasmDefaultSettings
 
 echo
 echo ===== Web App, WebAssembly, non-default settings =====
-echo dotnet new dimodi-blazor -o TestWebAppWasmNonDefaultSettings -f net8.0 -rm WebAssembly -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
+echo dotnet new dimodi-blazor -o TestWebAppWasmNonDefaultSettings -f net8.0 -int WebAssembly -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
 
-dotnet new dimodi-blazor -o TestWebAppWasmNonDefaultSettings -f net8.0 -rm WebAssembly -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
+dotnet new dimodi-blazor -o TestWebAppWasmNonDefaultSettings -f net8.0 -int WebAssembly -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
 cd TestWebAppWasmNonDefaultSettings
 dotnet build
 

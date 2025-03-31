@@ -5,7 +5,8 @@
       "longName": "framework"
     },
     "RenderMode": {
-      "longName": "render-mode"
+      "longName": "interactivity",
+      "shortName": "int"
     },
     "TelerikVersion": {
       "longName": "telerik-version"
