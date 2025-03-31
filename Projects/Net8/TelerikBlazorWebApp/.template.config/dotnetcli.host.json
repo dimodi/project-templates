@@ -4,6 +4,9 @@
     "Framework": {
       "longName": "framework"
     },
+    "RenderMode": {
+      "longName": "render-mode"
+    },
     "TelerikVersion": {
       "longName": "telerik-version"
     },
@@ -24,6 +27,12 @@
     },
     "RTL": {
       "longName": "rtl"
+    },
+    "SignalrMessageSize": {
+      "longName": "signalr-message-size"
+    },
+    "UploadController": {
+      "longName": "upload-controller"
     },
     "Docker": {
       "longName": "docker"

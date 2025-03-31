@@ -1,20 +1,12 @@
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using TelerikBlazorWasmStandalone;
 #if (Localization)
-using TelerikBlazorWasmStandalone.Services;
+using TelerikBlazorWebApp.Client.Services;
 using Microsoft.JSInterop;
 using System.Globalization;
 using Telerik.Blazor.Services;
 #endif
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-builder.Services.AddTelerikBlazor();
 
 #if (Localization)
 // Localization service for the Telerik component labels

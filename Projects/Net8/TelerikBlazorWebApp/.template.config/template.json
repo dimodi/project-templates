@@ -6,17 +6,23 @@
     "Blazor",
     "WebAssembly"
   ],
-  "identity": "Dimodi.Telerik.Blazor.WebAssembly.Standalone",
-  "name": "Telerik Blazor WebAssembly Standalone App",
+  "identity": "Dimodi.Telerik.Blazor.WebApp",
+  "name": "Telerik Blazor Web App",
   "defaultName": "TelerikBlazorApp",
-  "shortName": "dimodi-blazorwasm",
-  "description": "Blazor WebAssembly Standalone App with Telerik Blazor components installed",
-  "sourceName": "TelerikBlazorWasmStandalone",
+  "shortName": "dimodi-blazor",
+  "description": "Blazor Web App with global interactive Server, WebAssembly, or Auto render mode, and Telerik Blazor components installed",
+  "sourceName": "TelerikBlazorWebApp",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution",
+    "editorTreatAs": "solution"
   },
   "preferNameDirectory": true,
+  "guids": [
+    "27EC6E1B-25F1-4610-848C-816BA6C5DCFD",
+    "99CEE179-E2E4-40F9-B4D0-3055CE52699B",
+    "10E9231B-C208-4707-B24C-735A779D09F0"
+  ],
   "symbols": {
     "Framework": {
       "type": "parameter",
@@ -54,6 +60,28 @@
       },
       "replaces": "{TVAR_NETNUMBER}"
     },
+    "RenderMode": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "Server",
+      "description": "The global Blazor render mode (interactivity).",
+      "displayName": "Interactive Render Mode",
+      "choices": [
+        {
+          "choice": "Server",
+          "description": "Server"
+        },
+        {
+          "choice": "WebAssembly",
+          "description": "WebAssembly"
+        },
+        {
+          "choice": "Auto",
+          "description": "Auto"
+        }
+      ],
+      "replaces": "{TVAR_RENDERMODE}"
+    },
     "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
@@ -63,7 +91,7 @@
       "choices": [
         {
           "choice": "*",
-          "displayName": "latest as wildcard (no CDN)"
+          "displayName": "latest as wildcard"
         },
         {
           "choice": "8.1.1",
@@ -168,6 +196,22 @@
       "description": "Enable Right-to-Left support.",
       "displayName": "Enable RTL"
     },
+    "SignalrMessageSize": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "32",
+      "description": "Increase the max SignalR message size. Recommended for the Editor, FileManager, FileSelect, PDF Viewer, and Signature components.",
+      "displayName": "Max SignalR Message Size (KB)",
+      "isEnabled": "(RenderMode == \"Server\")",
+      "replaces": "{TVAR_SIGNALRMESSAGESIZE}"
+    },
+    "UploadController": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Add Upload controller and increase the upload file size limit to 256 MB",
+      "displayName": "Add Upload Controller"
+    },
     "Docker": {
       "type": "parameter",
       "datatype": "bool",
@@ -212,7 +256,19 @@
     },
     "HostIdentifier": {
       "type": "bind",
-      "binding": "host:HostIdentifier"
+      "binding": "host:HostIdentifier",
+      "defaultValue": "",
+      "replaces": "{TVAR_HOSTIDENTIFIER}"
+    },
+    "CreateSolutionDirectory": {
+      "type": "bind",
+      "binding": "context:CreateSolutionDirectory",
+      "datatype": "bool",
+      "defaultValue": "false"
+    },
+    "UseWebAssembly": {
+      "type": "computed",
+      "value": "(RenderMode == \"WebAssembly\" || RenderMode == \"Auto\")"
     },
     "UseDotNetCli": {
       "type": "computed",
@@ -231,8 +287,15 @@
           "condition": "(!Localization)",
           "exclude": [
             "**/Layout/CultureSelector.razor",
+            "**/Controllers/CultureController.cs",
             "**/Resources/**",
             "**/Services/**"
+          ]
+        },
+        {
+          "condition": "(!UploadController)",
+          "exclude": [
+            "**/Controllers/UploadController.cs"
           ]
         },
         {
@@ -246,20 +309,64 @@
             "**/Dockerfile",
             "**/NuGet_Deploy.Config",
             "**/dockerignore.dockerignore",
-            "**/.dockerignore",
-            "**/nginx.conf"
+            "**/.dockerignore"
           ]
+        },
+        {
+          "condition": "(!UseDotNetCli)",
+          "exclude": [
+            "*.sln"
+          ]
+        },
+        {
+          "condition": "(!UseWebAssembly)",
+          "exclude": [
+            "**/TelerikBlazorWebApp.Client/**",
+            "*.sln"
+          ],
+          "rename": {
+            "TelerikBlazorWebApp/": "./"
+          }
+        },
+        {
+          "condition": "(UseWebAssembly)",
+          "exclude": [
+            "TelerikBlazorWebApp/Components/Routes.razor"
+          ],
+          "rename": {
+            "TelerikBlazorWebApp/Components/Layout/": "./TelerikBlazorWebApp.Client/Layout/",
+            "TelerikBlazorWebApp/Components/Pages/Home.razor": "./TelerikBlazorWebApp.Client/Pages/Home.razor",
+            "TelerikBlazorWebApp/Components/Pages/Counter.razor": "./TelerikBlazorWebApp.Client/Pages/Counter.razor",
+            "TelerikBlazorWebApp/Components/Pages/Weather.razor": "./TelerikBlazorWebApp.Client/Pages/Weather.razor"
+          }
         }
       ]
     }
   ],
   "primaryOutputs": [
     {
-      "condition": "(!UseDotNetCli)",
-      "path": "Pages/Home.razor"
+      "condition": "(!UseWebAssembly && !UseDotNetCli)",
+      "path": "Components/Pages/Home.razor"
     },
     {
-      "path": "TelerikBlazorWasmStandalone.csproj"
+      "condition": "(UseWebAssembly && !UseDotNetCli)",
+      "path": "TelerikBlazorWebApp.Client/Pages/Home.razor"
+    },
+    {
+      "condition": "(UseWebAssembly && UseDotNetCli)",
+      "path": "TelerikBlazorWebApp.sln"
+    },
+    {
+      "condition": "(UseWebAssembly && !UseDotNetCli)",
+      "path": "TelerikBlazorWebApp/TelerikBlazorWebApp.csproj"
+    },
+    {
+      "condition": "(UseWebAssembly && !UseDotNetCli)",
+      "path": "TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj"
+    },
+    {
+      "condition": "(!UseWebAssembly)",
+      "path": "TelerikBlazorWebApp.csproj"
     }
   ],
   "postActions": [

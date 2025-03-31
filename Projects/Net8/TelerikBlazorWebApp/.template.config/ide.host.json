@@ -3,6 +3,13 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
+      "id": "RenderMode",
+      "name": {
+        "text": "Global Interactive Render Mode"
+      },
+      "isVisible": true
+    },
+    {
       "id": "TelerikVersion",
       "name": {
         "text": "Telerik UI for Blazor version"
@@ -48,6 +55,20 @@
       "id": "RTL",
       "name": {
         "text": "Enable RTL"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "SignalrMessageSize",
+      "name": {
+        "text": "Max SignalR Message Size (KB)"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "UploadController",
+      "name": {
+        "text": "Add Upload Controller"
       },
       "isVisible": true
     },
