@@ -194,12 +194,6 @@
       "binding": "host:HostIdentifier",
       "defaultValue": ""
     },
-    "CreateSolutionDirectory": {
-      "type": "bind",
-      "binding": "context:CreateSolutionDirectory",
-      "datatype": "bool",
-      "defaultValue": "false"
-    },
     "UseDotNetCli": {
       "type": "computed",
       "value": "(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\")"

@@ -4,7 +4,7 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-<!--#if (docker) -->
+<!--#if (Docker) -->
     <UserSecretsId>{TVAR_DOCKERUSERSECRETSID}</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 <!--#endif-->
@@ -13,15 +13,15 @@
   <ItemGroup>
     <ProjectReference Include="..\TelerikBlazorWasm.Client\TelerikBlazorWasm.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="{TVAR_NETNUMBER}.*" />
-<!--#if (localization) -->
+<!--#if (Localization) -->
     <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
-<!--#if (docker) -->
+<!--#if (Docker) -->
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
 <!--#endif-->
   </ItemGroup>
 
-<!--#if (localization) -->
+<!--#if (Localization) -->
   <ItemGroup>
     <EmbeddedResource Update="Resources\TelerikMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

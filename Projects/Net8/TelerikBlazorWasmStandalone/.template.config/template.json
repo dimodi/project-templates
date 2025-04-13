@@ -212,7 +212,8 @@
     },
     "HostIdentifier": {
       "type": "bind",
-      "binding": "host:HostIdentifier"
+      "binding": "host:HostIdentifier",
+      "defaultValue": ""
     },
     "UseDotNetCli": {
       "type": "computed",

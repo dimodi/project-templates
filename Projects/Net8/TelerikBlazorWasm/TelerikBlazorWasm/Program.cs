@@ -1,9 +1,9 @@
-#if (upload-controller)
+#if (UploadController)
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 #endif
 using TelerikBlazorWasm.Components;
-#if (localization)
+#if (Localization)
 using TelerikBlazorWasm.Services;
 using Microsoft.Extensions.Localization;
 using Telerik.Blazor.Services;
@@ -13,26 +13,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-#if (render-mode == "Auto")
+#if (RenderMode == "Auto")
     .AddInteractiveServerComponents()
 #endif
     .AddInteractiveWebAssemblyComponents();
 
-#if (localization)
+#if (Localization)
 builder.Services.AddLocalization();
 #endif
-#if (localization || upload-controller)
+#if (Localization || UploadController)
 builder.Services.AddControllers();
 
 #endif
 builder.Services.AddTelerikBlazor();
 
-#if (localization)
+#if (Localization)
 // Localization service for the Telerik component labels
 builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
 
 #endif
-#if (upload-controller)
+#if (UploadController)
 // .NET Core max form body length for Upload
 builder.Services.Configure<FormOptions>(options =>
 {
@@ -69,7 +69,7 @@ app.MapStaticAssets();
 #endif
 app.UseAntiforgery();
 
-#if (localization)
+#if (Localization)
 string[] supportedCultures = app.Configuration.GetSection("Cultures")
     .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
 
@@ -80,12 +80,12 @@ RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions(
 
 app.UseRequestLocalization(localizationOptions);
 #endif
-#if (localization || upload-controller)
+#if (Localization || UploadController)
 app.MapDefaultControllerRoute();
 
 #endif
 app.MapRazorComponents<App>()
-#if (render-mode == "Auto")
+#if (RenderMode == "Auto")
     .AddInteractiveServerRenderMode()
 #endif
     .AddInteractiveWebAssemblyRenderMode()

@@ -4,23 +4,23 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-<!--#if (docker) -->
+<!--#if (Docker) -->
     <UserSecretsId>{TVAR_DOCKERUSERSECRETSID}</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 <!--#endif-->
   </PropertyGroup>
 
   <ItemGroup>
-<!--#if (localization) -->
+<!--#if (Localization) -->
     <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
-<!--#if (docker) -->
+<!--#if (Docker) -->
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
   </ItemGroup>
 
-<!--#if (localization) -->
+<!--#if (Localization) -->
   <ItemGroup>
     <EmbeddedResource Update="Resources\TelerikMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

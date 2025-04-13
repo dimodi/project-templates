@@ -191,13 +191,8 @@
     },
     "HostIdentifier": {
       "type": "bind",
-      "binding": "host:HostIdentifier"
-    },
-    "CreateSolutionDirectory": {
-      "type": "bind",
-      "binding": "context:CreateSolutionDirectory",
-      "datatype": "bool",
-      "defaultValue": "false"
+      "binding": "host:HostIdentifier",
+      "defaultValue": ""
     },
     "UseDotNetCli": {
       "type": "computed",
