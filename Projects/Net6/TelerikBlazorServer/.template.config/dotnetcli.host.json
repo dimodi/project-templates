@@ -3,6 +3,33 @@
     "symbolInfo": {
       "Framework": {
         "longName": "framework"
+      },
+      "TelerikVersion": {
+        "longName": "telerik-version"
+      },
+      "Theme": {
+        "longName": "theme"
+      },
+      "DarkMode": {
+        "longName": "dark-mode"
+      },
+      "CDN": {
+        "longName": "cdn"
+      },
+      "IconType": {
+        "longName": "icon-type"
+      },
+      "RTL": {
+        "longName": "rtl"
+      },
+      "SignalrMessageSize": {
+        "longName": "signalr-message-size"
+      },
+      "FormBodyLength": {
+        "longName": "form-body-length"
+      },
+      "KestrelRequestSize": {
+        "longName": "kestrel-request-size"
       }
     }
   }

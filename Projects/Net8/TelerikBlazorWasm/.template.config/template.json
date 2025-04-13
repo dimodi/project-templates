@@ -244,8 +244,7 @@
     "host-identifier": {
       "type": "bind",
       "binding": "host:HostIdentifier",
-      "defaultValue": "",
-      "replaces": "{TVAR_HOSTIDENTIFIER}"
+      "defaultValue": ""
     },
     "create-solution-directory": {
       "type": "bind",

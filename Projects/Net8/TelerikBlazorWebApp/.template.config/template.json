@@ -257,8 +257,7 @@
     "HostIdentifier": {
       "type": "bind",
       "binding": "host:HostIdentifier",
-      "defaultValue": "",
-      "replaces": "{TVAR_HOSTIDENTIFIER}"
+      "defaultValue": ""
     },
     "CreateSolutionDirectory": {
       "type": "bind",

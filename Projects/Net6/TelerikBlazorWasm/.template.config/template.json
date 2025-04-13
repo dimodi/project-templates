@@ -42,7 +42,7 @@
       ],
       "replaces": "{TVAR_NETVERSION}"
     },
-    "telerik-version": {
+    "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "8.1.1",
@@ -68,7 +68,7 @@
       ],
       "replaces": "{TVAR_TELERIKVERSION}"
     },
-    "theme": {
+    "Theme": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "default",
@@ -94,14 +94,14 @@
       ],
       "replaces": "{TVAR_THEME}"
     },
-    "dark-mode": {
+    "DarkMode": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Load the dark swatch of the Telerik CSS theme. Requires CDN.",
       "displayName": "Dark Mode (requires CDN)"
     },
-    "theme-suffix": {
+    "ThemeSuffix": {
       "type": "generated",
       "generator": "switch",
       "parameters": {
@@ -109,7 +109,7 @@
         "evaluator": "C++",
         "cases": [
           {
-            "condition": "(dark-mode)",
+            "condition": "(DarkMode)",
             "value": "-dark"
           },
           {
@@ -120,14 +120,14 @@
       },
       "replaces": "{TVAR_THEMESUFFIX}"
     },
-    "cdn": {
+    "CDN": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Load Telerik CSS and JS files from CDN.",
       "displayName": "Use Telerik CDN"
     },
-    "icon-type": {
+    "IconType": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Svg",
@@ -146,14 +146,14 @@
       ],
       "replaces": "{TVAR_ICONTYPE}"
     },
-    "rtl": {
+    "RTL": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Enable Right-to-Left support.",
       "displayName": "Enable RTL"
     },
-    "form-body-length": {
+    "FormBodyLength": {
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "128",
@@ -161,7 +161,7 @@
       "displayName": "Max Form Body Length (MB)",
       "replaces": "{TVAR_FORMBODY}"
     },
-    "kestrel-request-size": {
+    "KestrelRequestSize": {
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "28",
@@ -169,7 +169,7 @@
       "displayName": "Max Kestrel Request Body Size (MB)",
       "replaces": "{TVAR_KESTRELREQUEST}"
     },
-    "kestrel-https-port": {
+    "KestrelHttpsPort": {
       "type": "generated",
       "generator": "port",
       "parameters": {
@@ -179,7 +179,7 @@
       },
       "replaces": "{TVAR_HTTPSPORT}"
     },
-    "kestrel-https-port2": {
+    "KestrelHttpsPort2": {
       "type": "generated",
       "generator": "port",
       "parameters": {
@@ -189,29 +189,21 @@
       },
       "replaces": "{TVAR_HTTPSPORT2}"
     },
-    "host-identifier": {
+    "HostIdentifier": {
       "type": "bind",
       "binding": "host:HostIdentifier"
+    },
+    "CreateSolutionDirectory": {
+      "type": "bind",
+      "binding": "context:CreateSolutionDirectory",
+      "datatype": "bool",
+      "defaultValue": "false"
+    },
+    "UseDotNetCli": {
+      "type": "computed",
+      "value": "(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\")"
     }
   },
-  "primaryOutputs": [
-    {
-      "condition": "(host-identifier == \"dotnetcli\" || host-identifier == \"dotnetcli-preview\")",
-      "path": "TelerikBlazorWasm.sln"
-    },
-    {
-      "condition": "(host-identifier != \"dotnetcli\" && host-identifier != \"dotnetcli-preview\")",
-      "path": "Server/TelerikBlazorWasm.Server.csproj"
-    },
-    {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "Client/TelerikBlazorWasm.Client.csproj"
-    },
-    {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "Shared/TelerikBlazorWasm.Shared.csproj"
-    }
-  ],
   "sources": [
     {
       "source": "./",
@@ -221,12 +213,56 @@
       ],
       "modifiers": [
         {
-          "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+          "condition": "(!UseDotNetCli)",
           "exclude": [
             "*.sln"
           ]
         }
       ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "condition": "(!UseDotNetCli)",
+      "path": "Client/Pages/Index.razor"
+    },
+    {
+      "condition": "(UseDotNetCli)",
+      "path": "TelerikBlazorWasm.sln"
+    },
+    {
+      "condition": "(!UseDotNetCli)",
+      "path": "Client/TelerikBlazorWasm.Client.csproj"
+    },
+    {
+      "condition": "(!UseDotNetCli)",
+      "path": "Server/TelerikBlazorWasm.Server.csproj"
+    },
+    {
+      "condition": "(!UseDotNetCli)",
+      "path": "Shared/TelerikBlazorWasm.Shared.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true,
+      "description": "Restore NuGet packages",
+      "manualInstructions": [
+        {
+          "text": "Run dotnet restore"
+        }
+      ]
+    },
+    {
+      "condition": "(!UseDotNetCli)",
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "description": "Open Index.razor",
+      "continueOnError": true,
+      "manualInstructions": [],
+      "args": {
+        "files": "0"
+      }
     }
   ]
 }
