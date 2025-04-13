@@ -1,10 +1,10 @@
-#if (upload-controller)
+#if (UploadController)
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 #endif
 using Microsoft.AspNetCore.SignalR;
 using TelerikBlazorServer.Components;
-#if (localization)
+#if (Localization)
 using TelerikBlazorServer.Services;
 using Telerik.Blazor.Services;
 #endif
@@ -15,16 +15,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-#if (localization)
+#if (Localization)
 builder.Services.AddLocalization();
 #endif
-#if (localization || upload-controller)
+#if (Localization || UploadController)
 builder.Services.AddControllers();
 
 #endif
 builder.Services.AddTelerikBlazor();
 
-#if (localization)
+#if (Localization)
 // Localization service for the Telerik component labels
 builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
 
@@ -32,14 +32,14 @@ builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLoc
 // SignalR max message size for Editor, FileManager, FileSelect, PDF Viewer, Signature
 builder.Services.Configure<HubOptions>(options =>
 {
-#if (signalr-message-size != 32)
+#if (SignalrMessageSize != 32)
     options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGE} * 1024; // {TVAR_SIGNALRMESSAGE} KB, or use null for no limit
 #else
     //options.MaximumReceiveMessageSize = {TVAR_SIGNALRMESSAGE} * 1024; // {TVAR_SIGNALRMESSAGE} KB, or use null for no limit
 #endif
 });
 
-#if (upload-controller)
+#if (UploadController)
 // .NET Core max form body length for Upload
 builder.Services.Configure<FormOptions>(options =>
 {
@@ -72,7 +72,7 @@ app.MapStaticAssets();
 #endif
 app.UseAntiforgery();
 
-#if (localization)
+#if (Localization)
 string[] supportedCultures = app.Configuration.GetSection("Cultures")
     .GetChildren().ToDictionary(x => x.Key, x => x.Value).Keys.ToArray();
 
@@ -83,7 +83,7 @@ RequestLocalizationOptions localizationOptions = new RequestLocalizationOptions(
 
 app.UseRequestLocalization(localizationOptions);
 #endif
-#if (localization || upload-controller)
+#if (Localization || UploadController)
 app.MapDefaultControllerRoute();
 
 #endif
