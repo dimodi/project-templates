@@ -336,7 +336,7 @@
       "condition": "(!UseDotNetCli)",
       "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
       "description": "Open Home.razor",
-      "continueOnError": false,
+      "continueOnError": true,
       "manualInstructions": [],
       "args": {
         "files": "0"
