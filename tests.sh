@@ -172,3 +172,25 @@ dotnet build
 
 cd ~/$testFolder
 rm -rf TestWebAppWasmNonDefaultSettings
+
+echo
+echo ===== Web App, Auto, default settings =====
+echo dotnet new dimodi-blazor -o TestWebAppAutoDefaultSettings -int Auto
+
+dotnet new dimodi-blazor -o TestWebAppAutoDefaultSettings -int Auto
+cd TestWebAppAutoDefaultSettings
+dotnet build
+
+cd ~/$testFolder
+rm -rf TestWebAppAutoDefaultSettings
+
+echo
+echo ===== Web App, Auto, non-default settings =====
+echo dotnet new dimodi-blazor -o TestWebAppAutoNonDefaultSettings -f net8.0 -int Auto -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
+
+dotnet new dimodi-blazor -o TestWebAppAutoNonDefaultSettings -f net8.0 -int Auto -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
+cd TestWebAppAutoNonDefaultSettings
+dotnet build
+
+cd ~/$testFolder
+rm -rf TestWebAppAutoNonDefaultSettings
