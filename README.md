@@ -5,11 +5,18 @@ This NuGet package provides ASP.NET Core Blazor project and item templates that 
 ## Table of Contents
 
 * [Templates](#templates)
+    * [Project Templates](#project-templates)
+    * [Deprecated Project Templates](#deprecated-project-templates)
+    * [Item Templates](#item-templates)
 * [Install](#install)
 * [Use with Visual Studio](#use-with-visual-studio)
 * [Use with VS Code](#use-with-vs-code)
 * [Use with the .NET CLI](#use-with-the-net-cli)
+    * [Create Projects](#create-projects)
+    * [Create Items](#create-items)
 * [Project template features](#project-template-features)
+    * [Telerik UI for Blazor Configuration](#telerik-ui-for-blazor-configuration)
+    * [Docker Support](#docker-support)
 * [Update](#update)
 * [Uninstall](#uninstall)
 * [Create your own templates](#create-your-own-templates)
@@ -113,8 +120,8 @@ dotnet new dimodi-grid --help
 
 The project templates are similar to the default .NET SDK Blazor project templates in terms of structure and configuration. The differences are:
 
-* The Blazor Web Apps use a global interactive render mode. This is the easier and recommended way to integrate Telerik UI for Blazor.
-* The WebAssembly apps reference the latest minor version of the selected .NET version.
+* The Blazor Web Apps use a **Global** interactivity location, i.e. [interactive render mode for the entire app](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes). This is the [easier and recommended way to integrate Telerik UI for Blazor](https://www.telerik.com/blazor-ui/documentation/getting-started/web-app#interactive-render-mode).
+* The WebAssembly apps reference the latest minor version of the selected .NET version through a wildcard.
 * The apps use the `https` launch profile by default.
 * Visual Studio opens `Home.razor` automatically after the app is created.
 * The top bar uses background and border colors from the Telerik theme. This makes the styling consistent in dark mode.
@@ -142,6 +149,8 @@ The project templates provide options to configure the app and the [Telerik UI f
 ### Docker Support
 
 The project templates provide an optional Docker setup, including `Dockerfile`, `.dockerignore`, and a Docker launch profile. The `Dockerfile` sets up the Telerik NuGet package source in the container.
+
+The `Dockerfile` contains additional documentation and tips.
 
 ## Update
 
