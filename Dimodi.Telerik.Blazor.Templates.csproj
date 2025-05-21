@@ -16,15 +16,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Added an optional Upload controller class. A larger max upload file size of 256 MB is now set in Program.cs only if the controller is added.
-* Added Docker support, including Dockerfile, .dockerignore, and a launch profile.
-* Enabled Home.razor to open automatically in newly created apps in Visual Studio.
-
-FIXED
-* Renamed the framework version short alias of the WebAssembly Standalone template from -F to -f when using the .NET CLI.
+* Added support for Telerik UI for Blazor 9.0.0
 
 NOTE
-The .NET 6 and .NET 7 project templates are deprecated and may not include all features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+The .NET 6 and .NET 7 project templates are deprecated and may not include all features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates;Docker;boilerplate</PackageTags>
@@ -32,7 +27,7 @@ The .NET 6 and .NET 7 project templates are deprecated and may not include all f
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>5.1.0</Version>
+    <Version>5.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
