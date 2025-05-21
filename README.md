@@ -29,7 +29,7 @@ The package includes the following project and item templates.
 | Telerik Blazor Server App (.NET 6-7) | `dimodi-blazorserver` |
 | Telerik Blazor WebAssembly App, ASP.NET Core hosted (.NET 6-7) | `dimodi-blazorwasm-hosted` |
 
-The two .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+The two .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
 
 ### Item Templates
 
