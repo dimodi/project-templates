@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Aggregate_Count" xml:space="preserve">
-    <value>Броя</value>
+    <value>Брой</value>
   </data>
   <data name="Aggregate_Max" xml:space="preserve">
     <value>Максимум</value>
@@ -1987,5 +1987,29 @@
   </data>
   <data name="PdfViewer_Annotations_FreeTextEditorPlaceholder" xml:space="preserve">
     <value>Въведи текст</value>
+  </data>
+  <data name="Filter_Clear_All" xml:space="preserve">
+    <value>Изчистете всички филтри</value>
+  </data>
+  <data name="Sort_Clear_All" xml:space="preserve">
+    <value>Изчистете всички подредби</value>
+  </data>
+  <data name="ColumnMenu_GroupBy" xml:space="preserve">
+    <value>Групирай по</value>
+  </data>
+  <data name="ColumnMenu_SortBy" xml:space="preserve">
+    <value>Сортирай по</value>
+  </data>
+  <data name="ColumnMenu_FilterBy" xml:space="preserve">
+    <value>Филтрирай по</value>
+  </data>
+  <data name="Group_Clear_All" xml:space="preserve">
+    <value>Изчистете всички групи</value>
+  </data>
+  <data name="Upload_Pause" xml:space="preserve">
+    <value>Пауза</value>
+  </data>
+  <data name="Upload_Resume" xml:space="preserve">
+    <value>Продължи</value>
   </data>
 </root>

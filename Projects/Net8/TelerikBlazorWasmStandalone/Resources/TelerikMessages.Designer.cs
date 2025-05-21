@@ -277,15 +277,6 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No data.
-        /// </summary>
-        public static string Chart_NoData {
-            get {
-                return ResourceManager.GetString("Chart_NoData", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to A.
         /// </summary>
         public static string ColorAlpha_Label {
@@ -493,6 +484,24 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filter By.
+        /// </summary>
+        public static string ColumnMenu_FilterBy {
+            get {
+                return ResourceManager.GetString("ColumnMenu_FilterBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group By.
+        /// </summary>
+        public static string ColumnMenu_GroupBy {
+            get {
+                return ResourceManager.GetString("ColumnMenu_GroupBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Group column.
         /// </summary>
         public static string ColumnMenu_GroupColumn {
@@ -552,6 +561,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string ColumnMenu_SortAscending {
             get {
                 return ResourceManager.GetString("ColumnMenu_SortAscending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort By.
+        /// </summary>
+        public static string ColumnMenu_SortBy {
+            get {
+                return ResourceManager.GetString("ColumnMenu_SortBy", resourceCulture);
             }
         }
         
@@ -1708,6 +1726,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear all filters.
+        /// </summary>
+        public static string Filter_Clear_All {
+            get {
+                return ResourceManager.GetString("Filter_Clear_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is equal to.
         /// </summary>
         public static string Filter_DateIsEqualTo {
@@ -2797,6 +2824,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear grouping.
+        /// </summary>
+        public static string Group_Clear_All {
+            get {
+                return ResourceManager.GetString("Group_Clear_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drag a column header and drop it here to group by that column.
         /// </summary>
         public static string Group_Empty {
@@ -3418,29 +3454,20 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grand total.
+        /// </summary>
+        public static string PivotGrid_GrandTotal1 {
+            get {
+                return ResourceManager.GetString("PivotGrid_GrandTotal1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Include fields.
         /// </summary>
         public static string PivotGrid_IncludeFields {
             get {
                 return ResourceManager.GetString("PivotGrid_IncludeFields", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total {0}.
-        /// </summary>
-        public static string PivotGrid_TotalValueFormat {
-            get {
-                return ResourceManager.GetString("PivotGrid_TotalValueFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} Total.
-        /// </summary>
-        public static string PivotGrid_ValueTotalFormat {
-            get {
-                return ResourceManager.GetString("PivotGrid_ValueTotalFormat", resourceCulture);
             }
         }
         
@@ -4278,6 +4305,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string Slider_Increase {
             get {
                 return ResourceManager.GetString("Slider_Increase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear sorting.
+        /// </summary>
+        public static string Sort_Clear_All {
+            get {
+                return ResourceManager.GetString("Sort_Clear_All", resourceCulture);
             }
         }
         
@@ -5574,11 +5610,29 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pause.
+        /// </summary>
+        public static string Upload_Pause {
+            get {
+                return ResourceManager.GetString("Upload_Pause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press Delete to remove.
         /// </summary>
         public static string Upload_Remove {
             get {
                 return ResourceManager.GetString("Upload_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resume.
+        /// </summary>
+        public static string Upload_Resume {
+            get {
+                return ResourceManager.GetString("Upload_Resume", resourceCulture);
             }
         }
         
