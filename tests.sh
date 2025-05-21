@@ -1,5 +1,5 @@
 if [ $# -eq 0 ]; then
- echo "Error: Provide a path argument"
+ echo "Error: Provide an argument with a path that is inside ~/"
  exit 1
 fi
 
