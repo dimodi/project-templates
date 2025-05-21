@@ -13,16 +13,16 @@
         int lastDotIndex = telerikBlazorAssemblyVersion.LastIndexOf(".");
         string TelerikUiForBlazorVersion = telerikBlazorAssemblyVersion.Substring(0, lastDotIndex);
     }
-    @*#if (cdn)
+    @*#if (CDN)
     <script src="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/telerik-blazor.min.js" defer></script>
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main{TVAR_THEMESUFFIX}.css" />
-    @*#if (icon-type == "Font")
+    @*#if (IconType == "Font")
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-font-icons/font-icons.css" />
     #endif*@
     #else
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?@TelerikUiForBlazorVersion" defer></script>
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css?@TelerikUiForBlazorVersion" />
-    @*#if (icon-type == "Font")
+    @*#if (IconType == "Font")
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@TelerikUiForBlazorVersion" />
     #endif*@
     #endif*@
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="TelerikBlazorServer.styles.css" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
-@*#if (rtl)
+@*#if (RTL)
 <body dir="rtl" class="k-body">
 #else
 <body class="k-body">

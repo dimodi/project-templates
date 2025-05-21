@@ -3,56 +3,56 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
-      "id": "telerik-version",
+      "id": "TelerikVersion",
       "name": {
         "text": "Telerik UI for Blazor version"
       },
       "isVisible": true
     },
     {
-      "id": "theme",
+      "id": "Theme",
       "name": {
         "text": "Telerik Theme"
       },
       "isVisible": true
     },
     {
-      "id": "dark-mode",
+      "id": "DarkMode",
       "name": {
         "text": "Dark Mode (requires CDN)"
       },
       "isVisible": true
     },
     {
-      "id": "cdn",
+      "id": "CDN",
       "name": {
         "text": "Use Telerik CDN"
       },
       "isVisible": true
     },
     {
-      "id": "icon-type",
+      "id": "IconType",
       "name": {
         "text": "Telerik Icon Type"
       },
       "isVisible": true
     },
     {
-      "id": "rtl",
+      "id": "RTL",
       "name": {
         "text": "Enable RTL"
       },
       "isVisible": true
     },
     {
-      "id": "form-body-length",
+      "id": "FormBodyLength",
       "name": {
         "text": "Max Form Body Length (MB)"
       },
       "isVisible": true
     },
     {
-      "id": "kestrel-request-size",
+      "id": "KestrelRequestSize",
       "name": {
         "text": "Max Kestrel Request Body Size (MB)"
       },
