@@ -50,10 +50,6 @@
       "displayName": "Telerik UI for Blazor version",
       "choices": [
         {
-          "choice": "*",
-          "displayName": "latest as wildcard (no CDN)"
-        },
-        {
           "choice": "8.1.1",
           "displayName": "8.1.1"
         },
