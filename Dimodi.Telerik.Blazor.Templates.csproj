@@ -24,7 +24,7 @@ NEW
 NOTE
 The following project templates are deprecated and may not include the latest or all available features:
 * Web App (Server) and Web App (WebAssembly and Auto). Use the Web App template instead.
-* The .NET 6 and .NET 7 project templates. These templates are compatible with Telerik UI for Blazor version 8.x, but won't be compatible with version 9.0.
+* The .NET 6 and .NET 7 project templates. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates;Docker;boilerplate</PackageTags>
@@ -32,7 +32,7 @@ The following project templates are deprecated and may not include the latest or
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>5.2.0</Version>
+    <Version>5.3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
