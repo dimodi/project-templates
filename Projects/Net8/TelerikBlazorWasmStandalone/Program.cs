@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using TelerikBlazorWasmStandalone;
-#if (localization)
+#if (Localization)
 using TelerikBlazorWasmStandalone.Services;
 using Microsoft.JSInterop;
 using System.Globalization;
@@ -16,7 +16,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddTelerikBlazor();
 
-#if (localization)
+#if (Localization)
 // Localization service for the Telerik component labels
 builder.Services.AddSingleton(typeof(ITelerikStringLocalizer), typeof(TelerikLocalizer));
 

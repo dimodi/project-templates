@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
-    <Copyright>Copyright (c) Dimo Dimov 2024</Copyright>
+    <Copyright>Copyright (c) Dimo Dimov 2025</Copyright>
     <Description>Blazor project and item templates with Telerik UI for Blazor and Docker integration. Configure the Telerik Blazor components via template options like CSS theme, icon type, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
-    <NoWarn>$(NoWarn);NU5128;NU5119</NoWarn>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
     <PackageIcon>progress-logo.png</PackageIcon>
     <PackageId>Dimodi.Telerik.Blazor.Templates</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,10 +16,16 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Added support for Telerik UI for Blazor 9.0.0
+* Telerik Blazor Web App template that supports all render modes (Server, WebAssembly and Auto).
+* Restore NuGet packages automatically on app creation.
+* Open Index.razor automatically on app creation in .NET 6 and 7 apps.
+* Set PrivateAssets="none" to the Telerik UI for Blazor NuGet package reference in WebAssembly and Auto apps to avoid license warnings.
+* Suppress the .NET out-of-support build warnings in .NET 6 and .NET 7 apps.
 
 NOTE
-The .NET 6 and .NET 7 project templates are deprecated and may not include all features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
+The following project templates are deprecated and may not include the latest or all available features:
+* Web App (Server) and Web App (WebAssembly and Auto). These templates will be removed in the next version. Use the unified Web App template instead.
+* The .NET 6 and .NET 7 project templates. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates;Docker;boilerplate</PackageTags>
@@ -27,12 +33,12 @@ The .NET 6 and .NET 7 project templates are deprecated and may not include all f
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>5.2.1</Version>
+    <Version>5.3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="**\*" />
-    <Content Include="Items\**\*;Projects\Net*\**\*" Exclude="Projects\Net*\**\bin\**;Projects\Net*\**\obj\**" />
+    <Content Include="Items\**\*;Projects\Net*\**\*" Exclude="Projects\Net*\**\bin\**;Projects\Net*\**\obj\**;**\.DS_Store" />
     <None Include="progress-logo.png" Pack="true" PackagePath="\" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>

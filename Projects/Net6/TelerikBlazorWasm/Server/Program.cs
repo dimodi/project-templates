@@ -11,7 +11,7 @@ builder.Services.AddRazorPages();
 // .NET Core max form body length for Upload
 builder.Services.Configure<FormOptions>(options =>
 {
-#if (form-body-length != 128)
+#if (FormBodyLength != 128)
     options.MultipartBodyLengthLimit = {TVAR_FORMBODY} * 1048576; // {TVAR_FORMBODY} MB
 #else
     //options.MultipartBodyLengthLimit = {TVAR_FORMBODY} * 1048576; // {TVAR_FORMBODY} MB
@@ -21,7 +21,7 @@ builder.Services.Configure<FormOptions>(options =>
 // Kestrel max request body size for Upload
 builder.Services.Configure<KestrelServerOptions>(options =>
 {
-#if (kestrel-request-size != 28)
+#if (KestrelRequestSize != 28)
     options.Limits.MaxRequestBodySize = {TVAR_KESTRELREQUEST} * 1048576; // {TVAR_KESTRELREQUEST} MB
 #else
     //options.Limits.MaxRequestBodySize = {TVAR_KESTRELREQUEST} * 1048576; // {TVAR_KESTRELREQUEST} MB

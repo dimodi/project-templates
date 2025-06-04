@@ -3,70 +3,70 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
-      "id": "render-mode",
+      "id": "RenderMode",
       "name": {
         "text": "Global Interactive Render Mode"
       },
       "isVisible": true
     },
     {
-      "id": "telerik-version",
+      "id": "TelerikVersion",
       "name": {
         "text": "Telerik UI for Blazor version"
       },
       "isVisible": true
     },
     {
-      "id": "theme",
+      "id": "Theme",
       "name": {
         "text": "Telerik Theme"
       },
       "isVisible": true
     },
     {
-      "id": "dark-mode",
+      "id": "DarkMode",
       "name": {
         "text": "Dark Mode (requires CDN)"
       },
       "isVisible": true
     },
     {
-      "id": "cdn",
+      "id": "CDN",
       "name": {
         "text": "Use Telerik CDN"
       },
       "isVisible": true
     },
     {
-      "id": "icon-type",
+      "id": "IconType",
       "name": {
         "text": "Telerik Icon Type"
       },
       "isVisible": true
     },
     {
-      "id": "localization",
+      "id": "Localization",
       "name": {
         "text": "Enable Localization"
       },
       "isVisible": true
     },
     {
-      "id": "rtl",
+      "id": "RTL",
       "name": {
         "text": "Enable RTL"
       },
       "isVisible": true
     },
     {
-      "id": "upload-controller",
+      "id": "UploadController",
       "name": {
         "text": "Add Upload Controller"
       },
       "isVisible": true
     },
     {
-      "id": "docker",
+      "id": "Docker",
       "name": {
         "text": "Add Dockerfile"
       },
