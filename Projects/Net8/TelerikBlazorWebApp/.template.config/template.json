@@ -85,13 +85,17 @@
     "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "8.1.1",
+      "defaultValue": "9.0.0",
       "description": "Select the Telerik UI for Blazor version.",
       "displayName": "Telerik UI for Blazor version",
       "choices": [
         {
           "choice": "*",
           "displayName": "latest as wildcard"
+        },
+        {
+          "choice": "9.0.0",
+          "displayName": "9.0.0"
         },
         {
           "choice": "8.1.1",
