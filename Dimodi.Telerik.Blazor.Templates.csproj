@@ -19,6 +19,7 @@ NEW
 * Telerik Blazor Web App template that supports all render modes (Server, WebAssembly and Auto).
 * Restore NuGet packages automatically on app creation.
 * Open Index.razor automatically on app creation in .NET 6 and 7 apps.
+* Set PrivateAssets="none" to the Telerik UI for Blazor NuGet package reference in WebAssembly and Auto apps to avoid license warnings.
 * Suppress the .NET out-of-support build warnings in .NET 6 and .NET 7 apps.
 
 NOTE

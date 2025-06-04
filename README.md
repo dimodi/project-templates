@@ -133,7 +133,8 @@ The project templates are similar to the default .NET SDK Blazor project templat
 
 ### Telerik UI for Blazor Configuration
 
-The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need). The Telerik CSS and JavaScript file URLs include a [query string cache buster](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) to prevent browser caching after version upgrades. The cache buster is missing from the WebAssembly Standalone App template due to dynamic content restrictions in `index.html`.
+* The Telerik UI for Blazor NuGet package, namespaces, service, and static assets are [added, according to best practices](https://docs.telerik.com/blazor-ui/getting-started/what-you-need). The [query string cache buster for the Telerik CSS and JavaScript files](https://docs.telerik.com/blazor-ui/knowledge-base/common-browser-cache-buster) is missing from the WebAssembly Standalone App template due to dynamic content restrictions in `index.html`.
+* The Web App templates set [`PrivateAssets="none"` to the Telerik UI for Blazor NuGet package reference](https://www.telerik.com/blazor-ui/documentation/installation/license-key#using-telerik-packages-in-referenced-projects) when using WebAssembly or Auto render mode. This avoids license warnings on app startup.
 
 The project templates provide options to configure the app and the [Telerik UI for Blazor components](https://docs.telerik.com/blazor-ui/introduction#getting-started) during app creation:
 

@@ -16,7 +16,7 @@
 <!--#if (Localization) -->
     <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
-    <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" PrivateAssets="none" />
   </ItemGroup>
 
 <!--#if (Localization) -->
