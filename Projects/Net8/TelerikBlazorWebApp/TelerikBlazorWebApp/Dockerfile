@@ -19,10 +19,14 @@
 
 # SUGGESTED BUILD COMMAND
 #
+//#if (UseWebAssembly)
 //#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
 # docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t telerikblazorwebapp:v1 -f TelerikBlazorWebApp/TelerikBlazorWebApp/Dockerfile .
 //#else
 # docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t telerikblazorwebapp:v1 -f TelerikBlazorWebApp/Dockerfile .
+//#endif
+//#else
+# docker build --secret id=telerik-license-key,src=/path/to/telerik-license.txt --secret id=telerik-nuget-key,src=/path/to/telerik-nuget.txt -t telerikblazorwebapp:v1 -f Dockerfile .
 //#endif
 #
 # SUGGESTED RUN COMMAND
@@ -43,20 +47,22 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:{TVAR_NETNUMBER}.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+//#if (UseWebAssembly)
 //#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
-COPY TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.csproj TelerikBlazorWebApp/TelerikBlazorWebApp/
-//#if (UseWebAssembly)
-COPY TelerikBlazorWebApp/TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj TelerikBlazorWebApp/TelerikBlazorWebApp.Client/
-//#endif
 COPY TelerikBlazorWebApp/TelerikBlazorWebApp/NuGet_Deploy.Config TelerikBlazorWebApp/NuGet.Config
+COPY TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.csproj TelerikBlazorWebApp/TelerikBlazorWebApp/
+COPY TelerikBlazorWebApp/TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj TelerikBlazorWebApp/TelerikBlazorWebApp.Client/
 //#else
+COPY TelerikBlazorWebApp/NuGet_Deploy.Config NuGet.Config
 COPY TelerikBlazorWebApp/TelerikBlazorWebApp.csproj TelerikBlazorWebApp/
-//#if (UseWebAssembly)
 COPY TelerikBlazorWebApp.Client/TelerikBlazorWebApp.Client.csproj TelerikBlazorWebApp.Client/
 //#endif
-COPY TelerikBlazorWebApp/NuGet_Deploy.Config NuGet.Config
+//#else
+COPY NuGet_Deploy.Config NuGet.Config
+COPY TelerikBlazorWebApp.csproj .
 //#endif
 RUN --mount=type=secret,id=telerik-nuget-key \
+//#if (UseWebAssembly)
 //#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
     dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile TelerikBlazorWebApp/NuGet.Config
 RUN dotnet restore TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.csproj
@@ -64,11 +70,17 @@ RUN dotnet restore TelerikBlazorWebApp/TelerikBlazorWebApp/TelerikBlazorWebApp.c
     dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile NuGet.Config
 RUN dotnet restore TelerikBlazorWebApp/TelerikBlazorWebApp.csproj
 //#endif
+//#else
+    dotnet nuget update source Telerik --username="api-key" --password="$(cat /run/secrets/telerik-nuget-key)" --store-password-in-clear-text --configfile NuGet.Config
+RUN dotnet restore TelerikBlazorWebApp.csproj
+//#endif
 COPY . .
+//#if (UseWebAssembly)
 //#if (HostIdentifier == "csharpdevkit" || CreateSolutionDirectory)
 WORKDIR /src/TelerikBlazorWebApp/TelerikBlazorWebApp
 //#else
 WORKDIR /src/TelerikBlazorWebApp
+//#endif
 //#endif
 RUN --mount=type=secret,id=telerik-license-key,env=TELERIK_LICENSE \
     dotnet build TelerikBlazorWebApp.csproj -c $BUILD_CONFIGURATION -o /app/build
