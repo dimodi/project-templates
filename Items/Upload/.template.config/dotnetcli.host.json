@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/dotnetcli.host",
+  "symbolInfo": {
+    "AllowedExtensions": {
+      "longName": "allowed-extensions",
+      "shortName": "ext"
+    },
+    "MinSize": {
+      "longName": "min-size",
+      "shortName": "min"
+    },
+    "MaxSize": {
+      "longName": "max-size",
+      "shortName": "max"
+    },
+    "Multiple": {
+      "longName": "multiple",
+      "shortName": "mu"
+    }
+  }
+}

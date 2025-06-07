@@ -8,9 +8,12 @@ namespace TelerikBlazorWebApp.Controllers
     {
         private IWebHostEnvironment HostingEnvironment { get; set; }
 
+        private readonly string RootPath;
+
         public UploadController(IWebHostEnvironment hostingEnvironment)
         {
             HostingEnvironment = hostingEnvironment;
+            RootPath = HostingEnvironment.WebRootPath;
         }
 
         [HttpPost]
@@ -20,8 +23,7 @@ namespace TelerikBlazorWebApp.Controllers
             {
                 try
                 {
-                    string rootPath = HostingEnvironment.WebRootPath;
-                    string saveLocation = Path.Combine(rootPath, files.FileName);
+                    string saveLocation = Path.Combine(RootPath, files.FileName);
 
                     using FileStream fs = new(saveLocation, FileMode.Create);
                     await files.CopyToAsync(fs);
@@ -43,8 +45,7 @@ namespace TelerikBlazorWebApp.Controllers
             {
                 try
                 {
-                    string rootPath = HostingEnvironment.WebRootPath;
-                    string fileLocation = Path.Combine(rootPath, files);
+                    string fileLocation = Path.Combine(RootPath, files);
 
                     if (System.IO.File.Exists(fileLocation))
                     {

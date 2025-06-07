@@ -3,35 +3,35 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
-      "id": "datasource",
+      "id": "Datasource",
       "name": {
         "text": "Data Binding Mechanism"
       },
       "isVisible": true
     },
     {
-      "id": "edit-mode",
+      "id": "EditMode",
       "name": {
         "text": "Edit Mode"
       },
       "isVisible": true
     },
     {
-      "id": "validation",
+      "id": "Validation",
       "name": {
         "text": "Enable Validation"
       },
       "isVisible": true
     },
     {
-      "id": "selection",
+      "id": "Selection",
       "name": {
         "text": "Enable Row Selection"
       },
       "isVisible": true
     },
     {
-      "id": "grouping",
+      "id": "Grouping",
       "name": {
         "text": "Enable Grouping"
       },

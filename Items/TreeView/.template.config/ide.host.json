@@ -3,42 +3,42 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
-      "id": "data",
+      "id": "Data",
       "name": {
         "text": "Data Structure"
       },
       "isVisible": true
     },
     {
-      "id": "levels",
+      "id": "Levels",
       "name": {
         "text": "Levels"
       },
       "isVisible": true
     },
     {
-      "id": "children",
+      "id": "Children",
       "name": {
         "text": "Children per Parent"
       },
       "isVisible": true
     },
     {
-      "id": "root-items",
+      "id": "RootItems",
       "name": {
         "text": "Root Items"
       },
       "isVisible": true
     },
     {
-      "id": "selection",
+      "id": "Selection",
       "name": {
         "text": "Enable Iten Selection"
       },
       "isVisible": true
     },
     {
-      "id": "checkboxes",
+      "id": "Checkboxes",
       "name": {
         "text": "Render Item Checkboxes"
       },
