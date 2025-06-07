@@ -194,3 +194,89 @@ dotnet build
 
 cd ~/$testFolder
 rm -rf TestWebAppAutoNonDefaultSettings
+
+# ===== Item Templates =====
+
+echo
+echo ===== Item Templates =====
+echo dotnet new dimodi-blazor -o TestItemTemplates -int Server
+
+dotnet dotnet new dimodi-blazor -o TestItemTemplates -int Server
+cd TestItemTemplates
+
+# ===== Grid =====
+
+echo
+echo ===== Grid, default settings =====
+cd Components/Pages/
+echo dotnet new dimodi-grid -n GridDefault
+
+dotnet dotnet new dimodi-grid -n GridDefault
+cd ../../
+dotnet build
+
+rm Components/Pages/GridDefault.razor
+
+echo
+echo ===== Grid, non-default settings =====
+cd Components/Pages/
+echo dotnet new dimodi-grid -n GridNonDefault
+
+dotnet dotnet new dimodi-grid -n GridNonDefault -da "OnRead" -em "Inline" -va -s -g
+cd ../../
+dotnet build
+
+rm Components/Pages/GridNonDefault.razor
+
+# ===== TreeView =====
+
+echo
+echo ===== TreeView, default settings =====
+cd Components/Pages/
+echo dotnet new dimodi-treeview -n TreeViewDefault
+
+dotnet dotnet new dimodi-treeview -n TreeViewDefault
+cd ../../
+dotnet build
+
+rm Components/Pages/TreeViewDefault.razor
+
+echo
+echo ===== TreeView, non-default settings =====
+cd Components/Pages/
+echo dotnet new dimodi-treeview -n TreeViewNonDefault -da "Hierarchical" -le 4 -c 2 -ri 2 -s -ch
+
+dotnet dotnet new dimodi-treeview -n TreeViewNonDefault -da "Hierarchical" -le 4 -c 2 -ri 2 -s -ch
+cd ../../
+dotnet build
+
+rm Components/Pages/TreeViewNonDefault.razor
+
+# ===== Upload =====
+
+echo
+echo ===== Upload, default settings =====
+cd Components/Pages/
+echo dotnet new dimodi-upload -n UploadDefault
+
+dotnet new dimodi-upload -n UploadDefault
+cd ../../
+dotnet build
+
+rm Components/Pages/UploadDefault.razor
+
+echo
+echo ===== Upload, non-default settings =====
+cd Components/Pages/
+echo dotnet new dimodi-upload -n UploadNonDefault -ext "img" -min 2 -max 3 -mu false
+
+dotnet new dimodi-upload -n UploadNonDefault -ext "img" -min 2 -max 3 -mu false
+cd ../../
+dotnet build
+
+rm Components/Pages/UploadNonDefault.razor
+
+# ===== Item Templates End =====
+
+cd ~/$testFolder
+rm -rf TestItemTemplates
