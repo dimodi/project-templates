@@ -15,7 +15,7 @@
     "type": "item"
   },
   "symbols": {
-    "data": {
+    "Data": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Flat",
@@ -32,7 +32,7 @@
         }
       ]
     },
-    "levels": {
+    "Levels": {
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "3",
@@ -40,7 +40,7 @@
       "displayName": "Levels",
       "replaces": "TVAR_LEVELS"
     },
-    "children": {
+    "Children": {
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "3",
@@ -48,7 +48,7 @@
       "displayName": "Children per Parent",
       "replaces": "TVAR_CHILDREN"
     },
-    "root-items": {
+    "RootItems": {
       "type": "parameter",
       "datatype": "int",
       "defaultValue": "3",
@@ -56,14 +56,14 @@
       "displayName": "Root Items",
       "replaces": "TVAR_ROOTITEMS"
     },
-    "selection": {
+    "Selection": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Allow users to select one or multiple items",
       "displayName": "Enable Item Selection"
     },
-    "checkboxes": {
+    "Checkboxes": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",

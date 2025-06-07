@@ -3,44 +3,37 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
-      "id": "Data",
+      "id": "AllowedExtensions",
       "name": {
-        "text": "Data Structure"
+        "text": "Allowed Extensions"
       },
       "isVisible": true
     },
     {
-      "id": "Levels",
+      "id": "MinSize",
       "name": {
-        "text": "Levels"
+        "text": "Min File Size"
       },
       "isVisible": true
     },
     {
-      "id": "Children",
+      "id": "MaxSize",
       "name": {
-        "text": "Children per Parent"
+        "text": "Max File Size"
       },
       "isVisible": true
     },
     {
-      "id": "RootItems",
+      "id": "Multiple",
       "name": {
-        "text": "Root Items"
+        "text": "Enable Multiple File Uploads"
       },
       "isVisible": true
     },
     {
-      "id": "Selection",
+      "id": "ChunkUpload",
       "name": {
-        "text": "Enable Iten Selection"
-      },
-      "isVisible": true
-    },
-    {
-      "id": "Checkboxes",
-      "name": {
-        "text": "Render Item Checkboxes"
+        "text": "Enable Chunk Upload"
       },
       "isVisible": true
     }
