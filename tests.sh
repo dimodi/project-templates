@@ -268,9 +268,9 @@ rm Components/Pages/UploadDefault.razor
 echo
 echo ===== Upload, non-default settings =====
 cd Components/Pages/
-echo dotnet new dimodi-upload -n UploadNonDefault -ext "img" -min 2 -max 3 -mu false
+echo dotnet new dimodi-upload -n UploadNonDefault -ext "img" -min 2 -max 3 -mu false -ch
 
-dotnet new dimodi-upload -n UploadNonDefault -ext "img" -min 2 -max 3 -mu false
+dotnet new dimodi-upload -n UploadNonDefault -ext "img" -min 2 -max 3 -mu false -ch
 cd ../../
 dotnet build
 
