@@ -18,7 +18,14 @@
                Multiple="false"
 #endif*@
                RemoveUrl="@ToAbsoluteUrl("api/upload/remove")"
+@*#if (ChunkUpload)
+               SaveUrl="@ToAbsoluteUrl("api/upload/savechunk")">
+    <UploadSettings>
+        <UploadChunkSettings Enabled="true" />
+    </UploadSettings>
+#else
                SaveUrl="@ToAbsoluteUrl("api/upload/save")">
+#endif*@
 </TelerikUpload>
 
 @code {

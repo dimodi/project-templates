@@ -84,6 +84,13 @@
       "defaultValue": "true",
       "description": "Allow several files to be selected and uploaded at the same time.",
       "displayName": "Enable Multiple File Uploads"
+    },
+    "ChunkUpload": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow files to be uploaded in parts (chunks). Requires Telerik UI for Blazor 9.0 or later.",
+      "displayName": "Enable Chunk Upload"
     }
   }
 }

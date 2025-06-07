@@ -29,6 +29,13 @@
         "text": "Enable Multiple File Uploads"
       },
       "isVisible": true
+    },
+    {
+      "id": "ChunkUpload",
+      "name": {
+        "text": "Enable Chunk Upload"
+      },
+      "isVisible": true
     }
   ]
 }

@@ -16,6 +16,10 @@
     "Multiple": {
       "longName": "multiple",
       "shortName": "mu"
+    },
+    "ChunkUpload": {
+      "longName": "chunk-upload",
+      "shortName": "ch"
     }
   }
 }
