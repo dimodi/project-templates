@@ -16,11 +16,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Telerik Blazor Web App template that supports all render modes (Server, WebAssembly and Auto).
-* Restore NuGet packages automatically on app creation.
-* Open Index.razor automatically on app creation in .NET 6 and 7 apps.
-* Set PrivateAssets="none" to the Telerik UI for Blazor NuGet package reference in WebAssembly and Auto apps to avoid license warnings.
-* Suppress the .NET out-of-support build warnings in .NET 6 and .NET 7 apps.
+* Added support for Telerik UI for Blazor 9.1.0.
 
 NOTE
 The following project templates are deprecated and may not include the latest or all available features:
@@ -33,7 +29,7 @@ The following project templates are deprecated and may not include the latest or
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>5.3.0</Version>
+    <Version>5.3.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
