@@ -15,7 +15,7 @@
     "type": "item"
   },
   "symbols": {
-    "datasource": {
+    "Datasource": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "Data",
@@ -32,7 +32,7 @@
         }
       ]
     },
-    "edit-mode": {
+    "EditMode": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "None",
@@ -58,21 +58,21 @@
       ],
       "replaces": "{TVAR_EDITMODE}"
     },
-    "validation": {
+    "Validation": {
       "type": "parameter",
       "datatype": "bool",
       "description": "Whether to use DataAnnotations validation in edit mode",
       "defaultValue": "false",
       "displayName": "Enable Validation"
     },
-    "selection": {
+    "Selection": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
       "description": "Allow users to select one or multiple rows",
       "displayName": "Enable Row Selection"
     },
-    "grouping": {
+    "Grouping": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",

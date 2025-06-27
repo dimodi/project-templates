@@ -1,68 +1,68 @@
-@page "/GridPage"
+@page "/gridpage"
 
-@*#if (edit-demo != "None" && validation)
+@*#if (EditMode != "None" && Validation)
 @using System.ComponentModel.DataAnnotations
 #endif*@
-@*#if (datasource == "OnRead" || grouping)
+@*#if (Datasource == "OnRead" || Grouping)
 @using Telerik.DataSource
 #endif*@
-@*#if (datasource == "OnRead")
+@*#if (Datasource == "OnRead")
 @using Telerik.DataSource.Extensions
 #endif*@
 
 <PageTitle>GridPage</PageTitle>
 
-@*#if (datasource == "OnRead")
+@*#if (Datasource == "OnRead")
 <TelerikGrid OnRead="@OnGridRead"
 #else
 <TelerikGrid Data="@GridData"
 #endif*@
              TItem="@GridItem"
-@*#if (edit-mode != "None")
+@*#if (EditMode != "None")
              EditMode="@GridEditMode.{TVAR_EDITMODE}"
              OnCreate="@OnGridCreate"
              OnDelete="@OnGridDelete"
              OnUpdate="@OnGridUpdate"
 #endif*@
              FilterMode="GridFilterMode.FilterRow"
-@*#if (grouping)
+@*#if (Grouping)
              Groupable="true"
              OnStateInit="@OnGridStateInit"
 #endif*@
              Pageable="true"
-@*#if (selection)
+@*#if (Selection)
              SelectionMode="@GridSelectionMode.Multiple"
              @bind-SelectedItems="@GridSelectedItems"
 #endif*@
              Sortable="true">
-@*#if (edit-mode != "None")
+@*#if (EditMode != "None")
     <GridToolBarTemplate>
         <GridCommandButton Command="Add">Add Item</GridCommandButton>
     </GridToolBarTemplate>
 #endif*@
     <GridColumns>
-@*#if (selection)
-@*#if (edit-mode == "Incell")
+@*#if (Selection)
+@*#if (EditMode == "Incell")
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" CheckBoxOnlySelection="true" />
 #else
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" />
 #endif*@
 #endif*@
         <GridColumn Field="@nameof(GridItem.Name)" />
-@*#if (grouping)
+@*#if (Grouping)
         <GridColumn Field="@nameof(GridItem.GroupName)" />
 #endif*@
         <GridColumn Field="@nameof(GridItem.Price)" DisplayFormat="{0:c2}" />
         <GridColumn Field="@nameof(GridItem.Quantity)" DisplayFormat="{0:n0}" />
         <GridColumn Field="@nameof(GridItem.StartDate)" DisplayFormat="{0:d}" />
         <GridColumn Field="@nameof(GridItem.IsActive)" />
-@*#if (edit-mode != "None")
+@*#if (EditMode != "None")
         <GridCommandColumn>
-@*#if (edit-mode != "Incell")
+@*#if (EditMode != "Incell")
             <GridCommandButton Command="Edit">Edit</GridCommandButton>
 #endif*@
             <GridCommandButton Command="Delete">Delete</GridCommandButton>
-@*#if (edit-mode == "Inline")
+@*#if (EditMode == "Inline")
             <GridCommandButton Command="Save" ShowInEdit="true">Save</GridCommandButton>
             <GridCommandButton Command="Cancel" ShowInEdit="true">Cancel</GridCommandButton>
 #endif*@
@@ -74,14 +74,14 @@
 @code {
     private List<GridItem> GridData { get; set; } = new();
 
-@*#if (selection)
+@*#if (Selection)
     private IEnumerable<GridItem> GridSelectedItems { get; set; } = new List<GridItem>();
 
 #endif*@
 
     private int LastId { get; set; }
 
-@*#if (datasource == "OnRead")
+@*#if (Datasource == "OnRead")
     private async Task OnGridRead(GridReadEventArgs args)
     {
         DataSourceResult result = await GridData.ToDataSourceResultAsync(args.Request);
@@ -92,7 +92,7 @@
     }
 
 #endif*@
-@*#if (grouping)
+@*#if (Grouping)
     private void OnGridStateInit(GridStateEventArgs<GridItem> args)
     {
         args.GridState.GroupDescriptors.Add(new GroupDescriptor()
@@ -103,7 +103,7 @@
     }
 
 #endif*@
-@*#if (edit-mode != "None")
+@*#if (EditMode != "None")
     private void OnGridCreate(GridCommandEventArgs args)
     {
         var createdItem = (GridItem)args.Item;
@@ -152,20 +152,20 @@
     public class GridItem
     {
         public int Id { get; set; }
-@*#if (edit-demo != "None" && validation)
+@*#if (EditMode != "None" && Validation)
         [Required]
 #endif*@
         public string Name { get; set; } = string.Empty;
         public string GroupName { get; set; } = string.Empty;
-@*#if (edit-demo != "None" && validation)
+@*#if (EditMode != "None" && Validation)
         [Range(typeof(decimal), "0.01", "1000000000000000")]
 #endif*@
         public decimal Price { get; set; }
-@*#if (edit-demo != "None" && validation)
+@*#if (EditMode != "None" && Validation)
         [Range(0, int.MaxValue)]
 #endif*@
         public int Quantity { get; set; }
-@*#if (edit-demo != "None" && validation)
+@*#if (EditMode != "None" && Validation)
         [Required]
 #endif*@
         public DateTime? StartDate { get; set; }
