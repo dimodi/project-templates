@@ -1,13 +1,13 @@
-@page "/TreeViewPage"
+@page "/treeviewpage"
 
 <PageTitle>TreeViewPage</PageTitle>
 
 <TelerikTreeView Data="@TreeViewData"
-@*#if (selection)
+@*#if (Selection)
                  SelectionMode="@TreeViewSelectionMode.Multiple"
                  @bind-SelectedItems="@TreeViewSelectedItems"
 #endif*@
-@*#if (checkboxes)
+@*#if (Checkboxes)
                  CheckBoxMode="@TreeViewCheckBoxMode.Multiple"
                  @bind-CheckedItems="@TreeViewCheckedItems"
                  CheckChildren="true"
@@ -19,10 +19,10 @@
     private List<TreeItem> TreeViewData { get; set; } = new();
 
     private IEnumerable<object> TreeViewExpandedItems { get; set; } = new List<TreeItem>();
-@*#if (selection)
+@*#if (Selection)
     private IEnumerable<object> TreeViewSelectedItems { get; set; } = new List<TreeItem>();
 #endif*@
-@*#if (checkboxes)
+@*#if (Checkboxes)
     private IEnumerable<object> TreeViewCheckedItems { get; set; } = new List<TreeItem>();
 #endif*@
 
@@ -34,31 +34,31 @@
 
     protected override void OnInitialized()
     {
-@*#if (data == "Flat")
+@*#if (Data == "Flat")
         TreeViewData = LoadTreeViewData();
 
         TreeViewExpandedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
-@*#if (selection)
+@*#if (Selection)
         TreeViewSelectedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
 #endif*@
-@*#if (checkboxes)
+@*#if (Checkboxes)
         TreeViewCheckedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
 #endif*@
 #endif*@
-@*#if (data == "Hierarchical")
+@*#if (Data == "Hierarchical")
         TreeViewData = LoadTreeViewData();
 
         TreeViewExpandedItems = new List<TreeItem>(TreeViewData);
-@*#if (selection)
+@*#if (Selection)
         TreeViewSelectedItems = new List<TreeItem>(TreeViewData);
 #endif*@
-@*#if (checkboxes)
+@*#if (Checkboxes)
         TreeViewCheckedItems = new List<TreeItem>(TreeViewData);
 #endif*@
 #endif*@
     }
 
-@*#if (data == "Flat")
+@*#if (Data == "Flat")
     private List<TreeItem> LoadTreeViewData()
     {
         List<TreeItem> items = new List<TreeItem>();
@@ -133,13 +133,13 @@
     public class TreeItem
     {
         public int Id { get; set; }
-@*#if (data == "Flat")
+@*#if (Data == "Flat")
         public int? ParentId { get; set; }
         public bool HasChildren { get; set; }
 #endif*@
         public string Text { get; set; } = string.Empty;
         public object? Icon { get; set; }
-@*#if (data == "Hierarchical")
+@*#if (Data == "Hierarchical")
         public List<TreeItem>? Items { get; set; }
 #endif*@
     }

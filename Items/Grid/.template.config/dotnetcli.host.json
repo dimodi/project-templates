@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/dotnetcli.host",
+  "symbolInfo": {
+    "Datasource": {
+      "longName": "datasource",
+      "shortName": "da"
+    },
+    "EditMode": {
+      "longName": "edit-mode",
+      "shortName": "em"
+    },
+    "Validation": {
+      "longName": "validation",
+      "shortName": "va"
+    },
+    "Selection": {
+      "longName": "selection",
+      "shortName": "s"
+    },
+    "Grouping": {
+      "longName": "grouping",
+      "shortName": "g"
+    }
+  }
+}

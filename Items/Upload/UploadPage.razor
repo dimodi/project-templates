@@ -1,0 +1,41 @@
+@page "/uploadpage"
+
+@inject NavigationManager NavigationManager
+
+<PageTitle>UploadPage</PageTitle>
+
+@*#if (AllowedExtensions != "all")
+<TelerikUpload Accept="@UploadAccept"
+               AllowedExtensions="@UploadAllowedExtensions"
+               MaxFileSize="{TVAR_MAXSIZE}"
+#else
+<TelerikUpload MaxFileSize="{TVAR_MAXSIZE}"
+#endif*@
+@*#if (MinSize != 1)
+               MinFileSize="{TVAR_MINSIZE}"
+#endif*@
+@*#if (!Multiple)
+               Multiple="false"
+#endif*@
+               RemoveUrl="@ToAbsoluteUrl("api/upload/remove")"
+@*#if (ChunkUpload)
+               SaveUrl="@ToAbsoluteUrl("api/upload/savechunk")">
+    <UploadSettings>
+        <UploadChunkSettings Enabled="true" />
+    </UploadSettings>
+#else
+               SaveUrl="@ToAbsoluteUrl("api/upload/save")">
+#endif*@
+</TelerikUpload>
+
+@code {
+@*#if (AllowedExtensions != "all")
+    private string UploadAccept => string.Join(",", UploadAllowedExtensions);
+    private readonly List<string> UploadAllowedExtensions = new() {TVAR_ALLOWEDEXTENSIONS};
+
+#endif*@
+    private string ToAbsoluteUrl(string url)
+    {
+        return $"{NavigationManager.BaseUri}{url}";
+    }
+}

@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Dimo Dimov",
+  "classifications": [
+    "Web",
+    "ASP.NET",
+    "Blazor"
+  ],
+  "identity": "Dimodi.Telerik.Blazor.Upload",
+  "name": "Telerik Blazor Upload",
+  "shortName": "dimodi-upload",
+  "sourceName": "UploadPage",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "AllowedExtensions": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "all",
+      "description": "Specify the valid files that the Upload will accept.",
+      "displayName": "Allowed File Types",
+      "choices": [
+        {
+          "choice": "all",
+          "description": "All file types",
+          "displayName": "All"
+        },
+        {
+          "choice": "img",
+          "description": "Common image formats.",
+          "displayName": "Images"
+        },
+        {
+          "choice": "doc",
+          "description": "Common office document formats.",
+          "displayName": "Documents"
+        }
+      ]
+    },
+    "AllowedExtensionsCode": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(AllowedExtensions == \"img\")",
+            "value": "{ \".jpg\", \".jpeg\", \".gif\", \".png\" }"
+          },
+          {
+            "condition": "(AllowedExtensions == \"doc\")",
+            "value": "{ \".csv\", \".docx\", \".xlsx\", \".pdf\", \".pptx\", \".rtf\", \".txt\" }"
+          },
+          {
+            "condition": "",
+            "value": ""
+          }
+        ]
+      },
+      "replaces": "{TVAR_ALLOWEDEXTENSIONS}"
+    },
+    "MinSize": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "1",
+      "description": "Minimum allowed file size",
+      "displayName": "Min File Size",
+      "replaces": "{TVAR_MINSIZE}"
+    },
+    "MaxSize": {
+      "type": "parameter",
+      "datatype": "int",
+      "defaultValue": "268435456",
+      "description": "Maximum allowed file size",
+      "displayName": "Max File Size",
+      "replaces": "{TVAR_MAXSIZE}"
+    },
+    "Multiple": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Allow several files to be selected and uploaded at the same time.",
+      "displayName": "Enable Multiple File Uploads"
+    },
+    "ChunkUpload": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow files to be uploaded in parts (chunks). Requires Telerik UI for Blazor 9.0 or later.",
+      "displayName": "Enable Chunk Upload"
+    }
+  }
+}
