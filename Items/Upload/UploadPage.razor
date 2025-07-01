@@ -31,7 +31,7 @@
 @code {
 @*#if (AllowedExtensions != "all")
     private string UploadAccept => string.Join(",", UploadAllowedExtensions);
-    private readonly List<string> UploadAllowedExtensions = new(){TVAR_ALLOWEDEXTENSIONS};
+    private readonly List<string> UploadAllowedExtensions = new() {TVAR_ALLOWEDEXTENSIONS};
 
 #endif*@
     private string ToAbsoluteUrl(string url)

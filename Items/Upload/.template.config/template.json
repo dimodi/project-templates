@@ -48,11 +48,11 @@
         "cases": [
           {
             "condition": "(AllowedExtensions == \"img\")",
-            "value": " { \".jpg\", \".jpeg\", \".gif\", \".png\" }"
+            "value": "{ \".jpg\", \".jpeg\", \".gif\", \".png\" }"
           },
           {
             "condition": "(AllowedExtensions == \"doc\")",
-            "value": " { \".csv\", \".docx\", \".xlsx\", \".pdf\", \".pptx\", \".rtf\", \".txt\" }"
+            "value": "{ \".csv\", \".docx\", \".xlsx\", \".pdf\", \".pptx\", \".rtf\", \".txt\" }"
           },
           {
             "condition": "",
