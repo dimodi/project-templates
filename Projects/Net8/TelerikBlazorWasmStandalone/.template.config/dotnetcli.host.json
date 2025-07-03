@@ -22,8 +22,8 @@
     "Localization": {
       "longName": "localization"
     },
-    "AddExcelPackages": {
-      "longName": "xlsx"
+    "AddDPLPackages": {
+      "longName": "dpl"
     },
     "RTL": {
       "longName": "rtl"

@@ -45,9 +45,9 @@
       "isVisible": true
     },
     {
-      "id": "AddExcelPackages",
+      "id": "AddDPLPackages",
       "name": {
-        "text": "Add Telerik Excel Packages"
+        "text": "Add Telerik Document Processing Packages"
       },
       "isVisible": true
     },

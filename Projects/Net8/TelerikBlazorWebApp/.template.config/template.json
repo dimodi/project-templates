@@ -209,12 +209,12 @@
       "isEnabled": "(RenderMode == \"Server\")",
       "replaces": "{TVAR_SIGNALRMESSAGESIZE}"
     },
-    "AddExcelPackages": {
+    "AddDPLPackages": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Add Telerik NuGet packages for generating or editing Excel files.",
-      "displayName": "Add Telerik Excel Packages"
+      "description": "Add Telerik NuGet packages for creating and editing CSV, DOCX, HTML, PDF and XLSX files.",
+      "displayName": "Add Telerik Document Processing Packages"
     },
     "RTL": {
       "type": "parameter",
