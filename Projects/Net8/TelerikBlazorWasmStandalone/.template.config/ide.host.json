@@ -45,6 +45,13 @@
       "isVisible": true
     },
     {
+      "id": "AddDPLPackages",
+      "name": {
+        "text": "Add Telerik Document Processing Packages"
+      },
+      "isVisible": true
+    },
+    {
       "id": "RTL",
       "name": {
         "text": "Enable RTL"

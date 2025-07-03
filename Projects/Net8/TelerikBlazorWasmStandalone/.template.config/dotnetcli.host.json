@@ -22,6 +22,9 @@
     "Localization": {
       "longName": "localization"
     },
+    "AddDPLPackages": {
+      "longName": "dpl"
+    },
     "RTL": {
       "longName": "rtl"
     },

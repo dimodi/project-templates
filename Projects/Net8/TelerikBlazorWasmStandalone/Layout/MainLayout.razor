@@ -1,27 +1,21 @@
 ﻿@inherits LayoutComponentBase
+@layout TelerikLayout
 
-@*#if (RTL)
-<TelerikRootComponent IconType="@IconType.{TVAR_ICONTYPE}"
-                      EnableRtl="true">
-#else
-<TelerikRootComponent IconType="@IconType.{TVAR_ICONTYPE}">
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+@*#if (Localization)
+            <CultureSelector />
 #endif*@
-    <div class="page">
-        <div class="sidebar">
-            <NavMenu />
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
-        <main>
-            <div class="top-row px-4">
-@*#if (Localization)
-                <CultureSelector />
-#endif*@
-                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-            </div>
-
-            <article class="content px-4">
-                @Body
-            </article>
-        </main>
-    </div>
-</TelerikRootComponent>
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

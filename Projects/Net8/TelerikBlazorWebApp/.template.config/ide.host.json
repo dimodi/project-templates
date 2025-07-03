@@ -52,9 +52,9 @@
       "isVisible": true
     },
     {
-      "id": "RTL",
+      "id": "UploadController",
       "name": {
-        "text": "Enable RTL"
+        "text": "Add Upload Controller"
       },
       "isVisible": true
     },
@@ -66,9 +66,16 @@
       "isVisible": true
     },
     {
-      "id": "UploadController",
+      "id": "AddDPLPackages",
       "name": {
-        "text": "Add Upload Controller"
+        "text": "Add Telerik Document Processing Packages"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "RTL",
+      "name": {
+        "text": "Enable RTL"
       },
       "isVisible": true
     },

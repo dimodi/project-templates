@@ -23,7 +23,23 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" />
+<!--#if (AddDPLPackages) -->
+    <PackageReference Include="Telerik.Documents.Fixed" Version="*" />
+    <PackageReference Include="Telerik.Documents.Flow" Version="*" />
+    <PackageReference Include="Telerik.Documents.Flow.FormatProviders.Pdf" Version="*" />
+    <PackageReference Include="Telerik.Documents.ImageUtils" Version="*" />
+    <PackageReference Include="Telerik.Documents.Spreadsheet.FormatProviders.OpenXml" Version="*" />
+    <PackageReference Include="Telerik.Documents.Spreadsheet.FormatProviders.Pdf" Version="*" />
+    <PackageReference Include="Telerik.Documents.SpreadsheetStreaming" Version="*" />
+<!--#endif-->
   </ItemGroup>
+
+<!--#if (AddDPLPackages) -->
+  <PropertyGroup>
+      <!--Disable Telerik Document Processing version conflicts-->
+      <NoWarn>NU1608;</NoWarn>
+  </PropertyGroup>
+<!--#endif-->
 
 <!--#if (Localization) -->
   <ItemGroup>

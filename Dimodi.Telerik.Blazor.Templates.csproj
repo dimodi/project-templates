@@ -16,18 +16,12 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* New Upload item template.
-* Add support for chunk uploading in the Upload controller class.
-* Use lowercase @page directives in all item templates.
-
-FIXED
-* Grid item template used incorrect argument name for EditMode.
-* Minor refactoring in the Upload Controller class.
+* Moved TelerikRootComponent to a separate layout file TelerikLayout.razor.
+* Added a project template option to add Telerik NuGet packages for creating and editing Excel files.
+* Removed the obsolete Web App (Server) and Web App (WebAssembly / Auto) project templates. Use the unified Web App template instead.
 
 NOTE
-The following project templates are deprecated and may not include the latest or all available features:
-* Web App (Server) and Web App (WebAssembly and Auto). These templates will be removed in a future version. Use the unified Web App template instead.
-* The .NET 6 and .NET 7 project templates. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
+The .NET 6 and .NET 7 project templates are deprecated and do not include the latest or all available features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
@@ -35,7 +29,7 @@ The following project templates are deprecated and may not include the latest or
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>5.4.0</Version>
+    <Version>6.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

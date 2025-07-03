@@ -1,0 +1,10 @@
+@inherits LayoutComponentBase
+
+@*#if (RTL)
+<TelerikRootComponent IconType="@IconType.{TVAR_ICONTYPE}"
+                      EnableRtl="true">
+#else
+<TelerikRootComponent IconType="@IconType.{TVAR_ICONTYPE}">
+#endif*@
+    @Body
+</TelerikRootComponent>
