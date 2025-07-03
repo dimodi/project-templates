@@ -26,14 +26,17 @@
     "Localization": {
       "longName": "localization"
     },
-    "RTL": {
-      "longName": "rtl"
+    "UploadController": {
+      "longName": "upload-controller"
     },
     "SignalrMessageSize": {
       "longName": "signalr-message-size"
     },
-    "UploadController": {
-      "longName": "upload-controller"
+    "AddExcelPackages": {
+      "longName": "xlsx"
+    },
+    "RTL": {
+      "longName": "rtl"
     },
     "Docker": {
       "longName": "docker"

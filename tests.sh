@@ -55,54 +55,6 @@ dotnet build
 cd ~/$testFolder
 rm -rf TestWasm6NonDefaultSettings
 
-# ===== Web App Server =====
-
-echo
-echo ===== Web App Server, default settings =====
-echo dotnet new dimodi-blazor-server -o TestServerDefaultSettings
-
-dotnet new dimodi-blazor-server -o TestServerDefaultSettings
-cd TestServerDefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestServerDefaultSettings
-
-echo
-echo ===== Web App Server, non-default settings =====
-echo dotnet new dimodi-blazor-server -o TestServerNonDefaultSettings -f net8.0 -tv "*" -th bootstrap -dm -c -it Font -lo -r -sms 64 -uc -do
-
-dotnet new dimodi-blazor-server -o TestServerNonDefaultSettings -f net8.0 -tv "*" -th bootstrap -dm -c -it Font -lo -r -sms 64 -uc -do
-cd TestServerNonDefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestServerNonDefaultSettings
-
-# ===== Web App WebAssembly and Auto =====
-
-echo
-echo ===== Web App WebAssembly, default settings =====
-echo dotnet new dimodi-blazor-wasmauto -o TestWasmDefaultSettings
-
-dotnet new dimodi-blazor-wasmauto -o TestWasmDefaultSettings
-cd TestWasmDefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestWasmDefaultSettings
-
-echo
-echo ===== Web App WebAssembly, non-default settings =====
-echo dotnet new dimodi-blazor-wasmauto -o TestWasmNonDefaultSettings -f net8.0 -rm Auto -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
-
-dotnet new dimodi-blazor-wasmauto -o TestWasmNonDefaultSettings -f net8.0 -rm Auto -tv "*" -th bootstrap -dm -c -it Font -lo -r -uc -do
-cd TestWasmNonDefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestWasmNonDefaultSettings
-
 # ===== WebAssembly Standalone =====
 
 echo

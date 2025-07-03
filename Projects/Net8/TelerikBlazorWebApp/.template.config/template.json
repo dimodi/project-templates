@@ -193,12 +193,12 @@
       "description": "Enable Telerik resource localization.",
       "displayName": "Enable Localization"
     },
-    "RTL": {
+    "UploadController": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Enable Right-to-Left support.",
-      "displayName": "Enable RTL"
+      "description": "Add Upload controller and increase the upload file size limit to 256 MB",
+      "displayName": "Add Upload Controller"
     },
     "SignalrMessageSize": {
       "type": "parameter",
@@ -209,12 +209,19 @@
       "isEnabled": "(RenderMode == \"Server\")",
       "replaces": "{TVAR_SIGNALRMESSAGESIZE}"
     },
-    "UploadController": {
+    "AddExcelPackages": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "Add Upload controller and increase the upload file size limit to 256 MB",
-      "displayName": "Add Upload Controller"
+      "description": "Add Telerik NuGet packages for generating or editing Excel files.",
+      "displayName": "Add Telerik Excel Packages"
+    },
+    "RTL": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Enable Right-to-Left support.",
+      "displayName": "Enable RTL"
     },
     "Docker": {
       "type": "parameter",

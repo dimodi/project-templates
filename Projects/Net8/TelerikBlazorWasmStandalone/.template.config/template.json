@@ -172,6 +172,13 @@
       "description": "Enable Right-to-Left support.",
       "displayName": "Enable RTL"
     },
+    "AddExcelPackages": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Add Telerik NuGet packages for generating or editing Excel files.",
+      "displayName": "Add Telerik Excel Packages"
+    },
     "Docker": {
       "type": "parameter",
       "datatype": "bool",

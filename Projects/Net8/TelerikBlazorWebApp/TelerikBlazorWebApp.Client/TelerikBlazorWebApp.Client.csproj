@@ -17,8 +17,20 @@
     <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" PrivateAssets="none" />
+<!--#if (AddExcelPackages) -->
+    <PackageReference Include="Telerik.Documents.Spreadsheet.FormatProviders.OpenXml" Version="*" />
+    <PackageReference Include="Telerik.Documents.SpreadsheetStreaming" Version="*" />
+    <PackageReference Include="Telerik.Documents.Spreadsheet.FormatProviders.Pdf" Version="*" />
+<!--#endif-->
   </ItemGroup>
 
+<!--#if (AddExcelPackages) -->
+  <PropertyGroup>
+      <!--Disable Telerik Document Processing version conflicts-->
+      <NoWarn>NU1068;</NoWarn>
+  </PropertyGroup>
+
+<!--#endif-->
 <!--#if (Localization) -->
   <ItemGroup>
     <EmbeddedResource Update="Resources\TelerikMessages.resx">
