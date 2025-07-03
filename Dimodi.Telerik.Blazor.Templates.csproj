@@ -17,7 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Moved TelerikRootComponent to a separate layout file TelerikLayout.razor.
-* Added a project template option to add Telerik NuGet packages for creating and editing Excel files.
+* Added a project template option to use Telerik Document Processing NuGet packages for working with CSV, DOCX, HTML, PDF and XLXS files.
 * Removed the obsolete Web App (Server) and Web App (WebAssembly / Auto) project templates. Use the unified Web App template instead.
 
 NOTE
