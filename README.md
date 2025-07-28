@@ -117,7 +117,6 @@ The project templates are similar to the default .NET SDK Blazor project templat
 * Visual Studio opens `Home.razor` automatically after the app is created.
 * The top bar uses background and border colors from the Telerik theme. This makes the styling consistent in dark mode.
 * The `<button>` and `<table>` HTML elements in the default sample pages are replaced with Telerik Button and Grid.
-* The `SurveyPrompt` Razor component is removed.
 
 ### Telerik UI for Blazor Configuration
 
@@ -133,9 +132,9 @@ The project templates provide options to configure the app and the [Telerik UI f
 | [Dark mode](https://www.telerik.com/blazor-ui/documentation/styling-and-themes/overview#basics) | disabled | Dark mode requires **CDN** to be enabled, because the dark theme variations (known as swatches) are not included as static assets in the Telerik UI for Blazor NuGet package. |
 | [CDN support](https://docs.telerik.com/blazor-ui/common-features/cdn) | disabled | Load the Telerik theme and JavaScript file from CDN instead of the NuGet package assets. WebAssembly Standalone Apps support CDN only with a fixed Telerik UI for Blazor version number. Blazor Web Apps support CDN with both fixed and wildcard version `*`. |
 | [Icon type](https://docs.telerik.com/blazor-ui/common-features/icons) | SVG | Telerik Blazor components can render SVG icons or font icons. |
-| [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) | disabled | Adds both .NET and Telerik localization. Available only in the .NET 8-9 project template. |
+| [Localization](https://docs.telerik.com/blazor-ui/globalization/localization) | disabled | Adds both .NET and Telerik localization. |
 | [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) | disabled |  |
-| [File upload controller](https://www.telerik.com/blazor-ui/documentation/components/upload/overview#implement-controller-methods) | disabled | When added, the [maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) increases to 256 MB in `Programs.cs`. Available only in the .NET 8-9 Web App project template. The controller class provides two save methods - one for regular uploads and one for [chunk uploads](https://www.telerik.com/blazor-ui/documentation/components/upload/chunk-upload). |
+| [File upload controller](https://www.telerik.com/blazor-ui/documentation/components/upload/overview#implement-controller-methods) | disabled | When added, the [maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) increases to 256 MB in `Programs.cs`. The controller class provides two save methods - one for regular uploads and one for [chunk uploads](https://www.telerik.com/blazor-ui/documentation/components/upload/chunk-upload). |
 | [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) | 32 KB | This option works in Visual Studio on Windows and through the .NET CLI. [The setting doesn't appear in VS Code](https://github.com/microsoft/vscode-dotnettools/issues/1659) and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app. |
 | [Telerik Document Processing Integration](https://www.telerik.com/blazor-ui/documentation/integrations/document-processing-libraries) | disabled | Some [Grid](https://www.telerik.com/blazor-ui/documentation/knowledge-base/grid-custom-cell-formatting-with-radspreadprocessing), [Editor](https://www.telerik.com/blazor-ui/documentation/components/editor/import-export) or [Spreadsheet](https://www.telerik.com/blazor-ui/documentation/knowledge-base/spreadsheet-get-cell-values) scenarios may require working with CSV, DOCX, HTML, PDF and XLXS files. This option references the required NuGet packages from the Telerik Document Processing library. |
 
