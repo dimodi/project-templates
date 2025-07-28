@@ -21,7 +21,7 @@ NEW
 * Removed the obsolete Web App (Server) and Web App (WebAssembly / Auto) project templates. Use the unified Web App template instead.
 
 NOTE
-The .NET 6 and .NET 7 project templates are deprecated and do not include the latest or all available features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
+The .NET 6 and .NET 7 project templates are deprecated. They do not include all features and will be removed in a future version. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
