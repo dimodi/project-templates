@@ -19,9 +19,7 @@ NEW
 * Moved TelerikRootComponent to a separate layout file TelerikLayout.razor.
 * Added a project template option to use Telerik Document Processing NuGet packages for working with CSV, DOCX, HTML, PDF and XLXS files.
 * Removed the obsolete Web App (Server) and Web App (WebAssembly / Auto) project templates. Use the unified Web App template instead.
-
-NOTE
-The .NET 6 and .NET 7 project templates are deprecated. They do not include all features and will be removed in a future version. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
+* Removed the obsolete .NET 6 and .NET 7 project templates.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>

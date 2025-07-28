@@ -6,7 +6,6 @@ This NuGet package provides ASP.NET Core Blazor project and item templates that 
 
 * [Templates](#templates)
     * [Project Templates](#project-templates)
-    * [Deprecated Project Templates](#deprecated-project-templates)
     * [Item Templates](#item-templates)
 * [Install](#install)
 * [Use with Visual Studio](#use-with-visual-studio)
@@ -33,14 +32,7 @@ The package includes the following project and item templates.
 | Telerik Blazor Web App | `dimodi-blazor` |
 | Telerik Blazor WebAssembly Standalone App | `dimodi-blazorwasm` |
 
-### Deprecated Project Templates
-
-The following .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
-
-| Template Name | .CLI Short Name |
-| --- | --- |
-| Telerik Blazor Server App (.NET 6-7) | `dimodi-blazorserver` |
-| Telerik Blazor WebAssembly App, ASP.NET Core hosted (.NET 6-7) | `dimodi-blazorwasm-hosted` |
+The last package version that includes .NET 6 and 7 project template is **5.4.0**.
 
 ### Item Templates
 

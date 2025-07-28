@@ -7,54 +7,6 @@ testFolder=$1
 
 cd ~/$testFolder
 
-# ===== Server =====
-
-echo
-echo ===== Server, default settings =====
-echo dotnet new dimodi-blazorserver -o TestServer6DefaultSettings -tv "7.1.0"
-
-dotnet new dimodi-blazorserver -o TestServer6DefaultSettings -tv "7.1.0"
-cd TestServer6DefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestServer6DefaultSettings
-
-echo
-echo ===== Server, non-default settings =====
-echo dotnet new dimodi-blazorserver -o TestServer6NonDefaultSettings -f net7.0 -tv "7.1.0" -th bootstrap -dm -c -it Font -r -sms 64
-
-dotnet new dimodi-blazorserver -o TestServer6NonDefaultSettings -f net7.0 -tv "7.1.0" -th bootstrap -dm -c -it Font -r -sms 64
-cd TestServer6NonDefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestServer6NonDefaultSettings
-
-# ===== WebAssembly Hosted =====
-
-echo
-echo ===== WebAssembly Hosted, default settings =====
-echo dotnet new dimodi-blazorwasm-hosted -o TestWasm6DefaultSettings -tv "7.1.0"
-
-dotnet new dimodi-blazorwasm-hosted -o TestWasm6DefaultSettings -tv "7.1.0"
-cd TestWasm6DefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestWasm6DefaultSettings
-
-echo
-echo ===== WebAssembly Hosted, non-default settings =====
-echo dotnet new dimodi-blazorwasm-hosted -o TestWasm6NonDefaultSettings -f net7.0 -tv "7.1.0" -th bootstrap -dm -c -it Font -r
-
-dotnet new dimodi-blazorwasm-hosted -o TestWasm6NonDefaultSettings -f net7.0 -tv "7.1.0" -th bootstrap -dm -c -it Font -r
-cd TestWasm6NonDefaultSettings
-dotnet build
-
-cd ~/$testFolder
-rm -rf TestWasm6NonDefaultSettings
-
 # ===== WebAssembly Standalone =====
 
 echo
