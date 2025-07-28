@@ -35,17 +35,12 @@ The package includes the following project and item templates.
 
 ### Deprecated Project Templates
 
-The following project templates are deprecated and do not include the latest template features:
+The following .NET 6-7 project templates are deprecated and do not include the latest template features. These templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
 
 | Template Name | .CLI Short Name |
 | --- | --- |
-| Telerik Blazor Web App (Server render mode) | `dimodi-blazor-server` |
-| Telerik Blazor Web App (WebAssembly or Auto render mode) | `dimodi-blazor-wasmauto` |
 | Telerik Blazor Server App (.NET 6-7) | `dimodi-blazorserver` |
 | Telerik Blazor WebAssembly App, ASP.NET Core hosted (.NET 6-7) | `dimodi-blazorwasm-hosted` |
-
-* The two Web App project templates (**Server** and **WebAssembly/Auto**) have a new single alternative: **Telerik Blazor Web App**.
-* The two .NET 6-7 project templates are compatible with Telerik UI for Blazor version 8.x, but are not compatible with version 9.x.
 
 ### Item Templates
 
@@ -150,6 +145,7 @@ The project templates provide options to configure the app and the [Telerik UI f
 | [RTL support](https://docs.telerik.com/blazor-ui/globalization/rtl-support) | disabled |  |
 | [File upload controller](https://www.telerik.com/blazor-ui/documentation/components/upload/overview#implement-controller-methods) | disabled | When added, the [maximum file upload size](https://docs.telerik.com/blazor-ui/components/upload/overview#large-file-uploads) increases to 256 MB in `Programs.cs`. Available only in the .NET 8-9 Web App project template. The controller class provides two save methods - one for regular uploads and one for [chunk uploads](https://www.telerik.com/blazor-ui/documentation/components/upload/chunk-upload). |
 | [Maximum SignalR message size](https://docs.telerik.com/blazor-ui/knowledge-base/common-increase-signalr-max-message-size) | 32 KB | This option works in Visual Studio on Windows and through the .NET CLI. [The setting doesn't appear in VS Code](https://github.com/microsoft/vscode-dotnettools/issues/1659) and in Visual Studio for Mac. In these cases, edit `Program.cs` after creating the app. |
+| [Telerik Document Processing Integration](https://www.telerik.com/blazor-ui/documentation/integrations/document-processing-libraries) | disabled | Some [Grid](https://www.telerik.com/blazor-ui/documentation/knowledge-base/grid-custom-cell-formatting-with-radspreadprocessing), [Editor](https://www.telerik.com/blazor-ui/documentation/components/editor/import-export) or [Spreadsheet](https://www.telerik.com/blazor-ui/documentation/knowledge-base/spreadsheet-get-cell-values) scenarios may require working with CSV, DOCX, HTML, PDF and XLXS files. This option references the required NuGet packages from the Telerik Document Processing library. |
 
 ### Docker Support
 
