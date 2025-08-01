@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
+    @*#if (Framework == "net10.0")
+    <LinkPreload />
+    #endif*@
     @*#if (UseWebAssembly)
     @{ string TelerikUiForBlazorVersion = TelerikBlazorWebApp.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion(); }
     #endif*@
@@ -49,7 +52,12 @@
 <body class="k-body">
 #endif*@
     <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
+    @*#if (Framework == "net10.0")
+    <ReconnectModal />
+    <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
+    #else
     <script src="_framework/blazor.web.js" autostart="false"></script>
+    #endif*@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             Blazor.start();

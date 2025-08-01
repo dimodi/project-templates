@@ -4,6 +4,9 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+<!--#if Framework == "net10.0" -->
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+<!--#endif-->
 <!--#if (Docker) -->
     <UserSecretsId>{TVAR_DOCKERUSERSECRETSID}</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>

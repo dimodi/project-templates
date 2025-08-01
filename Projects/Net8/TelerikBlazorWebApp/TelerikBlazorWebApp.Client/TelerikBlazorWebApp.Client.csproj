@@ -6,6 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
     <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+<!--#if Framework == "net10.0" -->
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+<!--#endif-->
 <!--#if (Localization) -->
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
 <!--#endif-->

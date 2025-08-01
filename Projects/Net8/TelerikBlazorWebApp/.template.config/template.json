@@ -31,12 +31,16 @@
       "description": "The target framework for the project.",
       "choices": [
         {
-          "choice": "net8.0",
-          "description": "Target .NET 8.0"
+          "choice": "net10.0",
+          "description": "Target .NET 10.0"
         },
         {
           "choice": "net9.0",
           "description": "Target .NET 9.0"
+        },
+        {
+          "choice": "net8.0",
+          "description": "Target .NET 8.0"
         }
       ],
       "replaces": "{TVAR_NETVERSION}"
@@ -48,6 +52,10 @@
         "datatype": "text",
         "evaluator": "C++",
         "cases": [
+          {
+            "condition": "(Framework == \"net10.0\")",
+            "value": "10"
+          },
           {
             "condition": "(Framework == \"net8.0\")",
             "value": "8"
@@ -348,6 +356,12 @@
             "TelerikBlazorWebApp/Components/Pages/Home.razor": "./TelerikBlazorWebApp.Client/Pages/Home.razor",
             "TelerikBlazorWebApp/Components/Pages/Counter.razor": "./TelerikBlazorWebApp.Client/Pages/Counter.razor",
             "TelerikBlazorWebApp/Components/Pages/Weather.razor": "./TelerikBlazorWebApp.Client/Pages/Weather.razor"
+          }
+        },
+        {
+          "condition": "(UseWebAssembly && Framework == \"net10.0\")",
+          "rename": {
+            "TelerikBlazorWebApp/Components/Pages/NotFound.razor": "./TelerikBlazorWebApp.Client/Pages/NotFound.razor"
           }
         }
       ]
