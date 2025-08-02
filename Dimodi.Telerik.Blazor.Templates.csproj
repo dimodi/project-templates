@@ -16,10 +16,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Moved TelerikRootComponent to a separate layout file TelerikLayout.razor.
-* Added a project template option to use Telerik Document Processing NuGet packages for working with CSV, DOCX, HTML, PDF and XLXS files.
-* Removed the obsolete Web App (Server) and Web App (WebAssembly / Auto) project templates. Use the unified Web App template instead.
-* Removed the obsolete .NET 6 and .NET 7 project templates.
+* Added support for the latest .NET 10 Preview. Always use preview .NET versions with the latest Telerik UI for Blazor version.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
@@ -27,7 +24,7 @@ NEW
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>6.0.0</Version>
+    <Version>6.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
