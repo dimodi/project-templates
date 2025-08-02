@@ -15,9 +15,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#if (Localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" PrivateAssets="none" />
 <!--#if (AddDPLPackages) -->

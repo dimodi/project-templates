@@ -16,10 +16,10 @@
   <ItemGroup>
 <!--#if (UseWebAssembly) -->
     <ProjectReference Include="..\TelerikBlazorWebApp.Client\TelerikBlazorWebApp.Client.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
 <!--#if (Localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
 <!--#if (Docker) -->
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />

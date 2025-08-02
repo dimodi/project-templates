@@ -27,20 +27,20 @@
     "Framework": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "net9.0",
+      "defaultValue": "net8.0",
       "description": "The target framework for the project.",
       "choices": [
         {
-          "choice": "net10.0",
-          "description": "Target .NET 10.0"
+          "choice": "net8.0",
+          "description": "Target .NET 8.0"
         },
         {
           "choice": "net9.0",
           "description": "Target .NET 9.0"
         },
         {
-          "choice": "net8.0",
-          "description": "Target .NET 8.0"
+          "choice": "net10.0",
+          "description": "Target .NET 10.0"
         }
       ],
       "replaces": "{TVAR_NETVERSION}"
@@ -57,16 +57,35 @@
             "value": "10"
           },
           {
-            "condition": "(Framework == \"net8.0\")",
-            "value": "8"
+            "condition": "(Framework == \"net9.0\")",
+            "value": "9"
           },
           {
             "condition": "",
-            "value": "9"
+            "value": "8"
           }
         ]
       },
       "replaces": "{TVAR_NETNUMBER}"
+    },
+    "FrameworkSuffix": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(Framework == \"net10.0\")",
+            "value": "*-"
+          },
+          {
+            "condition": "",
+            "value": ""
+          }
+        ]
+      },
+      "replaces": "{TVAR_NETSUFFIX}"
     },
     "RenderMode": {
       "type": "parameter",
