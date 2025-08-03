@@ -31,6 +31,17 @@ dotnet build
 cd ~/$testFolder
 rm -rf TestWasmAloneNonDefaultSettings
 
+echo
+echo ===== WebAssembly Standalone, .NET 10 =====
+echo dotnet new dimodi-blazorwasm -o TestWasmAloneNet10 -f net10.0 -lo
+
+dotnet new dimodi-blazorwasm -o TestWasmAloneNet10 -f net10.0 -lo
+cd TestWasmAloneNet10
+dotnet build
+
+cd ~/$testFolder
+rm -rf TestWasmAloneNet10
+
 # ===== Web App =====
 
 echo
@@ -56,6 +67,17 @@ cd ~/$testFolder
 rm -rf TestWebAppServerNonDefaultSettings
 
 echo
+echo ===== Web App, Server, .NET 10 =====
+echo dotnet new dimodi-blazor -o TestWebAppServerNet10 -f net10.0 -int Server -lo
+
+dotnet dotnet new dimodi-blazor -o TestWebAppServerNet10 -f net10.0 -int Server -lo
+cd TestWebAppServerNet10
+dotnet build
+
+cd ~/$testFolder
+rm -rf TestWebAppServerNet10
+
+echo
 echo ===== Web App, WebAssembly, default settings =====
 echo dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings -int WebAssembly
 
@@ -78,6 +100,17 @@ cd ~/$testFolder
 rm -rf TestWebAppWasmNonDefaultSettings
 
 echo
+echo ===== Web App, WebAssembly, .NET 10 =====
+echo dotnet new dimodi-blazor -o TestWebAppWasmNet10 -f net10.0 -int WebAssembly -lo
+
+dotnet dotnet new dimodi-blazor -o TestWebAppWasmNet10 -f net10.0 -int WebAssembly -lo
+cd TestWebAppWasmNet10
+dotnet build
+
+cd ~/$testFolder
+rm -rf TestWebAppWasmNet10
+
+echo
 echo ===== Web App, Auto, default settings =====
 echo dotnet new dimodi-blazor -o TestWebAppAutoDefaultSettings -int Auto
 
@@ -98,6 +131,18 @@ dotnet build
 
 cd ~/$testFolder
 rm -rf TestWebAppAutoNonDefaultSettings
+
+echo
+echo ===== Web App, Auto, .NET 10 =====
+echo dotnet new dimodi-blazor -o TestWebAppAutoNet10 -f net10.0 -int Auto -lo
+
+dotnet dotnet new dimodi-blazor -o TestWebAppAutoNet10 -f net10.0 -int Auto -lo
+cd TestWebAppAutoNet10
+dotnet build
+
+cd ~/$testFolder
+rm -rf TestWebAppAutoNet10
+
 
 # ===== Item Templates =====
 
