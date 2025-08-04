@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-@*#if (Framework == "net10.0")
+@*#if (FrameworkNumber == 10)
     <LinkPreload />
 #endif*@
 @*#if (UseWebAssembly)
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@TelerikUiForBlazorVersion" />
 #endif*@
 #endif*@
-@*#if (Framework == "net8.0")
+@*#if (FrameworkNumber == 8)
 @*#if (RTL)
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.rtl.min.css" />
 #else
@@ -52,7 +52,7 @@
 <body class="k-body">
 #endif*@
     <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
-@*#if (Framework == "net10.0")
+@*#if (FrameworkNumber == 10)
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
 #else
