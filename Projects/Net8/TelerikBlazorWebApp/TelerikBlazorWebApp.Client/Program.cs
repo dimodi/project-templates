@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 #if (Localization)
-using TelerikBlazorWebApp.Client.Services;
 using Microsoft.JSInterop;
 using System.Globalization;
 using Telerik.Blazor.Services;
+using TelerikBlazorWebApp.Client.Services;
 #endif
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);

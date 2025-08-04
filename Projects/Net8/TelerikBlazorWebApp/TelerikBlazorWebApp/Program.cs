@@ -7,11 +7,8 @@ using Microsoft.AspNetCore.SignalR;
 #endif
 using TelerikBlazorWebApp.Components;
 #if (Localization)
-using TelerikBlazorWebApp.Services;
-#if (!UseWebAssembly)
-using Microsoft.Extensions.Localization;
-#endif
 using Telerik.Blazor.Services;
+using TelerikBlazorWebApp.Services;
 #endif
 
 var builder = WebApplication.CreateBuilder(args);
