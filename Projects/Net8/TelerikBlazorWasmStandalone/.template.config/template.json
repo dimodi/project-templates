@@ -43,7 +43,7 @@
       "type": "generated",
       "generator": "switch",
       "parameters": {
-        "datatype": "text",
+        "datatype": "int",
         "evaluator": "C++",
         "cases": [
           {
@@ -287,6 +287,12 @@
             "**/dockerignore.dockerignore",
             "**/.dockerignore",
             "**/nginx.conf"
+          ]
+        },
+        {
+          "condition": "(FrameworkNumber < 10)",
+          "exclude": [
+            "**/Pages/NotFound.razor"
           ]
         }
       ]

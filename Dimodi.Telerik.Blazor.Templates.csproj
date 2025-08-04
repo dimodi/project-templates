@@ -17,6 +17,9 @@
     <PackageReleaseNotes>
 NEW
 * Added support for the latest .NET 10 Preview. Always use preview .NET versions with the latest Telerik UI for Blazor version.
+
+FIXED
+* Do not load package Microsoft.Extensions.Localization in the server project of Blazor Web Apps with WebAssembly or Auto render mode.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>

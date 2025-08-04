@@ -18,7 +18,7 @@
     <ProjectReference Include="..\TelerikBlazorWebApp.Client\TelerikBlazorWebApp.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
-<!--#if (Localization) -->
+<!--#if (Localization && !UseWebAssembly) -->
     <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
 <!--#if (Docker) -->

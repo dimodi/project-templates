@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.SignalR;
 using TelerikBlazorWebApp.Components;
 #if (Localization)
 using TelerikBlazorWebApp.Services;
+#if (!UseWebAssembly)
 using Microsoft.Extensions.Localization;
+#endif
 using Telerik.Blazor.Services;
 #endif
 
