@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-@*#if (FrameworkNumber == 10)
+@*#if (FrameworkNumber >= 10)
     <LinkPreload />
 #endif*@
 @*#if (UseWebAssembly)
@@ -52,7 +52,7 @@
 <body class="k-body">
 #endif*@
     <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
-@*#if (FrameworkNumber == 10)
+@*#if (FrameworkNumber >= 10)
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
 #else
