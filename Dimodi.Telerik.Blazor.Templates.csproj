@@ -21,6 +21,7 @@ NEW
 FIXED
 * Do not load package Microsoft.Extensions.Localization in the server project of Blazor Web Apps with WebAssembly or Auto render mode.
 * Do not import the Microsoft.Extensions.Localization namespace in Program.cs, as IStringLocalizer is not used.
+* Target .NET 8 by default, instead of .NET 9, until .NET 10 becomes official.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
