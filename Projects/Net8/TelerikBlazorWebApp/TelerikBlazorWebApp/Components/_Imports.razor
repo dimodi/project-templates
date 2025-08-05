@@ -9,12 +9,12 @@
 @using TelerikBlazorWebApp
 @*#if (UseWebAssembly)
 @using TelerikBlazorWebApp.Client
-@*#if (FrameworkNumber >= 10)
+@*#if (Framework == "net10.0")
 @using TelerikBlazorWebApp.Client.Layout
 #endif*@
 #endif*@
 @using TelerikBlazorWebApp.Components
-@*#if (FrameworkNumber >= 10 && !UseWebAssembly)
+@*#if (Framework == "net10.0" && !UseWebAssembly)
 @using TelerikBlazorWebApp.Components.Layout
 #endif*@
 @*#if (Localization && !UseWebAssembly)

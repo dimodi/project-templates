@@ -76,8 +76,8 @@
         "evaluator": "C++",
         "cases": [
           {
-            "condition": "(FrameworkNumber == 10)",
-            "value": "*-preview."
+            "condition": "(Framework == \"net10.0\")",
+            "value": "0.0-preview."
           },
           {
             "condition": "",
@@ -378,7 +378,7 @@
           }
         },
         {
-          "condition": "(UseWebAssembly && FrameworkNumber >= 10)",
+          "condition": "(UseWebAssembly && Framework == \"net10.0\")",
           "rename": {
             "TelerikBlazorWebApp/Components/Pages/NotFound.razor": "./TelerikBlazorWebApp.Client/Pages/NotFound.razor"
           }

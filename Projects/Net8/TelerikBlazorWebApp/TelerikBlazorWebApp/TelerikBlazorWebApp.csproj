@@ -4,7 +4,7 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-<!--#if (FrameworkNumber >= 10) -->
+<!--#if (Framework == "net10.0") -->
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
 <!--#endif-->
 <!--#if (Docker) -->
