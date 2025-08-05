@@ -1,4 +1,4 @@
-﻿@*#if (Framework == "net10.0")
+﻿@*#if (FrameworkNumber >= "10")
 <Router AppAssembly="@typeof(Program).Assembly" NotFoundPage="@typeof(Pages.NotFound)">
 #else
 <Router AppAssembly="@typeof(Program).Assembly">

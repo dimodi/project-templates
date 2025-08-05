@@ -378,7 +378,7 @@
           }
         },
         {
-          "condition": "(UseWebAssembly && Framework == \"net10.0\")",
+          "condition": "(UseWebAssembly && FrameworkNumber >= 10)",
           "rename": {
             "TelerikBlazorWebApp/Components/Pages/NotFound.razor": "./TelerikBlazorWebApp.Client/Pages/NotFound.razor"
           }
