@@ -76,13 +76,13 @@
 
     protected override void OnInitialized()
     {
-@*#if (UseWebAssembly) -->
+@*#if (UseWebAssembly)
         TelerikUiForBlazorVersion = TelerikBlazorWebApp.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion();
-##else
+#else
         string telerikBlazorAssemblyVersion = typeof(TelerikRootComponent).Assembly.GetName().Version?.ToString() ?? "0.0.0.0";
         int lastDotIndex = telerikBlazorAssemblyVersion.LastIndexOf(".");
         TelerikUiForBlazorVersion = telerikBlazorAssemblyVersion.Substring(0, lastDotIndex);
-##endif*@
+#endif*@
 
         base.OnInitialized();
     }
