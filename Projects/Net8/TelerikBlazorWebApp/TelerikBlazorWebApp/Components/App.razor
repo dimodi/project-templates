@@ -8,9 +8,6 @@
 @*#if (FrameworkNumber >= "10")
     <LinkPreload />
 #endif*@
-@*#if (UseWebAssembly)
-    @{ string TelerikUiForBlazorVersion = TelerikBlazorWebApp.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion(); }
-#endif*@
 @*#if (CDN)
     <script src="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/telerik-blazor.min.js" defer></script>
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main{TVAR_THEMESUFFIX}.css" />
@@ -73,18 +70,20 @@
 </body>
 
 </html>
-@*#if (!UseWebAssembly) -->
 
 @code {
-    private string? TelerikUiForBlazorVersion { get; set; }
+    private string TelerikUiForBlazorVersion { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
+@*#if (UseWebAssembly) -->
+        TelerikUiForBlazorVersion = TelerikBlazorWebApp.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion();
+##else
         string telerikBlazorAssemblyVersion = typeof(TelerikRootComponent).Assembly.GetName().Version?.ToString() ?? "0.0.0.0";
         int lastDotIndex = telerikBlazorAssemblyVersion.LastIndexOf(".");
         TelerikUiForBlazorVersion = telerikBlazorAssemblyVersion.Substring(0, lastDotIndex);
+##endif*@
 
         base.OnInitialized();
     }
 }
-##endif*@
