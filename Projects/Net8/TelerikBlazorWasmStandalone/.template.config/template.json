@@ -71,7 +71,7 @@
         "cases": [
           {
             "condition": "(FrameworkNumber == 10)",
-            "value": "*-"
+            "value": "*-preview."
           },
           {
             "condition": "",
