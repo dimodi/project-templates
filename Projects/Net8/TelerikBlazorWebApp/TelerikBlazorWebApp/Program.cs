@@ -88,7 +88,7 @@ app.UseStatusCodePagesWithReExecute("/not-found", createScopeForErrors: true);
 
 app.UseHttpsRedirection();
 
-#if (FrameworkNumber == 8)
+#if (Framewor == "net8.0")
 app.UseStaticFiles();
 #else
 app.MapStaticAssets();
