@@ -303,7 +303,7 @@ echo ===== Grid, non-default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-grid -n GridNonDefault
 
-dotnet dotnet new dimodi-grid -n GridNonDefault -da "OnRead" -em "Inline" -va -s -g
+dotnet new dimodi-grid -n GridNonDefault -da "OnRead" -em "Inline" -va -s -g
 cd ../../
 dotnet build
 
