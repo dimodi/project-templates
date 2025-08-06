@@ -91,7 +91,7 @@ rm -rf TestWebAppServerDefaultSettings10
 
 echo
 echo ===== Web App, Server, .NET 10, non-default settings =====
-echo dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSetting10 -f net10.0 -int Server -tv "*" -th bootstrap -dm -c -it Font -lo -uc -sms 64 -dp -r -do
+echo dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings10 -f net10.0 -int Server -tv "*" -th bootstrap -dm -c -it Font -lo -uc -sms 64 -dp -r -do
 
 dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings10 -f net10.0 -int Server -tv "*" -th bootstrap -dm -c -it Font -lo -uc -sms 64 -dp -r -do
 cd TestWebAppServerNonDefaultSettings10
