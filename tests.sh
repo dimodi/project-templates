@@ -316,7 +316,7 @@ echo ===== TreeView, default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-treeview -n TreeViewDefault
 
-dotnet dotnet new dimodi-treeview -n TreeViewDefault
+dotnet new dimodi-treeview -n TreeViewDefault
 cd ../../
 dotnet build
 
