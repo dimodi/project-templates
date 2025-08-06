@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Added support for the latest .NET 10 Preview. Always use preview .NET versions with the latest Telerik UI for Blazor version.
+* Added support for Telerik UI for Blazor 9.2.0.
 
 FIXED
 * Refactored the Telerik UI for Blazor version retrieval in App.razor for cache busting purposes.
