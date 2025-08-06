@@ -282,7 +282,7 @@ echo
 echo ===== Item Templates, .NET 10 =====
 echo dotnet new dimodi-blazor -o TestItemTemplates10 -int Server -f net10.0
 
-dotnet dotnet new dimodi-blazor -o TestItemTemplates10 -int Server -f net10.0
+dotnet new dimodi-blazor -o TestItemTemplates10 -int Server -f net10.0
 cd TestItemTemplates10
 
 # ===== Grid =====
