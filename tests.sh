@@ -195,7 +195,7 @@ echo
 echo ===== Item Templates =====
 echo dotnet new dimodi-blazor -o TestItemTemplates -int Server
 
-dotnet dotnet new dimodi-blazor -o TestItemTemplates -int Server
+dotnet new dimodi-blazor -o TestItemTemplates -int Server
 cd TestItemTemplates
 
 # ===== Grid =====
@@ -205,7 +205,7 @@ echo ===== Grid, default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-grid -n GridDefault
 
-dotnet dotnet new dimodi-grid -n GridDefault
+dotnet new dimodi-grid -n GridDefault
 cd ../../
 dotnet build
 
@@ -216,7 +216,7 @@ echo ===== Grid, non-default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-grid -n GridNonDefault
 
-dotnet dotnet new dimodi-grid -n GridNonDefault -da "OnRead" -em "Inline" -va -s -g
+dotnet new dimodi-grid -n GridNonDefault -da "OnRead" -em "Inline" -va -s -g
 cd ../../
 dotnet build
 
@@ -229,7 +229,7 @@ echo ===== TreeView, default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-treeview -n TreeViewDefault
 
-dotnet dotnet new dimodi-treeview -n TreeViewDefault
+dotnet new dimodi-treeview -n TreeViewDefault
 cd ../../
 dotnet build
 
@@ -240,7 +240,7 @@ echo ===== TreeView, non-default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-treeview -n TreeViewNonDefault -da "Hierarchical" -le 4 -c 2 -ri 2 -s -ch
 
-dotnet dotnet new dimodi-treeview -n TreeViewNonDefault -da "Hierarchical" -le 4 -c 2 -ri 2 -s -ch
+dotnet new dimodi-treeview -n TreeViewNonDefault -da "Hierarchical" -le 4 -c 2 -ri 2 -s -ch
 cd ../../
 dotnet build
 
