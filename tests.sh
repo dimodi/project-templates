@@ -292,7 +292,7 @@ echo ===== Grid, default settings =====
 cd Components/Pages/
 echo dotnet new dimodi-grid -n GridDefault
 
-dotnet dotnet new dimodi-grid -n GridDefault
+dotnet new dimodi-grid -n GridDefault
 cd ../../
 dotnet build
 
