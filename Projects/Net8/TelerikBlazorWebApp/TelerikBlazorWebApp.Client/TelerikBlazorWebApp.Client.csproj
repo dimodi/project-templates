@@ -6,15 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
     <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+<!--#if (FrameworkNumber >= "10") -->
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+<!--#endif-->
 <!--#if (Localization) -->
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
 <!--#endif-->
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#if (Localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
     <PackageReference Include="Telerik.UI.for.Blazor" Version="{TVAR_TELERIKVERSION}" PrivateAssets="none" />
 <!--#if (AddDPLPackages) -->

@@ -5,40 +5,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    @*#if (UseWebAssembly)
-    @{ string TelerikUiForBlazorVersion = TelerikBlazorWebApp.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion(); }
-    #endif*@
-    @*#if (CDN)
+@*#if (FrameworkNumber >= "10")
+    <LinkPreload />
+#endif*@
+@*#if (CDN)
     <script src="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/telerik-blazor.min.js" defer></script>
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-theme-{TVAR_THEME}/swatches/{TVAR_THEME}-main{TVAR_THEMESUFFIX}.css" />
-    @*#if (IconType == "Font")
+@*#if (IconType == "Font")
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-font-icons/font-icons.css" />
-    #endif*@
-    #else
+#endif*@
+#else
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?@TelerikUiForBlazorVersion" defer></script>
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css?@TelerikUiForBlazorVersion" />
-    @*#if (IconType == "Font")
+@*#if (IconType == "Font")
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@TelerikUiForBlazorVersion" />
-    #endif*@
-    #endif*@
-    @*#if (Framework == "net8.0")
-    @*#if (RTL)
+#endif*@
+#endif*@
+@*#if (FrameworkNumber == "8")
+@*#if (RTL)
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.rtl.min.css" />
-    #else
+#else
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-    #endif*@
+#endif*@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="TelerikBlazorWebApp.styles.css" />
-    #else
-    @*#if (RTL)
+#else
+@*#if (RTL)
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.rtl.min.css"]" />
-    #else
+#else
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
-    #endif*@
+#endif*@
     <link rel="stylesheet" href="@Assets["app.css"]" />
     <link rel="stylesheet" href="@Assets["TelerikBlazorWebApp.styles.css"]" />
     <ImportMap />
-    #endif*@
+#endif*@
     <link rel="icon" type="image/png" href="favicon.png" />
     <HeadOutlet @rendermode="@Interactive{TVAR_RENDERMODE}" />
 </head>
@@ -49,34 +49,41 @@
 <body class="k-body">
 #endif*@
     <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
+@*#if (FrameworkNumber >= "10")
+    <ReconnectModal />
+    <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
+#else
     <script src="_framework/blazor.web.js" autostart="false"></script>
+#endif*@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             Blazor.start();
         });
-        @*#if (Localization && UseWebAssembly)
+@*#if (Localization && UseWebAssembly)
 
         window.blazorCulture = {
             get: () => window.localStorage['BlazorCulture'],
             set: (value) => window.localStorage['BlazorCulture'] = value
         };
-        #endif*@
+#endif*@
     </script>
 </body>
 
 </html>
-@*#if (!UseWebAssembly) -->
 
 @code {
-    private string? TelerikUiForBlazorVersion { get; set; }
+    private string TelerikUiForBlazorVersion { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
+@*#if (UseWebAssembly)
+        TelerikUiForBlazorVersion = TelerikBlazorWebApp.Client.Layout.MainLayout.GetTelerikUiForBlazorVersion();
+#else
         string telerikBlazorAssemblyVersion = typeof(TelerikRootComponent).Assembly.GetName().Version?.ToString() ?? "0.0.0.0";
         int lastDotIndex = telerikBlazorAssemblyVersion.LastIndexOf(".");
         TelerikUiForBlazorVersion = telerikBlazorAssemblyVersion.Substring(0, lastDotIndex);
+#endif*@
 
         base.OnInitialized();
     }
 }
-##endif*@

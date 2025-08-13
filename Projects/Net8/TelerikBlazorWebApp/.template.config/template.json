@@ -27,7 +27,7 @@
     "Framework": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "net9.0",
+      "defaultValue": "net8.0",
       "description": "The target framework for the project.",
       "choices": [
         {
@@ -37,6 +37,10 @@
         {
           "choice": "net9.0",
           "description": "Target .NET 9.0"
+        },
+        {
+          "choice": "net10.0",
+          "description": "Target .NET 10.0"
         }
       ],
       "replaces": "{TVAR_NETVERSION}"
@@ -45,20 +49,43 @@
       "type": "generated",
       "generator": "switch",
       "parameters": {
-        "datatype": "text",
+        "datatype": "int",
         "evaluator": "C++",
         "cases": [
           {
-            "condition": "(Framework == \"net8.0\")",
-            "value": "8"
+            "condition": "(Framework == \"net10.0\")",
+            "value": "10"
+          },
+          {
+            "condition": "(Framework == \"net9.0\")",
+            "value": "9"
           },
           {
             "condition": "",
-            "value": "9"
+            "value": "8"
           }
         ]
       },
       "replaces": "{TVAR_NETNUMBER}"
+    },
+    "FrameworkSuffix": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "text",
+        "evaluator": "C++",
+        "cases": [
+          {
+            "condition": "(Framework == \"net10.0\")",
+            "value": "*-preview."
+          },
+          {
+            "condition": "",
+            "value": ""
+          }
+        ]
+      },
+      "replaces": "{TVAR_NETSUFFIX}"
     },
     "RenderMode": {
       "type": "parameter",
@@ -85,13 +112,17 @@
     "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "9.1.0",
+      "defaultValue": "10.0.0",
       "description": "Select the Telerik UI for Blazor version.",
       "displayName": "Telerik UI for Blazor version",
       "choices": [
         {
           "choice": "*",
           "displayName": "latest as wildcard"
+        },
+        {
+          "choice": "10.0.0",
+          "displayName": "10.0.0"
         },
         {
           "choice": "9.1.0",
@@ -349,6 +380,21 @@
             "TelerikBlazorWebApp/Components/Pages/Counter.razor": "./TelerikBlazorWebApp.Client/Pages/Counter.razor",
             "TelerikBlazorWebApp/Components/Pages/Weather.razor": "./TelerikBlazorWebApp.Client/Pages/Weather.razor"
           }
+        },
+        {
+          "condition": "(UseWebAssembly && FrameworkNumber >= 10)",
+          "rename": {
+            "TelerikBlazorWebApp/Components/Pages/NotFound.razor": "./TelerikBlazorWebApp.Client/Pages/NotFound.razor"
+          }
+        },
+        {
+          "condition": "(FrameworkNumber < 10)",
+          "exclude": [
+            "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor",
+            "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor.css",
+            "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor.js",
+            "TelerikBlazorWebApp/Components/Pages/NotFound.razor"
+          ]
         }
       ]
     }

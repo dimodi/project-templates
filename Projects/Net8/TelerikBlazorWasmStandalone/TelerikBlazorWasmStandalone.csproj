@@ -4,6 +4,9 @@
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+<!--#if (FrameworkNumber >= "10") -->
+    <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
+<!--#endif-->
 <!--#if (Localization) -->
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
 <!--#endif-->
@@ -14,10 +17,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="{TVAR_NETNUMBER}.*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" PrivateAssets="all" />
 <!--#if (Localization) -->
-    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="{TVAR_NETNUMBER}.{TVAR_NETSUFFIX}*" />
 <!--#endif-->
 <!--#if (Docker) -->
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />

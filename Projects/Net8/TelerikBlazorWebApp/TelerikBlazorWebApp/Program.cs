@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.SignalR;
 #endif
 using TelerikBlazorWebApp.Components;
 #if (Localization)
-using TelerikBlazorWebApp.Services;
-using Microsoft.Extensions.Localization;
 using Telerik.Blazor.Services;
+using TelerikBlazorWebApp.Services;
 #endif
 
 var builder = WebApplication.CreateBuilder(args);
@@ -83,10 +82,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+#if (FrameworkNumber >= "10")
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForErrors: true);
+#endif
 
 app.UseHttpsRedirection();
 
-#if (Framework == "net8.0")
+#if (FrameworkNumber == "8")
 app.UseStaticFiles();
 #else
 app.MapStaticAssets();
