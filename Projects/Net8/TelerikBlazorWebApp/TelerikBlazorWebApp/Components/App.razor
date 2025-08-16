@@ -15,10 +15,18 @@
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/@TelerikUiForBlazorVersion/kendo-font-icons/font-icons.css" />
 #endif*@
 #else
+@*#if (FrameworkNumber == "8")
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?@TelerikUiForBlazorVersion" defer></script>
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css?@TelerikUiForBlazorVersion" />
 @*#if (IconType == "Font")
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css?@TelerikUiForBlazorVersion" />
+#endif*@
+#else
+    <script src="@Assets["_content/Telerik.UI.for.Blazor/js/telerik-blazor.js"]" defer></script>
+    <link rel="stylesheet" href="@Assets["_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css"]" />
+@*#if (IconType == "Font")
+    <link rel="stylesheet" href="@Assets["_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css"]" />
+#endif*@
 #endif*@
 #endif*@
 @*#if (FrameworkNumber == "8")
@@ -70,6 +78,7 @@
 </body>
 
 </html>
+@*#if (FrameworkNumber == "8") -->
 
 @code {
     private string TelerikUiForBlazorVersion { get; set; } = string.Empty;
@@ -87,3 +96,4 @@
         base.OnInitialized();
     }
 }
+##endif*@
