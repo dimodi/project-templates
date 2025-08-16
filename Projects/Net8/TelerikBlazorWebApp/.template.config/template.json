@@ -121,6 +121,10 @@
           "displayName": "latest as wildcard"
         },
         {
+          "choice": "11.0.0",
+          "displayName": "11.0.0"
+        },
+        {
           "choice": "10.0.0",
           "displayName": "10.0.0"
         },
