@@ -20,6 +20,7 @@ NEW
 * Use .NET 10+ finger printing for the Telerik JS file in the WebAssembly Standalone App template.
 * Add support for Telerik UI for Blazor 11.0.0.
 * Add compatibility with .NET 10 Preview 7. Older .NET 10 versions are not supported due to breaking changes.
+* Use Unix line endings as in the .NET 10 project templates.
 
 FIXED
 * Fix broken anchor tag in MainLayout.razor in Blazor Web App template.
