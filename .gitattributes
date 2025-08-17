@@ -1,0 +1,22 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Files that should have LF line endings on checkout.
+*.sln text eol=lf
+*.csproj text eol=lf
+*.cs text eol=lf
+*.razor text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.resx text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+
+# Binary files that should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
