@@ -16,10 +16,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Use .NET 9+ static asset finger printing for the Telerik CSS and JS file instead of query string cache busting.
+* Use .NET 9+ static asset finger printing for the Telerik CSS and JS file in the Web App template. Classic query string cache busting remains in use in .NET 8.
 * Use .NET 10+ finger printing for the Telerik JS file in the WebAssembly Standalone App template.
 * Add support for Telerik UI for Blazor 11.0.0.
-* Add compatibility with .NET 10 Preview 7.
+* Add compatibility with .NET 10 Preview 7. Older .NET 10 versions are not supported due to breaking changes.
 
 FIXED
 * Fix broken anchor tag in MainLayout.razor in Blazor Web App template.
