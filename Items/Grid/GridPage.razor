@@ -2,56 +2,56 @@
 
 @*#if (EditMode != "None" && Validation)
 @using System.ComponentModel.DataAnnotations
-#endif*@
+##endif*@
 @*#if (Datasource == "OnRead" || Grouping)
 @using Telerik.DataSource
-#endif*@
+##endif*@
 @*#if (Datasource == "OnRead")
 @using Telerik.DataSource.Extensions
-#endif*@
+##endif*@
 
 <PageTitle>GridPage</PageTitle>
 
 @*#if (Datasource == "OnRead")
 <TelerikGrid OnRead="@OnGridRead"
-#else
+##else
 <TelerikGrid Data="@GridData"
-#endif*@
+##endif*@
              TItem="@GridItem"
 @*#if (EditMode != "None")
              EditMode="@GridEditMode.{TVAR_EDITMODE}"
              OnCreate="@OnGridCreate"
              OnDelete="@OnGridDelete"
              OnUpdate="@OnGridUpdate"
-#endif*@
+##endif*@
              FilterMode="GridFilterMode.FilterRow"
 @*#if (Grouping)
              Groupable="true"
              OnStateInit="@OnGridStateInit"
-#endif*@
+##endif*@
              Pageable="true"
 @*#if (Selection)
              SelectionMode="@GridSelectionMode.Multiple"
              @bind-SelectedItems="@GridSelectedItems"
-#endif*@
+##endif*@
              Sortable="true">
 @*#if (EditMode != "None")
     <GridToolBarTemplate>
         <GridCommandButton Command="Add">Add Item</GridCommandButton>
     </GridToolBarTemplate>
-#endif*@
+##endif*@
     <GridColumns>
 @*#if (Selection)
 @*#if (EditMode == "Incell")
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" CheckBoxOnlySelection="true" />
-#else
+##else
         <GridCheckboxColumn SelectAll="true" SelectAllMode="@GridSelectAllMode.All" />
-#endif*@
-#endif*@
+##endif*@
+##endif*@
         <GridColumn Field="@nameof(GridItem.Name)" />
 @*#if (Grouping)
         <GridColumn Field="@nameof(GridItem.GroupName)" />
-#endif*@
+##endif*@
         <GridColumn Field="@nameof(GridItem.Price)" DisplayFormat="{0:c2}" />
         <GridColumn Field="@nameof(GridItem.Quantity)" DisplayFormat="{0:n0}" />
         <GridColumn Field="@nameof(GridItem.StartDate)" DisplayFormat="{0:d}" />
@@ -60,14 +60,14 @@
         <GridCommandColumn>
 @*#if (EditMode != "Incell")
             <GridCommandButton Command="Edit">Edit</GridCommandButton>
-#endif*@
+##endif*@
             <GridCommandButton Command="Delete">Delete</GridCommandButton>
 @*#if (EditMode == "Inline")
             <GridCommandButton Command="Save" ShowInEdit="true">Save</GridCommandButton>
             <GridCommandButton Command="Cancel" ShowInEdit="true">Cancel</GridCommandButton>
-#endif*@
+##endif*@
         </GridCommandColumn>
-#endif*@
+##endif*@
     </GridColumns>
 </TelerikGrid>
 
@@ -77,7 +77,7 @@
 @*#if (Selection)
     private IEnumerable<GridItem> GridSelectedItems { get; set; } = new List<GridItem>();
 
-#endif*@
+##endif*@
 
     private int LastId { get; set; }
 
@@ -91,7 +91,7 @@
         args.AggregateResults = result.AggregateResults;
     }
 
-#endif*@
+##endif*@
 @*#if (Grouping)
     private void OnGridStateInit(GridStateEventArgs<GridItem> args)
     {
@@ -102,7 +102,7 @@
         });
     }
 
-#endif*@
+##endif*@
 @*#if (EditMode != "None")
     private void OnGridCreate(GridCommandEventArgs args)
     {
@@ -131,7 +131,7 @@
         }
     }
 
-#endif*@
+##endif*@
     protected override void OnInitialized()
     {
         for (int i = 1; i <= 24; i++)
@@ -154,20 +154,20 @@
         public int Id { get; set; }
 @*#if (EditMode != "None" && Validation)
         [Required]
-#endif*@
+##endif*@
         public string Name { get; set; } = string.Empty;
         public string GroupName { get; set; } = string.Empty;
 @*#if (EditMode != "None" && Validation)
         [Range(typeof(decimal), "0.01", "1000000000000000")]
-#endif*@
+##endif*@
         public decimal Price { get; set; }
 @*#if (EditMode != "None" && Validation)
         [Range(0, int.MaxValue)]
-#endif*@
+##endif*@
         public int Quantity { get; set; }
 @*#if (EditMode != "None" && Validation)
         [Required]
-#endif*@
+##endif*@
         public DateTime? StartDate { get; set; }
         public bool IsActive { get; set; }
     }

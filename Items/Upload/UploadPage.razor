@@ -8,24 +8,24 @@
 <TelerikUpload Accept="@UploadAccept"
                AllowedExtensions="@UploadAllowedExtensions"
                MaxFileSize="{TVAR_MAXSIZE}"
-#else
+##else
 <TelerikUpload MaxFileSize="{TVAR_MAXSIZE}"
-#endif*@
+##endif*@
 @*#if (MinSize != 1)
                MinFileSize="{TVAR_MINSIZE}"
-#endif*@
+##endif*@
 @*#if (!Multiple)
                Multiple="false"
-#endif*@
+##endif*@
                RemoveUrl="@ToAbsoluteUrl("api/upload/remove")"
 @*#if (ChunkUpload)
                SaveUrl="@ToAbsoluteUrl("api/upload/savechunk")">
     <UploadSettings>
         <UploadChunkSettings Enabled="true" />
     </UploadSettings>
-#else
+##else
                SaveUrl="@ToAbsoluteUrl("api/upload/save")">
-#endif*@
+##endif*@
 </TelerikUpload>
 
 @code {
@@ -33,7 +33,7 @@
     private string UploadAccept => string.Join(",", UploadAllowedExtensions);
     private readonly List<string> UploadAllowedExtensions = new() {TVAR_ALLOWEDEXTENSIONS};
 
-#endif*@
+##endif*@
     private string ToAbsoluteUrl(string url)
     {
         return $"{NavigationManager.BaseUri}{url}";

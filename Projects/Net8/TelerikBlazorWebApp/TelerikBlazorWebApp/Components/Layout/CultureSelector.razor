@@ -2,7 +2,7 @@
 
 @*#if (UseWebAssembly)
 @inject IJSRuntime js
-#endif*@
+##endif*@
 @inject IConfiguration AppConfiguration
 @inject NavigationManager Navigation
 
@@ -30,15 +30,15 @@
 
 @*#if (UseWebAssembly)
     private async Task ApplySelectedCultureAsync(object newValue)
-#else
+##else
     private void ApplySelectedCultureAsync(object newValue)
-#endif*@
+##endif*@
     {
         if (CultureInfo.CurrentCulture.Name != SelectedCulture && !string.IsNullOrEmpty(SelectedCulture))
         {
 @*#if (UseWebAssembly)
             await js.InvokeVoidAsync("blazorCulture.set", SelectedCulture);
-#endif*@
+##endif*@
 
             string cultureEscaped = Uri.EscapeDataString(SelectedCulture);
             string uri = new Uri(Navigation.Uri)

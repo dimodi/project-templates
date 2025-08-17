@@ -10,7 +10,7 @@
         <div class="top-row px-4">
 @*#if (Localization)
             <CultureSelector />
-#endif*@
+##endif*@
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
@@ -25,7 +25,7 @@
     <a href="." class="reload">Reload</a
     <span class="dismiss">🗙</span>
 </div>
-@*#if (FrameworkNumber == "8" && UseWebAssembly) -->
+@*#if (UseWebAssembly && (FrameworkNumber == "8" || CDN)) -->
 
 @code {
     public static string GetTelerikUiForBlazorVersion()

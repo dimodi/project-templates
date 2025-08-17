@@ -11,20 +11,20 @@
 @using TelerikBlazorWebApp.Client
 @*#if (FrameworkNumber >= "10")
 @using TelerikBlazorWebApp.Client.Layout
-#endif*@
-#endif*@
+##endif*@
+##endif*@
 @using TelerikBlazorWebApp.Components
 @*#if (FrameworkNumber >= "10" && !UseWebAssembly)
 @using TelerikBlazorWebApp.Components.Layout
-#endif*@
+##endif*@
 @*#if (Localization && !UseWebAssembly)
 @using TelerikBlazorWebApp.Resources
 @using Microsoft.Extensions.Configuration
 @using Microsoft.Extensions.Localization
-#endif*@
+##endif*@
 @*#if (!UseWebAssembly)
 
 @using Telerik.Blazor
 @using Telerik.Blazor.Components
 @using Telerik.{TVAR_ICONTYPE}Icons
-#endif*@
+##endif*@

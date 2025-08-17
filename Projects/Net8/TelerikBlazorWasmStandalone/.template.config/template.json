@@ -90,7 +90,7 @@
       "choices": [
         {
           "choice": "*",
-          "displayName": "latest as wildcard (no CDN)"
+          "displayName": "Latest as wildcard (no CDN)"
         },
         {
           "choice": "11.0.0",

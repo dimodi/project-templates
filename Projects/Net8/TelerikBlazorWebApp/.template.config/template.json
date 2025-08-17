@@ -118,7 +118,7 @@
       "choices": [
         {
           "choice": "*",
-          "displayName": "latest as wildcard"
+          "displayName": "Latest as wildcard"
         },
         {
           "choice": "11.0.0",
