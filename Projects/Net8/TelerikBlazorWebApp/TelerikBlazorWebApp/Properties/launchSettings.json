@@ -24,6 +24,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+//#if (Docker)
     },
     "Docker": {
       "commandName": "Docker",
@@ -36,5 +37,8 @@
       "publishAllPorts": true,
       "useSSL": true
     }
+//#else
+    }
+//#endif
   }
 }
