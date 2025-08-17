@@ -21,6 +21,7 @@ NEW
 
 FIXED
 * Fix broken anchor tag in MainLayout.razor in Blazor Web App template.
+* Add Docker profile to launchSettings.json only when using Docker integration.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
