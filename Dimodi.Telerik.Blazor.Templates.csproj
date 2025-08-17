@@ -21,6 +21,7 @@ NEW
 
 FIXED
 * Fix broken anchor tag in MainLayout.razor in Blazor Web App template.
+* Use correct ReconnectModal.razor.js URL in .NET 10 Web App apps with Auto render mode.
 * Add Docker profile to launchSettings.json only when using Docker integration.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
