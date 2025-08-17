@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="https://blazor.cdn.telerik.com/blazor/{TVAR_TELERIKVERSION}/kendo-font-icons/font-icons.css" />
 <!--#endif -->
 <!--#else -->
+<!--#if (FrameworkNumber >= "10") -->
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor#[.{fingerprint}].js" defer></script>
+<!--#else -->
     <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" defer></script>
+<!--#endif -->
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-{TVAR_THEME}/all.css" />
 <!--#if (IconType == "Font") -->
     <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-font-icons/font-icons.css" />
