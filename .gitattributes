@@ -14,7 +14,6 @@
 *.md text eol=lf
 *.sh text eol=lf
 
-# Binary files that should not be modified.
 *.png binary
 *.jpg binary
 *.jpeg binary
