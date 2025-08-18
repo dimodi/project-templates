@@ -1,7 +1,6 @@
 # Default behavior if core.autocrlf is not set.
 * text=auto
 
-# Files that should have LF line endings on checkout.
 *.sln text eol=lf
 *.csproj text eol=lf
 *.cs text eol=lf
