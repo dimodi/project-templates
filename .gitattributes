@@ -1,4 +1,4 @@
-# Set the default behavior, in case people don't have core.autocrlf set.
+# Default behavior if core.autocrlf is not set.
 * text=auto
 
 # Files that should have LF line endings on checkout.
