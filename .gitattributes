@@ -1,0 +1,20 @@
+# Default behavior if core.autocrlf is not set.
+* text=auto
+
+*.sln text eol=lf
+*.csproj text eol=lf
+*.cs text eol=lf
+*.razor text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.resx text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

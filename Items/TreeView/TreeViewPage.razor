@@ -6,13 +6,13 @@
 @*#if (Selection)
                  SelectionMode="@TreeViewSelectionMode.Multiple"
                  @bind-SelectedItems="@TreeViewSelectedItems"
-#endif*@
+##endif*@
 @*#if (Checkboxes)
                  CheckBoxMode="@TreeViewCheckBoxMode.Multiple"
                  @bind-CheckedItems="@TreeViewCheckedItems"
                  CheckChildren="true"
                  CheckParents="true"
-#endif*@
+##endif*@
                  @bind-ExpandedItems="@TreeViewExpandedItems" />
 
 @code {
@@ -21,10 +21,10 @@
     private IEnumerable<object> TreeViewExpandedItems { get; set; } = new List<TreeItem>();
 @*#if (Selection)
     private IEnumerable<object> TreeViewSelectedItems { get; set; } = new List<TreeItem>();
-#endif*@
+##endif*@
 @*#if (Checkboxes)
     private IEnumerable<object> TreeViewCheckedItems { get; set; } = new List<TreeItem>();
-#endif*@
+##endif*@
 
     private int LastId { get; set; }
 
@@ -40,22 +40,22 @@
         TreeViewExpandedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
 @*#if (Selection)
         TreeViewSelectedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
-#endif*@
+##endif*@
 @*#if (Checkboxes)
         TreeViewCheckedItems = TreeViewData.Where(x => x.HasChildren == true && x.ParentId == null);
-#endif*@
-#endif*@
+##endif*@
+##endif*@
 @*#if (Data == "Hierarchical")
         TreeViewData = LoadTreeViewData();
 
         TreeViewExpandedItems = new List<TreeItem>(TreeViewData);
 @*#if (Selection)
         TreeViewSelectedItems = new List<TreeItem>(TreeViewData);
-#endif*@
+##endif*@
 @*#if (Checkboxes)
         TreeViewCheckedItems = new List<TreeItem>(TreeViewData);
-#endif*@
-#endif*@
+##endif*@
+##endif*@
     }
 
 @*#if (Data == "Flat")
@@ -88,7 +88,7 @@
             }
         }
     }
-#else
+##else
     private List<TreeItem> LoadTreeViewData()
     {
         List<TreeItem> items = new List<TreeItem>();
@@ -128,7 +128,7 @@
             PopulateTreeItems(item.Items, level);
         }
     }
-#endif*@
+##endif*@
 
     public class TreeItem
     {
@@ -136,11 +136,11 @@
 @*#if (Data == "Flat")
         public int? ParentId { get; set; }
         public bool HasChildren { get; set; }
-#endif*@
+##endif*@
         public string Text { get; set; } = string.Empty;
         public object? Icon { get; set; }
 @*#if (Data == "Hierarchical")
         public List<TreeItem>? Items { get; set; }
-#endif*@
+##endif*@
     }
 }

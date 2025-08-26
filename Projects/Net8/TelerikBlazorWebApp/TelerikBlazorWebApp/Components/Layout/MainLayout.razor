@@ -10,7 +10,7 @@
         <div class="top-row px-4">
 @*#if (Localization)
             <CultureSelector />
-#endif*@
+##endif*@
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
@@ -22,10 +22,10 @@
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
-    <a href="." class="reload">Reload</a
+    <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
-@*#if (UseWebAssembly) -->
+@*#if (UseWebAssembly && (FrameworkNumber == "8" || CDN)) -->
 
 @code {
     public static string GetTelerikUiForBlazorVersion()
