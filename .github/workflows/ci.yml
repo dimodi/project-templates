@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Template Package
         run: |
-          dotnet new install bin/Release/Dimodi.Telerik.Project.Templates.*.nupkg
+          dotnet new install bin/Release/Dimodi.Telerik.Project.Templates.6.3.0.nupkg
 
       - name: Run Tests
         run: sh tests.sh
