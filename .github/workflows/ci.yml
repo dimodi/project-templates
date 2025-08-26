@@ -28,5 +28,13 @@ jobs:
         run: |
           dotnet new install bin/Release/Dimodi.Telerik.Blazor.Templates.*.nupkg
 
+      - name: Set up Telerik NuGet Feed
+        run: |
+          dotnet nuget add source https://nuget.telerik.com/v3/index.json \
+            --name Telerik \
+            --username api-key \
+            --password ${{ secrets.TELERIK_NUGET_KEY }} \
+            --store-password-in-clear-text
+
       - name: Run Tests
         run: sh tests.sh
