@@ -124,6 +124,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Discard.
+        /// </summary>
+        public static string AIPrompt_OutputView_Discard {
+            get {
+                return ResourceManager.GetString("AIPrompt_OutputView_Discard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generated with AI:.
         /// </summary>
         public static string AIPrompt_OutputView_PromptTitle {
@@ -273,6 +282,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string Carousel_Previous {
             get {
                 return ResourceManager.GetString("Carousel_Previous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message copied to clipboard..
+        /// </summary>
+        public static string Chat_Message_Copied {
+            get {
+                return ResourceManager.GetString("Chat_Message_Copied", resourceCulture);
             }
         }
         
@@ -894,6 +912,159 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string Editor_AddRowBelow {
             get {
                 return ResourceManager.GetString("Editor_AddRowBelow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correct any mistakes in the following text while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Fix {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Fix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjust the length of the following text to be longer while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Length_Longer {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Length_Longer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjust the length of the following text to be shorter while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Length_Shorter {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Length_Shorter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polish the formatting of the following text to improve readability and consistency while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Polish {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Polish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rewrite the following text while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Rewrite {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Rewrite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjust the tone of the following text to be more casual while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Tone_Casual {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Tone_Casual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjust the tone of the following text to be more formal while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Tone_Formal {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Tone_Formal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjust the tone of the following text to be more friendly while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Tone_Friendly {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Tone_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjust the tone of the following text to be more neutral while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Tone_Neutral {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Tone_Neutral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translate the following text into English while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Translate_English {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Translate_English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translate the following text into German while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Translate_German {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Translate_German", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translate the following text into Spanish while preserving its original meaning and intent. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Command_Translate_Spanish {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Command_Translate_Spanish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are a helpful assistant designed to assist users with writing and editing content. Avoid discussing harmful, illegal, or inappropriate topics. Output plain string. Do not output HTML!.
+        /// </summary>
+        public static string Editor_AI_Prompt_Default_System_Prompt {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_Default_System_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert.
+        /// </summary>
+        public static string Editor_AI_Prompt_OutputView_Insert {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_OutputView_Insert", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Use with content.
+        /// </summary>
+        public static string Editor_AI_Prompt_PromptView_ContentButton {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_PromptView_ContentButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace.
+        /// </summary>
+        public static string Editor_AI_Prompt_OutputView_Replace {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_OutputView_Replace", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Use with selection.
+        /// </summary>
+        public static string Editor_AI_Prompt_PromptView_SelectionButton {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_PromptView_SelectionButton", resourceCulture);
             }
         }
         
@@ -2599,6 +2770,24 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collapse Details.
+        /// </summary>
+        public static string Grid_Detail_Template_Collapse {
+            get {
+                return ResourceManager.GetString("Grid_Detail_Template_Collapse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expand Details.
+        /// </summary>
+        public static string Grid_Detail_Template_Expand {
+            get {
+                return ResourceManager.GetString("Grid_Detail_Template_Expand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string Grid_DialogClose {
@@ -2793,6 +2982,24 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string Grid_SortedDescending {
             get {
                 return ResourceManager.GetString("Grid_SortedDescending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        public static string Grid_ToolBar_AITool_AIAssistant_Apply {
+            get {
+                return ResourceManager.GetString("Grid_ToolBar_AITool_AIAssistant_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AI Assistant.
+        /// </summary>
+        public static string Grid_ToolBar_AITool_AIAssistant_Title {
+            get {
+                return ResourceManager.GetString("Grid_ToolBar_AITool_AIAssistant_Title", resourceCulture);
             }
         }
         

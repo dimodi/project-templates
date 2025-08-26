@@ -2012,4 +2012,34 @@
   <data name="Upload_Resume" xml:space="preserve">
     <value>Продължи</value>
   </data>
+  <data name="AIPrompt_OutputView_Discard" xml:space="preserve">
+    <value>Изчисти</value>
+  </data>
+  <data name="Grid_ToolBar_AITool_AIAssistant_Apply" xml:space="preserve">
+    <value>Приложи</value>
+  </data>
+  <data name="Grid_ToolBar_AITool_AIAssistant_Title" xml:space="preserve">
+    <value>AI Assistant</value>
+  </data>
+  <data name="Editor_AI_Prompt_OutputView_Insert" xml:space="preserve">
+    <value>Добави</value>
+  </data>
+  <data name="Editor_AI_Prompt_OutputView_Replace" xml:space="preserve">
+    <value>Замени</value>
+  </data>
+  <data name="Grid_Detail_Template_Collapse" xml:space="preserve">
+    <value>Затворете детайлите</value>
+  </data>
+  <data name="Grid_Detail_Template_Expand" xml:space="preserve">
+    <value>Отворете детайлите</value>
+  </data>
+  <data name="Editor_AI_Prompt_PromptView_SelectionButton" xml:space="preserve">
+    <value>Използвай със селекцията</value>
+  </data>
+  <data name="Editor_AI_Prompt_PromptView_ContentButton" xml:space="preserve">
+    <value>Използвай със съдържанието</value>
+  </data>
+  <data name="Chat_Message_Copied" xml:space="preserve">
+    <value>Съобщение, копирано в клипборда.</value>
+  </data>
 </root>

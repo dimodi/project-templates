@@ -2051,4 +2051,34 @@
   <data name="Upload_Resume" xml:space="preserve">
     <value>Resume</value>
   </data>
+  <data name="AIPrompt_OutputView_Discard" xml:space="preserve">
+    <value>Discard</value>
+  </data>
+  <data name="Grid_ToolBar_AITool_AIAssistant_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Grid_ToolBar_AITool_AIAssistant_Title" xml:space="preserve">
+    <value>AI Assistant</value>
+  </data>
+  <data name="Editor_AI_Prompt_OutputView_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Editor_AI_Prompt_OutputView_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="Grid_Detail_Template_Collapse" xml:space="preserve">
+    <value>Collapse Details</value>
+  </data>
+  <data name="Grid_Detail_Template_Expand" xml:space="preserve">
+    <value>Expand Details</value>
+  </data>
+  <data name="Editor_AI_Prompt_PromptView_SelectionButton" xml:space="preserve">
+    <value>Use with selection</value>
+  </data>
+  <data name="Editor_AI_Prompt_PromptView_ContentButton" xml:space="preserve">
+    <value>Use with content</value>
+  </data>
+  <data name="Chat_Message_Copied" xml:space="preserve">
+    <value>Message copied to clipboard.</value>
+  </data>
 </root>
