@@ -38,3 +38,5 @@ jobs:
 
       - name: Run Tests
         run: sh tests.sh
+        env:
+          TELERIK_LICENSE: ${{ secrets.TELERIK_LICENSE_KEY }}
