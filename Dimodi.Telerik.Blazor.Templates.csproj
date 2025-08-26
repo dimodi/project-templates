@@ -16,7 +16,16 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Add CI
+* Use .NET 9+ static asset finger printing for the Telerik CSS and JS file in the Web App template. Classic query string cache busting remains in use in .NET 8.
+* Use .NET 10+ finger printing for the Telerik JS file in the WebAssembly Standalone App template.
+* Add support for Telerik UI for Blazor 11.0.0.
+* Add compatibility with .NET 10 Preview 7. Older .NET 10 versions are not supported due to breaking changes.
+* Use Unix line endings as in the .NET 10 project templates.
+
+FIXED
+* Fix broken anchor tag in MainLayout.razor in Blazor Web App template.
+* Use correct ReconnectModal.razor.js URL in .NET 10 Web App apps with Auto render mode.
+* Add Docker profile to launchSettings.json only when using Docker integration.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
@@ -24,7 +33,7 @@ NEW
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>6.3.0</Version>
+    <Version>6.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
