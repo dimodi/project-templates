@@ -1,0 +1,29 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Create Template Package
+        run: |
+          dotnet pack -c Release
+
+      - name: Install Template Package
+        run: |
+          dotnet new install bin/Release/Dimodi.Telerik.Project.Templates.*.nupkg
+
+      - name: Run Tests
+        run: sh tests.sh

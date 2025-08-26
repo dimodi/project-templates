@@ -1,11 +1,12 @@
-if [ $# -eq 0 ]; then
- echo "Error: Provide an argument with a path that is inside ~/"
- exit 1
-fi
+#if [ $# -eq 0 ]; then
+# echo "Error: Provide an argument with a path that is inside ~/"
+# exit 1
+#fi
 
-testFolder=$1
+testFolder=temptests
 
-cd ~/$testFolder
+mkdir $testFolder
+cd $testFolder/
 
 # ===== WebAssembly Standalone =====
 
@@ -17,7 +18,7 @@ dotnet new dimodi-blazorwasm -o TestWasmAloneDefaultSettings
 cd TestWasmAloneDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWasmAloneDefaultSettings
 
 echo
@@ -28,7 +29,7 @@ dotnet new dimodi-blazorwasm -o TestWasmAloneNonDefaultSettings -f net9.0 -tv "*
 cd TestWasmAloneNonDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWasmAloneNonDefaultSettings
 
 echo
@@ -39,7 +40,7 @@ dotnet new dimodi-blazorwasm -o TestWasmAloneDefaultSettings10 -f net10.0
 cd TestWasmAloneDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWasmAloneDefaultSettings10
 
 echo
@@ -50,7 +51,7 @@ dotnet new dimodi-blazorwasm -o TestWasmAloneNonDefaultSettings10 -f net10.0 -tv
 cd TestWasmAloneNonDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWasmAloneNonDefaultSettings10
 
 
@@ -64,7 +65,7 @@ dotnet new dimodi-blazor -o TestWebAppServerDefaultSettings -int Server
 cd TestWebAppServerDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppServerDefaultSettings
 
 echo
@@ -75,7 +76,7 @@ dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings -f net9.0 -int Se
 cd TestWebAppServerNonDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppServerNonDefaultSettings
 
 echo
@@ -86,7 +87,7 @@ dotnet new dimodi-blazor -o TestWebAppServerDefaultSettings10 -int Server -f net
 cd TestWebAppServerDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppServerDefaultSettings10
 
 echo
@@ -97,7 +98,7 @@ dotnet new dimodi-blazor -o TestWebAppServerNonDefaultSettings10 -f net10.0 -int
 cd TestWebAppServerNonDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppServerNonDefaultSettings10
 
 echo
@@ -108,7 +109,7 @@ dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings -int WebAssembly
 cd TestWebAppWasmDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppWasmDefaultSettings
 
 echo
@@ -119,7 +120,7 @@ dotnet new dimodi-blazor -o TestWebAppWasmNonDefaultSettings -f net9.0 -int WebA
 cd TestWebAppWasmNonDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppWasmNonDefaultSettings
 
 echo
@@ -130,7 +131,7 @@ dotnet new dimodi-blazor -o TestWebAppWasmDefaultSettings10 -int WebAssembly -f 
 cd TestWebAppWasmDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppWasmDefaultSettings10
 
 echo
@@ -141,7 +142,7 @@ dotnet new dimodi-blazor -o TestWebAppWasmNonDefaultSettings10 -f net10.0 -int W
 cd TestWebAppWasmNonDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppWasmNonDefaultSettings10
 
 echo
@@ -152,7 +153,7 @@ dotnet new dimodi-blazor -o TestWebAppAutoDefaultSettings -int Auto
 cd TestWebAppAutoDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppAutoDefaultSettings
 
 echo
@@ -163,7 +164,7 @@ dotnet new dimodi-blazor -o TestWebAppAutoNonDefaultSettings -f net9.0 -int Auto
 cd TestWebAppAutoNonDefaultSettings
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppAutoNonDefaultSettings
 
 echo
@@ -174,7 +175,7 @@ dotnet new dimodi-blazor -o TestWebAppAutoDefaultSettings10 -int Auto -f net10.0
 cd TestWebAppAutoDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppAutoDefaultSettings10
 
 echo
@@ -185,7 +186,7 @@ dotnet new dimodi-blazor -o TestWebAppAutoNonDefaultSettings10 -f net10.0 -int A
 cd TestWebAppAutoNonDefaultSettings10
 dotnet build
 
-cd ~/$testFolder
+cd ../
 rm -rf TestWebAppAutoNonDefaultSettings10
 
 
@@ -272,7 +273,7 @@ rm Components/Pages/UploadNonDefault.razor
 
 # ===== Item Templates End =====
 
-cd ~/$testFolder
+cd ../
 rm -rf TestItemTemplates
 
 
@@ -359,5 +360,10 @@ rm Components/Pages/UploadNonDefault.razor
 
 # ===== Item Templates .NET 10 End =====
 
-cd ~/$testFolder
+cd ../
 rm -rf TestItemTemplates10
+
+# ===== Tests End =====
+
+cd ../
+rm -rf $testFolder
