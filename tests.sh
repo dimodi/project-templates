@@ -3,6 +3,8 @@
 # exit 1
 #fi
 
+set -e
+
 testFolder=temptests
 
 mkdir $testFolder
