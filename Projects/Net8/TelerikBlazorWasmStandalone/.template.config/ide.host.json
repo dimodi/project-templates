@@ -3,6 +3,13 @@
   "icon": "progress-logo.png",
   "symbolInfo": [
     {
+      "id": "PWA",
+      "name": {
+        "text": "Progressive Web Application"
+      },
+      "isVisible": true
+    },
+    {
       "id": "TelerikVersion",
       "name": {
         "text": "Telerik UI for Blazor version"
