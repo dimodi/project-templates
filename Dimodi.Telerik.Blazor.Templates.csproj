@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Add support for Progressive Web Applications (PWA) in the WebAssembly Standalone template.
+* Add compatibility with .NET 10 RC1
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
