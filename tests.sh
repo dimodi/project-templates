@@ -25,9 +25,9 @@ rm -rf TestWasmAloneDefaultSettings
 
 echo
 echo ===== WebAssembly Standalone, non-default settings =====
-echo dotnet new dimodi-blazorwasm -o TestWasmAloneNonDefaultSettings -f net9.0 -tv "*" -th bootstrap -dm -c -it Font -lo -dp -r -do
+echo dotnet new dimodi-blazorwasm -o TestWasmAloneNonDefaultSettings -f net9.0 -p -tv "*" -th bootstrap -dm -c -it Font -lo -dp -r -do
 
-dotnet new dimodi-blazorwasm -o TestWasmAloneNonDefaultSettings -f net9.0 -tv "*" -th bootstrap -dm -c -it Font -lo -dp -r -do
+dotnet new dimodi-blazorwasm -o TestWasmAloneNonDefaultSettings -f net9.0 -p -tv "*" -th bootstrap -dm -c -it Font -lo -dp -r -do
 cd TestWasmAloneNonDefaultSettings
 dotnet build
 

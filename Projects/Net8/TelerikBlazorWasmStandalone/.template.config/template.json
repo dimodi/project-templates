@@ -4,7 +4,8 @@
   "classifications": [
     "Web",
     "Blazor",
-    "WebAssembly"
+    "WebAssembly",
+    "PWA"
   ],
   "identity": "Dimodi.Telerik.Blazor.WebAssembly.Standalone",
   "name": "Telerik Blazor WebAssembly Standalone App",
@@ -81,10 +82,17 @@
       },
       "replaces": "{TVAR_NETSUFFIX}"
     },
+    "PWA": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Add support for a Progressive Web Application.",
+      "displayName": "Progressive Web Application"
+    },
     "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "11.1.0",
+      "defaultValue": "11.1.1",
       "description": "Select the Telerik UI for Blazor version.",
       "displayName": "Telerik UI for Blazor version",
       "choices": [
@@ -93,8 +101,8 @@
           "displayName": "Latest as wildcard (no CDN)"
         },
         {
-          "choice": "11.1.0",
-          "displayName": "11.1.0"
+          "choice": "11.1.1",
+          "displayName": "11.1.1"
         },
         {
           "choice": "10.0.0",
@@ -280,6 +288,15 @@
             "**/Layout/CultureSelector.razor",
             "**/Resources/**",
             "**/Services/**"
+          ]
+        },
+        {
+          "condition": "(!PWA)",
+          "exclude": [
+            "wwwroot/service-worker*.js",
+            "wwwroot/manifest.webmanifest",
+            "wwwroot/icon-192.png",
+            "wwwroot/icon-512.png"
           ]
         },
         {

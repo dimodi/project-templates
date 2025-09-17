@@ -4,6 +4,9 @@
     "Framework": {
       "longName": "framework"
     },
+    "PWA": {
+      "longName": "pwa"
+    },
     "TelerikVersion": {
       "longName": "telerik-version"
     },

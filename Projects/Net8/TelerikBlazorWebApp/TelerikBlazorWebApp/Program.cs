@@ -83,7 +83,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 #if (FrameworkNumber >= "10")
-app.UseStatusCodePagesWithReExecute("/not-found", createScopeForErrors: true);
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 #endif
 
 app.UseHttpsRedirection();
