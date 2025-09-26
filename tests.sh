@@ -281,7 +281,7 @@ mkdir Controllers
 cd Controllers
 echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates
 
-dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates
+dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates
 cd ../
 dotnet build
 
@@ -291,9 +291,9 @@ echo
 echo ===== Upload Controller, non-default settings =====
 mkdir Controllers
 cd Controllers
-echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates -api false -ch false
+echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates -api false -ch
 
-dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates -rte "[controller]/[action]" -api false -ch false
+dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates -rte "[controller]/[action]" -api false -ch
 cd ../
 dotnet build
 
@@ -394,7 +394,7 @@ mkdir Controllers
 cd Controllers
 echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10
 
-dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10
+dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10
 cd ../
 dotnet build
 
@@ -404,9 +404,9 @@ echo
 echo ===== Upload Controller, non-default settings =====
 mkdir Controllers
 cd Controllers
-echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10 -api false -ch false
+echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10 -api false -ch
 
-dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10 -rte "[controller]/[action]" -api false -ch false
+dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10 -rte "[controller]/[action]" -api false -ch
 cd ../
 dotnet build
 

@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+#if (ChunkUpload)
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
+#endif
 
 namespace {TVAR_ROOTNAMESPACE}.Controllers
 {
