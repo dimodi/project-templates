@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "icon": "progress-logo.png",
+  "symbolInfo": [
+    {
+      "id": "RootNameSpace",
+      "name": {
+        "text": "Root Namespace"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "Route",
+      "name": {
+        "text": "Controller Route"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "ApiController",
+      "name": {
+        "text": "Use [ApiController] Attribute"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "ChunkUpload",
+      "name": {
+        "text": "Enable Chunk Upload"
+      },
+      "isVisible": true
+    }
+  ]
+}

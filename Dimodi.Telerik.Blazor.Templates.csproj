@@ -16,9 +16,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Add support for Progressive Web Applications (PWA) in the WebAssembly Standalone template.
-* Add compatibility with .NET 10 RC1. Earlier .NET 10 versions are not supported due to breaking changes.
-* Add support for Telerik UI for Blazor 11.1.1.
+* Add Upload controller item template.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
@@ -26,7 +24,7 @@ NEW
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>6.3.0</Version>
+    <Version>6.4.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

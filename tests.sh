@@ -273,6 +273,32 @@ dotnet build
 
 rm Components/Pages/UploadNonDefault.razor
 
+# ===== Upload Controller =====
+
+echo
+echo ===== Upload Controller, default settings =====
+mkdir Controllers
+cd Controllers
+echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates
+
+dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates
+cd ../
+dotnet build
+
+rm -rf Controllers
+
+echo
+echo ===== Upload Controller, non-default settings =====
+mkdir Controllers
+cd Controllers
+echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates -api false ch false
+
+dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates -rte "[controller]/[action]" -api false ch false
+cd ../
+dotnet build
+
+rm Controllers/UploadController.cs
+
 # ===== Item Templates End =====
 
 cd ../
@@ -359,6 +385,33 @@ cd ../../
 dotnet build
 
 rm Components/Pages/UploadNonDefault.razor
+
+# ===== Upload Controller =====
+
+echo
+echo ===== Upload Controller, default settings =====
+mkdir Controllers
+cd Controllers
+echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10
+
+dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10
+cd ../
+dotnet build
+
+rm -rf Controllers
+
+echo
+echo ===== Upload Controller, non-default settings =====
+mkdir Controllers
+cd Controllers
+echo dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10 -api false ch false
+
+dotnet dotnet new dimodi-upload-controller -n UploadController -root TestItemTemplates10 -rte "[controller]/[action]" -api false ch false
+cd ../
+dotnet build
+
+rm Controllers/UploadController.cs
+
 
 # ===== Item Templates .NET 10 End =====
 
