@@ -103,6 +103,7 @@ namespace {TVAR_ROOTNAMESPACE}.Controllers
             return new EmptyResult();
         }
     }
+#if (ChunkUpload)
 
     [DataContract]
     public class ChunkMetadata
@@ -125,4 +126,5 @@ namespace {TVAR_ROOTNAMESPACE}.Controllers
         [DataMember(Name = "totalChunks")]
         public long TotalChunks { get; set; }
     }
+#endif
 }
