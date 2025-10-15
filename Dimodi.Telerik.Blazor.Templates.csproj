@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
 NEW
 * Add Upload controller item template.
+* Add support for Telerik UI for Blazor 11.2.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
