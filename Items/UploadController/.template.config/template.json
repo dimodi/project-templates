@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Dimo Dimov",
+  "classifications": [
+    "Web",
+    "ASP.NET",
+    "Blazor"
+  ],
+  "identity": "Dimodi.Telerik.Blazor.UploadController",
+  "name": "Telerik Blazor UploadController",
+  "shortName": "dimodi-upload-controller",
+  "sourceName": "UploadController",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "RootNameSpace": {
+      "type": "parameter",
+      "datatype": "text",
+      "defaultValue": "TelerikBlazorWebApp",
+      "description": "The root project namespace that precedes .Controllers",
+      "displayName": "Root Project Namespace",
+      "isRequired": true,
+      "replaces": "{TVAR_ROOTNAMESPACE}"
+    },
+    "Route": {
+      "type": "parameter",
+      "datatype": "text",
+      "defaultValue": "api/[controller]/[action]",
+      "description": "The controller route that determines the base of ther action method URLs",
+      "displayName": "Controller Route",
+      "replaces": "{TVAR_ROUTE}"
+    },
+    "ApiController": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Use [ApiController] attribute for the controller class",
+      "displayName": "Use [ApiController] Attribute"
+    },
+    "ChunkUpload": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Allow files to be uploaded in parts (chunks). Requires Telerik UI for Blazor 9.0 or later.",
+      "displayName": "Enable Chunk Upload"
+    }
+  }
+}

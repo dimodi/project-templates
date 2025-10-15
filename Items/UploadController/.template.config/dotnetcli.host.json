@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/dotnetcli.host",
+  "symbolInfo": {
+    "RootNameSpace": {
+      "longName": "root-namespace",
+      "shortName": "root"
+    },
+    "Route": {
+      "longName": "route",
+      "shortName": "rte"
+    },
+    "ApiController": {
+      "longName": "api-controller",
+      "shortName": "api"
+    },
+    "ChunkUpload": {
+      "longName": "chunk-upload",
+      "shortName": "ch"
+    }
+  }
+}
