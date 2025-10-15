@@ -43,6 +43,7 @@ The item templates produce a runnable `.razor` file that includes a Telerik Blaz
 | Telerik Blazor Grid | `dimodi-grid` | CRUD operations, row selection, grouping, `Data` or `OnRead` data binding |
 | Telerik Blazor TreeView | `dimodi-treeview` | Selection, checkboxes, flat or hierarchical data structure |
 | Telerik Blazor Upload | `dimodi-upload` | Allowed extensions, min/max file size, multiple uploads, chunk uploads |
+| Telerik Blazor Upload Controller | `dimodi-upload-controller` | Chunk uploads |
 
 ## Install
 
