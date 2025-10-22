@@ -16,8 +16,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Add Upload controller item template.
-* Add support for Telerik UI for Blazor 11.2.0.
+* Add support for Telerik UI for Blazor 11.3.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
@@ -25,7 +24,7 @@ NEW
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>6.4.0</Version>
+    <Version>6.4.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
