@@ -21,7 +21,7 @@ NEW
 
 FIXED
 * Remove the ReconnectModal component from the Web App template when using WebAssembly render mode.
-* Populate appsettings.json in the Client project in the Web App template.
+* Populate appsettings.json in the WebAssembly Standalone template and the Client project in the Web App template.
 * Remove launchSettings.json from the Client project in the Web App template.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
