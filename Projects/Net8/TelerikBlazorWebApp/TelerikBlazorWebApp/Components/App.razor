@@ -57,7 +57,7 @@
 <body class="k-body">
 ##endif*@
     <Routes @rendermode="@Interactive{TVAR_RENDERMODE}" />
-@*#if (FrameworkNumber >= "10")
+@*#if (FrameworkNumber >= "10" && RenderMode != "WebAssembly")
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
 ##else
