@@ -398,10 +398,15 @@
         {
           "condition": "(FrameworkNumber < 10)",
           "exclude": [
+            "TelerikBlazorWebApp/Components/Pages/NotFound.razor"
+          ]
+        },
+        {
+          "condition": "(FrameworkNumber < 10 || RenderMode == \"WebAssembly\")",
+          "exclude": [
             "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor",
             "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor.css",
-            "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor.js",
-            "TelerikBlazorWebApp/Components/Pages/NotFound.razor"
+            "TelerikBlazorWebApp/Components/Layout/ReconnectModal.razor.js"
           ]
         }
       ]

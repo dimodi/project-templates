@@ -18,6 +18,10 @@
 NEW
 * Add support for the official .NET 10.
 * Add support for Telerik UI for Blazor 12.0.0.
+
+FIXED
+* Populate appsettings.json in the Client project in the Web App template.
+* Remove launchSettings.json from the Client project in the Web App template.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>

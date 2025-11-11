@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>{TVAR_NETVERSION}</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
     <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
 <!--#if (FrameworkNumber >= "10") -->
@@ -52,10 +52,4 @@
   </ItemGroup>
 
 <!--#endif-->
-  <ItemGroup>
-    <Content Update="Properties\launchSettings.json">
-      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>
