@@ -58,7 +58,7 @@ The item templates produce a runnable `.razor` file that includes a Telerik Blaz
 
 On **Windows**, the new project templates will appear in the `C#`, `Web` and `Blazor` categories in the **Create New Project** wizard. Make sure to select "**All platforms**" in the respective dropdown.
 
-On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category. Visual Studio for Mac is unable to run .NET 8 Blazor Web Apps with WebAssembly or Auto render mode if .NET 9 is installed. In this case, [edit and run the app through VS Code](#use-with-vs-code) or another compatible IDE.
+On **Mac**, the new project templates will appear in the `Other` &gt; `Custom` category. Visual Studio for Mac is unable to run .NET 8 Blazor Web Apps with WebAssembly or Auto render mode if a newer .NET SDK is installed. In this case, [edit and run the app through VS Code](#use-with-vs-code) or another compatible IDE.
 
 When creating a WebAssembly app, make sure to select the server project as a startup project before running.
 
