@@ -16,7 +16,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Add support for Telerik UI for Blazor 11.3.0.
+* Add support for the official .NET 10.
+* Add support for Telerik UI for Blazor 12.0.0.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
@@ -24,7 +25,7 @@ NEW
     <RepositoryUrl>https://github.com/dimodi/project-templates</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Telerik Blazor Project and Item Templates</Title>
-    <Version>6.4.1</Version>
+    <Version>6.5.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
