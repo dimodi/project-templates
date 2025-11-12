@@ -2081,4 +2081,10 @@
   <data name="Chat_Message_Copied" xml:space="preserve">
     <value>Message copied to clipboard.</value>
   </data>
+  <data name="Chat_Message_Action_Reply" xml:space="preserve">
+    <value>Reply</value>
+  </data>
+  <data name="Chat_Message_Action_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
 </root>
