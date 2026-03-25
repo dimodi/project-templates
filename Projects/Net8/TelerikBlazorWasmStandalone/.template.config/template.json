@@ -92,7 +92,7 @@
     "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "13.0.0",
+      "defaultValue": "13.1.0",
       "description": "Select the Telerik UI for Blazor version.",
       "displayName": "Telerik UI for Blazor version",
       "choices": [
@@ -101,8 +101,8 @@
           "displayName": "Latest as wildcard (no CDN)"
         },
         {
-          "choice": "13.0.0",
-          "displayName": "13.0.0"
+          "choice": "13.1.0",
+          "displayName": "13.1.0"
         },
         {
           "choice": "12.3.0",
