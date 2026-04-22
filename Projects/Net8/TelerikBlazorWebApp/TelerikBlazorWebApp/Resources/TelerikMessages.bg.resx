@@ -859,7 +859,7 @@
     <value>Филтър</value>
   </data>
   <data name="Grid_FilterMenuSettings" xml:space="preserve">
-    <value>{0} колона настройки филтър меню</value>
+    <value>колона настройки филтър меню</value>
   </data>
   <data name="Grid_FilterRowLabel" xml:space="preserve">
     <value>{0} филтър</value>
@@ -2041,5 +2041,77 @@
   </data>
   <data name="Chat_Message_Copied" xml:space="preserve">
     <value>Съобщение, копирано в клипборда.</value>
+  </data>
+  <data name="Chat_Message_Action_Reply" xml:space="preserve">
+    <value>Отговори</value>
+  </data>
+  <data name="Chat_Message_Action_Copy" xml:space="preserve">
+    <value>Копирай</value>
+  </data>
+  <data name="Chat_File_Action_Download" xml:space="preserve">
+    <value>Изтегли</value>
+  </data>
+  <data name="Chat_Message_Download_All" xml:space="preserve">
+    <value>Изтегли всички</value>
+  </data>
+  <data name="Chat_Deleted_Message" xml:space="preserve">
+    <value>Това съобщение беше изтрито.</value>
+  </data>
+  <data name="Chat_Failed_Message" xml:space="preserve">
+    <value>Failed to send.</value>
+  </data>
+  <data name="SmartBox_AIAssistant_NoData" xml:space="preserve">
+    <value>Няма предишни търсения</value>
+  </data>
+  <data name="SmartBox_AIAssistant_Placeholder" xml:space="preserve">
+    <value>Сортирай, филтрирай и групирай с ИИ</value>
+  </data>
+  <data name="SmartBox_AIAssistant_PreviousPrompts" xml:space="preserve">
+    <value>Предишни запитвания</value>
+  </data>
+  <data name="SmartBox_AIAssistant_Title" xml:space="preserve">
+    <value>Асистент с изкуствен интелект</value>
+  </data>
+  <data name="SmartBox_Search_Description" xml:space="preserve">
+    <value>Търси в данните по точно съвпадение на дума в данните</value>
+  </data>
+  <data name="SmartBox_Search_NoData" xml:space="preserve">
+    <value>Няма предишни търсения</value>
+  </data>
+  <data name="SmartBox_Search_Placeholder" xml:space="preserve">
+    <value>Търси</value>
+  </data>
+  <data name="SmartBox_Search_PreviousSearches" xml:space="preserve">
+    <value>Няма предишни търсения</value>
+  </data>
+  <data name="SmartBox_Search_Title" xml:space="preserve">
+    <value>Търси</value>
+  </data>
+  <data name="SmartBox_SemanticSearch_Description" xml:space="preserve">
+    <value>Разбира контекст, за да намери най-подходящите резултати</value>
+  </data>
+  <data name="SmartBox_SemanticSearch_NoData" xml:space="preserve">
+    <value>Няма предишни търсения</value>
+  </data>
+  <data name="SmartBox_SemanticSearch_Placeholder" xml:space="preserve">
+    <value>Семантично търсене</value>
+  </data>
+  <data name="SmartBox_SemanticSearch_PreviousSearches" xml:space="preserve">
+    <value>Предишни търсения</value>
+  </data>
+  <data name="SmartBox_SemanticSearch_Title" xml:space="preserve">
+    <value>Семантично търсене</value>
+  </data>
+  <data name="SmartBox_AIAssistant_SuggestedPrompts" xml:space="preserve">
+    <value>Препоръчани запитвания</value>
+  </data>
+  <data name="TabStrip_PinTab" xml:space="preserve">
+    <value>Закачи</value>
+  </data>
+  <data name="TabStrip_UnpinTab" xml:space="preserve">
+    <value>Откачи</value>
+  </data>
+  <data name="TabStrip_CloseTab" xml:space="preserve">
+    <value>Затвори</value>
   </data>
 </root>
