@@ -19,7 +19,7 @@ namespace TelerikBlazorWasmStandalone.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class TelerikMessages {
@@ -286,11 +286,74 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No data.
+        /// </summary>
+        public static string Chart_NoData {
+            get {
+                return ResourceManager.GetString("Chart_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This message has been deleted..
+        /// </summary>
+        public static string Chat_Deleted_Message {
+            get {
+                return ResourceManager.GetString("Chat_Deleted_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to send..
+        /// </summary>
+        public static string Chat_Failed_Message {
+            get {
+                return ResourceManager.GetString("Chat_Failed_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        public static string Chat_File_Action_Download {
+            get {
+                return ResourceManager.GetString("Chat_File_Action_Download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        public static string Chat_Message_Action_Copy {
+            get {
+                return ResourceManager.GetString("Chat_Message_Action_Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reply.
+        /// </summary>
+        public static string Chat_Message_Action_Reply {
+            get {
+                return ResourceManager.GetString("Chat_Message_Action_Reply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Message copied to clipboard..
         /// </summary>
         public static string Chat_Message_Copied {
             get {
                 return ResourceManager.GetString("Chat_Message_Copied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download All.
+        /// </summary>
+        public static string Chat_Message_Download_All {
+            get {
+                return ResourceManager.GetString("Chat_Message_Download_All", resourceCulture);
             }
         }
         
@@ -853,6 +916,33 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string DropDownTree_Cancel {
+            get {
+                return ResourceManager.GetString("DropDownTree_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string DropDownTree_Clear {
+            get {
+                return ResourceManager.GetString("DropDownTree_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No data.
+        /// </summary>
+        public static string DropDownTree_NoData {
+            get {
+                return ResourceManager.GetString("DropDownTree_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drag and drop files here to upload.
         /// </summary>
         public static string DropZone_Hint {
@@ -1040,15 +1130,6 @@ namespace TelerikBlazorWasmStandalone.Resources {
                 return ResourceManager.GetString("Editor_AI_Prompt_OutputView_Insert", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Use with content.
-        /// </summary>
-        public static string Editor_AI_Prompt_PromptView_ContentButton {
-            get {
-                return ResourceManager.GetString("Editor_AI_Prompt_PromptView_ContentButton", resourceCulture);
-            }
-        }
         
         /// <summary>
         ///   Looks up a localized string similar to Replace.
@@ -1058,7 +1139,16 @@ namespace TelerikBlazorWasmStandalone.Resources {
                 return ResourceManager.GetString("Editor_AI_Prompt_OutputView_Replace", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use with content.
+        /// </summary>
+        public static string Editor_AI_Prompt_PromptView_ContentButton {
+            get {
+                return ResourceManager.GetString("Editor_AI_Prompt_PromptView_ContentButton", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Use with selection.
         /// </summary>
@@ -2851,7 +2941,7 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} column filter menu settings.
+        ///   Looks up a localized string similar to column filter menu settings.
         /// </summary>
         public static string Grid_FilterMenuSettings {
             get {
@@ -3031,7 +3121,7 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clear grouping.
+        ///   Looks up a localized string similar to Clear groups.
         /// </summary>
         public static string Group_Clear_All {
             get {
@@ -3189,6 +3279,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string MultiSelect_Open {
             get {
                 return ResourceManager.GetString("MultiSelect_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use.
+        /// </summary>
+        public static string MultiSelect_Use {
+            get {
+                return ResourceManager.GetString("MultiSelect_Use", resourceCulture);
             }
         }
         
@@ -3661,20 +3760,29 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grand total.
-        /// </summary>
-        public static string PivotGrid_GrandTotal1 {
-            get {
-                return ResourceManager.GetString("PivotGrid_GrandTotal1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Include fields.
         /// </summary>
         public static string PivotGrid_IncludeFields {
             get {
                 return ResourceManager.GetString("PivotGrid_IncludeFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total {0}.
+        /// </summary>
+        public static string PivotGrid_TotalValueFormat {
+            get {
+                return ResourceManager.GetString("PivotGrid_TotalValueFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Total.
+        /// </summary>
+        public static string PivotGrid_ValueTotalFormat {
+            get {
+                return ResourceManager.GetString("PivotGrid_ValueTotalFormat", resourceCulture);
             }
         }
         
@@ -4512,6 +4620,141 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string Slider_Increase {
             get {
                 return ResourceManager.GetString("Slider_Increase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No previous prompts.
+        /// </summary>
+        public static string SmartBox_AIAssistant_NoData {
+            get {
+                return ResourceManager.GetString("SmartBox_AIAssistant_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort, filter, or group with AI.
+        /// </summary>
+        public static string SmartBox_AIAssistant_Placeholder {
+            get {
+                return ResourceManager.GetString("SmartBox_AIAssistant_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previously asked.
+        /// </summary>
+        public static string SmartBox_AIAssistant_PreviousPrompts {
+            get {
+                return ResourceManager.GetString("SmartBox_AIAssistant_PreviousPrompts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Suggested prompts.
+        /// </summary>
+        public static string SmartBox_AIAssistant_SuggestedPrompts {
+            get {
+                return ResourceManager.GetString("SmartBox_AIAssistant_SuggestedPrompts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AI Assistant.
+        /// </summary>
+        public static string SmartBox_AIAssistant_Title {
+            get {
+                return ResourceManager.GetString("SmartBox_AIAssistant_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Looks for exact word matches across data.
+        /// </summary>
+        public static string SmartBox_Search_Description {
+            get {
+                return ResourceManager.GetString("SmartBox_Search_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No previous searches.
+        /// </summary>
+        public static string SmartBox_Search_NoData {
+            get {
+                return ResourceManager.GetString("SmartBox_Search_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string SmartBox_Search_Placeholder {
+            get {
+                return ResourceManager.GetString("SmartBox_Search_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previously searched.
+        /// </summary>
+        public static string SmartBox_Search_PreviousSearches {
+            get {
+                return ResourceManager.GetString("SmartBox_Search_PreviousSearches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string SmartBox_Search_Title {
+            get {
+                return ResourceManager.GetString("SmartBox_Search_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Understands context to surface the most relevant results.
+        /// </summary>
+        public static string SmartBox_SemanticSearch_Description {
+            get {
+                return ResourceManager.GetString("SmartBox_SemanticSearch_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No previous searches.
+        /// </summary>
+        public static string SmartBox_SemanticSearch_NoData {
+            get {
+                return ResourceManager.GetString("SmartBox_SemanticSearch_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semantic search.
+        /// </summary>
+        public static string SmartBox_SemanticSearch_Placeholder {
+            get {
+                return ResourceManager.GetString("SmartBox_SemanticSearch_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previously searched.
+        /// </summary>
+        public static string SmartBox_SemanticSearch_PreviousSearches {
+            get {
+                return ResourceManager.GetString("SmartBox_SemanticSearch_PreviousSearches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semantic search.
+        /// </summary>
+        public static string SmartBox_SemanticSearch_Title {
+            get {
+                return ResourceManager.GetString("SmartBox_SemanticSearch_Title", resourceCulture);
             }
         }
         
@@ -5412,6 +5655,24 @@ namespace TelerikBlazorWasmStandalone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string TabStrip_CloseTab {
+            get {
+                return ResourceManager.GetString("TabStrip_CloseTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pin.
+        /// </summary>
+        public static string TabStrip_PinTab {
+            get {
+                return ResourceManager.GetString("TabStrip_PinTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show Next Tabs.
         /// </summary>
         public static string TabStrip_ShowNextTabs {
@@ -5426,6 +5687,15 @@ namespace TelerikBlazorWasmStandalone.Resources {
         public static string TabStrip_ShowPreviousTabs {
             get {
                 return ResourceManager.GetString("TabStrip_ShowPreviousTabs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unpin.
+        /// </summary>
+        public static string TabStrip_UnpinTab {
+            get {
+                return ResourceManager.GetString("TabStrip_UnpinTab", resourceCulture);
             }
         }
         
