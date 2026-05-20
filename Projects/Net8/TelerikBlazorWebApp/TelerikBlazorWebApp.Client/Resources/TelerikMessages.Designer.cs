@@ -212,7 +212,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("AutoComplete_NoData", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Breadcrumb.
+        /// </summary>
+        public static string Breadcrumb_AriaLabel {
+            get {
+                return ResourceManager.GetString("Breadcrumb_AriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Choose a decade.
         /// </summary>
@@ -392,7 +401,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("ColorGradient_AriaLabel", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to selecting color saturation and lightness, currently selected X:{0} and Y:{1}.
+        /// </summary>
+        public static string ColorGradient_DragHandleAriaLabel {
+            get {
+                return ResourceManager.GetString("ColorGradient_DragHandleAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Hue slider value.
         /// </summary>
@@ -1301,7 +1319,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Editor_DialogUpdate", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Div edit mode.
+        /// </summary>
+        public static string Editor_DivEditModeAriaLabel {
+            get {
+                return ResourceManager.GetString("Editor_DivEditModeAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Font Name.
         /// </summary>
@@ -1436,7 +1463,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Editor_Italic", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Iframe edit mode.
+        /// </summary>
+        public static string Editor_IframeEditModeAriaLabel {
+            get {
+                return ResourceManager.GetString("Editor_IframeEditModeAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Open in new window.
         /// </summary>
@@ -2696,7 +2732,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Gantt_Save", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select a timeline view.
+        /// </summary>
+        public static string Gantt_SelectTimelineViewAriaLabel {
+            get {
+                return ResourceManager.GetString("Gantt_SelectTimelineViewAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Week.
         /// </summary>
@@ -2912,7 +2957,25 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Grid_DragRowLabel", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to drag.
+        /// </summary>
+        public static string Grid_DragCellAriaLabel {
+            get {
+                return ResourceManager.GetString("Grid_DragCellAriaLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to draggable.
+        /// </summary>
+        public static string Grid_DraggableHeaderLabel {
+            get {
+                return ResourceManager.GetString("Grid_DraggableHeaderLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
@@ -2966,7 +3029,25 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Grid_GroupHeaderLabel", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to groupable.
+        /// </summary>
+        public static string Grid_GroupableHeaderLabel {
+            get {
+                return ResourceManager.GetString("Grid_GroupableHeaderLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to hierarchy.
+        /// </summary>
+        public static string Grid_HierarchyHeaderLabel {
+            get {
+                return ResourceManager.GetString("Grid_HierarchyHeaderLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Lock.
         /// </summary>
@@ -3983,7 +4064,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Scheduler_Day", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0}, Starts at {1}, Ends at {2}.
+        /// </summary>
+        public static string Scheduler_DayAppointmentAriaLabel {
+            get {
+                return ResourceManager.GetString("Scheduler_DayAppointmentAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
@@ -4136,7 +4226,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Scheduler_MultiDay", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to More events.
+        /// </summary>
+        public static string Scheduler_MoreEventsAriaLabel {
+            get {
+                return ResourceManager.GetString("Scheduler_MoreEventsAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
@@ -4163,7 +4262,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("Scheduler_Previous", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select a view.
+        /// </summary>
+        public static string Scheduler_SelectViewAriaLabel {
+            get {
+                return ResourceManager.GetString("Scheduler_SelectViewAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Do you want to delete only this event occurrence or the whole series?.
         /// </summary>
@@ -5700,6 +5808,294 @@ namespace TelerikBlazorWebApp.Client.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Toolbar.
+        /// </summary>
+        public static string TaskBoard_ToolBar_AriaLabel {
+            get {
+                return ResourceManager.GetString("TaskBoard_ToolBar_AriaLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Column.
+        /// </summary>
+        public static string TaskBoard_ToolBar_AddColumn {
+            get {
+                return ResourceManager.GetString("TaskBoard_ToolBar_AddColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search....
+        /// </summary>
+        public static string TaskBoard_SearchBox_Placeholder {
+            get {
+                return ResourceManager.GetString("TaskBoard_SearchBox_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit column.
+        /// </summary>
+        public static string TaskBoard_Column_Edit {
+            get {
+                return ResourceManager.GetString("TaskBoard_Column_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add card.
+        /// </summary>
+        public static string TaskBoard_Column_AddCard {
+            get {
+                return ResourceManager.GetString("TaskBoard_Column_AddCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete column.
+        /// </summary>
+        public static string TaskBoard_Column_Delete {
+            get {
+                return ResourceManager.GetString("TaskBoard_Column_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card actions.
+        /// </summary>
+        public static string TaskBoard_Card_Actions {
+            get {
+                return ResourceManager.GetString("TaskBoard_Card_Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit column name....
+        /// </summary>
+        public static string TaskBoard_Column_EditPlaceholder {
+            get {
+                return ResourceManager.GetString("TaskBoard_Column_EditPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save column.
+        /// </summary>
+        public static string TaskBoard_Column_SaveEdit {
+            get {
+                return ResourceManager.GetString("TaskBoard_Column_SaveEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel edit.
+        /// </summary>
+        public static string TaskBoard_Column_CancelEdit {
+            get {
+                return ResourceManager.GetString("TaskBoard_Column_CancelEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Card.
+        /// </summary>
+        public static string TaskBoard_Pane_AddCard {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_AddCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string TaskBoard_Pane_TitleLabel {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_TitleLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Title cannot be empty.
+        /// </summary>
+        public static string TaskBoard_Pane_TitleEmptyValidation {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_TitleEmptyValidation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string TaskBoard_Pane_DescriptionLabel {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_DescriptionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Priority.
+        /// </summary>
+        public static string TaskBoard_Pane_PriorityLabel {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_PriorityLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string TaskBoard_Pane_Close {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string TaskBoard_Pane_Delete {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string TaskBoard_Pane_Update {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit card.
+        /// </summary>
+        public static string TaskBoard_Pane_EditCardTitle {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_EditCardTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string TaskBoard_Pane_Save {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string TaskBoard_Pane_Cancel {
+            get {
+                return ResourceManager.GetString("TaskBoard_Pane_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Card.
+        /// </summary>
+        public static string TaskBoard_Card_EditCard {
+            get {
+                return ResourceManager.GetString("TaskBoard_Card_EditCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Card.
+        /// </summary>
+        public static string TaskBoard_Card_DeleteCard {
+            get {
+                return ResourceManager.GetString("TaskBoard_Card_DeleteCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteCardCancel {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteCardCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteCardOk {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteCardOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this card?
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteCardText {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteCardText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete card.
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteCardTitle {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteCardTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteColumnCancel {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteColumnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteColumnOk {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteColumnOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this column?
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteColumnText {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteColumnText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete column.
+        /// </summary>
+        public static string TaskBoard_ConfirmDeleteColumnTitle {
+            get {
+                return ResourceManager.GetString("TaskBoard_ConfirmDeleteColumnTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Column {0}.
+        /// </summary>
+        public static string TaskBoard_NewColumn_Title {
+            get {
+                return ResourceManager.GetString("TaskBoard_NewColumn_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
         public static string TextBox_Clear {
@@ -5923,7 +6319,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("TreeList_DialogClose", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to drag.
+        /// </summary>
+        public static string TreeList_DragCellAriaLabel {
+            get {
+                return ResourceManager.GetString("TreeList_DragCellAriaLabel", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
@@ -5932,7 +6337,16 @@ namespace TelerikBlazorWebApp.Client.Resources {
                 return ResourceManager.GetString("TreeList_Edit", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Filter.
+        /// </summary>
+        public static string TreeList_Filter {
+            get {
+                return ResourceManager.GetString("TreeList_Filter", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to No records available..
         /// </summary>
