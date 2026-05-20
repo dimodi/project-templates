@@ -141,6 +141,9 @@
   <data name="AutoComplete_NoData" xml:space="preserve">
     <value>No data</value>
   </data>
+  <data name="Breadcrumb_AriaLabel" xml:space="preserve">
+    <value>Breadcrumb</value>
+  </data>
   <data name="Calendar_Choose_Decade" xml:space="preserve">
     <value>Choose a decade</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="ColorGradient_AlphaSlider_Label" xml:space="preserve">
     <value>Alpha slider value</value>
+  </data>
+  <data name="ColorGradient_DragHandleAriaLabel" xml:space="preserve">
+    <value>selecting color saturation and lightness, currently selected X:{0} and Y:{1}</value>
   </data>
   <data name="ColorGradient_HueSlider_Label" xml:space="preserve">
     <value>Hue slider value</value>
@@ -375,6 +381,9 @@
   <data name="Editor_DialogUpdate" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="Editor_DivEditModeAriaLabel" xml:space="preserve">
+    <value>Div edit mode</value>
+  </data>
   <data name="Editor_FontFamily" xml:space="preserve">
     <value>Font Name</value>
   </data>
@@ -419,6 +428,9 @@
   </data>
   <data name="Editor_Italic" xml:space="preserve">
     <value>Italic</value>
+  </data>
+  <data name="Editor_IframeEditModeAriaLabel" xml:space="preserve">
+    <value>Iframe edit mode</value>
   </data>
   <data name="Editor_LinkOpenNewWindow" xml:space="preserve">
     <value>Open in new window</value>
@@ -786,6 +798,9 @@
   <data name="Gantt_Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Gantt_SelectTimelineViewAriaLabel" xml:space="preserve">
+    <value>Select a timeline view</value>
+  </data>
   <data name="Gantt_Week" xml:space="preserve">
     <value>Week</value>
   </data>
@@ -852,6 +867,12 @@
   <data name="Grid_DragRowLabel" xml:space="preserve">
     <value>Drag row</value>
   </data>
+  <data name="Grid_DragCellAriaLabel" xml:space="preserve">
+    <value>drag</value>
+  </data>
+  <data name="Grid_DraggableHeaderLabel" xml:space="preserve">
+    <value>draggable</value>
+  </data>
   <data name="Grid_Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
@@ -869,6 +890,12 @@
   </data>
   <data name="Grid_GroupHeaderLabel" xml:space="preserve">
     <value>Grid group header</value>
+  </data>
+  <data name="Grid_GroupableHeaderLabel" xml:space="preserve">
+    <value>groupable</value>
+  </data>
+  <data name="Grid_HierarchyHeaderLabel" xml:space="preserve">
+    <value>hierarchy</value>
   </data>
   <data name="Grid_Lock" xml:space="preserve">
     <value>Lock</value>
@@ -1065,6 +1092,9 @@
   <data name="Scheduler_Day" xml:space="preserve">
     <value>Day</value>
   </data>
+  <data name="Scheduler_DayAppointmentAriaLabel" xml:space="preserve">
+    <value>{0}, Starts at {1}, Ends at {2}</value>
+  </data>
   <data name="Scheduler_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -1113,11 +1143,17 @@
   <data name="Scheduler_MultiDay" xml:space="preserve">
     <value>MultiDay</value>
   </data>
+  <data name="Scheduler_MoreEventsAriaLabel" xml:space="preserve">
+    <value>More events</value>
+  </data>
   <data name="Scheduler_Next" xml:space="preserve">
     <value>Next</value>
   </data>
   <data name="Scheduler_Previous" xml:space="preserve">
     <value>Previous</value>
+  </data>
+  <data name="Scheduler_SelectViewAriaLabel" xml:space="preserve">
+    <value>Select a view</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteRecurring" xml:space="preserve">
     <value>Do you want to delete only this event occurrence or the whole series?</value>
@@ -1287,6 +1323,102 @@
   <data name="TabStrip_ShowPreviousTabs" xml:space="preserve">
     <value>Show Previous Tabs</value>
   </data>
+  <data name="TaskBoard_ToolBar_AriaLabel" xml:space="preserve">
+    <value>Toolbar</value>
+  </data>
+  <data name="TaskBoard_ToolBar_AddColumn" xml:space="preserve">
+    <value>Add Column</value>
+  </data>
+  <data name="TaskBoard_SearchBox_Placeholder" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="TaskBoard_Column_Edit" xml:space="preserve">
+    <value>Edit column</value>
+  </data>
+  <data name="TaskBoard_Column_AddCard" xml:space="preserve">
+    <value>Add card</value>
+  </data>
+  <data name="TaskBoard_Column_Delete" xml:space="preserve">
+    <value>Delete column</value>
+  </data>
+  <data name="TaskBoard_Card_Actions" xml:space="preserve">
+    <value>Card actions</value>
+  </data>
+  <data name="TaskBoard_Column_EditPlaceholder" xml:space="preserve">
+    <value>Edit column name...</value>
+  </data>
+  <data name="TaskBoard_Column_SaveEdit" xml:space="preserve">
+    <value>Save column</value>
+  </data>
+  <data name="TaskBoard_Column_CancelEdit" xml:space="preserve">
+    <value>Cancel edit</value>
+  </data>
+  <data name="TaskBoard_Pane_AddCard" xml:space="preserve">
+    <value>Add Card</value>
+  </data>
+  <data name="TaskBoard_Pane_TitleLabel" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TaskBoard_Pane_TitleEmptyValidation" xml:space="preserve">
+    <value>Title cannot be empty</value>
+  </data>
+  <data name="TaskBoard_Pane_DescriptionLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TaskBoard_Pane_PriorityLabel" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="TaskBoard_Pane_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="TaskBoard_Pane_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="TaskBoard_Pane_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="TaskBoard_Pane_EditCardTitle" xml:space="preserve">
+    <value>Edit card</value>
+  </data>
+  <data name="TaskBoard_Pane_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="TaskBoard_Pane_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TaskBoard_Card_EditCard" xml:space="preserve">
+    <value>Edit Card</value>
+  </data>
+  <data name="TaskBoard_Card_DeleteCard" xml:space="preserve">
+    <value>Delete Card</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardText" xml:space="preserve">
+    <value>Are you sure you want to delete this card?</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardTitle" xml:space="preserve">
+    <value>Delete card</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnText" xml:space="preserve">
+    <value>Are you sure you want to delete this column?</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnTitle" xml:space="preserve">
+    <value>Delete column</value>
+  </data>
+  <data name="TaskBoard_NewColumn_Title" xml:space="preserve">
+    <value>New Column {0}</value>
+  </data>
   <data name="TimePicker_Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -1359,8 +1491,14 @@
   <data name="TreeList_DialogClose" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="TreeList_DragCellAriaLabel" xml:space="preserve">
+    <value>drag</value>
+  </data>
   <data name="TreeList_Edit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="TreeList_Filter" xml:space="preserve">
+    <value>Filter</value>
   </data>
   <data name="TreeList_NoRecords" xml:space="preserve">
     <value>No records available.</value>

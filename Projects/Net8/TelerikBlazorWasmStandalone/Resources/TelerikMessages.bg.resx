@@ -2111,7 +2111,145 @@
   <data name="TabStrip_UnpinTab" xml:space="preserve">
     <value>Откачи</value>
   </data>
+  <data name="Breadcrumb_AriaLabel" xml:space="preserve">
+    <value>Навигационна пътека</value>
+  </data>
+  <data name="ColorGradient_DragHandleAriaLabel" xml:space="preserve">
+    <value>избиране на наситеност и яркост на цвета, текущо избрани X:{0} и Y:{1}</value>
+  </data>
+  <data name="Editor_DivEditModeAriaLabel" xml:space="preserve">
+    <value>Режим на редактиране Div</value>
+  </data>
+  <data name="Editor_IframeEditModeAriaLabel" xml:space="preserve">
+    <value>Режим на редактиране Iframe</value>
+  </data>
+  <data name="Gantt_SelectTimelineViewAriaLabel" xml:space="preserve">
+    <value>Изберете изглед на времевата линия</value>
+  </data>
+  <data name="Grid_DragCellAriaLabel" xml:space="preserve">
+    <value>плъзгане</value>
+  </data>
+  <data name="Grid_DraggableHeaderLabel" xml:space="preserve">
+    <value>плъзгащо</value>
+  </data>
+  <data name="Grid_GroupableHeaderLabel" xml:space="preserve">
+    <value>групируемо</value>
+  </data>
+  <data name="Grid_HierarchyHeaderLabel" xml:space="preserve">
+    <value>йерархия</value>
+  </data>
+  <data name="Scheduler_DayAppointmentAriaLabel" xml:space="preserve">
+    <value>{0}, Започва в {1}, Завършва в {2}</value>
+  </data>
+  <data name="Scheduler_MoreEventsAriaLabel" xml:space="preserve">
+    <value>Още събития</value>
+  </data>
+  <data name="Scheduler_SelectViewAriaLabel" xml:space="preserve">
+    <value>Изберете изглед</value>
+  </data>
+  <data name="TreeList_DragCellAriaLabel" xml:space="preserve">
+    <value>плъзгане</value>
+  </data>
+  <data name="TreeList_Filter" xml:space="preserve">
+    <value>Филтър</value>
+  </data>
   <data name="TabStrip_CloseTab" xml:space="preserve">
     <value>Затвори</value>
+  </data>
+  <data name="TaskBoard_Card_Actions" xml:space="preserve">
+    <value>Действия с картата</value>
+  </data>
+  <data name="TaskBoard_Card_DeleteCard" xml:space="preserve">
+    <value>Изтрий карта</value>
+  </data>
+  <data name="TaskBoard_Card_EditCard" xml:space="preserve">
+    <value>Редактирай карта</value>
+  </data>
+  <data name="TaskBoard_Column_AddCard" xml:space="preserve">
+    <value>Добави карта</value>
+  </data>
+  <data name="TaskBoard_Column_CancelEdit" xml:space="preserve">
+    <value>Откажи редакцията</value>
+  </data>
+  <data name="TaskBoard_Column_Delete" xml:space="preserve">
+    <value>Изтрий колона</value>
+  </data>
+  <data name="TaskBoard_Column_Edit" xml:space="preserve">
+    <value>Редактирай колона</value>
+  </data>
+  <data name="TaskBoard_Column_EditPlaceholder" xml:space="preserve">
+    <value>Редактирай името на колоната...</value>
+  </data>
+  <data name="TaskBoard_Column_SaveEdit" xml:space="preserve">
+    <value>Запази колоната</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardCancel" xml:space="preserve">
+    <value>Откажи</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardOk" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardText" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете тази карта?</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteCardTitle" xml:space="preserve">
+    <value>Изтрий карта</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnCancel" xml:space="preserve">
+    <value>Откажи</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnOk" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnText" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете тази колона?</value>
+  </data>
+  <data name="TaskBoard_ConfirmDeleteColumnTitle" xml:space="preserve">
+    <value>Изтрий колона</value>
+  </data>
+  <data name="TaskBoard_NewColumn_Title" xml:space="preserve">
+    <value>Нова колона {0}</value>
+  </data>
+  <data name="TaskBoard_Pane_AddCard" xml:space="preserve">
+    <value>Добави карта</value>
+  </data>
+  <data name="TaskBoard_Pane_Cancel" xml:space="preserve">
+    <value>Откажи</value>
+  </data>
+  <data name="TaskBoard_Pane_Close" xml:space="preserve">
+    <value>Затвори</value>
+  </data>
+  <data name="TaskBoard_Pane_Delete" xml:space="preserve">
+    <value>Изтрий</value>
+  </data>
+  <data name="TaskBoard_Pane_DescriptionLabel" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="TaskBoard_Pane_EditCardTitle" xml:space="preserve">
+    <value>Редактирай карта</value>
+  </data>
+  <data name="TaskBoard_Pane_PriorityLabel" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="TaskBoard_Pane_Save" xml:space="preserve">
+    <value>Запази</value>
+  </data>
+  <data name="TaskBoard_Pane_TitleEmptyValidation" xml:space="preserve">
+    <value>Заглавието не може да е празно</value>
+  </data>
+  <data name="TaskBoard_Pane_TitleLabel" xml:space="preserve">
+    <value>Заглавие</value>
+  </data>
+  <data name="TaskBoard_Pane_Update" xml:space="preserve">
+    <value>Запази</value>
+  </data>
+  <data name="TaskBoard_SearchBox_Placeholder" xml:space="preserve">
+    <value>Търси...</value>
+  </data>
+  <data name="TaskBoard_ToolBar_AddColumn" xml:space="preserve">
+    <value>Добави колона</value>
+  </data>
+  <data name="TaskBoard_ToolBar_AriaLabel" xml:space="preserve">
+    <value>Лента с инструменти</value>
   </data>
 </root>
