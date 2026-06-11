@@ -22,22 +22,26 @@ namespace TelerikBlazorWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Save(IFormFile files)
         {
-            if (files != null)
+            if (files is null)
             {
-                try
-                {
-                    string saveLocation = Path.Combine(RootPath, files.FileName);
+                Response.StatusCode = 400;
+                await Response.WriteAsync("No file to upload.");
+                return new EmptyResult();
+            }
 
-                    using FileStream fs = new(saveLocation, FileMode.Create);
-                    await files.CopyToAsync(fs);
+            try
+            {
+                string saveLocation = Path.Combine(RootPath, files.FileName);
 
-                    Response.StatusCode = 201;
-                }
-                catch (Exception ex)
-                {
-                    Response.StatusCode = 500;
-                    await Response.WriteAsync($"Upload failed: {ex.Message}");
-                }
+                using FileStream fs = new(saveLocation, FileMode.Create);
+                await files.CopyToAsync(fs);
+
+                Response.StatusCode = 201;
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                await Response.WriteAsync($"Upload failed: {ex.Message}");
             }
 
             return new EmptyResult();
@@ -46,30 +50,34 @@ namespace TelerikBlazorWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> SaveChunk(IFormFile files, [FromForm] string chunkMetadata)
         {
-            if (files != null)
+            if (files is null)
             {
-                try
+                Response.StatusCode = 400;
+                await Response.WriteAsync("No file to upload.");
+                return new EmptyResult();
+            }
+
+            try
+            {
+                DataContractJsonSerializer dcSerializer = new(typeof(ChunkMetadata));
+                MemoryStream ms = new(Encoding.UTF8.GetBytes(chunkMetadata));
+
+                if (dcSerializer.ReadObject(ms) is not ChunkMetadata metadata)
                 {
-                    DataContractJsonSerializer dcSerializer = new(typeof(ChunkMetadata));
-                    MemoryStream ms = new(Encoding.UTF8.GetBytes(chunkMetadata));
-
-                    if (dcSerializer.ReadObject(ms) is not ChunkMetadata metadata)
-                    {
-                        throw new NullReferenceException("Chunk metadata serialization failed.");
-                    }
-
-                    string saveLocation = Path.Combine(RootPath, metadata.FileName);
-
-                    using FileStream fs = new(saveLocation, FileMode.Append);
-                    await files.CopyToAsync(fs);
-
-                    Response.StatusCode = 201;
+                    throw new NullReferenceException("Chunk metadata serialization failed.");
                 }
-                catch (Exception ex)
-                {
-                    Response.StatusCode = 500;
-                    await Response.WriteAsync($"Upload failed: {ex.Message}");
-                }
+
+                string saveLocation = Path.Combine(RootPath, metadata.FileName);
+
+                using FileStream fs = new(saveLocation, metadata.ChunkIndex == 0 ? FileMode.Create : FileMode.Append);
+                await files.CopyToAsync(fs);
+
+                Response.StatusCode = 201;
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                await Response.WriteAsync($"Upload failed: {ex.Message}");
             }
 
             return new EmptyResult();
@@ -78,22 +86,26 @@ namespace TelerikBlazorWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Remove([FromForm] string files)
         {
-            if (files != null)
+            if (string.IsNullOrEmpty(files?.Trim()))
             {
-                try
-                {
-                    string fileLocation = Path.Combine(RootPath, files);
+                Response.StatusCode = 400;
+                await Response.WriteAsync("No file to delete.");
+                return new EmptyResult();
+            }
 
-                    if (System.IO.File.Exists(fileLocation))
-                    {
-                        System.IO.File.Delete(fileLocation);
-                    }
-                }
-                catch (Exception ex)
+            try
+            {
+                string fileLocation = Path.Combine(RootPath, files);
+
+                if (System.IO.File.Exists(fileLocation))
                 {
-                    Response.StatusCode = 500;
-                    await Response.WriteAsync($"Delete failed: {ex.Message}");
+                    System.IO.File.Delete(fileLocation);
                 }
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                await Response.WriteAsync($"Delete failed: {ex.Message}");
             }
 
             return new EmptyResult();
