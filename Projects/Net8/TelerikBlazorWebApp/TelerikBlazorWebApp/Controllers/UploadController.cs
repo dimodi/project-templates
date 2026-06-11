@@ -60,7 +60,7 @@ public class UploadController : ControllerBase
         try
         {
             DataContractJsonSerializer dcSerializer = new(typeof(ChunkMetadata));
-            MemoryStream ms = new(Encoding.UTF8.GetBytes(chunkMetadata));
+            using MemoryStream ms = new(Encoding.UTF8.GetBytes(chunkMetadata));
 
             if (dcSerializer.ReadObject(ms) is not ChunkMetadata metadata)
             {

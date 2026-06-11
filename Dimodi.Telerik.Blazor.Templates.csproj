@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
 FIXED
 * Create a new file instead of appending on first chunk upload.
+* Use simpler namespace declaration syntax in controllers.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
