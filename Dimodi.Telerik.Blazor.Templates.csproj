@@ -15,9 +15,12 @@
     <PackageProjectUrl>https://github.com/dimodi/project-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
+NEW
+* Add support for Telerik UI for Blazor 14.1.0.
+* Use simpler namespace declaration syntax in controllers.
+
 FIXED
 * Create a new file instead of appending on first chunk upload.
-* Use simpler namespace declaration syntax in controllers.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
