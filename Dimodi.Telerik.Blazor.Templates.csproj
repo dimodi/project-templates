@@ -16,11 +16,11 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
 NEW
-* Add support for Telerik UI for Blazor 14.1.0.
-* Use simpler namespace declaration syntax in controllers.
+* ...
 
-FIXED
-* Create a new file instead of appending on first chunk upload.
+BREAKING CHANGES
+* Change default .NET version to 10.
+* Drop support for .NET 9.
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Telerik;Blazor;dotnet-new;templates</PackageTags>
