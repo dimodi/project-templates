@@ -1074,6 +1074,9 @@
   <data name="Scheduler_Editor_EditorTitle" xml:space="preserve">
     <value>Събитие</value>
   </data>
+  <data name="Scheduler_Editor_EditEventTitle" xml:space="preserve">
+    <value>Редактирай събитие</value>
+  </data>
   <data name="Scheduler_Editor_End" xml:space="preserve">
     <value>Край</value>
   </data>
@@ -1117,7 +1120,7 @@
     <value>Предишен</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteRecurring" xml:space="preserve">
-    <value>Сигурен ли сте че искате да изтриете това събитие или цялата серия?</value>
+    <value>Искате ли да премахнете повторението?</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteWindowOccurrence" xml:space="preserve">
     <value>Изтрии единично събитие</value>
@@ -1126,7 +1129,31 @@
     <value>Изтрии серията</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteWindowTitle" xml:space="preserve">
-    <value>Изтриване на повтарящо се събитие</value>
+    <value>Премахване на повторението</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmation" xml:space="preserve">
+    <value>Изтриване на събитие</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmationText" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете това събитие?</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmationYes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmationNo" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmation" xml:space="preserve">
+    <value>Изтриване на серия</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmationText" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете цялата серия?</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmationYes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmationNo" xml:space="preserve">
+    <value>Не</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Daily_Interval" xml:space="preserve">
     <value> ден(дни)</value>
@@ -1150,22 +1177,22 @@
     <value>На </value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Daily" xml:space="preserve">
-    <value>Ежедневно</value>
+    <value>Ден</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Monthly" xml:space="preserve">
-    <value>Месечно</value>
+    <value>Месец</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Never" xml:space="preserve">
     <value>Никога</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Weekly" xml:space="preserve">
-    <value>Седмично</value>
+    <value>Седмица</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Yearly" xml:space="preserve">
-    <value>Годишно</value>
+    <value>Година</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Monthly_Day" xml:space="preserve">
-    <value>Ден </value>
+    <value>Ден от месеца</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Monthly_Interval" xml:space="preserve">
     <value> месец(и)</value>
@@ -1177,28 +1204,28 @@
     <value>Повтаряй на: </value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_First" xml:space="preserve">
-    <value>първи(а)</value>
+    <value>Първи(а)</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Fourth" xml:space="preserve">
-    <value>четвърти(та)</value>
+    <value>Четвърти(та)</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Last" xml:space="preserve">
-    <value>последен(на)</value>
+    <value>Последен(на)</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Second" xml:space="preserve">
-    <value>втори(а)</value>
+    <value>Втори(а)</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Third" xml:space="preserve">
-    <value>трети(та)</value>
+    <value>Трети(та)</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekdays_Day" xml:space="preserve">
-    <value>ден</value>
+    <value>Ден</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekdays_Weekday" xml:space="preserve">
-    <value>делник</value>
+    <value>Делник</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekdays_Weekend" xml:space="preserve">
-    <value>почивен ден</value>
+    <value>Почивен ден</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekly_Interval" xml:space="preserve">
     <value> седмица(и)</value>
@@ -1233,6 +1260,57 @@
   <data name="Scheduler_Recurrence_EditWindowTitle" xml:space="preserve">
     <value>Промяна на повтарящо се действие</value>
   </data>
+  <data name="Scheduler_Recurrence_Editor_Title" xml:space="preserve">
+    <value>Повтарящо се</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RepeatEvery" xml:space="preserve">
+    <value>Повтори всеки</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Interval" xml:space="preserve">
+    <value>Интервал</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_FrequencyLabel" xml:space="preserve">
+    <value>Честота</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_EndCondition" xml:space="preserve">
+    <value>Условие за край</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Position" xml:space="preserve">
+    <value>Позиция</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_DayType" xml:space="preserve">
+    <value>Тип ден</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Month" xml:space="preserve">
+    <value>Месец</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Day" xml:space="preserve">
+    <value>Ден</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrence" xml:space="preserve">
+    <value>Премахни повторението</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrenceConfirmationText" xml:space="preserve">
+    <value>Искате ли да премахнете повторението?</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrenceConfirmationYes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrenceConfirmationNo" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_EndDateAriaLabel" xml:space="preserve">
+    <value>Крайна дата</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_OccurrencesAriaLabel" xml:space="preserve">
+    <value>Брой повторения</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RepeatOnWeekDayAriaLabel" xml:space="preserve">
+    <value>Ден от седмицата</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RepeatOnMonthDayAriaLabel" xml:space="preserve">
+    <value>Ден от месеца</value>
+  </data>
   <data name="Scheduler_Save" xml:space="preserve">
     <value>Запази</value>
   </data>
@@ -1244,6 +1322,9 @@
   </data>
   <data name="Scheduler_Timeline" xml:space="preserve">
     <value>Таймлайн</value>
+  </data>
+  <data name="Scheduler_NewEvent" xml:space="preserve">
+    <value>Ново събитие</value>
   </data>
   <data name="Scheduler_Today" xml:space="preserve">
     <value>Днес</value>
@@ -1616,6 +1697,9 @@
   </data>
   <data name="MultiSelect_Open" xml:space="preserve">
     <value>Отвори</value>
+  </data>
+  <data name="MultiSelect_SelectAll" xml:space="preserve">
+    <value>Избери всички</value>
   </data>
   <data name="Filter_Expression_Options" xml:space="preserve">
     <value>Филтър Оператори</value>
@@ -2144,6 +2228,9 @@
   <data name="Scheduler_MoreEventsAriaLabel" xml:space="preserve">
     <value>Още събития</value>
   </data>
+  <data name="Scheduler_MoreEventsCountText" xml:space="preserve">
+    <value>Още {0}</value>
+  </data>
   <data name="Scheduler_SelectViewAriaLabel" xml:space="preserve">
     <value>Изберете изглед</value>
   </data>
@@ -2251,5 +2338,20 @@
   </data>
   <data name="TaskBoard_ToolBar_AriaLabel" xml:space="preserve">
     <value>Лента с инструменти</value>
+  </data>
+  <data name="Scheduler_Editor_DateFrom" xml:space="preserve">
+    <value>от</value>
+  </data>
+  <data name="Scheduler_Editor_DateTo" xml:space="preserve">
+    <value>до</value>
+  </data>
+  <data name="Scheduler_Editor_MakeRecurring" xml:space="preserve">
+    <value>Направи повтарящо се</value>
+  </data>
+  <data name="Scheduler_Editor_TimeZone" xml:space="preserve">
+    <value>Часова зона</value>
+  </data>
+  <data name="Scheduler_Editor_ResetTimeZone" xml:space="preserve">
+    <value>Нулиране на часова зона</value>
   </data>
 </root>
