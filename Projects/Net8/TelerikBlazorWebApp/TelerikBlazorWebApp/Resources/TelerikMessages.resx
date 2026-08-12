@@ -940,7 +940,7 @@
     <value>Unlock</value>
   </data>
   <data name="Grid_Update" xml:space="preserve">
-    <value>Update</value>
+    <value>Save</value>
   </data>
   <data name="Group_Empty" xml:space="preserve">
     <value>Drag a column header and drop it here to group by that column</value>
@@ -1107,6 +1107,9 @@
   <data name="Scheduler_Editor_EditorTitle" xml:space="preserve">
     <value>Event</value>
   </data>
+  <data name="Scheduler_Editor_EditEventTitle" xml:space="preserve">
+    <value>Edit Event</value>
+  </data>
   <data name="Scheduler_Editor_End" xml:space="preserve">
     <value>End</value>
   </data>
@@ -1137,6 +1140,21 @@
   <data name="Scheduler_Editor_TitleRequiredValidationMessage" xml:space="preserve">
     <value>Title is required.</value>
   </data>
+  <data name="Scheduler_Editor_DateFrom" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="Scheduler_Editor_DateTo" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="Scheduler_Editor_MakeRecurring" xml:space="preserve">
+    <value>Make recurring</value>
+  </data>
+  <data name="Scheduler_Editor_TimeZone" xml:space="preserve">
+    <value>Time zone</value>
+  </data>
+  <data name="Scheduler_Editor_ResetTimeZone" xml:space="preserve">
+    <value>Reset time zone</value>
+  </data>
   <data name="Scheduler_Month" xml:space="preserve">
     <value>Month</value>
   </data>
@@ -1145,6 +1163,9 @@
   </data>
   <data name="Scheduler_MoreEventsAriaLabel" xml:space="preserve">
     <value>More events</value>
+  </data>
+  <data name="Scheduler_MoreEventsCountText" xml:space="preserve">
+    <value>{0} more</value>
   </data>
   <data name="Scheduler_Next" xml:space="preserve">
     <value>Next</value>
@@ -1156,7 +1177,7 @@
     <value>Select a view</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteRecurring" xml:space="preserve">
-    <value>Do you want to delete only this event occurrence or the whole series?</value>
+    <value>Do you want to remove the recurrence?</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteWindowOccurrence" xml:space="preserve">
     <value>Delete current occurrence</value>
@@ -1165,7 +1186,31 @@
     <value>Delete the series</value>
   </data>
   <data name="Scheduler_Recurrence_DeleteWindowTitle" xml:space="preserve">
-    <value>Delete Recurring Appointment</value>
+    <value>Remove recurrence</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmation" xml:space="preserve">
+    <value>Delete occurrence</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmationText" xml:space="preserve">
+    <value>Are you sure you want to delete this occurrence?</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmationYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteOccurrenceConfirmationNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmation" xml:space="preserve">
+    <value>Delete series</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmationText" xml:space="preserve">
+    <value>Are you sure you want to delete the whole series?</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmationYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Scheduler_Recurrence_DeleteSeriesConfirmationNo" xml:space="preserve">
+    <value>No</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Daily_Interval" xml:space="preserve">
     <value> day(s)</value>
@@ -1177,7 +1222,7 @@
     <value>After </value>
   </data>
   <data name="Scheduler_Recurrence_Editor_End_Label" xml:space="preserve">
-    <value>End</value>
+    <value>Ends</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_End_Never" xml:space="preserve">
     <value>Never</value>
@@ -1189,22 +1234,22 @@
     <value>On </value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Daily" xml:space="preserve">
-    <value>Daily</value>
+    <value>Day</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Monthly" xml:space="preserve">
-    <value>Monthly</value>
+    <value>Month</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Never" xml:space="preserve">
     <value>Never</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Weekly" xml:space="preserve">
-    <value>Weekly</value>
+    <value>Week</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Frequencies_Yearly" xml:space="preserve">
-    <value>Yearly</value>
+    <value>Year</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Monthly_Day" xml:space="preserve">
-    <value>Day</value>
+    <value>Day of month</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Monthly_Interval" xml:space="preserve">
     <value>month(s)</value>
@@ -1213,31 +1258,31 @@
     <value>Repeat every</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Monthly_RepeatOn" xml:space="preserve">
-    <value>Repeat on</value>
+    <value>On</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_First" xml:space="preserve">
-    <value>first</value>
+    <value>First</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Fourth" xml:space="preserve">
-    <value>fourth</value>
+    <value>Fourth</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Last" xml:space="preserve">
-    <value>last</value>
+    <value>Last</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Second" xml:space="preserve">
-    <value>second</value>
+    <value>Second</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_OffsetPositions_Third" xml:space="preserve">
-    <value>third</value>
+    <value>Third</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekdays_Day" xml:space="preserve">
-    <value>day</value>
+    <value>Day</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekdays_Weekday" xml:space="preserve">
-    <value>weekday</value>
+    <value>Weekday</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekdays_Weekend" xml:space="preserve">
-    <value>weekend day</value>
+    <value>Weekend day</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekly_Interval" xml:space="preserve">
     <value>week(s)</value>
@@ -1246,7 +1291,7 @@
     <value>Repeat every</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Weekly_RepeatOn" xml:space="preserve">
-    <value>Repeat on</value>
+    <value>On</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Yearly_Interval" xml:space="preserve">
     <value>year(s)</value>
@@ -1258,7 +1303,7 @@
     <value>Repeat every</value>
   </data>
   <data name="Scheduler_Recurrence_Editor_Yearly_RepeatOn" xml:space="preserve">
-    <value>Repeat on</value>
+    <value>On</value>
   </data>
   <data name="Scheduler_Recurrence_EditRecurring" xml:space="preserve">
     <value>Do you want to edit only this event occurrence or the whole series?</value>
@@ -1272,6 +1317,57 @@
   <data name="Scheduler_Recurrence_EditWindowTitle" xml:space="preserve">
     <value>Edit Recurring Appointment</value>
   </data>
+  <data name="Scheduler_Recurrence_Editor_Title" xml:space="preserve">
+    <value>Recurrence</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RepeatEvery" xml:space="preserve">
+    <value>Repeat every</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Interval" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_FrequencyLabel" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_EndCondition" xml:space="preserve">
+    <value>End condition</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_DayType" xml:space="preserve">
+    <value>Day type</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrence" xml:space="preserve">
+    <value>Remove recurrence</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrenceConfirmationText" xml:space="preserve">
+    <value>Do you want to remove the recurrence?</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrenceConfirmationYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RemoveRecurrenceConfirmationNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_EndDateAriaLabel" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_OccurrencesAriaLabel" xml:space="preserve">
+    <value>Occurrences</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RepeatOnWeekDayAriaLabel" xml:space="preserve">
+    <value>Day of the week</value>
+  </data>
+  <data name="Scheduler_Recurrence_Editor_RepeatOnMonthDayAriaLabel" xml:space="preserve">
+    <value>Day of the month</value>
+  </data>
   <data name="Scheduler_Save" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -1283,6 +1379,9 @@
   </data>
   <data name="Scheduler_Timeline" xml:space="preserve">
     <value>Timeline</value>
+  </data>
+  <data name="Scheduler_NewEvent" xml:space="preserve">
+    <value>New Event</value>
   </data>
   <data name="Scheduler_Today" xml:space="preserve">
     <value>Today</value>
@@ -1375,7 +1474,7 @@
     <value>Delete</value>
   </data>
   <data name="TaskBoard_Pane_Update" xml:space="preserve">
-    <value>Update</value>
+    <value>Save</value>
   </data>
   <data name="TaskBoard_Pane_EditCardTitle" xml:space="preserve">
     <value>Edit card</value>
@@ -1519,7 +1618,7 @@
     <value>Sorted in descending order</value>
   </data>
   <data name="TreeList_Update" xml:space="preserve">
-    <value>Update</value>
+    <value>Save</value>
   </data>
   <data name="Upload_Cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -1757,6 +1856,9 @@
   </data>
   <data name="MultiSelect_Open" xml:space="preserve">
     <value>Open</value>
+  </data>
+  <data name="MultiSelect_SelectAll" xml:space="preserve">
+    <value>Select all</value>
   </data>
   <data name="Filter_Expression_Options" xml:space="preserve">
     <value>Filter Operators list</value>
@@ -2308,5 +2410,41 @@
   </data>
   <data name="TabStrip_CloseTab" xml:space="preserve">
     <value>Close</value>
+  </data>
+  <data name="Checkpoint_StartOver" xml:space="preserve">
+    <value>Start Over</value>
+  </data>
+  <data name="Checkpoint_Restore" xml:space="preserve">
+    <value>Restore Checkpoint</value>
+  </data>
+  <data name="Checkpoint_Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="Checkpoint_Restored" xml:space="preserve">
+    <value>Checkpoint Restored</value>
+  </data>
+  <data name="ToolCall_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ToolCall_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ToolCall_AwaitingApproval" xml:space="preserve">
+    <value>Awaiting Approval</value>
+  </data>
+  <data name="ToolCall_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ToolCall_Parameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="ToolCall_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="ToolCall_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ToolCall_Reject" xml:space="preserve">
+    <value>Reject</value>
   </data>
 </root>
