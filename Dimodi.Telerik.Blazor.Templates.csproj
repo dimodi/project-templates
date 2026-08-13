@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Authors>Dimo Dimov</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
-    <Copyright>Copyright (c) Dimo Dimov 2025</Copyright>
+    <Copyright>Copyright (c) Dimo Dimov 2024 - $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
     <Description>Blazor project and item templates with Telerik UI for Blazor and Docker integration. Configure the Telerik Blazor components via template options like CSS theme, icon type, localization, and RTL support.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
