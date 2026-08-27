@@ -104,7 +104,7 @@
     "TelerikVersion": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "15.0.0",
+      "defaultValue": "15.0.1",
       "description": "Select the Telerik UI for Blazor version.",
       "displayName": "Telerik UI for Blazor version",
       "choices": [
@@ -113,8 +113,8 @@
           "displayName": "Latest as wildcard"
         },
         {
-          "choice": "15.0.0",
-          "displayName": "15.0.0"
+          "choice": "15.0.1",
+          "displayName": "15.0.1"
         },
         {
           "choice": "14.1.0",
